@@ -1,6 +1,7 @@
 {
-  "private": true,
-  "name": "devextreme-reactive",
+  "private": false,
+  "name": "@vtrphan/devextreme-reactive",
+  "version": "4.0.11",
   "author": {
     "name": "Developer Express Inc.",
     "url": "https://www.devexpress.com/"
@@ -10,6 +11,15 @@
     "url": "git+https://github.com/DevExpress/devextreme-reactive.git"
   },
   "type": "module",
+  "main": "index.js",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "packages/"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "SEE LICENSE IN README.md",
   "devDependencies": {
     "@microsoft/api-extractor": "7.20.0",

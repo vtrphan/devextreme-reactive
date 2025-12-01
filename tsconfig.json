@@ -10,7 +10,6 @@
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "moduleResolution": "node",
     "noLib": false,
@@ -22,7 +21,7 @@
     "baseUrl": "./",
     "stripInternal": true,
     "paths": {
-      "@devexpress/*":["packages/*/src"],
+      "@devexpress/*": ["packages/*/src"],
       "*": ["node_modules", "packages"]
     },
     "esModuleInterop": true
@@ -33,4 +32,4 @@
     "packages/**/dist",
     "packages/**/api"
   ]
- }
+}

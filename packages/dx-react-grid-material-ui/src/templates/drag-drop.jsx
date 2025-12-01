@@ -1,26 +1,29 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'clsx';
-import { Chip, styled } from '@mui/material';
+import * as React from "react";
+import PropTypes from "prop-types";
+import classNames from "clsx";
+import { Chip, styled } from "@mui/material";
 
-const PREFIX = 'DragDrop';
+const PREFIX = "DragDrop";
 export const classes = {
   container: `${PREFIX}-container`,
-  column: `${PREFIX}-column`,
+  column: `${PREFIX}-column`
 };
 
-const StyledDiv = styled('div')(() => ({
+const StyledDiv = styled("div")(() => ({
   [`&.${classes.container}`]: {
-    position: 'fixed',
+    position: "fixed",
     zIndex: 1000,
     left: 0,
     top: 0,
-    display: 'inline-block',
-  },
+    display: "inline-block"
+  }
 }));
 
 export const Container = ({
-  clientOffset, style, className, children,
+  clientOffset,
+  style,
+  className,
+  children,
   ...restProps
 }) => (
   <StyledDiv
@@ -28,7 +31,7 @@ export const Container = ({
     style={{
       transform: `translate(calc(${clientOffset.x}px - 50%), calc(${clientOffset.y}px - 50%))`,
       msTransform: `translateX(${clientOffset.x}px) translateX(-50%) translateY(${clientOffset.y}px) translateY(-50%)`,
-      ...style,
+      ...style
     }}
     {...restProps}
   >
@@ -39,45 +42,39 @@ export const Container = ({
 Container.propTypes = {
   clientOffset: PropTypes.shape({
     x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired
   }).isRequired,
   children: PropTypes.node,
   style: PropTypes.object,
-  className: PropTypes.string,
+  className: PropTypes.string
 };
 
 Container.defaultProps = {
   style: null,
   className: undefined,
-  children: undefined,
+  children: undefined
 };
 
 const StyledChip = styled(Chip)(({ theme }) => ({
   [`&.${classes.column}`]: {
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2),
-    float: 'right',
-    cursor: 'move',
-  },
+    float: "right",
+    cursor: "move"
+  }
 }));
 
-export const Column = React.memo(({
-  column,
-  className,
-  ...restProps
-}) => (
-  <StyledChip
-    className={classNames(classes.column, className)}
-    label={column.title}
-    {...restProps}
-  />
-));
+export const Column = React.memo(
+  ({ column, className = undefined, ...restProps }) => (
+    <StyledChip
+      className={classNames(classes.column, className)}
+      label={column.title}
+      {...restProps}
+    />
+  )
+);
 
 Column.propTypes = {
   column: PropTypes.object.isRequired,
-  className: PropTypes.string,
-};
-
-Column.defaultProps = {
-  className: undefined,
+  className: PropTypes.string
 };
