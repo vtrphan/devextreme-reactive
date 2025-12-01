@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import {
   FilteringState,
   IntegratedFiltering,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableFilterRow,
-} from '@devexpress/dx-react-grid-bootstrap4';
+} from '@vtrphan/dx-react-grid-bootstrap4';
 
 import {
   generateRows,

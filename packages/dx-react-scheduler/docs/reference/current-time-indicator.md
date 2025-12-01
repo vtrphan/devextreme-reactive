@@ -7,13 +7,13 @@ A plugin that renders the current time indicator and the shading that covers app
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { CurrentTimeIndicator } from '@devexpress/dx-react-scheduler-material-ui';
+import { CurrentTimeIndicator } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { CurrentTimeIndicator } from '@devexpress/dx-react-scheduler';
+import { CurrentTimeIndicator } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

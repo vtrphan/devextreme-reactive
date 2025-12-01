@@ -7,15 +7,15 @@ A plugin that renders a filter row.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableFilterRow } from '@devexpress/dx-react-grid-material-ui';
-// import { TableFilterRow } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableFilterRow } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableFilterRow } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableFilterRow } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableFilterRow } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableFilterRow } from '@devexpress/dx-react-grid';
+import { TableFilterRow } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference
@@ -54,7 +54,7 @@ filter | [Filter](filtering-state.md#filter) &#124; null | Filtering options tha
 onFilter | (filter: [Filter](filtering-state.md#filter) &#124; null) => void | An event that initiates applying a new filter to a column.
 column | [Column](grid.md#column) | A column.
 filteringEnabled | boolean | Specifies whether filtering by column is enabled.
-getMessage | ([messageKey](#localization-messages): string) => string | Returns the filter editor placeholder text. Available in the "@devexpress/dx-react-grid-material-ui" package.
+getMessage | ([messageKey](#localization-messages): string) => string | Returns the filter editor placeholder text. Available in the "@vtrphan/dx-react-grid-material-ui" package.
 
 ### TableFilterRow.FilterSelectorProps
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DataTypeProvider } from '@devexpress/dx-react-grid';
+import { DataTypeProvider } from '@vtrphan/dx-react-grid';
 
 const Formatter = ({ value }) => (value ? 'Yes' : 'No');
 

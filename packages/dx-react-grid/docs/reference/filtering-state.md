@@ -7,7 +7,7 @@ A plugin that manages the filtering state.
 Use the following statement to import the plugin:
 
 ```js
-import { FilteringState } from '@devexpress/dx-react-grid';
+import { FilteringState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

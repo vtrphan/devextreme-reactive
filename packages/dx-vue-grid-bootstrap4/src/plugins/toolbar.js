@@ -1,4 +1,4 @@
-import { DxToolbar as DxToolbarBase } from '@devexpress/dx-vue-grid';
+import { DxToolbar as DxToolbarBase } from '@vtrphan/dx-vue-grid';
 import { DxToolbar as Root } from '../templates/toolbar/toolbar';
 import { FlexibleSpace } from '../templates/toolbar/flexible-space';
 

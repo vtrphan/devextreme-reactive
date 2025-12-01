@@ -7,7 +7,7 @@ import classNames from 'clsx';
 import {
   getLabelsForAllGroups, getGroupsLastRow, VIEW_TYPES,
   HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { TicksLayout } from './ticks-layout';
 import { getBrightBorder } from '../../../utils';
 import { SPACING_CELL_HEIGHT, LEFT_PANEL_WIDTH_SPACING } from '../../../constants';

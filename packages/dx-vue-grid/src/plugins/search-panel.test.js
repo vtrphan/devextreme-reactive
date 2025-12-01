@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import { PluginDepsToComponents } from './test-utils';
 import { DxSearchPanel } from './search-panel';
 

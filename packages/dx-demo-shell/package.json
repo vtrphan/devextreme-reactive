@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@devexpress/dx-demo-shell",
+  "name": "@vtrphan/dx-demo-shell",
   "version": "4.0.11",
   "description": "DevExtreme Reactive Components Demo Shell",
   "author": {

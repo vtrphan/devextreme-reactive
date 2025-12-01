@@ -1,4 +1,4 @@
-import { DxTableSelection as DxTableSelectionBase } from '@devexpress/dx-vue-grid';
+import { DxTableSelection as DxTableSelectionBase } from '@vtrphan/dx-vue-grid';
 import { TableSelectAllCell } from '../templates/table-select-all-cell';
 import { TableSelectCell } from '../templates/table-select-cell';
 import { TableSelectRow } from '../templates/table-select-row';

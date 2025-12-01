@@ -1,4 +1,4 @@
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import { GridCore } from './plugins/grid-core';
 
 export const DxGrid = {

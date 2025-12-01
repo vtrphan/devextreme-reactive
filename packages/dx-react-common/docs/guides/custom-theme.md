@@ -46,7 +46,7 @@ export const TableCell = ({
 Once you implement all the required components, create a theme plugin. Inside of it, import a base plugin from the core package and provide your theme components to it:
 
 ```jsx
-import { TableHeaderRow as TableHeaderRowBase } from '@devexpress/dx-react-grid';
+import { TableHeaderRow as TableHeaderRowBase } from '@vtrphan/dx-react-grid';
 import { TableRow } from '../templates/table-row';
 // ... other components
 
@@ -61,8 +61,8 @@ export const TableHeaderRow = props => (
 If you look at the code of our themes, you may notice that we do the same with a not-yet-documented HOC, `withComponents`. The previous code looks like this if you use this HOC too:
 
 ```jsx
-import { withComponents } from '@devexpress/dx-react-core';
-import { TableHeaderRow as TableHeaderRowBase } from '@devexpress/dx-react-grid';
+import { withComponents } from '@vtrphan/dx-react-core';
+import { TableHeaderRow as TableHeaderRowBase } from '@vtrphan/dx-react-grid';
 import { TableRow } from '../templates/table-row';
 // ... other components
 

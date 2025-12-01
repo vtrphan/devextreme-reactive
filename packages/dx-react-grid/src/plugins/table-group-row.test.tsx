@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   tableColumnsWithGrouping,
   tableRowsWithGrouping,
@@ -16,14 +16,14 @@ import {
   getColumnSummaries,
   calculateGroupCellIndent,
   TABLE_FLEX_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableGroupRow, defaultMessages } from './table-group-row';
 import { TableSummaryContent } from '../components/summary/table-summary-content';
 import { flattenGroupInlineSummaries } from '../components/summary/group-summaries';
 import { TableColumnsWithGrouping } from './internal';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   tableColumnsWithGrouping: jest.fn(),
   tableRowsWithGrouping: jest.fn(),
   tableGroupCellColSpanGetter: jest.fn(),
@@ -37,8 +37,8 @@ jest.mock('@devexpress/dx-grid-core', () => ({
   getColumnSummaries: jest.fn(),
 }));
 
-jest.mock('@devexpress/dx-core', () => ({
-  ...jest.requireActual('@devexpress/dx-core'),
+jest.mock('@vtrphan/dx-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-core'),
   getMessagesFormatter: jest.fn().mockReturnValue(() => {}),
 }));
 

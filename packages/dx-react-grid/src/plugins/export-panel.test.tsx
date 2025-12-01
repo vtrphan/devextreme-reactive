@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { ExportPanel } from './export-panel';
 
 describe('ExportPanel', () => {

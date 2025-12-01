@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow, createMount } from '@devexpress/dx-testing';
+import { createShallow, createMount } from '@vtrphan/dx-testing';
 import { ChangeWeekNumberEditor, classes } from './change-week-number-editor';
 
 describe('AppointmentForm recurrence RadioGroup', () => {

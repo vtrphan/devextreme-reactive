@@ -7,7 +7,7 @@ A plugin that performs built-in data sorting.
 Use the following statement to import the plugin:
 
 ```js
-import { DxIntegratedSorting } from '@devexpress/dx-vue-grid';
+import { DxIntegratedSorting } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

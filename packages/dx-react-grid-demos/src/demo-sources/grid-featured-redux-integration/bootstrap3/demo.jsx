@@ -4,12 +4,12 @@ import { connect, Provider } from 'react-redux';
 import {
   SortingState, SelectionState, FilteringState, PagingState, GroupingState, RowDetailState,
   IntegratedFiltering, IntegratedGrouping, IntegratedPaging, IntegratedSorting, IntegratedSelection,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid, Table, TableBandHeader, TableHeaderRow,
   TableFilterRow, TableSelection, TableGroupRow, TableRowDetail,
   GroupingPanel, PagingPanel, DragDropProvider, TableColumnReordering, TableColumnResizing, Toolbar,
-} from '@devexpress/dx-react-grid-bootstrap3';
+} from '@vtrphan/dx-react-grid-bootstrap3';
 
 import {
   generateRows,

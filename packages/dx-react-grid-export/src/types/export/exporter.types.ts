@@ -5,7 +5,7 @@ import {
   SortingStateProps, GroupingStateProps, TableGroupRowProps, SelectionStateProps,
   TableProps, TableColumnVisibilityProps, TableGroupRow, FilteringStateProps,
   GridProps, GroupSummaryItem, SummaryItem, Column,
-} from '@devexpress/dx-react-grid/dist/dx-react-grid';
+} from '@vtrphan/dx-react-grid/dist/dx-react-grid';
 import {
   CustomizeSummaryCellFn,
 } from '../index';

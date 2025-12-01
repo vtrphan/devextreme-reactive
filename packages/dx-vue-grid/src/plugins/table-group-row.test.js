@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost, DxTemplatePlaceholder } from '@devexpress/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost, DxTemplatePlaceholder } from '@vtrphan/dx-vue-core';
 import {
   tableColumnsWithGrouping,
   tableRowsWithGrouping,
@@ -8,11 +8,11 @@ import {
   isGroupIndentTableCell,
   isGroupTableRow,
   tableGroupCellColSpanGetter,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { DxTableGroupRow } from './table-group-row';
 import { PluginDepsToComponents, getComputedState } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   tableColumnsWithGrouping: jest.fn(),
   tableRowsWithGrouping: jest.fn(),
   isGroupTableCell: jest.fn(),

@@ -6,8 +6,8 @@ import {
   BarSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { Stack, Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { Stack, Animation } from '@vtrphan/dx-react-chart';
 
 import { population as data } from '../../../demo-data/data-vizualization';
 

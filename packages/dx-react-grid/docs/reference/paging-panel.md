@@ -7,15 +7,15 @@ A plugin that renders the paging panel used for navigation through data pages. T
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { PagingPanel } from '@devexpress/dx-react-grid-material-ui';
-// import { PagingPanel } from '@devexpress/dx-react-grid-bootstrap4';
-// import { PagingPanel } from '@devexpress/dx-react-grid-bootstrap3';
+import { PagingPanel } from '@vtrphan/dx-react-grid-material-ui';
+// import { PagingPanel } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { PagingPanel } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { PagingPanel } from '@devexpress/dx-react-grid';
+import { PagingPanel } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference
@@ -54,7 +54,7 @@ getMessage | ([messageKey](#localization-messages): string, parameters?: { from:
 Field | Type | Default | Description
 ------|------|---------|------------
 showAll? | string | 'All' | Specifies the page size selector's 'All' item text.
-rowsPerPage? | string | 'Rows per page:' | Specifies the 'Rows per page' label's text. Available in the "@devexpress/dx-react-grid-material-ui" package.
+rowsPerPage? | string | 'Rows per page:' | Specifies the 'Rows per page' label's text. Available in the "@vtrphan/dx-react-grid-material-ui" package.
 info? | (parameters: { from: number, to: number, count: number }) => string &#124; string | {from}-{to} of {count} | Specifies the 'Row count' text template.
 
 ## Plugin Components

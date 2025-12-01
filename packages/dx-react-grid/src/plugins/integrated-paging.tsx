@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Getter, Plugin, Getters, Actions } from '@devexpress/dx-react-core';
+import { Getter, Plugin, Getters, Actions } from '@vtrphan/dx-react-core';
 import {
   paginatedRows, rowsWithPageHeaders, rowCount, currentPage,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { IntegratedPagingProps } from '../types';
 
 const pluginDependencies = [

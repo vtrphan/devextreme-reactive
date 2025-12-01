@@ -1,5 +1,5 @@
 import { colors } from '@mui/material';
-import { VIEW_TYPES } from '@devexpress/dx-scheduler-core';
+import { VIEW_TYPES } from '@vtrphan/dx-scheduler-core';
 
 const {
   red, pink, purple, deepPurple, indigo, blue, lightBlue, cyan, teal,

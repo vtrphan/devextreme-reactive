@@ -1,1 +1,1 @@
-export { LineSeries } from '@devexpress/dx-react-chart';
+export { LineSeries } from '@vtrphan/dx-react-chart';

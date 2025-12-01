@@ -5,10 +5,10 @@ import { withPattern } from '../../utils/with-pattern';
 import { withAnimation } from '../../utils/with-animation';
 import {
   dBar, adjustBarSize, processBarAnimation, isValuesChanged, getPointStart,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { Bar } from './bar';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   dBar: jest.fn().mockReturnValue({ attributes: 'test-attributes' }),
   HOVERED: 'test_hovered',
   SELECTED: 'test_selected',

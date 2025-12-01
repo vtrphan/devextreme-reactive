@@ -7,14 +7,14 @@ The SplineSeries plugin visualizes the spline series.
 Use the following statement to import the plugin:
 
 ```js
-import { SplineSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { SplineSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { SplineSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { SplineSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { SplineSeries } from '@devexpress/dx-react-chart';
+import { SplineSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

@@ -7,13 +7,13 @@ A plugin that renders appointments.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { Appointments } from '@devexpress/dx-react-scheduler-material-ui';
+import { Appointments } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { Appointments } from '@devexpress/dx-react-scheduler';
+import { Appointments } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

@@ -7,7 +7,7 @@ A plugin that manages the filtering state.
 Use the following statement to import the plugin:
 
 ```js
-import { DxFilteringState } from '@devexpress/dx-vue-grid';
+import { DxFilteringState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

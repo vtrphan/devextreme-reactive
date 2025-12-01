@@ -1,5 +1,5 @@
-import { PureComputed } from '@devexpress/dx-core';
-import { Getters } from '@devexpress/dx-react-core';
+import { PureComputed } from '@vtrphan/dx-core';
+import { Getters } from '@vtrphan/dx-react-core';
 import { TableColumn, TableRow, GetCellColSpanFn } from './table.types';
 import { RIGHT_POSITION, LEFT_POSITION } from '../plugins/virtual-table/constants';
 

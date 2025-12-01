@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PluginPositionFn } from '@devexpress/dx-core';
+import { PluginPositionFn } from '@vtrphan/dx-core';
 import { PositionContext } from './contexts';
 
 type MemoizedPluginPositionFn =

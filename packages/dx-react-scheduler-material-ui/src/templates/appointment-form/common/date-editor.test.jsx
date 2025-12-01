@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { shallow as enzymeShallow } from 'enzyme';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
-import { convertToMoment } from '@devexpress/dx-scheduler-core';
+import { convertToMoment } from '@vtrphan/dx-scheduler-core';
 import { DateEditor } from './date-editor';
 
 describe('AppointmentForm common', () => {

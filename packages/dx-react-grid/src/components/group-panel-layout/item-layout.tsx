@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { DragSource } from '@devexpress/dx-react-core';
+import { DragSource } from '@vtrphan/dx-react-core';
 import { GroupingPanel as GP } from '../../types';
 
 const defaultProps = {

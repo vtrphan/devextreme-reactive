@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Action, Plugin, Actions } from '@devexpress/dx-react-core';
+import { Action, Plugin, Actions } from '@vtrphan/dx-react-core';
 import { IntegratedEditingProps } from '../types';
 
 const pluginDependencies = [

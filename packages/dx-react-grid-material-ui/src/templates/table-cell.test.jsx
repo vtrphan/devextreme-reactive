@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TableCell as TableCellMUI } from '@mui/material';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { TableCell, classes } from './table-cell';
 
 describe('TableCell', () => {

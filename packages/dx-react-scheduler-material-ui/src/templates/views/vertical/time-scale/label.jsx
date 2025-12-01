@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { HOUR_MINUTE_OPTIONS } from '@devexpress/dx-scheduler-core';
+import { HOUR_MINUTE_OPTIONS } from '@vtrphan/dx-scheduler-core';
 import { SPACING_LABEL_HEIGHT } from '../../../constants';
 
 const PREFIX = 'Label';

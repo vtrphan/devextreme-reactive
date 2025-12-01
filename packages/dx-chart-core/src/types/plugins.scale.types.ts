@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import {
   ScaleObject, DomainItems, ScalesCache, Point, Series,
 } from './chart-core.types';

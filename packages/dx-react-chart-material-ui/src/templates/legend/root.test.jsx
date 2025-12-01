@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { List } from '@mui/material';
 import { classes } from '../utils';
 import { Root } from './root';

@@ -7,15 +7,15 @@ The ColumnChooser plugin allows a user to toggle grid columns' visibility at run
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { ColumnChooser } from '@devexpress/dx-react-grid-material-ui';
-// import { ColumnChooser } from '@devexpress/dx-react-grid-bootstrap4';
-// import { ColumnChooser } from '@devexpress/dx-react-grid-bootstrap3';
+import { ColumnChooser } from '@vtrphan/dx-react-grid-material-ui';
+// import { ColumnChooser } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { ColumnChooser } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { ColumnChooser } from '@devexpress/dx-react-grid';
+import { ColumnChooser } from '@vtrphan/dx-react-grid';
 ```
 
 ## User reference
@@ -55,7 +55,7 @@ Describes properties passed to a component that renders the button that invokes 
 Field | Type | Description
 ------|------|------------
 onToggle | () => void | An event that initiates overlay showing or hiding.
-getMessage | ([messageKey](#localization-messages): string) => string | Returns a specified localization message. Available in the "@devexpress/dx-react-grid-material-ui" package.
+getMessage | ([messageKey](#localization-messages): string) => string | Returns a specified localization message. Available in the "@vtrphan/dx-react-grid-material-ui" package.
 buttonRef | (ref: ReactInstance) => void | A function that accepts the button's root React element.
 
 ### ColumnChooser.ContainerProps
@@ -89,7 +89,7 @@ hidden | boolean | Specifies whether the associated column is hidden.
 
 Field | Type | Default | Description
 ------|------|---------|------------
-showColumnChooser? | string | 'Show Column Chooser' | The toggle button's tooltip text. Available in the "@devexpress/dx-react-grid-material-ui" package.
+showColumnChooser? | string | 'Show Column Chooser' | The toggle button's tooltip text. Available in the "@vtrphan/dx-react-grid-material-ui" package.
 
 ## Plugin Components
 

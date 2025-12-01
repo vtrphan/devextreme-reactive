@@ -1,18 +1,18 @@
 import * as React from 'react';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import {
   END_REPEAT_RADIO_GROUP,
   MONTHLY_RADIO_GROUP,
   YEARLY_RADIO_GROUP,
   getRecurrenceOptions,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { RadioGroup } from './radio-group';
 import { EndRepeatEditor } from './end-repeat-editor';
 import { MonthlyEditor } from './monthly-editor';
 import { YearlyEditor } from './yealy-editor';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   getRecurrenceOptions: jest.fn(),
 }));
 jest.mock('./monthly-editor', () => ({

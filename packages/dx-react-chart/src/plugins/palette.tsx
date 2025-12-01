@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Plugin, Getter } from '@devexpress/dx-react-core';
+import { Plugin, Getter } from '@vtrphan/dx-react-core';
 import { PaletteProps } from '../types';
 
 class PaletteBase extends React.PureComponent<PaletteProps> {

@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import {
   SortingState, EditingState, PagingState, SummaryState,
   IntegratedPaging, IntegratedSorting, IntegratedSummary,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table, TableHeaderRow, TableEditRow, TableEditColumn,
   PagingPanel, DragDropProvider, TableColumnReordering,
   TableFixedColumns, TableSummaryRow,
-} from '@devexpress/dx-react-grid-bootstrap3';
+} from '@vtrphan/dx-react-grid-bootstrap3';
 import { ProgressBarCell } from '../../../theme-sources/bootstrap3/components/progress-bar-cell';
 import { HighlightedCell } from '../../../theme-sources/bootstrap3/components/highlighted-cell';
 import { CurrencyTypeProvider } from '../../../theme-sources/bootstrap3/components/currency-type-provider';

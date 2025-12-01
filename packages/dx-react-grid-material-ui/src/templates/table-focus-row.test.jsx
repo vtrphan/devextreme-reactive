@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { FocusRow, classes } from './table-focus-row';
 
 const defaultProps = {

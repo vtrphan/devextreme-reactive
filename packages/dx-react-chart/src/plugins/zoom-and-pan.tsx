@@ -10,13 +10,13 @@ import {
   withComponents,
   Size,
   clearSelection,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { DragBox } from '../templates/drag-box';
 import {
   adjustLayout, getViewport, isKeyPressed, getOffset, getDeltaForTouches, getRect,
   ScalesCache, getWheelDelta, getEventCoords, isMultiTouch, attachEvents, detachEvents,
   setCursorType,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import {
   ZoomAndPanProps, ZoomAndPanState, Location, NumberArray, ZoomPanProviderProps, EventHandlers,
 } from '../types';

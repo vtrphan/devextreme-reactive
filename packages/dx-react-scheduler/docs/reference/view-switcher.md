@@ -7,13 +7,13 @@ A plugin that renders the Scheduler's view switcher.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { ViewSwitcher } from '@devexpress/dx-react-scheduler-material-ui';
+import { ViewSwitcher } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { ViewSwitcher } from '@devexpress/dx-react-scheduler';
+import { ViewSwitcher } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

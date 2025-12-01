@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost, DxTemplatePlaceholder } from '@devexpress/dx-vue-core';
-import { isTreeTableCell } from '@devexpress/dx-grid-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost, DxTemplatePlaceholder } from '@vtrphan/dx-vue-core';
+import { isTreeTableCell } from '@vtrphan/dx-grid-core';
 import { DxTableTreeColumn } from './table-tree-column';
 import { PluginDepsToComponents } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   isTreeTableCell: jest.fn(),
 }));
 

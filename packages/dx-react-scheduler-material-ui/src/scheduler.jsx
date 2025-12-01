@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Scheduler as SchedulerBase } from '@devexpress/dx-react-scheduler';
+import { Scheduler as SchedulerBase } from '@vtrphan/dx-react-scheduler';
 import { Root } from './templates/layout';
 
 export const Scheduler = ({ children, ...restProps }) => (

@@ -4,12 +4,12 @@ import {
   Template,
   TemplateConnector,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { GroupingPanelProps } from '../types';
 import {
   VERTICAL_VIEW_LEFT_OFFSET, HORIZONTAL_VIEW_LEFT_OFFSET,
   HORIZONTAL_GROUP_ORIENTATION, VIEW_TYPES,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
 const pluginDependencies = [
   { name: 'GroupingState' },

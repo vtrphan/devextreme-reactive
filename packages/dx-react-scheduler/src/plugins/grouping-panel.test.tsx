@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
 import {
   HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION, VIEW_TYPES,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { GroupingPanel } from './grouping-panel';
 
 describe('GroupingPanel', () => {

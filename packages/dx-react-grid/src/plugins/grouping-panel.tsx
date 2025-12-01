@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Template, TemplatePlaceholder, Plugin, TemplateConnector, withComponents,
   Getters, Actions,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   groupingPanelItems,
   getColumnSortingDirection,
   TOP_POSITION,
   GroupingPanelItem,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { GroupPanelLayout as Layout } from '../components/group-panel-layout';
 import { GroupingPanelProps } from '../types';
 

@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { getRecurrenceOptions, changeRecurrenceOptions } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { getRecurrenceOptions, changeRecurrenceOptions } from '@vtrphan/dx-scheduler-core';
 import { Daily } from './daily';
 import { IntervalEditor } from './interval-editor';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   getRecurrenceOptions: jest.fn(),
   changeRecurrenceOptions: jest.fn(),
 }));

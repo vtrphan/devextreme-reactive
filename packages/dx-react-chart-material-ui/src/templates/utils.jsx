@@ -1,4 +1,4 @@
-import { withPatchedProps } from '@devexpress/dx-react-chart';
+import { withPatchedProps } from '@vtrphan/dx-react-chart';
 import {
   darken, alpha, lighten, styled,
 } from '@mui/material';

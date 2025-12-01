@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import { HorizontalAppointment, classes } from './horizontal-appointment';
 
 describe('HorizontalAppointment', () => {

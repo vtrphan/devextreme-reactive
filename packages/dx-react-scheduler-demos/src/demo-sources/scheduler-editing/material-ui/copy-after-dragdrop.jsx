@@ -1,14 +1,14 @@
 /* eslint-disable react/no-unused-state */
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState, IntegratedEditing } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Appointments,
   AppointmentTooltip,
   WeekView,
   DragDropProvider,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import { appointments } from '../../../demo-data/appointments';
 
 const SHIFT_KEY = 16;

@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 
 import { PluginIndexer } from './plugin-indexer';
 import { POSITION_CONTEXT } from './constants';

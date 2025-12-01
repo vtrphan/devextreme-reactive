@@ -4,7 +4,7 @@ import {
   VirtualTable,
   TableHeaderRow,
   TableKeyboardNavigation,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 const getRowId = row => row.id;
 

@@ -2,7 +2,7 @@ import {
   DxGrid,
   DxVirtualTable,
   DxTableHeaderRow,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import {
   generateRows,

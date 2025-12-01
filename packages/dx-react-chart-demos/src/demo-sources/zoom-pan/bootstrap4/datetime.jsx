@@ -6,9 +6,9 @@ import {
   ValueAxis,
   LineSeries,
   ZoomAndPan,
-} from '@devexpress/dx-react-chart-bootstrap4';
+} from '@vtrphan/dx-react-chart-bootstrap4';
 import { scaleTime } from 'd3-scale';
-import { ArgumentScale } from '@devexpress/dx-react-chart';
+import { ArgumentScale } from '@vtrphan/dx-react-chart';
 
 const generateData = (n) => {
   const ret = [];

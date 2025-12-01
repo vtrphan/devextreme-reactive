@@ -7,13 +7,13 @@ The Scheduler is a root container component designed to process and display the 
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { Scheduler } from '@devexpress/dx-react-scheduler-material-ui';
+import { Scheduler } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { Scheduler } from '@devexpress/dx-react-scheduler';
+import { Scheduler } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User reference

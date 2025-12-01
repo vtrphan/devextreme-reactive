@@ -1,6 +1,6 @@
 // tslint:disable-next-line: no-submodule-imports
 import * as Excel from 'exceljs';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import {
   TableColumn, FindRangesFn, ExportRowsFn,
   CloseSheetFn,

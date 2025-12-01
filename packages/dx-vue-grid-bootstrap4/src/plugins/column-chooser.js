@@ -1,4 +1,4 @@
-import { DxColumnChooser as DxColumnChooserBase } from '@devexpress/dx-vue-grid';
+import { DxColumnChooser as DxColumnChooserBase } from '@vtrphan/dx-vue-grid';
 import { Overlay } from '../templates/column-chooser/overlay';
 import { Container } from '../templates/column-chooser/container';
 import { Item } from '../templates/column-chooser/item';

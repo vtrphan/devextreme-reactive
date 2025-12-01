@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { TABLE_SELECT_TYPE } from './constants';
 import { TableColumn } from '../../types';
 

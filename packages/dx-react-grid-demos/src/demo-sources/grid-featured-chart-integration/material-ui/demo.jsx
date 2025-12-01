@@ -3,25 +3,25 @@ import Paper from '@mui/material/Paper';
 import {
   RowDetailState,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   scaleBand,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import {
   ArgumentScale,
   Stack,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import {
   Chart,
   BarSeries,
   ArgumentAxis,
   ValueAxis,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import {
   Grid, Table, TableBandHeader, TableHeaderRow,
   TableRowDetail,
-} from '@devexpress/dx-react-grid-material-ui';
+} from '@vtrphan/dx-react-grid-material-ui';
 import { styled } from '@mui/material/styles';
 import { citiesCount, regionsCount } from '../../../demo-data/chart-data';
 

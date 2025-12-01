@@ -2227,7 +2227,7 @@ To provide a more convenient and flexible way to render elements that are placed
     // ...
     Toolbar,
     GroupingPanel
-  } from '@devexpress/dx-react-grid-material-ui';
+  } from '@vtrphan/dx-react-grid-material-ui';
 
   <Grid>
     {/* ... */}
@@ -2253,7 +2253,7 @@ To provide a more convenient and flexible way to render elements that are placed
   After:
 
   ```js
-  import { Template, TemplatePlaceholder } from '@devexpress/dx-react-core';
+  import { Template, TemplatePlaceholder } from '@vtrphan/dx-react-core';
 
   <Grid>
     <Template name="header">
@@ -2398,7 +2398,7 @@ It allows placing our Grid to an existing Paper with other components. For examp
   * The `selection` getter's return value type has been changed to `Set`.
   * The default value of the `TableSelection` plugin's `showSelectAll` property has been changed to `false`.
 
-  Both plugins are available from the `@devexpress/dx-react-grid` package.
+  Both plugins are available from the `@vtrphan/dx-react-grid` package.
   Note that `LocalSelection` should be linked after `SelectionState` if you use the `TableSelection` plugin.
 * **react-core:** To simplify working with plugins, we have got rid of the Watcher.
 Now, you can use a Getter instead.
@@ -2512,7 +2512,7 @@ Now, you can use a Getter instead.
 
 ### BREAKING CHANGES
 
-* **rect-grid:** The `ColumnOrderState` plugin has been renamed to `TableColumnReordering` and is now available via the `@devexpress/dx-react-grid-bootstrap3` and `@devexpress/dx-react-grid-material-ui` packages.
+* **rect-grid:** The `ColumnOrderState` plugin has been renamed to `TableColumnReordering` and is now available via the `@vtrphan/dx-react-grid-bootstrap3` and `@vtrphan/dx-react-grid-material-ui` packages.
 
   The `TableView` plugin's `allowColumnReordering` property has been removed and the `TableColumnReordering` plugin now depends on the `TableView` plugin. Thus, it is enough to link the `TableColumnReordering` plugin below the `TableView` plugin to enable column reordering.
 
@@ -2521,7 +2521,7 @@ Now, you can use a Getter instead.
   import {
     // ...
     ColumnOrderState
-  } from '@devexpress/dx-react-grid';
+  } from '@vtrphan/dx-react-grid';
 
   // ...
 
@@ -2534,22 +2534,22 @@ Now, you can use a Getter instead.
   import {
     // ...
     TableColumnReordering
-  } from '@devexpress/dx-react-grid-bootstrap3';
-  // } from '@devexpress/dx-react-grid-material-ui';
+  } from '@vtrphan/dx-react-grid-bootstrap3';
+  // } from '@vtrphan/dx-react-grid-material-ui';
 
   // ...
 
   <TableView />
   <TableColumnReordering defaultOrder={[/* ... */]} />
   ```
-* **react-grid:** The TableColumnResizing plugin is now available in the "@devexpress/dx-react-grid-bootstrap3" and "@devexpress/dx-react-grid-material-ui" packages.
+* **react-grid:** The TableColumnResizing plugin is now available in the "@vtrphan/dx-react-grid-bootstrap3" and "@vtrphan/dx-react-grid-material-ui" packages.
 
   Use the following code to import the plugin.
 
   ```
   import {
     TableColumnResizing,
-  } from from '@devexpress/dx-react-grid-bootstrap3'/* or '@devexpress/dx-react-grid-material-ui' */;
+  } from from '@vtrphan/dx-react-grid-bootstrap3'/* or '@vtrphan/dx-react-grid-material-ui' */;
   ```
 
 
@@ -2850,7 +2850,7 @@ The `column` field is no longer present in the GroupRow interface. So, to access
 ### BREAKING CHANGES
 
 * **react-grid:** In order to improve API transparency, the most recently added row will be added to the end of the addedRows property of the EditingState plugin.
-* **react-grid-material-ui:** UMD bundle for the `@devexpress/dx-react-grid-material-ui` package is no longer provided
+* **react-grid-material-ui:** UMD bundle for the `@vtrphan/dx-react-grid-material-ui` package is no longer provided
 * **react-grid:** Arguments of the `setPageSize` and `setCurrentPage` actions were simpilified. Now, to call these actions, a user can use `numbers` instead of `objects`. See the following code:
   ```
   setPageSize(5); // instead of setPageSize({ size: 5 })
@@ -2959,10 +2959,10 @@ The `column` field is no longer present in the GroupRow interface. So, to access
 
 ### BREAKING CHANGES
 
-* **react-grid:** The following package has become a peer dependency of the `@devexpress/dx-react-grid` one and has to be installed by your app:
+* **react-grid:** The following package has become a peer dependency of the `@vtrphan/dx-react-grid` one and has to be installed by your app:
 
   ```
-  npm i --save @devexpress/dx-react-core
+  npm i --save @vtrphan/dx-react-core
   ```
 
 * **react-grid:** The 'groupRowCellTemplate' property of the TableGroupRow plugin has been renamed to 'groupCellTemplate'
@@ -3005,14 +3005,14 @@ The `column` field is no longer present in the GroupRow interface. So, to access
 
 ### BREAKING CHANGES
 
-* **react-grid:** We moved layout templates from the TableView plugin to the Grid component. The Grid component with the predefined plugins is now available in the "@devexpress/dx-react-grid-bootstrap3" package. If you want to define custom layout templates, the Grid component without predefined templates is still available in the "devexpress/dx-react-grid" package.
+* **react-grid:** We moved layout templates from the TableView plugin to the Grid component. The Grid component with the predefined plugins is now available in the "@vtrphan/dx-react-grid-bootstrap3" package. If you want to define custom layout templates, the Grid component without predefined templates is still available in the "devexpress/dx-react-grid" package.
 
   The following code:
 
   ```jsx
   import {
     Grid
-  } from '@devexpress/dx-react-grid';
+  } from '@vtrphan/dx-react-grid';
   ```
 
   should be replaced with:
@@ -3020,7 +3020,7 @@ The `column` field is no longer present in the GroupRow interface. So, to access
   ```jsx
   import {
     Grid
-  } from '@devexpress/dx-react-grid-bootstrap3';
+  } from '@vtrphan/dx-react-grid-bootstrap3';
   ```
 
 

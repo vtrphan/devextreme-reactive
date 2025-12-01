@@ -2,7 +2,7 @@ import {
   TABLE_FILTER_TYPE, TABLE_HEADING_TYPE, TABLE_DATA_TYPE, TABLE_BAND_TYPE,
   TABLE_STUB_TYPE, TABLE_GROUP_TYPE,
   TABLE_TOTAL_SUMMARY_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
     getNextFocusedCell, getInnerElements, isRowFocused, isCellExist,
     getPart, getIndexToFocus, filterHeaderRows,

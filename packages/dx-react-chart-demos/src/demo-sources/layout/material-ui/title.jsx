@@ -7,9 +7,9 @@ import {
   BarSeries,
   Legend,
   Title,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import { styled } from '@mui/material/styles';
-import { Stack } from '@devexpress/dx-react-chart';
+import { Stack } from '@vtrphan/dx-react-chart';
 
 import { ageStructure } from '../../../demo-data/data-vizualization';
 

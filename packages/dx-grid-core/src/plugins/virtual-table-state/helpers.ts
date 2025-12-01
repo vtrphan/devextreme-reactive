@@ -3,7 +3,7 @@ import {
   VirtualRows, Row, MergeRowsFn, CalculateRequestedRangeFn,
   Interval, GridViewport, GetRequestMeta, CorrectRangeFn,
 } from '../../types';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 export const emptyVirtualRows: VirtualRows = {
   skip: Number.POSITIVE_INFINITY,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { firstRowOnPage, lastRowOnPage, calculateStartPage } from '@devexpress/dx-grid-core';
+import { firstRowOnPage, lastRowOnPage, calculateStartPage } from '@vtrphan/dx-grid-core';
 import {
   Pagination as PaginationBS4,
   PaginationLink,

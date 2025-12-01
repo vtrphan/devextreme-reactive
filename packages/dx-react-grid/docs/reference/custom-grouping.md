@@ -7,7 +7,7 @@ A plugin that converts custom formatted grouped data to a supported format and p
 Use the following statement to import the plugin:
 
 ```js
-import { CustomGrouping } from '@devexpress/dx-react-grid';
+import { CustomGrouping } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

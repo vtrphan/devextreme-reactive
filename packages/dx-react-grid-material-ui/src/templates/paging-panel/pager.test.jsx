@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { withKeyboardNavigation } from '@devexpress/dx-react-grid';
+import { createShallow } from '@vtrphan/dx-testing';
+import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
 import { Pager, classes } from './pager';
 import { Pagination } from './pagination';
 import { PageSizeSelector } from './page-size-selector';
 
-jest.mock('@devexpress/dx-react-grid', () => ({
+jest.mock('@vtrphan/dx-react-grid', () => ({
   withKeyboardNavigation: jest.fn().mockReturnValue(x => x),
 }));
 

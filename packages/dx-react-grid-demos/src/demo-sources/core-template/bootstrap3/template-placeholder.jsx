@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   PluginHost, Plugin, Template, TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 const ENTER_KEY = 13;
 

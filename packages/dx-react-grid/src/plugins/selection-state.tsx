@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, ActionFn,
-} from '@devexpress/dx-react-core';
-import { toggleSelection } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { toggleSelection } from '@vtrphan/dx-grid-core';
 import { SelectionStateProps, SelectionStateState } from '../types';
 
 class SelectionStateBase extends React.PureComponent<SelectionStateProps, SelectionStateState> {

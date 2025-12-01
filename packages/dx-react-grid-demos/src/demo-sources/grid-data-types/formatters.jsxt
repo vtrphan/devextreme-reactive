@@ -1,10 +1,10 @@
 import React, { useState } from 'react';<%&additionalImports%>
-import { DataTypeProvider } from '@devexpress/dx-react-grid';
+import { DataTypeProvider } from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

@@ -6,7 +6,7 @@ import LowPriority from '@mui/icons-material/LowPriority';
 import PriorityHigh from '@mui/icons-material/PriorityHigh';
 import {
   ViewState, GroupingState, IntegratedGrouping,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Resources,
@@ -14,7 +14,7 @@ import {
   GroupingPanel,
   DayView,
   AllDayPanel,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import { data as appointments } from '../../../demo-data/grouping';
 
 const priorityData = [

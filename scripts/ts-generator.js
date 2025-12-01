@@ -34,7 +34,7 @@ const tsReplace = element => element
   .replace(/\[key: number \| string\]:/, '[key: string]:')
   .replace(/\[key: GroupKey\]:/, '[key: string]:')
   // clean description
-  .replace(/\@devexpress/g, '\\@devexpress')
+  .replace(/\@vtrphan/g, '\\@devexpress')
   .replace(/\*\*\@deprecated\*\*/g, '\@deprecated')
   .replace(/<br\/>/g, '');
 
@@ -248,7 +248,7 @@ const getThemesTypeScript = (data, componentName, packageName) => {
 
   return 'import {\n'
     + `  ${componentName} as ${componentName}Base,\n`
-    + `} from \'@devexpress/${packageName}\';\n\n`
+    + `} from \'@vtrphan/${packageName}\';\n\n`
     + `${interfaces.length ? `\n${interfaces}` : ''}`
     + `export interface ${componentName}Props {\n`
     + `${properties}`
@@ -333,7 +333,7 @@ const generateTypeScriptForPackage = (packageName) => {
   themesIndexContent = 'import * as React from \'react\';\n'
     + 'import {\n'
     + `  ${themesImports.join(',\n  ')}`
-    + `\n} from \'@devexpress/${packageName}\';\n`
+    + `\n} from \'@vtrphan/${packageName}\';\n`
     + `${themesIndexContent}`;
 
   // Was removed after move packages to ts

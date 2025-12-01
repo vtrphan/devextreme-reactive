@@ -7,7 +7,7 @@ A plugin that allows implementing a custom totalCount calculation logic.
 Use the following statement to import the plugin:
 
 ```js
-import { DxCustomPaging } from '@devexpress/dx-vue-grid';
+import { DxCustomPaging } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

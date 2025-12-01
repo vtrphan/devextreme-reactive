@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import {
   VERTICAL_TYPE, HORIZONTAL_TYPE, DAY_OPTIONS, SHORT_MONTH_OPTIONS,
   DAY_SHORT_MONTH_OPTIONS, SHORT_MONTH_LONG_YEAR_OPTIONS,

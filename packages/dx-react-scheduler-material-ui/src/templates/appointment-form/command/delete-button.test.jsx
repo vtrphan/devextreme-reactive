@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { DeleteButton, classes } from './delete-button';
 

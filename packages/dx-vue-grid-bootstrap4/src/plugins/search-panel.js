@@ -1,4 +1,4 @@
-import { DxSearchPanel as DxSearchPanelBase } from '@devexpress/dx-vue-grid';
+import { DxSearchPanel as DxSearchPanelBase } from '@vtrphan/dx-vue-grid';
 import { SearchPanelInput } from '../templates/search-panel-input';
 
 const defaultMessages = {

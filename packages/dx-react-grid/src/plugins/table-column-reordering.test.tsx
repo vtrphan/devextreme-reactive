@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, setupConsole } from '@devexpress/dx-testing';
+import { pluginDepsToComponents, setupConsole } from '@vtrphan/dx-testing';
 import {
   TABLE_DATA_TYPE,
   TABLE_REORDERING_TYPE,
@@ -8,17 +8,17 @@ import {
   getTableTargetColumnIndex,
   changeColumnOrder,
   draftOrder,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
   PluginHost,
   Template,
   TemplatePlaceholder,
   TemplateConnector,
   DragDropProvider,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { TableColumnReordering } from './table-column-reordering';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   TABLE_DATA_TYPE: 'd',
   TABLE_REORDERING_TYPE: 'r',
   orderedColumns: jest.fn(),

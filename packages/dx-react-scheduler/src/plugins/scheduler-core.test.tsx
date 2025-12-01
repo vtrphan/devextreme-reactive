@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
-import { appointments, formatDateTimeGetter } from '@devexpress/dx-scheduler-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
+import { appointments, formatDateTimeGetter } from '@vtrphan/dx-scheduler-core';
 import { SchedulerCore } from './scheduler-core';
 
 const defaultProps = {
@@ -10,7 +10,7 @@ const defaultProps = {
   rootComponent: () => null,
 };
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
   appointments: jest.fn(),
   formatDateTimeGetter: jest.fn(),
 }));

@@ -7,13 +7,13 @@ A plugin that renders Scheduler data for a month. This plugin arranges appointme
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { MonthView } from '@devexpress/dx-react-scheduler-material-ui';
+import { MonthView } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { MonthView } from '@devexpress/dx-react-scheduler';
+import { MonthView } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

@@ -1,7 +1,7 @@
-import { DxGetter, DxPlugin } from '@devexpress/dx-vue-core';
+import { DxGetter, DxPlugin } from '@vtrphan/dx-vue-core';
 import {
   paginatedRows, rowsWithPageHeaders, rowCount, currentPage,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxPagingState' },

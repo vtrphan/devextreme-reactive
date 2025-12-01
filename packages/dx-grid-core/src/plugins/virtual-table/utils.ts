@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 type CompareFn = (...args: [any, any]) => boolean;
 /** @internal */

@@ -1,4 +1,4 @@
-import { PureComputed, ReadonlyObject } from '@devexpress/dx-core';
+import { PureComputed, ReadonlyObject } from '@vtrphan/dx-core';
 import { Row, GetRowIdFn, RowId, TableColumn } from '..';
 import { GroupSummaryItem, SummaryType, SummaryItem } from './summary.types';
 import { Grouping } from './grouping.types';

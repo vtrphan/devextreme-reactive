@@ -7,13 +7,13 @@ A plugin that renders a row being edited.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableEditRow } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableEditRow } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableEditRow } from '@devexpress/dx-vue-grid';
+import { DxTableEditRow } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

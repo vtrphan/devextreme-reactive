@@ -2,7 +2,7 @@ import * as React from "react";
 import { styled, Typography } from "@mui/material";
 import PropTypes from "prop-types";
 import classNames from "clsx";
-import { TITLE, ORDINARY_LABEL } from "@devexpress/dx-scheduler-core";
+import { TITLE, ORDINARY_LABEL } from "@vtrphan/dx-scheduler-core";
 
 const PREFIX = "Label";
 

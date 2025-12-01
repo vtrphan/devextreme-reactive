@@ -9,7 +9,7 @@ import {
   HORIZONTAL_GROUP_ORIENTATION,
   VERTICAL_GROUP_ORIENTATION,
   VIEW_TYPES
-} from "@devexpress/dx-scheduler-core";
+} from "@vtrphan/dx-scheduler-core";
 import { getBorder, getBrightBorder } from "../../../utils";
 import {
   SMALL_LAYOUT_MEDIA_QUERY,

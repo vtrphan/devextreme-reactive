@@ -41,7 +41,7 @@ DevExtreme React Scheduler is a component that represents scheduled data and all
 Install the dx-react-scheduler package and its dependencies using the following command:
 
 ```
-npm i --save @devexpress/dx-react-core.npm-tag() @devexpress/dx-react-scheduler.npm-tag()
+npm i --save @vtrphan/dx-react-core.npm-tag() @vtrphan/dx-react-scheduler.npm-tag()
 ```
 
 This package does not contain visual components. In the examples below, visual components are rendered using the Material-UI package.
@@ -49,7 +49,7 @@ This package does not contain visual components. In the examples below, visual c
 - Material-UI
 
   ```
-  npm i --save @devexpress/dx-react-scheduler-material-ui.npm-tag()
+  npm i --save @vtrphan/dx-react-scheduler-material-ui.npm-tag()
   ```
 
   Make sure that the [Material-UI](https://material-ui.com/) dependencies are installed and properly configured. Check the Material-UI's [Getting Started](https://material-ui.com/getting-started/installation) article for configuration details.

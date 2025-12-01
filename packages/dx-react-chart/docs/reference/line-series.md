@@ -7,14 +7,14 @@ The LineSeries plugin visualizes the line series.
 Use the following statement to import the plugin:
 
 ```js
-import { LineSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { LineSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { LineSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { LineSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { LineSeries } from '@devexpress/dx-react-chart';
+import { LineSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

@@ -2,12 +2,12 @@
 <%&additionalImports%>
 import {
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 
 import {
   generateRows,

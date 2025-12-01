@@ -1,4 +1,4 @@
-import { Chart } from '@devexpress/dx-react-chart';
+import { Chart } from '@vtrphan/dx-react-chart';
 import { withClassName, classes } from './utils';
 
 const styles = ({ theme }) => {

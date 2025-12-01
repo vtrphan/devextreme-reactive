@@ -1,18 +1,18 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents, getComputedState, executeComputedAction, setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   rowsWithAvailableToSelect,
   someSelected,
   allSelected,
   unwrapSelectedRows,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { IntegratedSelection } from './integrated-selection';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   someSelected: jest.fn(),
   allSelected: jest.fn(),
   rowsWithAvailableToSelect: jest.fn(),

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, TableCell } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { WEEK_DAY_OPTIONS } from '@devexpress/dx-scheduler-core';
+import { WEEK_DAY_OPTIONS } from '@vtrphan/dx-scheduler-core';
 import { getBorder, getBrightBorder } from '../../../utils';
 
 const PREFIX = 'Cell';

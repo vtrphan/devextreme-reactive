@@ -1,4 +1,4 @@
-import { DxPagingPanel as DxPagingPanelBase } from '@devexpress/dx-vue-grid';
+import { DxPagingPanel as DxPagingPanelBase } from '@vtrphan/dx-vue-grid';
 import { Pager } from '../templates/paging-panel/pager';
 
 const defaultMessages = {

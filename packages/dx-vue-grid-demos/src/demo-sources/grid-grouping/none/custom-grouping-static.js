@@ -1,13 +1,13 @@
 import {
   DxGroupingState,
   DxCustomGrouping,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxTableGroupRow,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { generateRows, defaultColumnValues } from '../../../demo-data/generator';
 

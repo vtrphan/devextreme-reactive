@@ -1,12 +1,12 @@
 import React, { useRef, useCallback } from 'react';<%&additionalImports%>
-import { GridExporter } from '@devexpress/dx-react-grid-export';
+import { GridExporter } from '@vtrphan/dx-react-grid-export';
 import {
   Grid,
   VirtualTable,
   TableHeaderRow,
   Toolbar,
   ExportPanel,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 import saveAs from 'file-saver';
 
 import { orders } from '../../../demo-data/orders';

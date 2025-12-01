@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 /** @internal */
 export type CurrentPageFn = PureComputed<[number, number, number, (p: number) => void]>;

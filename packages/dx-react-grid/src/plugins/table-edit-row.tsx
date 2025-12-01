@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Getter, Template, TemplatePlaceholder, TemplateConnector, Plugin, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   getRowChange,
   tableRowsWithEditing,
@@ -10,7 +10,7 @@ import {
   isEditTableCell,
   TABLE_EDIT_TYPE,
   TABLE_ADDED_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableEditRowProps, TableCellProps, TableRowProps } from '../types';
 
 const pluginDependencies = [

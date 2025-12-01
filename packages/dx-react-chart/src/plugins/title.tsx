@@ -5,7 +5,7 @@ import {
   Template,
   TemplatePlaceholder,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { TitleProps } from '../types';
 
 class TitleBase extends React.PureComponent<TitleProps> {

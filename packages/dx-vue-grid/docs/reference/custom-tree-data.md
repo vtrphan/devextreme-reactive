@@ -7,7 +7,7 @@ A plugin that converts custom formatted tree data to a supported format and expa
 Use the following statement to import the plugin:
 
 ```js
-import { DxCustomTreeData } from '@devexpress/dx-vue-grid';
+import { DxCustomTreeData } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

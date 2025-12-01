@@ -7,7 +7,7 @@ import {
   DxIntegratedSorting,
   DxIntegratedGrouping,
   DxIntegratedSelection,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 
 import {
   DxGrid,
@@ -18,7 +18,7 @@ import {
   DxTableSelection,
   DxToolbar,
   DxGroupingPanel,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import {
   generateRows,

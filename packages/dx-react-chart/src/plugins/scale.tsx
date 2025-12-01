@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Plugin, Getter, Getters } from '@devexpress/dx-react-core';
-import { ARGUMENT_DOMAIN, getValueDomainName, addDomain } from '@devexpress/dx-chart-core';
+import { Plugin, Getter, Getters } from '@vtrphan/dx-react-core';
+import { ARGUMENT_DOMAIN, getValueDomainName, addDomain } from '@vtrphan/dx-chart-core';
 import { withPatchedProps } from '../utils';
 import { ScaleProps, ArgumentScaleProps, ValueScaleProps } from '../types';
 

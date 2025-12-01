@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { WEEK_DAY_OPTIONS, DAY_OPTIONS, areDatesSame } from '@devexpress/dx-scheduler-core';
+import { WEEK_DAY_OPTIONS, DAY_OPTIONS, areDatesSame } from '@vtrphan/dx-scheduler-core';
 
 const PREFIX = 'Table';
 

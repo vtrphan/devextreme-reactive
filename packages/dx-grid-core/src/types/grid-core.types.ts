@@ -1,5 +1,5 @@
 import { TableRow, TableColumn } from './table.types';
-import { PureReducer, PureComputed } from '@devexpress/dx-core';
+import { PureReducer, PureComputed } from '@vtrphan/dx-core';
 
 /** Defines the column configuration object. Used to display data stored in a row. */
 export interface Column {

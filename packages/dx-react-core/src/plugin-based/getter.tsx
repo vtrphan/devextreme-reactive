@@ -6,7 +6,7 @@ import {
 } from './helpers';
 import { UPDATE_CONNECTION_EVENT, PLUGIN_HOST_CONTEXT, POSITION_CONTEXT } from './constants';
 import { withHostAndPosition } from '../utils/with-props-from-context';
-import { InnerPlugin } from '@devexpress/dx-core';
+import { InnerPlugin } from '@vtrphan/dx-core';
 import { PluginContextProps } from './plugin-context-prop-types';
 import { ComputedFn } from '../types';
 

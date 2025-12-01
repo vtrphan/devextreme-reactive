@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import {
   tableRowsWithExpandedDetail,
   tableDetailCellColSpanGetter,
@@ -9,11 +9,11 @@ import {
   isDetailToggleTableCell,
   isDetailTableRow,
   isDetailTableCell,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { DxTableRowDetail } from './table-row-detail';
 import { PluginDepsToComponents, getComputedState } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   tableRowsWithExpandedDetail: jest.fn(),
   tableDetailCellColSpanGetter: jest.fn(),
   isDetailRowExpanded: jest.fn(),

@@ -7,7 +7,7 @@ A plugin that converts custom formatted grouped data to a supported format and p
 Use the following statement to import the plugin:
 
 ```js
-import { DxCustomGrouping } from '@devexpress/dx-vue-grid';
+import { DxCustomGrouping } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

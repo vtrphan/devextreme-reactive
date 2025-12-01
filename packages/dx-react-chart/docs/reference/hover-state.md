@@ -7,7 +7,7 @@ The `HoverState` plugin  implements the *hovered* state for points and series
 Use the following statement to import the plugin:
 
 ```js
-import { HoverState } from '@devexpress/dx-react-chart';
+import { HoverState } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

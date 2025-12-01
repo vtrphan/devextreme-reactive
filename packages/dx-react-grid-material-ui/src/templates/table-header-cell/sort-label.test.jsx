@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow, createMount } from '@devexpress/dx-testing';
+import { createShallow, createMount } from '@vtrphan/dx-testing';
 import { TableSortLabel, Tooltip } from '@mui/material';
 import { SortLabel, classes } from './sort-label';
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import { TableSelectAllCell } from './table-select-all-cell';
 
 describe('TableSelectAllCell', () => {

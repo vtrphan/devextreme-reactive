@@ -4,9 +4,9 @@ import {
   BarSeries,
   ArgumentAxis,
   ValueAxis,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { scaleBand } from '@devexpress/dx-chart-core';
-import { Animation, ArgumentScale } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { scaleBand } from '@vtrphan/dx-chart-core';
+import { Animation, ArgumentScale } from '@vtrphan/dx-react-chart';
 
 const data = [
   { x: -20, y: -20 },

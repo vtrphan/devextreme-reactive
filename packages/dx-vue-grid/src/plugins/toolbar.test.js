@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost, DxTemplatePlaceholder } from '@devexpress/dx-vue-core';
+import { DxPluginHost, DxTemplatePlaceholder } from '@vtrphan/dx-vue-core';
 import { DxToolbar } from './toolbar';
 
 describe('DxToolbar', () => {

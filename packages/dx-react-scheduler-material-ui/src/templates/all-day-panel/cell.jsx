@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import {
   VIEW_TYPES, HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { getBorder, getBrightBorder } from '../utils';
 import { SPACING_CELL_HEIGHT } from '../constants';
 

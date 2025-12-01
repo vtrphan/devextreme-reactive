@@ -1,13 +1,13 @@
 import React, { useState } from 'react';<%&additionalImports%>
 import {
   EditingState,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableEditColumn, TableEditRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 import debounce from 'lodash.debounce';
 
 import { generateRows, employeeValues } from '../../../demo-data/generator';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Plugin, Getter } from '@devexpress/dx-react-core';
-import { buildAnimation, easeOutCubic } from '@devexpress/dx-chart-core';
+import { Plugin, Getter } from '@vtrphan/dx-react-core';
+import { buildAnimation, easeOutCubic } from '@vtrphan/dx-chart-core';
 import { AnimationProps } from '../types';
 
 class AnimationBase extends React.PureComponent<AnimationProps> {

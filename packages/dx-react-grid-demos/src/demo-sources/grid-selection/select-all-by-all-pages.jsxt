@@ -4,14 +4,14 @@ import {
   PagingState,
   IntegratedPaging,
   IntegratedSelection,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableSelection,
   PagingPanel,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { generateRows } from '../../../demo-data/generator';
 

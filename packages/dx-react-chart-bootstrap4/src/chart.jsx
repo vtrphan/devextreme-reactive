@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { withComponents } from '@devexpress/dx-react-core';
-import { Chart as ChartBase, Palette } from '@devexpress/dx-react-chart';
+import { withComponents } from '@vtrphan/dx-react-core';
+import { Chart as ChartBase, Palette } from '@vtrphan/dx-react-chart';
 import { Root } from './templates/layout';
 import { Label } from './templates/label';
 

@@ -7,9 +7,9 @@ import {
   LineSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import { styled } from '@mui/material/styles';
-import { Animation } from '@devexpress/dx-react-chart';
+import { Animation } from '@vtrphan/dx-react-chart';
 
 import { confidence as data } from '../../../demo-data/data-vizualization';
 

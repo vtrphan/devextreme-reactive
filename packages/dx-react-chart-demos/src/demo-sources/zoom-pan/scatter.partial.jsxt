@@ -5,7 +5,7 @@ import {
   EventTracker,
   HoverState,
   Animation,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import {
   Chart,
   ArgumentAxis,
@@ -15,7 +15,7 @@ import {
   ZoomAndPan,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
 <%&imports%>
 import { format } from 'd3-format';
 

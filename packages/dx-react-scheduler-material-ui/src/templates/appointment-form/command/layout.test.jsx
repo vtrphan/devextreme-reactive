@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { CANCEL_BUTTON, DELETE_BUTTON, SAVE_BUTTON } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { CANCEL_BUTTON, DELETE_BUTTON, SAVE_BUTTON } from '@vtrphan/dx-scheduler-core';
 import { Layout, classes } from './layout';
 
 describe('AppointmentForm command', () => {

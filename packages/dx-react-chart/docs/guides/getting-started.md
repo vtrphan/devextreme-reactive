@@ -39,7 +39,7 @@ The DevExtreme React Chart is a data visualization component that provides diffe
 Install the `dx-react-chart` package and its dependencies using the following command:
 
 ```
-npm i --save @devexpress/dx-react-core.npm-tag() @devexpress/dx-react-chart.npm-tag()
+npm i --save @vtrphan/dx-react-core.npm-tag() @vtrphan/dx-react-chart.npm-tag()
 ```
 
 This package does not contain visual components. In the examples below, visual components are rendered using the Material-UI package. However, you can use any of the following:
@@ -47,7 +47,7 @@ This package does not contain visual components. In the examples below, visual c
 - Material-UI
 
   ```
-  npm i --save @devexpress/dx-react-chart-material-ui.npm-tag()
+  npm i --save @vtrphan/dx-react-chart-material-ui.npm-tag()
   ```
 
   Make sure that the [Material-UI](https://material-ui.com/) dependencies are installed and properly configured. Check the Material-UI's [Getting Started](https://material-ui.com/getting-started/installation) article for configuration details.
@@ -55,7 +55,7 @@ This package does not contain visual components. In the examples below, visual c
 - Bootstrap 4
 
   ```
-  npm i --save @devexpress/dx-react-chart-bootstrap4.npm-tag()
+  npm i --save @vtrphan/dx-react-chart-bootstrap4.npm-tag()
   ```
 
   Make sure that the [OpenIconic](https://useiconic.com/open) icons are installed and properly configured.
@@ -63,7 +63,7 @@ This package does not contain visual components. In the examples below, visual c
   Add the DevExtreme React Chart styles in the root .js file:
 
   ```js
-  import '@devexpress/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
+  import '@vtrphan/dx-react-chart-bootstrap4/dist/dx-react-chart-bootstrap4.css';
   ```
 
   NOTE: The DevExtreme React Chart does not include Bootstrap CSS.

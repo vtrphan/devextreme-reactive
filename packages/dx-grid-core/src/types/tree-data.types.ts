@@ -1,4 +1,4 @@
-import { PureComputed, CustomFunction } from '@devexpress/dx-core';
+import { PureComputed, CustomFunction } from '@vtrphan/dx-core';
 import { Row, GetRowIdFn, RowId, IsSpecificRowFn, GetRowLevelKeyFn } from './grid-core.types';
 import { NODE_CHECK } from '../utils/hierarchical-data';
 import { TableRow } from './table.types';

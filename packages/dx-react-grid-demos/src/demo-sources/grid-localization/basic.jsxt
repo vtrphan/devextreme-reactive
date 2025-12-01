@@ -7,7 +7,7 @@ import {
   EditingState,
   PagingState,
   IntegratedPaging,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
@@ -20,7 +20,7 @@ import {
   PagingPanel,
   DragDropProvider,
   Toolbar,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

@@ -4,7 +4,7 @@ import {
   Template,
   Plugin,
   TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { ToolbarProps, TableKeyboardNavigation } from '../types';
 
 class ToolbarBase extends React.PureComponent<ToolbarProps> {

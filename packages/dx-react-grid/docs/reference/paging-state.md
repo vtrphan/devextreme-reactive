@@ -7,7 +7,7 @@ A plugin that manages the paging state. It controls the total page count dependi
 Use the following statement to import the plugin:
 
 ```js
-import { PagingState } from '@devexpress/dx-react-grid';
+import { PagingState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

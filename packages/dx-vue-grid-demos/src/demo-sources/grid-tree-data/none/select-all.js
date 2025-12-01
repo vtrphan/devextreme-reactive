@@ -3,13 +3,13 @@ import {
   DxTreeDataState,
   DxCustomTreeData,
   DxIntegratedSelection,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxTableTreeColumn,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import {
   generateRows,

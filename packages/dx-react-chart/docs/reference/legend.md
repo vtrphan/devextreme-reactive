@@ -7,14 +7,14 @@ The Legend plugin visualizes the legend.
 Use the following statement to import the plugin:
 
 ```js
-import { Legend } from '@devexpress/dx-react-chart-material-ui';
-// import { Legend } from '@devexpress/dx-react-chart-bootstrap4';
+import { Legend } from '@vtrphan/dx-react-chart-material-ui';
+// import { Legend } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { Legend } from '@devexpress/dx-react-chart';
+import { Legend } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

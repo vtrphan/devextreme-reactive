@@ -1,9 +1,9 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { AppointmentModel, ViewState, SchedulerDateTime } from '@devexpress/dx-react-scheduler';
+import { AppointmentModel, ViewState, SchedulerDateTime } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler, DayView, Appointments, Resources,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 const appointments: Array<AppointmentModel> = [{
   startDate: '2018-10-31T10:00',

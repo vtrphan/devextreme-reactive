@@ -3,7 +3,7 @@ import {
   Grid,
   VirtualTable,
   TableHeaderRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { RowId } from '../types';
 
 export const toggle: PureComputed<[RowId[], RowId[], boolean?]> = (

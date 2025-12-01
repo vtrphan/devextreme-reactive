@@ -7,13 +7,13 @@ A plugin that configures [resources](../guides/resources.md).
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { Resources } from '@devexpress/dx-react-scheduler-material-ui';
+import { Resources } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { Resources } from '@devexpress/dx-react-scheduler';
+import { Resources } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

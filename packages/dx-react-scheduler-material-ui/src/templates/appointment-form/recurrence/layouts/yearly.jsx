@@ -6,7 +6,7 @@ import {
   getRecurrenceOptions,
   changeRecurrenceOptions,
   checkIsNaturalNumber,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { IntervalEditor } from './interval-editor';
 
 const PREFIX = 'Yearly';

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Getter, Plugin, Getters } from '@devexpress/dx-react-core';
-import { sortedRows, getColumnExtension } from '@devexpress/dx-grid-core';
+import { Getter, Plugin, Getters } from '@vtrphan/dx-react-core';
+import { sortedRows, getColumnExtension } from '@vtrphan/dx-grid-core';
 import { IntegratedSortingProps, IntegratedSorting as IntegratedSortingNs } from '../types';
 
 const pluginDependencies = [

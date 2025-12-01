@@ -1,4 +1,4 @@
-import { DxGetter, DxPlugin } from '@devexpress/dx-vue-core';
+import { DxGetter, DxPlugin } from '@vtrphan/dx-vue-core';
 import {
   groupRowChecker,
   groupRowLevelKeyGetter,
@@ -6,7 +6,7 @@ import {
   groupedRows,
   expandedGroupRows,
   getColumnExtension,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxGroupingState' },

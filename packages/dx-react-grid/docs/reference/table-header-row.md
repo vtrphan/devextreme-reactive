@@ -9,15 +9,15 @@ The plugin also allows you to manage a column's sorting and grouping state and i
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableHeaderRow } from '@devexpress/dx-react-grid-material-ui';
-// import { TableHeaderRow } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableHeaderRow } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableHeaderRow } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableHeaderRow } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableHeaderRow } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableHeaderRow } from '@devexpress/dx-react-grid';
+import { TableHeaderRow } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference
@@ -99,7 +99,7 @@ onGroup | () => void | An event that invokes grouping by the associated column.
 
 Field | Type | Default | Description
 ------|------|---------|------------
-sortingHint? | string | 'Sort' | Specifies the 'Sort' hint's text. Available in the "@devexpress/dx-react-grid-material-ui" package.
+sortingHint? | string | 'Sort' | Specifies the 'Sort' hint's text. Available in the "@vtrphan/dx-react-grid-material-ui" package.
 
 ## Plugin Components
 

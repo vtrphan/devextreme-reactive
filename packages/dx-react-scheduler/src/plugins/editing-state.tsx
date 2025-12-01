@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Action, Plugin, Getter, createStateHelper, StateHelper, ComputedFn, ActionFn,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   addAppointment,
   cancelAddedAppointment,
@@ -12,7 +12,7 @@ import {
   changedAppointmentById,
   RECURRENCE_EDIT_SCOPE,
   preCommitChanges as preCommitChangesBase,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { EditingStateProps, EditingStateState } from '../types';
 
 class EditingStateBase extends React.PureComponent<EditingStateProps, EditingStateState> {

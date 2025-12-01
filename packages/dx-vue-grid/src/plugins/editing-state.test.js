@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import {
   createRowChangeGetter,
   getColumnExtensionValueGetter,
@@ -9,12 +9,12 @@ import {
   changeRow, cancelChanges,
   addRow, changeAddedRow, cancelAddedRows,
   changedRowsByIds, addedRowsByIds,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { PluginDepsToComponents, getComputedState, executeComputedAction } from './test-utils';
 import { DxEditingState } from './editing-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...require.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...require.requireActual('@vtrphan/dx-grid-core'),
   startEditRows: jest.fn(),
   stopEditRows: jest.fn(),
   deleteRows: jest.fn(),

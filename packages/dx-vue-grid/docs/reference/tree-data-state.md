@@ -7,7 +7,7 @@ A plugin that manages tree rows' expanded state.
 Use the following statement to import the plugin:
 
 ```js
-import { DxTreeDataState } from '@devexpress/dx-vue-grid';
+import { DxTreeDataState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

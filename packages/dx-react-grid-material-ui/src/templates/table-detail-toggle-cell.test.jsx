@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow, createMount } from '@devexpress/dx-testing';
+import { createShallow, createMount } from '@vtrphan/dx-testing';
 import { IconButton } from '@mui/material';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ExpandLess from '@mui/icons-material/ExpandLess';

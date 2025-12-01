@@ -1,4 +1,4 @@
-import { shallowEqual } from '@devexpress/dx-core';
+import { shallowEqual } from '@vtrphan/dx-core';
 
 export const getAvailableGetters = (
   pluginHost,

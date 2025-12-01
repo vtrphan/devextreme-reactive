@@ -3,14 +3,14 @@ import {
   EditingState,
   SortingState,
   IntegratedSorting,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable,
   TableHeaderRow,
   TableEditColumn,
   TableEditRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 
 import {
   generateRows,

@@ -1,9 +1,9 @@
-import { DxSortingState } from '@devexpress/dx-vue-grid';
+import { DxSortingState } from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxVirtualTable,
   DxTableHeaderRow,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { Loading as DxLoading } from '../../../theme-sources/none/components/loading';
 

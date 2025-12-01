@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';<%&additionalImports%>
 import {
   TreeDataState,
   CustomTreeData,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable,
   TableHeaderRow,
   TableTreeColumn,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { Loading } from '../../../theme-sources/<%&themeName%>/components/loading';
 

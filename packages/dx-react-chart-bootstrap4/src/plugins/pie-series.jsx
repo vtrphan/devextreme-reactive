@@ -1,1 +1,1 @@
-export { PieSeries } from '@devexpress/dx-react-chart';
+export { PieSeries } from '@vtrphan/dx-react-chart';

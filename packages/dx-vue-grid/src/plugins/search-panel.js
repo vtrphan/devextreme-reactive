@@ -3,8 +3,8 @@ import {
   DxTemplatePlaceholder,
   DxPlugin,
   DxTemplateConnector,
-} from '@devexpress/dx-vue-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+} from '@vtrphan/dx-vue-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 
 const pluginDependencies = [
   { name: 'DxToolbar' },

@@ -1,5 +1,5 @@
-import { DxGetter, DxAction, DxPlugin } from '@devexpress/dx-vue-core';
-import { toggleRowExpanded } from '@devexpress/dx-grid-core';
+import { DxGetter, DxAction, DxPlugin } from '@vtrphan/dx-vue-core';
+import { toggleRowExpanded } from '@vtrphan/dx-grid-core';
 
 export const DxTreeDataState = {
   name: 'DxTreeDataState',

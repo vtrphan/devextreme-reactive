@@ -7,13 +7,13 @@ A plugin that visualizes table rows' selection state by rendering selection chec
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableSelection } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableSelection } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableSelection } from '@devexpress/dx-vue-grid';
+import { DxTableSelection } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

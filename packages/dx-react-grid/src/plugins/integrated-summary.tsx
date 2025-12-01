@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { Getter, Plugin, Getters } from '@devexpress/dx-react-core';
+import { Getter, Plugin, Getters } from '@vtrphan/dx-react-core';
 import {
   defaultSummaryCalculator,
   totalSummaryValues,
   groupSummaryValues,
   treeSummaryValues,
   SummaryCalculator,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { IntegratedSummaryProps, SummaryType } from '../types';
 
 const pluginDependencies = [

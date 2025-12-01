@@ -7,13 +7,13 @@ A plugin that renders the Scheduler's week view. This plugin arranges appointmen
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { WeekView } from '@devexpress/dx-react-scheduler-material-ui';
+import { WeekView } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { WeekView } from '@devexpress/dx-react-scheduler';
+import { WeekView } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

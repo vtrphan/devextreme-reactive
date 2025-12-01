@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { RIGHT, TOP } from '@devexpress/dx-chart-core';
+import { RIGHT, TOP } from '@vtrphan/dx-chart-core';
 import { Popover } from '../../../../dx-react-bootstrap4/components';
 
 const popperModifiers = [

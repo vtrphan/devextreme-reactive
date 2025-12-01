@@ -7,13 +7,13 @@ A plugin that renders the Scheduler's date navigator.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DateNavigator } from '@devexpress/dx-react-scheduler-material-ui';
+import { DateNavigator } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin to use custom components:
 
 ```js
-import { DateNavigator } from '@devexpress/dx-react-scheduler';
+import { DateNavigator } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

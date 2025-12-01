@@ -3,13 +3,13 @@ import {
   SortingState,
   SelectionState,
   IntegratedSorting,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableSelection,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { createStore, combineReducers } from 'redux';
 import { connect, Provider } from 'react-redux';

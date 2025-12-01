@@ -7,13 +7,13 @@ A plugin that renders a filter row.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableFilterRow } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableFilterRow } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableFilterRow } from '@devexpress/dx-vue-grid';
+import { DxTableFilterRow } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

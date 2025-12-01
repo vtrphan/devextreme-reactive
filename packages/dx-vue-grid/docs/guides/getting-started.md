@@ -9,13 +9,13 @@ DevExtreme Vue Grid is a component that displays table data from a local or remo
 Install the dx-vue-grid package and its dependencies using the following command:
 
 ```
-npm i --save @devexpress/dx-vue-core.npm-tag() @devexpress/dx-vue-grid.npm-tag()
+npm i --save @vtrphan/dx-vue-core.npm-tag() @vtrphan/dx-vue-grid.npm-tag()
 ```
 
 This package does not contain visual components. You can use Bootstrap 4 package to render visual components.
 
 ```
-npm i --save @devexpress/dx-vue-grid-bootstrap4.npm-tag()
+npm i --save @vtrphan/dx-vue-grid-bootstrap4.npm-tag()
 ```
 
 You need add to your project the [OpenIconic](https://useiconic.com/open) icons.
@@ -23,7 +23,7 @@ You need add to your project the [OpenIconic](https://useiconic.com/open) icons.
 Add the DevExtreme Vue Grid styles in the root .js file:
 
 ```js
-import '@devexpress/dx-vue-grid-bootstrap4/dist/dx-vue-grid-bootstrap4.css';
+import '@vtrphan/dx-vue-grid-bootstrap4/dist/dx-vue-grid-bootstrap4.css';
 ```
 
 NOTE: The DevExtreme Vue Grid does not include Bootstrap CSS.
@@ -49,7 +49,7 @@ import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 const App = {
   data() {

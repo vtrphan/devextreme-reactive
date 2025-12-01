@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { getVerticalRowFromGroups, VIEW_TYPES } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { getVerticalRowFromGroups, VIEW_TYPES } from '@vtrphan/dx-scheduler-core';
 import { VerticalLayout, classes } from './vertical-layout';
 import { BASIC_CELL_HEIGHT } from '../constants';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   getVerticalRowFromGroups: jest.fn(),
 }));
 

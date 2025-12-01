@@ -4,8 +4,8 @@ import {
   BarSeries,
   ArgumentAxis,
   ValueAxis,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { EventTracker, HoverState } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { EventTracker, HoverState } from '@vtrphan/dx-react-chart';
 
 const data = [
   { year: '1950', population: 2.525 },

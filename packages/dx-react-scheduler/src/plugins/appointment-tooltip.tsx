@@ -8,7 +8,7 @@ import {
   StateHelper,
   PluginComponents,
   Action,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   OPEN_COMMAND_BUTTON,
   CLOSE_COMMAND_BUTTON,
@@ -17,7 +17,7 @@ import {
   AppointmentMeta,
   TOGGLE_APPOINTMENT_TOOLTIP_VISIBILITY,
   getAppointmentResources,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
 import { AppointmentTooltipProps, AppointmentTooltipState, Appointments } from '../types';
 

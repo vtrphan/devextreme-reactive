@@ -1,4 +1,4 @@
-import { PureReducer, PureComputed } from '@devexpress/dx-core';
+import { PureReducer, PureComputed } from '@vtrphan/dx-core';
 
 /** @internal */
 export type StateHelper = {

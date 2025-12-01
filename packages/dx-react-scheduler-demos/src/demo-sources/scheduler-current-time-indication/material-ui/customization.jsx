@@ -5,7 +5,7 @@ import {
   Scheduler,
   WeekView,
   CurrentTimeIndicator,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import Paper from '@mui/material/Paper';
 import { teal } from '@mui/material/colors';
 import classNames from 'clsx';

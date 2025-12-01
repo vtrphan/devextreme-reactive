@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DragSource, DropTarget } from '@devexpress/dx-react-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DragSource, DropTarget } from '@vtrphan/dx-react-core';
 import { GroupPanelLayout } from './group-panel-layout';
 
-jest.mock('@devexpress/dx-react-core', () => ({
+jest.mock('@vtrphan/dx-react-core', () => ({
   DragSource: React.forwardRef(({ children }: { children: React.ReactElement }, ref) => children),
   DropTarget: jest.fn(({ children }) => children),
 }));

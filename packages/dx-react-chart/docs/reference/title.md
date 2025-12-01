@@ -7,14 +7,14 @@ The Title plugin renders the chart title.
 Use the following statement to import the plugin:
 
 ```js
-import { Title } from '@devexpress/dx-react-chart-material-ui';
-// import { Title } from '@devexpress/dx-react-chart-bootstrap4';
+import { Title } from '@vtrphan/dx-react-chart-material-ui';
+// import { Title } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { Title } from '@devexpress/dx-react-chart';
+import { Title } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

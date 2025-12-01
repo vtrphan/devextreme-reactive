@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import {
   Getter, PluginHost,
   DragDropProvider as DragDropProviderCore,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { DragDropProvider } from './drag-drop-provider';
 
 // eslint-disable-next-line react/prop-types

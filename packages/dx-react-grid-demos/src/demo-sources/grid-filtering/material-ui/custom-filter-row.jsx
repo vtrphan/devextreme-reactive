@@ -5,13 +5,13 @@ import TableCell from '@mui/material/TableCell';
 import {
   FilteringState,
   IntegratedFiltering,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableFilterRow,
-} from '@devexpress/dx-react-grid-material-ui';
+} from '@vtrphan/dx-react-grid-material-ui';
 
 import {
   generateRows,

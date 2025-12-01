@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {
  Plugin, TemplateConnector, Action, Template, TemplatePlaceholder, Getter,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   TABLE_ADDED_TYPE, TABLE_DATA_TYPE, TABLE_FLEX_TYPE,
   getNextFocusedCell,  getPart, getIndexToFocus,
   isCellExist, focus, isTabArrowUpDown,
   filterHeaderRows, Elements, isDataTableRow, isRowFocused, getClosestCellByRow,
   isCellFocused, getFocusing, RIGHT_POSITION, LEFT_POSITION,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
   TableKeyboardNavigationProps, TableKeyboardNavigationCoreProps, TableKeyboardNavigationCoreState,
   TableCellProps, TableRowProps,

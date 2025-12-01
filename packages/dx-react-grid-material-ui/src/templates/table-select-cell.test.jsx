@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Checkbox } from '@mui/material';
 import {
   createMount, createShallow, setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import { TableSelectCell, classes } from './table-select-cell';
 
 describe('TableSelectCell', () => {

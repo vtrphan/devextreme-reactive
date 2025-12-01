@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Draggable } from '@devexpress/dx-react-core';
+import { Draggable } from '@vtrphan/dx-react-core';
 
 const ResizingControlLine = ({ resizing, style }) => {
   const resizingControlLineBody = resizing && (

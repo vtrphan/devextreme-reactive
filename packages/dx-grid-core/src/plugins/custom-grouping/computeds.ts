@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { GRID_GROUP_CHECK } from '../integrated-grouping/constants';
 import { GetRowIdFn, Row, RowId, CustomGroupedRowsFn, GroupsGetterFn } from '../../types';
 import { getCustomGroups } from './helpers';

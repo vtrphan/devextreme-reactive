@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-core';
+import { PluginHost } from '@vtrphan/dx-core';
 import { withContext, withHostAndPosition } from './with-props-from-context';
 import { PluginHostContext, PositionContext } from '../plugin-based/contexts';
 import { PLUGIN_HOST_CONTEXT, POSITION_CONTEXT } from '../plugin-based/constants';

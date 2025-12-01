@@ -7,13 +7,13 @@ A plugin that renders the paging panel used for navigation through data pages.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxPagingPanel } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxPagingPanel } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxPagingPanel } from '@devexpress/dx-vue-grid';
+import { DxPagingPanel } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

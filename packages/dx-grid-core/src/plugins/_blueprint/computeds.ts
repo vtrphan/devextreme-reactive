@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 // tslint:disable-next-line: space-in-parens
 export const pureComputed: PureComputed<[string[], number?]> = (param1, param2) => {

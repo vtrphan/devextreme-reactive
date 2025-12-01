@@ -1,11 +1,11 @@
-import { DxSearchState } from '@devexpress/dx-vue-grid';
+import { DxSearchState } from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxVirtualTable,
   DxTableHeaderRow,
   DxToolbar,
   DxSearchPanel,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { Loading as DxLoading } from '../../../theme-sources/none/components/loading';
 

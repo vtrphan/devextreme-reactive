@@ -7,7 +7,7 @@ A plugin that allows you to customize formatting options and editors depending o
 Use the following statement to import the plugin:
 
 ```js
-import { DataTypeProvider } from '@devexpress/dx-react-grid';
+import { DataTypeProvider } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

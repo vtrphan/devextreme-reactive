@@ -2,13 +2,13 @@ import {
   DxPagingState,
   DxSortingState,
   DxCustomPaging,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxPagingPanel,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { Loading as DxLoading } from '../../../theme-sources/none/components/loading';
 import { CurrencyTypeProvider } from '../../../theme-sources/none/components/currency-type-provider';

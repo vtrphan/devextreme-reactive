@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import { Menu } from '@mui/material';
 import { FilterSelector, classes } from './filter-selector';
 

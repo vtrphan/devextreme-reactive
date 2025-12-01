@@ -5,8 +5,8 @@ import {
   ValueAxis,
   LineSeries,
   Title,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { ArgumentScale, ValueScale, Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { ArgumentScale, ValueScale, Animation } from '@vtrphan/dx-react-chart';
 import { scaleLog, scaleTime } from 'd3-scale';
 
 import { bitcoin as data } from '../../../demo-data/data-vizualization';

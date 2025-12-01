@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { Sizer } from '@devexpress/dx-react-core';
+import { Sizer } from '@vtrphan/dx-react-core';
 import { styled } from '@mui/material';
 import { TableStubCell } from './table-stub-cell';
 

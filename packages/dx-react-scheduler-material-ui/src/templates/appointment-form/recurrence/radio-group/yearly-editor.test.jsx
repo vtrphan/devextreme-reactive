@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import {
   handleStartDateChange,
   handleToDayOfWeekChange,
@@ -12,13 +12,13 @@ import {
   DAYS_OF_WEEK,
   RRULE_REPEAT_TYPES,
   MONTHS,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { YearlyEditor } from './yealy-editor';
 import { ChangeMonthEditor } from './change-month-editor';
 import { ChangeWeekNumberEditor } from './change-week-number-editor';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   handleStartDateChange: jest.fn(),
   handleToDayOfWeekChange: jest.fn(),
   getRecurrenceOptions: jest.fn(),

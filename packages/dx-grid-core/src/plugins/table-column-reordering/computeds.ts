@@ -1,4 +1,4 @@
-import { PureComputed, slice } from '@devexpress/dx-core';
+import { PureComputed, slice } from '@vtrphan/dx-core';
 import mergeSort from '../../utils/merge-sort';
 import { TABLE_DATA_TYPE } from '../table/constants';
 import { TABLE_REORDERING_TYPE } from './constants';

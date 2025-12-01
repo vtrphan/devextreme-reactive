@@ -1,10 +1,10 @@
-import { DxGetter, DxAction, DxPlugin } from '@devexpress/dx-vue-core';
+import { DxGetter, DxAction, DxPlugin } from '@vtrphan/dx-vue-core';
 import {
   rowsWithAvailableToSelect,
   someSelected,
   allSelected,
   unwrapSelectedRows,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const rowsWithAvailableToSelectComputed = (
   { rows, getRowId, isGroupRow },

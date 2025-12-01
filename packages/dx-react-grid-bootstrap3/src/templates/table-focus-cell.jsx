@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withKeyboardNavigation } from '@devexpress/dx-react-grid';
+import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
 
 const FocusCellBase = ({
   component: CellPlaceholder,

@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { VERTICAL_GROUP_ORIENTATION } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { VERTICAL_GROUP_ORIENTATION } from '@vtrphan/dx-scheduler-core';
 import { Cell, classes } from './cell';
 
 describe('AllDayPanel', () => {

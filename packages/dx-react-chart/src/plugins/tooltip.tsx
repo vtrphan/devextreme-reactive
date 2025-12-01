@@ -6,8 +6,8 @@ import {
   Template,
   TemplatePlaceholder,
   PluginComponents,
-} from '@devexpress/dx-react-core';
-import { getParameters, processHandleTooltip, createReference } from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-react-core';
+import { getParameters, processHandleTooltip, createReference } from '@vtrphan/dx-chart-core';
 import { TooltipProps, TooltipState, GetPointerMoveHandlersFn } from '../types';
 
 const dependencies = [{ name: 'EventTracker', optional: true }];

@@ -7,7 +7,7 @@ The `ArgumentScale` plugin allows you to customize the argument scale.
 Use the following statement to import the plugin:
 
 ```js
-import { ArgumentScale } from '@devexpress/dx-react-chart';
+import { ArgumentScale } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

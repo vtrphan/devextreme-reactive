@@ -1,4 +1,4 @@
-import { calculateStartPage } from '@devexpress/dx-grid-core';
+import { calculateStartPage } from '@vtrphan/dx-grid-core';
 
 export const PageButtons = {
   name: 'PageButtons',

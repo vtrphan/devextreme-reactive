@@ -1,5 +1,5 @@
 import { Row, RowId } from './grid-core.types';
-import { CustomFunction, PureComputed } from '@devexpress/dx-core';
+import { CustomFunction, PureComputed } from '@vtrphan/dx-core';
 import { TableRow, TableColumn } from './table.types';
 
 export interface EditingColumnExtension {

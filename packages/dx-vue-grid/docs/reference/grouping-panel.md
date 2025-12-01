@@ -9,13 +9,13 @@ Optionally, the plugin allows an end-user to change grouped columns' sorting ord
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxGroupingPanel } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxGroupingPanel } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxGroupingPanel } from '@devexpress/dx-vue-grid';
+import { DxGroupingPanel } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

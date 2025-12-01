@@ -1,17 +1,17 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost, DxTemplatePlaceholder } from '@devexpress/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost, DxTemplatePlaceholder } from '@vtrphan/dx-vue-core';
 import {
   getRowChange,
   tableRowsWithEditing,
   isEditTableCell,
   isEditTableRow,
   isAddedTableRow,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { DxTableEditRow } from './table-edit-row';
 import { PluginDepsToComponents, getComputedState } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getRowChange: jest.fn(),
   tableRowsWithEditing: jest.fn(),
   isEditTableCell: jest.fn(),

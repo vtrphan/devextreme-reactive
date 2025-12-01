@@ -1,15 +1,15 @@
 import * as React from 'react';<%&additionalImports%>
-import { connectProps } from '@devexpress/dx-react-core';
+import { connectProps } from '@vtrphan/dx-react-core';
 import {
   EventTracker, HoverState,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import {
   Chart,
   SplineSeries,
   ArgumentAxis,
   ValueAxis,
   Legend,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
 import { energyConsumption as data } from '../../../demo-data/data-vizualization';
 
 const rootStyles = {

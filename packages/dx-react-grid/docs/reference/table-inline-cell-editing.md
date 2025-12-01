@@ -7,15 +7,15 @@ A plugin that renders a cell being edited.
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { TableInlineCellEditing } from '@devexpress/dx-react-grid-material-ui';
-// import { TableInlineCellEditing } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableInlineCellEditing } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableInlineCellEditing } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableInlineCellEditing } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableInlineCellEditing } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableInlineCellEditing } from '@devexpress/dx-react-grid';
+import { TableInlineCellEditing } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

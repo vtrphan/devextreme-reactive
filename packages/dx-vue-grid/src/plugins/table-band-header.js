@@ -1,14 +1,14 @@
 import {
   DxGetter, DxTemplate, DxPlugin,
   DxTemplateConnector, DxTemplatePlaceholder,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 import {
   getBandComponent,
   isBandedTableRow, isBandedOrHeaderRow,
   tableRowsWithBands, isHeadingTableCell,
   BAND_GROUP_CELL, BAND_HEADER_CELL,
   BAND_EMPTY_CELL, BAND_DUPLICATE_RENDER,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const CellPlaceholder = {
   render() {

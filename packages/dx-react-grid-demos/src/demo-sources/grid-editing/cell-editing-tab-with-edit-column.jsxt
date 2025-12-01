@@ -1,12 +1,12 @@
 import React, { useState } from 'react';<%&additionalImports%>
-import { EditingState } from '@devexpress/dx-react-grid';
+import { EditingState } from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableEditColumn,
   TableInlineCellEditing,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

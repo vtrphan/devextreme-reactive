@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 import { withAnimation } from './with-animation';
-import { isScalesChanged } from '@devexpress/dx-chart-core';
+import { isScalesChanged } from '@vtrphan/dx-chart-core';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   isScalesChanged: jest.fn().mockReturnValue(false),
 }));
 

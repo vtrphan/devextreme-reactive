@@ -7,7 +7,7 @@ The `Animation` plugin animates series.
 Use the following statement to import the plugin:
 
 ```js
-import { Animation } from '@devexpress/dx-react-chart';
+import { Animation } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

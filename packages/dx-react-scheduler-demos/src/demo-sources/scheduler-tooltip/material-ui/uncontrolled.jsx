@@ -6,7 +6,7 @@ import {
   Appointments,
   AppointmentTooltip,
   AppointmentForm,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 import appointments from '../../../demo-data/today-appointments';
 

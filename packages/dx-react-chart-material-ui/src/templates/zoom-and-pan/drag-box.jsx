@@ -1,4 +1,4 @@
-import { ZoomAndPan as ZoomAndPanBase } from '@devexpress/dx-react-chart';
+import { ZoomAndPan as ZoomAndPanBase } from '@vtrphan/dx-react-chart';
 import { withClassName, classes } from '../utils';
 
 const styles = ({ theme }) => ({

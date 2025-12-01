@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
 import {
     filterHeaderRows, isDataTableRow, isRowFocused,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableKeyboardNavigation } from './table-keyboard-navigation';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   filterHeaderRows: jest.fn(),
   isDataTableRow: jest.fn(),
   isRowFocused: jest.fn(),

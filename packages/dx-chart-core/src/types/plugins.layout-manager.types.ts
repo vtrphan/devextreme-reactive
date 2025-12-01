@@ -1,4 +1,4 @@
-import { Size } from '@devexpress/dx-react-core';
+import { Size } from '@vtrphan/dx-react-core';
 import { NumberArray } from './chart-core.types';
 
 /** @internal */

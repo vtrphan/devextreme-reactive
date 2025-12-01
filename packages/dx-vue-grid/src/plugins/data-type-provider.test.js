@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost, DxTemplate } from '@devexpress/dx-vue-core';
+import { DxPluginHost, DxTemplate } from '@vtrphan/dx-vue-core';
 import { DxDataTypeProvider } from './data-type-provider';
 
 describe('DxDataTypeProvider', () => {

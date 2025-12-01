@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, Typography } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { MONTH_YEAR_OPTIONS } from '@devexpress/dx-scheduler-core';
+import { MONTH_YEAR_OPTIONS } from '@vtrphan/dx-scheduler-core';
 
 const PREFIX = 'Text';
 

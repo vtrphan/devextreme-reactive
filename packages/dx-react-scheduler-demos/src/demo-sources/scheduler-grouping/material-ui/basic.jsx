@@ -2,7 +2,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import {
   ViewState, GroupingState, IntegratedGrouping, IntegratedEditing, EditingState,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Resources,
@@ -12,7 +12,7 @@ import {
   DayView,
   DragDropProvider,
   AppointmentForm,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import {
   teal, indigo,
 } from '@mui/material/colors';

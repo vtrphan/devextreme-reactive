@@ -7,13 +7,13 @@ The AppointmentForm plugin renders a form that visualizes appointment's data and
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { AppointmentForm } from '@devexpress/dx-react-scheduler-material-ui';
+import { AppointmentForm } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { AppointmentForm } from '@devexpress/dx-react-scheduler';
+import { AppointmentForm } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User reference

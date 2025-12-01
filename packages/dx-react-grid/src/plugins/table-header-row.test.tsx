@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   tableRowsWithHeading,
   isHeadingTableCell,
   isHeadingTableRow,
   getColumnSortingDirection,
   getNextColumnName,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableHeaderRow } from './table-header-row';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   tableRowsWithHeading: jest.fn(),
   isHeadingTableCell: jest.fn(),
   isHeadingTableRow: jest.fn(),

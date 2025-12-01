@@ -5,7 +5,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Typography from '@mui/material/FormControl';
 import { styled } from '@mui/material/styles';
-import { ViewState, EditingState, IntegratedEditing } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState, IntegratedEditing } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   WeekView,
@@ -13,7 +13,7 @@ import {
   AppointmentForm,
   AppointmentTooltip,
   DragDropProvider,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 import { appointments } from '../../../demo-data/appointments';
 

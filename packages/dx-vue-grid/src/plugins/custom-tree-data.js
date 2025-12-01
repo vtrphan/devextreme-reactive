@@ -1,4 +1,4 @@
-import { DxGetter, DxPlugin } from '@devexpress/dx-vue-core';
+import { DxGetter, DxPlugin } from '@vtrphan/dx-vue-core';
 import {
   customTreeRowLevelKeyGetter,
   customTreeRowIdGetter,
@@ -8,7 +8,7 @@ import {
   isTreeRowLeafGetter,
   getTreeRowLevelGetter,
   unwrappedCustomTreeRows,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxTreeDataState' },

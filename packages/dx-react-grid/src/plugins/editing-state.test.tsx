@@ -2,8 +2,8 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 import {
   pluginDepsToComponents, getComputedState, testStatePluginField, setupConsole,
-} from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   createRowChangeGetter,
   getColumnExtensionValueGetter,
@@ -12,11 +12,11 @@ import {
   deleteRows, cancelDeletedRows,
   changeRow, cancelChanges,
   addRow, changeAddedRow, cancelAddedRows,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { EditingState } from './editing-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   startEditRows: jest.fn(),
   stopEditRows: jest.fn(),
   startEditCells: jest.fn(),

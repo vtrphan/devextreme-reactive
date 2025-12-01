@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { SchedulerCore } from './plugins/scheduler-core';
 import { SchedulerProps } from './types';
 

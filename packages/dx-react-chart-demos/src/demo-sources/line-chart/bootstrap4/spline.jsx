@@ -6,8 +6,8 @@ import {
   LineSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-bootstrap4';
-import { ArgumentScale, Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-bootstrap4';
+import { ArgumentScale, Animation } from '@vtrphan/dx-react-chart';
 import {
   curveCatmullRom,
   line,

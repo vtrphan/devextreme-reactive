@@ -1,13 +1,13 @@
 import {
   DxGetter, DxTemplate, DxTemplatePlaceholder, DxTemplateConnector, DxPlugin,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 import {
   getRowChange,
   tableRowsWithEditing,
   isEditTableRow,
   isAddedTableRow,
   isEditTableCell,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxEditingState' },

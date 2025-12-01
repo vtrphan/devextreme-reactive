@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { ViewState } from '@devexpress/dx-react-scheduler';
+import { ViewState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   MonthView,
@@ -8,7 +8,7 @@ import {
   DateNavigator,
   Appointments,
   TodayButton,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 import { appointments } from '../../../demo-data/month-appointments';
 

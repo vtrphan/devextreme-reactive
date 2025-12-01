@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { Indicator, classes } from './indicator';
 
 jest.mock('@mui/material/styles/styled', () => () => () => ({

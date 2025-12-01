@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Template, TemplatePlaceholder, Plugin,
   TemplateConnector,
-} from '@devexpress/dx-react-core';
-import { pageCount } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { pageCount } from '@vtrphan/dx-grid-core';
 import { PagingPanelProps, TableKeyboardNavigation } from '../types';
 
 const pluginDependencies = [

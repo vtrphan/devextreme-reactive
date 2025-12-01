@@ -1,1 +1,1 @@
-export { BarSeries } from '@devexpress/dx-react-chart';
+export { BarSeries } from '@vtrphan/dx-react-chart';

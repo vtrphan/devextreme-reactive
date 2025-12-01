@@ -7,8 +7,8 @@ import {
   Title,
   Legend,
   ScatterSeries,
-} from '@devexpress/dx-react-chart-bootstrap4';
-import { Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-bootstrap4';
+import { Animation } from '@vtrphan/dx-react-chart';
 import {
   line,
   curveStep,

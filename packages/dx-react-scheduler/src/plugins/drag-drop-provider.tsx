@@ -4,14 +4,14 @@ import {
   TemplateConnector, DropTarget, DragSource,
   DragDropProvider as DragDropProviderCore,
   PluginComponents, PlaceholderWithRef,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   cellIndex, cellData, cellType, getAppointmentStyle, intervalDuration, autoScroll,
   calculateAppointmentTimeBoundaries, calculateInsidePart, RESIZE_TOP, RESIZE_BOTTOM,
   POSITION_START, POSITION_END, getAppointmentResources, calculateAppointmentGroups,
   appointmentDragged, calculateDraftAppointments,
   HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION, SCROLL_SPEED_PX,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { DragDropProviderProps, DragDropProviderState } from '../types';
 
 const renderAppointmentItems = (items, Wrapper, draftData) => (

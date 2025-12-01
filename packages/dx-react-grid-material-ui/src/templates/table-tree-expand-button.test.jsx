@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { IconButton } from '@mui/material';
 import { TableTreeExpandButton } from './table-tree-expand-button';
 

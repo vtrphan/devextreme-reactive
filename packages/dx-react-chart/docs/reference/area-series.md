@@ -7,14 +7,14 @@ The AreaSeries plugin visualizes the area series.
 Use the following statement to import the plugin:
 
 ```js
-import { AreaSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { AreaSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { AreaSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { AreaSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 You can import the themeless plugin to use custom components:
 
 ```js
-import { AreaSeries } from '@devexpress/dx-react-chart';
+import { AreaSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

@@ -7,14 +7,14 @@ The BarSeries plugin visualizes the bar series.
 Use the following statement to import the plugin:
 
 ```js
-import { BarSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { BarSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { BarSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { BarSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 You can import the themeless plugin to use custom components:
 
 ```js
-import { BarSeries } from '@devexpress/dx-react-chart';
+import { BarSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

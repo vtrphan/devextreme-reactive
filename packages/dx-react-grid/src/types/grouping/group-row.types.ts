@@ -1,5 +1,5 @@
-import { PureComputed, GetMessageFn } from '@devexpress/dx-core';
-import { GroupSummaryItem, GroupSummaryValue } from '@devexpress/dx-grid-core';
+import { PureComputed, GetMessageFn } from '@vtrphan/dx-core';
+import { GroupSummaryItem, GroupSummaryValue } from '@vtrphan/dx-grid-core';
 import {
   Table, Column, TableRow,
   TableSummaryRow, ColumnSummary,

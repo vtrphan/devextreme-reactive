@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMount, createShallow } from '@devexpress/dx-testing';
+import { createMount, createShallow } from '@vtrphan/dx-testing';
 import { Checkbox } from '@mui/material';
 import { BooleanEditor } from './boolean-editor';
 

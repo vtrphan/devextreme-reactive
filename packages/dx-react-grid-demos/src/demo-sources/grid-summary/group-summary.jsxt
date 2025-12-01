@@ -5,14 +5,14 @@ import {
   IntegratedGrouping,
   IntegratedSummary,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableGroupRow,
   TableSummaryRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

@@ -2,25 +2,25 @@ import React, { useState } from 'react';
 import {
   RowDetailState,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   scaleBand,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import {
   ArgumentScale,
   Stack,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import {
   Chart,
   BarSeries,
   ArgumentAxis,
   ValueAxis,
   Legend,
-} from '@devexpress/dx-react-chart-bootstrap4';
+} from '@vtrphan/dx-react-chart-bootstrap4';
 import {
   Grid, Table, TableBandHeader, TableHeaderRow,
   TableRowDetail,
-} from '@devexpress/dx-react-grid-bootstrap4';
+} from '@vtrphan/dx-react-grid-bootstrap4';
 import { citiesCount, regionsCount } from '../../../demo-data/chart-data';
 
 const currencyFormatter = ({ value }) => (

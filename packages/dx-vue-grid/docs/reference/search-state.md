@@ -7,7 +7,7 @@ A plugin that manages the search state.
 Use the following statement to import the plugin:
 
 ```js
-import { DxSearchState } from '@devexpress/dx-vue-grid';
+import { DxSearchState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

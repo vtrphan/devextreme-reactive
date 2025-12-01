@@ -1,4 +1,4 @@
-import { PluginHost as PluginHostCore } from '@devexpress/dx-core';
+import { PluginHost as PluginHostCore } from '@vtrphan/dx-core';
 import { PluginIndexer } from './plugin-indexer';
 import { DxTemplatePlaceholder } from './template-placeholder';
 import { PLUGIN_HOST_CONTEXT } from './constants';

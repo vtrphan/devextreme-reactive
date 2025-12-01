@@ -7,7 +7,7 @@ import {
   MULTILINE_TEXT_EDITOR,
   ORDINARY_TEXT_EDITOR,
   NUMBER_EDITOR
-} from "@devexpress/dx-scheduler-core";
+} from "@vtrphan/dx-scheduler-core";
 
 const PREFIX = "TextEditor";
 

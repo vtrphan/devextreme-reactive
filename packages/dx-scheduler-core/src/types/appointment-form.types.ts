@@ -1,5 +1,5 @@
 import { AppointmentModel, SchedulerDateTime } from './scheduler-core.types';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { RRULE_REPEAT_TYPES } from '../plugins/appointment-form/constants';
 
 /** @internal */

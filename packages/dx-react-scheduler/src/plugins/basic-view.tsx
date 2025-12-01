@@ -6,7 +6,7 @@ import {
   TemplateConnector,
   TemplatePlaceholder,
   ComputedFn,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   computed,
   startViewDate as startViewDateCore,
@@ -14,8 +14,8 @@ import {
   availableViews as availableViewsCore,
   HORIZONTAL_GROUP_ORIENTATION,
   VERTICAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
-import { memoize } from '@devexpress/dx-core';
+} from '@vtrphan/dx-scheduler-core';
+import { memoize } from '@vtrphan/dx-core';
 import { BasicViewProps, BasicViewState, ScrollingStrategy } from '../types';
 
 const CellPlaceholder = params => <TemplatePlaceholder name="cell" params={params} />;

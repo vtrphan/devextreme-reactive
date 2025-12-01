@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Getter, Template, Plugin, TemplateConnector, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   tableRowsWithExpandedDetail,
   tableDetailCellColSpanGetter,
@@ -11,7 +11,7 @@ import {
   isDetailTableRow,
   isDetailTableCell,
   TABLE_DETAIL_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableRowDetailProps, TableCellProps, TableRowProps } from '../types';
 
 const getCellColSpanComputed = (

@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, ActionFn,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   changeColumnSorting,
   getColumnExtensionValueGetter,
   getPersistentSortedColumns,
   calculateKeepOther,
   ChangeSortingPayload,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { SortingStateProps, SortingStateState } from '../types';
 
 const columnExtensionValueGetter = (

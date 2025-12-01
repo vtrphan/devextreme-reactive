@@ -7,7 +7,7 @@ A plugin that performs built-in grouping and group expanding/collapsing.
 Use the following statement to import the plugin:
 
 ```js
-import { DxIntegratedGrouping } from '@devexpress/dx-vue-grid';
+import { DxIntegratedGrouping } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

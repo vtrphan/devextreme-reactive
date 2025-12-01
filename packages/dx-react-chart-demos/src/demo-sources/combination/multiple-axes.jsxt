@@ -10,15 +10,15 @@ import {
   Title,
   Legend,
   Tooltip,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
 import {
   ValueScale,
   Stack,
   Animation,
   EventTracker,
   HoverState,
-} from '@devexpress/dx-react-chart';
-import { connectProps } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-chart';
+import { connectProps } from '@vtrphan/dx-react-core';
 import { format } from 'd3-format';
 
 import { oilProduction } from '../../../demo-data/data-vizualization';

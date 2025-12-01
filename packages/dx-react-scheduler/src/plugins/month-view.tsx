@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Plugin, PluginComponents } from '@devexpress/dx-react-core';
-import { monthCellsData, calculateMonthDateIntervals, VIEW_TYPES } from '@devexpress/dx-scheduler-core';
+import { Plugin, PluginComponents } from '@vtrphan/dx-react-core';
+import { monthCellsData, calculateMonthDateIntervals, VIEW_TYPES } from '@vtrphan/dx-scheduler-core';
 import { BasicView } from './basic-view';
 import { MonthViewProps } from '../types';
 

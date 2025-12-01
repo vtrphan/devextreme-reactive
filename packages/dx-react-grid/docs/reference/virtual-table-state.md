@@ -7,7 +7,7 @@ A plugin that manages remote data for the virtual table.
 Use the following statement to import the plugin:
 
 ```js
-import { VirtualTableState } from '@devexpress/dx-react-grid';
+import { VirtualTableState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

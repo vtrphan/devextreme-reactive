@@ -14,7 +14,7 @@ import {
   BarSeries, ScatterSeries, PieSeries,
   PointComponentProps, PathFn, PathStartCoordinates, PathEndCoordinates, Scales,
 } from '../../types';
-import { Size } from '@devexpress/dx-react-core';
+import { Size } from '@vtrphan/dx-react-core';
 import { ARGUMENT_DOMAIN } from '../../constants';
 import { getValueDomainName, getWidth, rangesEqual } from '../../utils/scale';
 

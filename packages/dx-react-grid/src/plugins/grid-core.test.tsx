@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
-import { rowIdGetter, cellValueGetter } from '@devexpress/dx-grid-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
+import { rowIdGetter, cellValueGetter } from '@vtrphan/dx-grid-core';
 import { GridCore } from './grid-core';
 import { GridCoreGetters } from './internal';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   rowIdGetter: jest.fn(),
   cellValueGetter: jest.fn(),
 }));

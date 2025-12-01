@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Action, Plugin, PluginHost,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { GridExporterCore } from './grid-exporter-core';
 import { ExporterProps, ExporterState } from '../types/export/exporter.types';
 

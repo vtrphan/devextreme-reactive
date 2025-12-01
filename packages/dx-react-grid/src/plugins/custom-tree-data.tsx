@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Getter, Plugin, Getters } from '@devexpress/dx-react-core';
+import { Getter, Plugin, Getters } from '@vtrphan/dx-react-core';
 import {
   customTreeRowLevelKeyGetter,
   customTreeRowIdGetter,
@@ -9,7 +9,7 @@ import {
   isTreeRowLeafGetter,
   getTreeRowLevelGetter,
   unwrappedCustomTreeRows,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { CustomTreeDataProps } from '../types';
 
 const pluginDependencies = [

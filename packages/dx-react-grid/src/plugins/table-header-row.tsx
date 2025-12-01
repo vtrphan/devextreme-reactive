@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Template, Plugin, TemplateConnector, TemplatePlaceholder, Getters,
-} from '@devexpress/dx-react-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+} from '@vtrphan/dx-react-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   getColumnSortingDirection,
   tableRowsWithHeading,
@@ -11,7 +11,7 @@ import {
   getNextColumnName,
   TABLE_DATA_TYPE,
   TABLE_HEADING_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableHeaderRowProps, TableCellProps, TableRowProps } from '../types';
 
 const tableHeaderRowsComputed = (

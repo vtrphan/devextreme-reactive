@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   getBarPointTransformer as getPointTransformer,
   createBarHitTester as createHitTester,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { declareSeries } from '../utils';
 import { PointCollection as Path } from '../templates/series/point-collection';
 import { Bar as Point } from '../templates/series/bar';

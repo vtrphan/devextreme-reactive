@@ -7,15 +7,15 @@ A plugin that renders table rows that display a total, group, and tree summary.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableSummaryRow } from '@devexpress/dx-react-grid-material-ui';
-// import { TableSummaryRow } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableSummaryRow } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableSummaryRow } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableSummaryRow } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableSummaryRow } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 You can import the themeless plugin to use custom components:
 
 ```js
-import { TableSummaryRow } from '@devexpress/dx-react-grid';
+import { TableSummaryRow } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

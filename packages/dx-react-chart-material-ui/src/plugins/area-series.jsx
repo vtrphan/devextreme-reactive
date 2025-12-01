@@ -1,1 +1,1 @@
-export { AreaSeries } from '@devexpress/dx-react-chart';
+export { AreaSeries } from '@vtrphan/dx-react-chart';

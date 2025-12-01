@@ -1,15 +1,15 @@
 import * as React from 'react';
 import {
   Plugin, Template, TemplatePlaceholder, TemplateConnector, PluginComponents,
-} from '@devexpress/dx-react-core';
-import { createClickHandlers, memoize } from '@devexpress/dx-core';
+} from '@vtrphan/dx-react-core';
+import { createClickHandlers, memoize } from '@vtrphan/dx-core';
 import {
   POSITION_START, POSITION_END, VERTICAL_TYPE,
   getVerticalRectByAppointmentData, calculateRectByDateAndGroupIntervals,
   getAppointmentStyle, HORIZONTAL_TYPE, getHorizontalRectByAppointmentData,
   isAllDayElementsMetaActual, isTimeTableElementsMetaActual,
   HORIZONTAL_GROUP_ORIENTATION, VIEW_TYPES, getGroupsLastRow, Rect,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
 import { AppointmentsProps } from '../types';
 

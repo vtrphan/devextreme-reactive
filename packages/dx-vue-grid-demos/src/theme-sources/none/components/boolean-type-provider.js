@@ -1,4 +1,4 @@
-import { DxDataTypeProvider } from '@devexpress/dx-vue-grid';
+import { DxDataTypeProvider } from '@vtrphan/dx-vue-grid';
 
 const BooleanFormatter = {
   props: ['value'],

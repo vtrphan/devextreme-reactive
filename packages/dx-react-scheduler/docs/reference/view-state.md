@@ -7,7 +7,7 @@ A plugin that manages the view state. It specifies the current date and the disp
 Use the following statement to import the plugin:
 
 ```js
-import { ViewState } from '@devexpress/dx-react-scheduler';
+import { ViewState } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

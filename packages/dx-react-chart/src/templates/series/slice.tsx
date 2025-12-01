@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   dPie, HOVERED, SELECTED, processPieAnimation, isValuesChanged, getDelay,
   getPieStart,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withPattern } from '../../utils/with-pattern';
 import { withAnimation } from '../../utils/with-animation';

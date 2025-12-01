@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';<%&additionalImports%>
-import { SearchState } from '@devexpress/dx-react-grid';
+import { SearchState } from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Toolbar,
   SearchPanel,
   VirtualTable,
   TableHeaderRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { Loading } from '../../../theme-sources/<%&themeName%>/components/loading';
 

@@ -1,4 +1,4 @@
-import { DxTableTreeColumn as DxTableTreeColumnBase } from '@devexpress/dx-vue-grid';
+import { DxTableTreeColumn as DxTableTreeColumnBase } from '@vtrphan/dx-vue-grid';
 import { TableTreeExpandButton } from '../templates/table-tree-expand-button';
 import { TableTreeCheckbox } from '../templates/table-tree-checkbox';
 import { TableTreeIndent } from '../templates/table-tree-indent';

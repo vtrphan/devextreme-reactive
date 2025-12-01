@@ -7,7 +7,7 @@ A plugin that manages the sorting state. It controls the list of columns that pa
 Use the following statement to import the plugin:
 
 ```js
-import { DxSortingState } from '@devexpress/dx-vue-grid';
+import { DxSortingState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

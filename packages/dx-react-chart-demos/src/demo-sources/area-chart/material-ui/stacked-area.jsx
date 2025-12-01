@@ -7,9 +7,9 @@ import {
   AreaSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import { styled } from '@mui/material/styles';
-import { Stack, Animation } from '@devexpress/dx-react-chart';
+import { Stack, Animation } from '@vtrphan/dx-react-chart';
 import { carbonEmmision as data } from '../../../demo-data/data-vizualization';
 
 const PREFIX = 'Demo';

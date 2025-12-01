@@ -3,13 +3,13 @@ import {
   DxTemplate,
   DxPlugin,
   DxTemplateConnector,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 import {
   tableColumnsWithSelection,
   isSelectTableCell,
   isSelectAllTableCell,
   isDataTableRow,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 export const DxTableSelection = {
   name: 'DxTableSelection',

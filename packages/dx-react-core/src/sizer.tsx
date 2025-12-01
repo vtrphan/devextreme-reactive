@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import { SizerProps, Size } from './types';
-import { shallowEqual } from '@devexpress/dx-core';
+import { shallowEqual } from '@vtrphan/dx-core';
 
 const SCROLL_OFFSET = 2;
 const styles: Record<string, React.CSSProperties> = {

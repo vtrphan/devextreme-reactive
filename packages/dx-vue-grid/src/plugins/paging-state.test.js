@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
-import { setCurrentPage, setPageSize } from '@devexpress/dx-grid-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
+import { setCurrentPage, setPageSize } from '@vtrphan/dx-grid-core';
 import { PluginDepsToComponents, getComputedState, executeComputedAction } from './test-utils';
 import { DxPagingState } from './paging-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   setCurrentPage: jest.fn(),
   setPageSize: jest.fn(),
 }));

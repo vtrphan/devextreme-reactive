@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { DataTypeProvider } from '@devexpress/dx-react-grid';
+import { DataTypeProvider } from '@vtrphan/dx-react-grid';
 
 const getInputValue = value => (value === undefined ? '' : (value * 100).toFixed(1));
 

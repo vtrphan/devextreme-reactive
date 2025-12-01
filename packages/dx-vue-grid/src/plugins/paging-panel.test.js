@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
-import { pageCount } from '@devexpress/dx-grid-core';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { pageCount } from '@vtrphan/dx-grid-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import { DxPagingPanel } from './paging-panel';
 import { PluginDepsToComponents } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   pageCount: jest.fn(),
 }));
 

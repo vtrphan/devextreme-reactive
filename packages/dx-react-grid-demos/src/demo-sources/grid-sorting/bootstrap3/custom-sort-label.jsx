@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import {
   SortingState,
   IntegratedSorting,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
-} from '@devexpress/dx-react-grid-bootstrap3';
+} from '@vtrphan/dx-react-grid-bootstrap3';
 
 import { generateRows } from '../../../demo-data/generator';
 

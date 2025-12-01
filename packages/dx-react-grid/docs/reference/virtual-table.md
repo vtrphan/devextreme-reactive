@@ -7,9 +7,9 @@ A plugin that renders a scrollable table instead of a static table. Contains the
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { VirtualTable } from '@devexpress/dx-react-grid-material-ui';
-// import { VirtualTable } from '@devexpress/dx-react-grid-bootstrap4';
-// import { VirtualTable } from '@devexpress/dx-react-grid-bootstrap3';
+import { VirtualTable } from '@vtrphan/dx-react-grid-material-ui';
+// import { VirtualTable } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { VirtualTable } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 ## User Reference
@@ -23,7 +23,7 @@ import { VirtualTable } from '@devexpress/dx-react-grid-material-ui';
 Name | Type | Default | Description
 -----|------|---------|------------
 height | number &#124; string | 530 | The virtual table's height.
-estimatedRowHeight | number | `49` for [Bootstrap4](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap4); `37` for [Bootstrap](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap3); `53` for [Material-UI](https://www.npmjs.com/package/@devexpress/dx-react-grid-material-ui) | Estimated row height. Specify the average value for a table whose rows have different heights.
+estimatedRowHeight | number | `49` for [Bootstrap4](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap4); `37` for [Bootstrap](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap3); `53` for [Material-UI](https://www.npmjs.com/package/@vtrphan/dx-react-grid-material-ui) | Estimated row height. Specify the average value for a table whose rows have different heights.
 columnExtensions? | Array&lt;[VirtualTable.ColumnExtension](#virtualtablecolumnextension)&gt; | | Additional column properties that the plugin can handle.
 tableComponent | ComponentType&lt;object&gt; | | A component that renders a table.
 headComponent | ComponentType&lt;object&gt; | | A component that renders a table head.

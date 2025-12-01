@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { PluginHost, withComponents, PluginComponents } from '@devexpress/dx-react-core';
+import { PluginHost, withComponents, PluginComponents } from '@vtrphan/dx-react-core';
 import {
   TOP, BOTTOM, LEFT, RIGHT,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { ChartProps } from './types';
 
 import { BasicData } from './plugins/basic-data';

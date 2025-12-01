@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { ViewState, EditingState } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Toolbar,
@@ -16,8 +16,8 @@ import {
   DragDropProvider,
   EditRecurrenceMenu,
   AllDayPanel,
-} from '@devexpress/dx-react-scheduler-material-ui';
-import { connectProps } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-scheduler-material-ui';
+import { connectProps } from '@vtrphan/dx-react-core';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment';

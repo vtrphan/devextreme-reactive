@@ -1,13 +1,13 @@
 import {
   DxTreeDataState,
   DxCustomTreeData,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxVirtualTable,
   DxTableHeaderRow,
   DxTableTreeColumn,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { Loading as DxLoading } from '../../../theme-sources/none/components/loading';
 

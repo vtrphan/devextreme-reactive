@@ -1,7 +1,7 @@
 import {
   DxGetter, DxTemplate, DxTemplateConnector, DxTemplatePlaceholder, DxPlugin,
-} from '@devexpress/dx-vue-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+} from '@vtrphan/dx-vue-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   getColumnFilterConfig,
   tableHeaderRowsWithFilter,
@@ -9,7 +9,7 @@ import {
   isFilterTableRow,
   getColumnFilterOperations,
   isFilterValueEmpty,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxFilteringState' },

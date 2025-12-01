@@ -7,13 +7,13 @@ A plugin that renders the grouping panel used to display group names.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { GroupingPanel } from '@devexpress/dx-react-scheduler-material-ui';
+import { GroupingPanel } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { GroupingPanel } from '@devexpress/dx-react-scheduler';
+import { GroupingPanel } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

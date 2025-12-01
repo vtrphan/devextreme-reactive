@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { CustomFunction, PureComputed } from '@devexpress/dx-core';
+import { CustomFunction, PureComputed } from '@vtrphan/dx-core';
 import { RRule, RRuleSet } from 'rrule';
 import {
   ComputedHelperFn, ViewPredicateFn,

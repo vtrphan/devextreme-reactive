@@ -7,7 +7,7 @@ A plugin that manages grid rows' editing state. It arranges grid rows by differe
 Use the following statement to import the plugin:
 
 ```js
-import { DxEditingState } from '@devexpress/dx-vue-grid';
+import { DxEditingState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

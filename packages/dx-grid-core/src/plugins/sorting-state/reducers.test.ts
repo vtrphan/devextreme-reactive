@@ -1,6 +1,6 @@
 // tslint:disable-next-line: import-name
 import Immutable from 'seamless-immutable';
-import { ReadonlyObject } from '@devexpress/dx-core';
+import { ReadonlyObject } from '@vtrphan/dx-core';
 import { changeColumnSorting } from './reducers';
 import { ColumnSortingState, ChangeSortingPayload } from '../../types';
 

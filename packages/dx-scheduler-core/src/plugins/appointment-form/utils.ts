@@ -1,8 +1,8 @@
 import {
   LONG_WEEK_DAY_OPTIONS, DAY_LONG_MONTH_OPTIONS,
   LONG_MONTH_OPTIONS,
-} from '@devexpress/dx-scheduler-core';
-import { PureComputed } from '@devexpress/dx-core';
+} from '@vtrphan/dx-scheduler-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import {
   SelectOption, OptionsFormatterFn, DateFormatterFn, RecurrenceFrequency,
 } from '../../types';

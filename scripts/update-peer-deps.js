@@ -12,7 +12,7 @@ export default () => {
   const packagesDir = join(dirname(fileURLToPath(import.meta.url)), '../packages');
   const packages = readdirSync(packagesDir);
   const verReplacers = packages.map(currentPackage =>
-    new RegExp(`(\\"@devexpress/${currentPackage}\\"\\s*:\\s*\\")([^\\"]+)(\\")`, 'gi'));
+    new RegExp(`(\\"@vtrphan/${currentPackage}\\"\\s*:\\s*\\")([^\\"]+)(\\")`, 'gi'));
 
   for (let currentPackage of packages) {
     const configPath = join(packagesDir, `${currentPackage}/package.json`);

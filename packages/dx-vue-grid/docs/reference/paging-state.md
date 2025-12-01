@@ -7,7 +7,7 @@ A plugin that manages the paging state. It controls the total page count dependi
 Use the following statement to import the plugin:
 
 ```js
-import { DxPagingState } from '@devexpress/dx-vue-grid';
+import { DxPagingState } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

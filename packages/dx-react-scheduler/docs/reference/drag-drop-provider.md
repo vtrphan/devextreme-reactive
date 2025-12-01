@@ -7,13 +7,13 @@ A plugin that enables users to edit appointments via drag-and-drop.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DragDropProvider } from '@devexpress/dx-react-scheduler-material-ui';
+import { DragDropProvider } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DragDropProvider } from '@devexpress/dx-react-scheduler';
+import { DragDropProvider } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

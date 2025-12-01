@@ -7,8 +7,8 @@ import {
   evalAnimations,
   TABLE_FLEX_TYPE,
   ColumnAnimationMap,
-} from '@devexpress/dx-grid-core';
-import { shallowEqual } from '@devexpress/dx-core';
+} from '@vtrphan/dx-grid-core';
+import { shallowEqual } from '@vtrphan/dx-core';
 import { TableLayoutCoreProps, TableLayoutCoreState } from '../types';
 import { isNumber } from '../utils/helpers';
 

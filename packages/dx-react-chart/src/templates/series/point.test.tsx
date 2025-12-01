@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { shallow } from 'enzyme';
-import { dSymbol, getPointStart, processPointAnimation, isValuesChanged } from '@devexpress/dx-chart-core';
+import { dSymbol, getPointStart, processPointAnimation, isValuesChanged } from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withAnimation } from '../../utils/with-animation';
 import { Point } from './point';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   dSymbol: jest.fn().mockReturnValue('test-d-attribute'),
   HOVERED: 'test_hovered',
   SELECTED: 'test_selected',

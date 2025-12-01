@@ -1,5 +1,5 @@
 import { shallow } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import { TableDetailToggleCell } from './table-detail-toggle-cell';
 import { ExpandButton } from './parts/expand-button';
 

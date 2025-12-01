@@ -4,9 +4,9 @@ import { withStates } from '../../utils/with-states';
 import { withPattern } from '../../utils/with-pattern';
 import { withAnimation } from '../../utils/with-animation';
 import { Slice } from './slice';
-import { dPie, isValuesChanged, processPieAnimation, getPieStart, getDelay } from '@devexpress/dx-chart-core';
+import { dPie, isValuesChanged, processPieAnimation, getPieStart, getDelay } from '@vtrphan/dx-chart-core';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   dPie: jest.fn().mockReturnValue('test-d-attribute'),
   HOVERED: 'test_hovered',
   SELECTED: 'test_selected',

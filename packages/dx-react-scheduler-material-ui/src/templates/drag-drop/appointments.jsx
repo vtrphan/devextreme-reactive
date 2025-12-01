@@ -3,7 +3,7 @@ import { styled } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import Repeat from '@mui/icons-material/Repeat';
-import { POSITION_START, POSITION_END } from '@devexpress/dx-scheduler-core';
+import { POSITION_START, POSITION_END } from '@vtrphan/dx-scheduler-core';
 import { AppointmentContent } from '../appointment/appointment-content';
 import { Appointment } from '../appointment/appointment';
 import { SplitIndicator } from '../appointment/split-indicator';

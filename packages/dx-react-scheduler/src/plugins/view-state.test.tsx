@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
   testStatePluginField, pluginDepsToComponents, getComputedState, setupConsole,
-} from '@devexpress/dx-testing';
-import { changeCurrentDate, setCurrentViewName } from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-testing';
+import { changeCurrentDate, setCurrentViewName } from '@vtrphan/dx-scheduler-core';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { ViewState } from './view-state';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
   changeCurrentDate: jest.fn(),
   setCurrentViewName: jest.fn(),
 }));

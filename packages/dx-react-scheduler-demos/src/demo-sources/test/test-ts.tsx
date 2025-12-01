@@ -3,7 +3,7 @@ import * as React from 'react';
 import Paper from '@mui/material/Paper';
 import {
   Scheduler, ConfirmationDialog,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 const Demo: React.FunctionComponent = () => (
   <Paper>

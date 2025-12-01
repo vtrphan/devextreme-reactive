@@ -6,16 +6,16 @@ import {
   emptyVirtualRows,
   plainRows, getReferenceIndex,
   loadedRowsStart, needFetchMorePages, shouldSendRequest,
-} from '@devexpress/dx-grid-core';
-import { PluginHost } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-grid-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { mount } from 'enzyme';
 import {
   pluginDepsToComponents, getComputedState, executeComputedAction,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import { VirtualTableState } from './virtual-table-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   virtualRowsWithCache: jest.fn(),
   plainRows: jest.fn(),
   loadedRowsStart: jest.fn(),
@@ -338,7 +338,7 @@ describe('VirtualTableState', () => {
       beforeEach(() => {
         jest.useFakeTimers();
 
-        const actual = jest.requireActual('@devexpress/dx-grid-core');
+        const actual = jest.requireActual('@vtrphan/dx-grid-core');
         getRequestMeta.mockImplementation((...args) => (
           actual.getRequestMeta(...args)
         ));

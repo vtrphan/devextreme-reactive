@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import { Toolbar as ToolbarMUI, styled } from '@mui/material';
-import { withKeyboardNavigation } from '@devexpress/dx-react-grid';
+import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
 import { getBorder } from '../utils';
 
 const PREFIX = 'Toolbar';

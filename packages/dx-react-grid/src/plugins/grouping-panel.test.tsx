@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, setupConsole } from '@devexpress/dx-testing';
+import { pluginDepsToComponents, setupConsole } from '@vtrphan/dx-testing';
 import {
   groupingPanelItems,
   getColumnSortingDirection,
   TOP_POSITION,
-} from '@devexpress/dx-grid-core';
-import { PluginHost } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-grid-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { GroupingPanel } from './grouping-panel';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   groupingPanelItems: jest.fn(),
   getColumnSortingDirection: jest.fn(),
 }));

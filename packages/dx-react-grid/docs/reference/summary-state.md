@@ -7,7 +7,7 @@ A plugin that provides items for total, group, and tree summaries.
 Use the following statement to import the plugin:
 
 ```js
-import { SummaryState } from '@devexpress/dx-react-grid';
+import { SummaryState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

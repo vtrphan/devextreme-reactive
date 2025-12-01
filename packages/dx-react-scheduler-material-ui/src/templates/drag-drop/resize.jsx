@@ -7,7 +7,7 @@ import {
   HORIZONTAL_TYPE,
   POSITION_START,
   POSITION_END
-} from "@devexpress/dx-scheduler-core";
+} from "@vtrphan/dx-scheduler-core";
 
 const PREFIX = "Resize";
 

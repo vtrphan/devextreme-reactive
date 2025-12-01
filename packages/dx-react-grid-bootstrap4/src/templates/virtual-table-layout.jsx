@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   TableLayout,
   VirtualTableLayout as VirtualTableLayoutCore,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 
 const MINIMAL_COLUMN_WIDTH = 150;
 

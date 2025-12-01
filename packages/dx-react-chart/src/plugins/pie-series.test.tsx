@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { create as createTestRenderer } from 'react-test-renderer';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { findSeriesByName } from '@devexpress/dx-chart-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { findSeriesByName } from '@vtrphan/dx-chart-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
 import { PieSeries } from './pie-series';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   findSeriesByName: jest.fn(),
   addSeries: jest.fn(),
   extendDomains: jest.fn(),

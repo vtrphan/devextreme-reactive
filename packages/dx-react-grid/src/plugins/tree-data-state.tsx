@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, ActionFn,
-} from '@devexpress/dx-react-core';
-import { toggleRowExpanded, ToggleRowPayload } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { toggleRowExpanded, ToggleRowPayload } from '@vtrphan/dx-grid-core';
 import { TreeDataStateProps, TreeDataStateState } from '../types';
 
 class TreeDataStateBase extends React.PureComponent<TreeDataStateProps, TreeDataStateState> {

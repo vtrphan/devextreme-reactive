@@ -7,7 +7,7 @@ A function that instantiates the default implementation of row caching. We recom
 Use the following statement to import the function:
 
 ```js
-import { createRowCache } from '@devexpress/dx-react-grid';
+import { createRowCache } from '@vtrphan/dx-react-grid';
 ```
 
 ## User reference

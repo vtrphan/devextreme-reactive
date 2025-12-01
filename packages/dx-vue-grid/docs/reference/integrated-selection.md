@@ -7,7 +7,7 @@ A plugin that performs built-in selection.
 Use the following statement to import the plugin:
 
 ```js
-import { DxIntegratedSelection } from '@devexpress/dx-vue-grid';
+import { DxIntegratedSelection } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

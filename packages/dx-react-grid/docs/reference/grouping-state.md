@@ -7,7 +7,7 @@ A plugin that manages the grouping state. It lists columns used for grouping and
 Use the following statement to import the plugin:
 
 ```js
-import { GroupingState } from '@devexpress/dx-react-grid';
+import { GroupingState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

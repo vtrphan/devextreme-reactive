@@ -4,7 +4,7 @@ import {
   Plugin, Getter, Template, TemplatePlaceholder,
   TemplateConnector,
   DragDropProvider as DragDropProviderCore,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { DragDropProviderProps, DragDropProviderState } from '../types';
 
 const getTargetColumns = (payload, columns) => payload

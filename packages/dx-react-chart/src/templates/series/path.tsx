@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   processLineAnimation, HOVERED, SELECTED, isCoordinatesChanged, getPathStart,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withAnimation } from '../../utils/with-animation';
 import { PathComponentPathProps } from '../../types';

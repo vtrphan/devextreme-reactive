@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import {
   changeColumnSorting,
   getColumnExtensionValueGetter,
   getPersistentSortedColumns,
   calculateKeepOther,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { DxSortingState } from './sorting-state';
 import { PluginDepsToComponents, executeComputedAction, getComputedState } from './test-utils';
 
@@ -18,7 +18,7 @@ const defaultDeps = {
   },
 };
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   changeColumnSorting: jest.fn(),
   getColumnExtensionValueGetter: jest.fn(),
   getPersistentSortedColumns: jest.fn(),

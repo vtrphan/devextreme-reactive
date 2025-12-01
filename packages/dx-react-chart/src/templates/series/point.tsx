@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   processPointAnimation, dSymbol, HOVERED, SELECTED, getVisibility,
   isValuesChanged, getPointStart,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withAnimation } from '../../utils/with-animation';
 import { ScatterSeries } from '../../types';

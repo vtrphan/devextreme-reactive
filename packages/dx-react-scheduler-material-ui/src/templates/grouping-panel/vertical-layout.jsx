@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 import {
   VERTICAL_GROUP_ORIENTATION, getVerticalRowFromGroups, getGroupsLastRow, VIEW_TYPES,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { BASIC_CELL_HEIGHT } from '../constants';
 
 const PREFIX = 'VerticalLayout';

@@ -1,14 +1,14 @@
 import {
   DxEditingState,
   DxDataTypeProvider,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxTableEditRow,
   DxTableEditColumn,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 import {
   generateRows,
   globalSalesValues,

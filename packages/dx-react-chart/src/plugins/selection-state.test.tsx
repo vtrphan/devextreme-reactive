@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
-import { changeSeriesState } from '@devexpress/dx-chart-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
+import { changeSeriesState } from '@vtrphan/dx-chart-core';
 import { SelectionState } from './selection-state';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   SELECTED: 'TEST-SELECTED',
   changeSeriesState: jest.fn().mockReturnValue('selected-series'),
 }));

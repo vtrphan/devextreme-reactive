@@ -6,13 +6,13 @@ import {
   Plugin,
   Getter,
   Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   getRowChange,
   TABLE_DATA_TYPE,
   rowsWithEditingCells,
   columnsWithEditingCells,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableInlineCellEditingProps, TableCellProps } from '../types';
 
 const pluginDependencies = [

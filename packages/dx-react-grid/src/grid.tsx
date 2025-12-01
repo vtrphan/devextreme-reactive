@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { GridCore } from './plugins/grid-core';
 import { GridProps } from './types';
 

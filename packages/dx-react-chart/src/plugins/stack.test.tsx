@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
 import { stackOrderNone, stackOffsetDiverging } from 'd3-shape';
-import { getStackedSeries, getStackedDomains } from '@devexpress/dx-chart-core';
+import { getStackedSeries, getStackedDomains } from '@vtrphan/dx-chart-core';
 import { Stack } from './stack';
 
 jest.mock('d3-shape', () => ({
@@ -11,7 +11,7 @@ jest.mock('d3-shape', () => ({
   stackOffsetDiverging: jest.fn(),
 }));
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   getStackedSeries: jest.fn().mockReturnValue('stacked-series'),
   getStackedDomains: jest.fn().mockReturnValue('stacked-domains'),
 }));

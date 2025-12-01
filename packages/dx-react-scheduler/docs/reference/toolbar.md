@@ -7,13 +7,13 @@ A plugin that renders the Scheduler's toolbar.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { Toolbar } from '@devexpress/dx-react-scheduler-material-ui';
+import { Toolbar } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { Toolbar } from '@devexpress/dx-react-scheduler';
+import { Toolbar } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

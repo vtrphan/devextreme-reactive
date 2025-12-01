@@ -1,4 +1,4 @@
-import { ZoomAndPan } from '@devexpress/dx-react-chart';
+import { ZoomAndPan } from '@vtrphan/dx-react-chart';
 import { withClassName } from '../utils';
 
 export const DragBox = withClassName(

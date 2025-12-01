@@ -7,13 +7,13 @@ The DxGrid is a root container component designed to process and display data sp
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxGrid } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxGrid } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxGrid } from '@devexpress/dx-vue-grid';
+import { DxGrid } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User reference

@@ -1,4 +1,4 @@
-import { CustomFunction } from '@devexpress/dx-core';
+import { CustomFunction } from '@vtrphan/dx-core';
 
 // tslint:disable-next-line: space-in-parens
 export const pureHelper: CustomFunction<[any, any?]> = (param1, param2) => {

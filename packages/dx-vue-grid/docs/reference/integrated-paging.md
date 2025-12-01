@@ -7,7 +7,7 @@ A plugin that performs built-in data paging. It also changes the current page if
 Use the following statement to import the plugin:
 
 ```js
-import { DxIntegratedPaging } from '@devexpress/dx-vue-grid';
+import { DxIntegratedPaging } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

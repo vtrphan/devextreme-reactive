@@ -1,5 +1,5 @@
 import { TableRow, TableLayoutProps } from '../index';
-import { CollapsedCell } from '@devexpress/dx-grid-core';
+import { CollapsedCell } from '@vtrphan/dx-grid-core';
 
 type rowsBlockSharedProps = 'rowComponent' | 'cellComponent' | 'getCellColSpan' | 'columns';
 type virtualRowsBlockSharedProps = 'rowComponent' | 'cellComponent';

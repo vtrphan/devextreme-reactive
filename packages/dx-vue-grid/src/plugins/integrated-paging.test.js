@@ -1,13 +1,13 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
-import { setupConsole } from '@devexpress/dx-testing';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
 import {
   paginatedRows, rowsWithPageHeaders, currentPage, rowCount,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { PluginDepsToComponents, getComputedState } from './test-utils';
 import { DxIntegratedPaging } from './integrated-paging';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   paginatedRows: jest.fn(),
   rowsWithPageHeaders: jest.fn(),
   rowCount: jest.fn(),

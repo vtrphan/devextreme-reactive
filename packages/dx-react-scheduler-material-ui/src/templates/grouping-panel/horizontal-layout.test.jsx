@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { getRowFromGroups } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { getRowFromGroups } from '@vtrphan/dx-scheduler-core';
 import { HorizontalLayout } from './horizontal-layout';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   getRowFromGroups: jest.fn(),
 }));
 

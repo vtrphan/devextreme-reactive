@@ -1,16 +1,16 @@
 import * as React from 'react';
 import {
   testStatePluginField, pluginDepsToComponents, getComputedState, setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   toggleExpandedGroups, HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { GroupingState } from './grouping-state';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   toggleExpandedGroups: jest.fn(),
 }));
 

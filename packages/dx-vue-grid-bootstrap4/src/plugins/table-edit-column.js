@@ -1,4 +1,4 @@
-import { DxTableEditColumn as DxTableEditColumnBase } from '@devexpress/dx-vue-grid';
+import { DxTableEditColumn as DxTableEditColumnBase } from '@vtrphan/dx-vue-grid';
 import {
   EditCommandHeadingCell,
   EditCommandCell,

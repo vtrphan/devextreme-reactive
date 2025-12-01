@@ -1,5 +1,5 @@
 import { insertPlugin, removePlugin } from './utils';
-import { Getters } from '@devexpress/dx-react-core';
+import { Getters } from '@vtrphan/dx-react-core';
 
 const getDependencyError = (
   pluginName, dependencyName,

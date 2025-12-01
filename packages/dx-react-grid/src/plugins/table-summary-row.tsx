@@ -5,7 +5,7 @@ import {
   Plugin,
   TemplateConnector,
   Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   tableRowsWithSummaries,
   tableRowsWithTotalSummaries,
@@ -20,7 +20,7 @@ import {
   TABLE_GROUP_SUMMARY_TYPE,
   TABLE_TOTAL_SUMMARY_TYPE,
   isFooterSummary,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableCellProps, TableRowProps, TableSummaryRowProps } from '../types';
 import { TableSummaryContent } from '../components/summary/table-summary-content';
 

@@ -1,20 +1,20 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
 import {
   PluginHost, DropTarget, DragSource,
   DragDropProvider as DragDropProviderCore,
   TemplatePlaceholder, Template,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   cellIndex, cellData, cellType, getAppointmentStyle, autoScroll,
   calculateDraftAppointments, VERTICAL_GROUP_ORIENTATION, SCROLL_SPEED_PX,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { DragDropProvider } from './drag-drop-provider';
 
 // tslint:disable: max-line-length
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   calculateDraftAppointments: jest.fn(),
   autoScroll: jest.fn(),
   cellIndex: jest.fn(),

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { viewBoundText } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { viewBoundText } from '@vtrphan/dx-scheduler-core';
 import { Content, classes } from './content';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   viewBoundText: jest.fn(),
 }));
 

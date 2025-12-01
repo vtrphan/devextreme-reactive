@@ -7,13 +7,13 @@ A plugin that renders Scheduler data for a day. This plugin arranges appointment
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DayView } from '@devexpress/dx-react-scheduler-material-ui';
+import { DayView } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { DayView } from '@devexpress/dx-react-scheduler';
+import { DayView } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

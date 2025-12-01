@@ -1,6 +1,6 @@
 import Repeat from '@mui/icons-material/Repeat';
-import { withComponents } from '@devexpress/dx-react-core';
-import { AppointmentTooltip as AppointmentTooltipBase } from '@devexpress/dx-react-scheduler';
+import { withComponents } from '@vtrphan/dx-react-core';
+import { AppointmentTooltip as AppointmentTooltipBase } from '@vtrphan/dx-react-scheduler';
 import { Layout } from '../templates/appointment-tooltip/layout';
 import { Header } from '../templates/appointment-tooltip/header';
 import { Content } from '../templates/appointment-tooltip/content';

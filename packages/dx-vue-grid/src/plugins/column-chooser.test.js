@@ -1,10 +1,10 @@
 import { mount } from '@vue/test-utils';
-import { columnChooserItems } from '@devexpress/dx-grid-core';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+import { columnChooserItems } from '@vtrphan/dx-grid-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import { PluginDepsToComponents } from './test-utils';
 import { DxColumnChooser } from './column-chooser';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   columnChooserItems: jest.fn(),
 }));
 

@@ -3,13 +3,13 @@ import {
   FilteringState, GroupingState,
   IntegratedFiltering, IntegratedGrouping, IntegratedPaging, IntegratedSelection, IntegratedSorting,
   PagingState, SelectionState, SortingState,DataTypeProvider, DataTypeProviderProps,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   DragDropProvider,
   Grid, GroupingPanel, PagingPanel,
   Table, TableFilterRow, TableGroupRow,
   TableHeaderRow, TableSelection, Toolbar,
-} from '@devexpress/dx-react-grid-bootstrap3';
+} from '@vtrphan/dx-react-grid-bootstrap3';
 
 import {
   generateRows,

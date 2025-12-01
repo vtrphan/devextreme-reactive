@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   getPiePointTransformer as getPointTransformer,
   createPieHitTester as createHitTester,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { declareSeries } from '../utils';
 import { PointCollection as Path } from '../templates/series/point-collection';
 import { Slice as Point } from '../templates/series/slice';

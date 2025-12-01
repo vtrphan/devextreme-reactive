@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Resources as ResourcesBase } from '@devexpress/dx-react-scheduler';
+import { Resources as ResourcesBase } from '@vtrphan/dx-react-scheduler';
 import { DEFAULT_PALETTE } from '../templates/constants';
 
 export const Resources = ({ data, mainResourceName, palette }) => (

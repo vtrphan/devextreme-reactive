@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   processBarAnimation, HOVERED, SELECTED, dBar, getVisibility, adjustBarSize,
   isValuesChanged, getPointStart,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withPattern } from '../../utils/with-pattern';
 import { withAnimation } from '../../utils/with-animation';

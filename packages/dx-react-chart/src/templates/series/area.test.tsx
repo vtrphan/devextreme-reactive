@@ -6,9 +6,9 @@ import { withAnimation } from '../../utils/with-animation';
 import { Area } from './area';
 import {
   getPathStart, processAreaAnimation, isCoordinatesChanged,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   HOVERED: 'test_hovered',
   SELECTED: 'test_selected',
   isCoordinatesChanged: jest.fn(),

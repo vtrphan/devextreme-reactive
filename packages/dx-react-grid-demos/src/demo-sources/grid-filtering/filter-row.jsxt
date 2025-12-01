@@ -2,13 +2,13 @@ import React, { useState } from 'react';<%&additionalImports%>
 import {
   FilteringState,
   IntegratedFiltering,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableFilterRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { generateRows } from '../../../demo-data/generator';
 

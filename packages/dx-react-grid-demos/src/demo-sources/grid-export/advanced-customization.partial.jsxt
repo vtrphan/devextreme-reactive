@@ -3,8 +3,8 @@ import {
   SummaryState,
   IntegratedSummary,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
-import { GridExporter } from '@devexpress/dx-react-grid-export';
+} from '@vtrphan/dx-react-grid';
+import { GridExporter } from '@vtrphan/dx-react-grid-export';
 import {
   Grid,
   VirtualTable,
@@ -12,7 +12,7 @@ import {
   TableSummaryRow,
   Toolbar,
   ExportPanel,
-} from '@devexpress/dx-react-grid-<%themeName%>';
+} from '@vtrphan/dx-react-grid-<%themeName%>';
 <%&imports%>
 import saveAs from 'file-saver';
 

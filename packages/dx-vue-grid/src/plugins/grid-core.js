@@ -1,7 +1,7 @@
 import {
   DxPlugin, DxGetter, DxTemplate, DxTemplatePlaceholder,
-} from '@devexpress/dx-vue-core';
-import { rowIdGetter, cellValueGetter } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-vue-core';
+import { rowIdGetter, cellValueGetter } from '@vtrphan/dx-grid-core';
 
 export const GridCore = {
   name: 'GridCore',

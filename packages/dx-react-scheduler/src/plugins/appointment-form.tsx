@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getMessagesFormatter, memoize } from '@devexpress/dx-core';
+import { getMessagesFormatter, memoize } from '@vtrphan/dx-core';
 import {
   Plugin,
   Template,
@@ -9,7 +9,7 @@ import {
   TemplatePlaceholder,
   PluginComponents,
   Action,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   setAppointmentData,
   isAllDayCell,
@@ -19,7 +19,7 @@ import {
   getAppointmentResources,
   ValidResourceInstance,
   checkMultipleResourceFields,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
 import {
   AppointmentFormProps, AppointmentFormState, AppointmentTooltip, Appointments,

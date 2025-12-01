@@ -2,9 +2,9 @@ import * as React from 'react';
 import { TableCell } from '@mui/material';
 import {
   createMount, createShallow, setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 
-import { DragDropProvider, DragSource } from '@devexpress/dx-react-core';
+import { DragDropProvider, DragSource } from '@vtrphan/dx-react-core';
 import { TableHeaderCell } from './table-header-cell';
 import { ResizingControl } from './table-header-cell/resizing-control';
 import { classes } from './table-header-cell/cell-layout';

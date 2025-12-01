@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { Plugin, Getter, Getters } from '@devexpress/dx-react-core';
+import { Plugin, Getter, Getters } from '@vtrphan/dx-react-core';
 import {
   getGroupsFromResources, expandViewCellsDataWithGroups,
   sortFilteredResources, filterResourcesByGrouping, updateGroupingWithMainResource,
   expandGroups, VERTICAL_GROUP_ORIENTATION, VIEW_TYPES,
   updateTimeTableCellElementsMeta, updateAllDayCellElementsMeta, updateTimeCellsData,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { IntegratedGroupingProps } from '../types';
 
 const pluginDependencies = [

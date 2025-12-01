@@ -7,15 +7,15 @@ A plugin that renders the Export Panel.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { ExportPanel } from '@devexpress/dx-react-grid-material-ui';
-// import { ExportPanel } from '@devexpress/dx-react-grid-bootstrap4';
-// import { ExportPanel } from '@devexpress/dx-react-grid-bootstrap3';
+import { ExportPanel } from '@vtrphan/dx-react-grid-material-ui';
+// import { ExportPanel } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { ExportPanel } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { ExportPanel } from '@devexpress/dx-react-grid';
+import { ExportPanel } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference
@@ -71,7 +71,7 @@ onClick | () => void | A function that handles a click on the menu item.
 
 Field | Type | Default | Description
 ------|------|---------|------------
-showExportMenu? | string | 'Export' | The text of the toggle button tooltip. Available only with the `@devexpress/dx-react-grid-material-ui` package.
+showExportMenu? | string | 'Export' | The text of the toggle button tooltip. Available only with the `@vtrphan/dx-react-grid-material-ui` package.
 exportAll? | string | 'Export all data' | The text of the command that exports all data.
 exportSelected? | string | 'Export selected rows' | The text of the command that exports selected rows.
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { flushSync } from 'react-dom';
-import { DropTarget } from '@devexpress/dx-react-core';
-import { getGroupCellTargetIndex } from '@devexpress/dx-grid-core';
+import { DropTarget } from '@vtrphan/dx-react-core';
+import { getGroupCellTargetIndex } from '@vtrphan/dx-grid-core';
 import { ItemLayout } from './group-panel-layout/item-layout';
 import { GroupingPanel as GP } from '../types';
 

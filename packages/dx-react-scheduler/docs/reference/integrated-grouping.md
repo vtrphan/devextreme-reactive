@@ -7,7 +7,7 @@ A plugin that implements grouping.
 Use the following statement to import the plugin:
 
 ```js
-import { IntegratedGrouping } from '@devexpress/dx-react-scheduler';
+import { IntegratedGrouping } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

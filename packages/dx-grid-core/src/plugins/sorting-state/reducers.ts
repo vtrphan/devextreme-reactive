@@ -1,5 +1,5 @@
 import { ColumnSortingState, ChangeSortingPayload, Sorting } from '../../types';
-import { PureReducer, slice } from '@devexpress/dx-core';
+import { PureReducer, slice } from '@vtrphan/dx-core';
 
 export const changeColumnSorting: PureReducer<ColumnSortingState, ChangeSortingPayload> = (
   state, {

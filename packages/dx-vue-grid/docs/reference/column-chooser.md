@@ -7,13 +7,13 @@ The DxColumnChooser plugin allows a user to toggle grid columns' visibility at r
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxColumnChooser } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxColumnChooser } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxColumnChooser } from '@devexpress/dx-vue-grid';
+import { DxColumnChooser } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User reference

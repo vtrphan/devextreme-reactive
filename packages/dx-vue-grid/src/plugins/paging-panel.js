@@ -1,9 +1,9 @@
 import {
   DxTemplate, DxTemplatePlaceholder,
   DxTemplateConnector, DxPlugin,
-} from '@devexpress/dx-vue-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
-import { pageCount } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-vue-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
+import { pageCount } from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxPagingState' },

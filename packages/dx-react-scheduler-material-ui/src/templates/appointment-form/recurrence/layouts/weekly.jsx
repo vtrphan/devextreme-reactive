@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { styled } from '@mui/material';
 import PropTypes from 'prop-types';
-import { getRecurrenceOptions, changeRecurrenceOptions, checkIsNaturalNumber } from '@devexpress/dx-scheduler-core';
+import { getRecurrenceOptions, changeRecurrenceOptions, checkIsNaturalNumber } from '@vtrphan/dx-scheduler-core';
 import { IntervalEditor } from './interval-editor';
 
 const PREFIX = 'Weekly';

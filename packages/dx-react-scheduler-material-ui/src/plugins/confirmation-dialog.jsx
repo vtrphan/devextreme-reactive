@@ -1,5 +1,5 @@
-import { withComponents } from '@devexpress/dx-react-core';
-import { ConfirmationDialog as ConfirmationDialogBase } from '@devexpress/dx-react-scheduler';
+import { withComponents } from '@vtrphan/dx-react-core';
+import { ConfirmationDialog as ConfirmationDialogBase } from '@vtrphan/dx-react-scheduler';
 import { Overlay } from '../templates/common/dialog/overlay';
 import { Layout } from '../templates/confirmation-dialog/layout';
 import { OverlayContainer as Container } from '../templates/common/overlay-container';

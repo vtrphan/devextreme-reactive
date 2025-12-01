@@ -1,5 +1,5 @@
 import { shallow, mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import { PLUGIN_HOST_CONTEXT } from './constants';
 import { DxTemplateConnector } from './template-connector';
 

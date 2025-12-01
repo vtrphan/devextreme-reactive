@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { FilteringState, IntegratedFiltering, DataTypeProvider } from '@devexpress/dx-react-grid';
+import { FilteringState, IntegratedFiltering, DataTypeProvider } from '@vtrphan/dx-react-grid';
 import {
   Grid, Table, TableHeaderRow, TableFilterRow,
-} from '@devexpress/dx-react-grid-bootstrap4';
+} from '@vtrphan/dx-react-grid-bootstrap4';
 
 import { generateRows, globalSalesValues } from '../../../demo-data/generator';
 

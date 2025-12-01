@@ -7,8 +7,8 @@ import {
   ValueAxis,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { ValueScale, Stack } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { ValueScale, Stack } from '@vtrphan/dx-react-chart';
 
 import { oilProduction } from '../../../demo-data/data-vizualization';
 

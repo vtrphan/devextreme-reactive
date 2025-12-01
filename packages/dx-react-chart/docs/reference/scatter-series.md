@@ -7,14 +7,14 @@ The ScatterSeries plugin visualizes the scatter series.
 Use the following statement to import the plugin:
 
 ```js
-import { ScatterSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { ScatterSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { ScatterSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { ScatterSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { ScatterSeries } from '@devexpress/dx-react-chart';
+import { ScatterSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

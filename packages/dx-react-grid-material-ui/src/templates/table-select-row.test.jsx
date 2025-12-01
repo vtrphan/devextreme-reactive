@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { TableRow as TableRowMUI } from '@mui/material';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { TableSelectRow, classes } from './table-select-row';
 
 const defaultProps = {

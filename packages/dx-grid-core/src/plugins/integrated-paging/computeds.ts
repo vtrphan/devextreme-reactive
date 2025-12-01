@@ -1,6 +1,6 @@
 import { clamp } from './helpers';
 import { Row, GetRowLevelKeyFn, CurrentPageFn } from '../../types';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 // tslint:disable-next-line:max-line-length
 const PAGE_HEADERS_OVERFLOW_ERROR = 'Max row level exceeds the page size. Consider increasing the page size.';

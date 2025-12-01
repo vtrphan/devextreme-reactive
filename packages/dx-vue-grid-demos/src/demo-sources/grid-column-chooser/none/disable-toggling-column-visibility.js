@@ -5,7 +5,7 @@ import {
   DxColumnChooser,
   DxTableColumnVisibility,
   DxToolbar,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { generateRows } from '../../../demo-data/generator';
 

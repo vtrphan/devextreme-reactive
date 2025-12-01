@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { PureReducer } from '@devexpress/dx-core';
+import { PureReducer } from '@vtrphan/dx-core';
 import { ChangeCurrentDatePayload } from '../../types';
 
 export const changeCurrentDate: PureReducer<Date, ChangeCurrentDatePayload> = (

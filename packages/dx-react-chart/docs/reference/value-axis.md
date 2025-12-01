@@ -7,14 +7,14 @@ The ValueAxis plugin visualizes the value axis.
 Use the following statement to import the plugin:
 
 ```js
-import { ValueAxis } from '@devexpress/dx-react-chart-material-ui';
-// import { ValueAxis } from '@devexpress/dx-react-chart-bootstrap4';
+import { ValueAxis } from '@vtrphan/dx-react-chart-material-ui';
+// import { ValueAxis } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { ValueAxis } from '@devexpress/dx-react-chart';
+import { ValueAxis } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

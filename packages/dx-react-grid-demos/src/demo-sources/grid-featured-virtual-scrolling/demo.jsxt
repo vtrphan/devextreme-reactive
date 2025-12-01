@@ -2,12 +2,12 @@ import React, { useState } from 'react';<%&additionalImports%>
 import {
   SortingState, SelectionState, FilteringState, GroupingState, SearchState,
   IntegratedFiltering, IntegratedGrouping, IntegratedSorting, IntegratedSelection,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable, TableHeaderRow, TableFilterRow, TableSelection, TableGroupRow,
   GroupingPanel, DragDropProvider, TableColumnReordering, Toolbar, SearchPanel,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { ProgressBarCell } from '../../../theme-sources/<%&themeName%>/components/progress-bar-cell';
 import { HighlightedCell } from '../../../theme-sources/<%&themeName%>/components/highlighted-cell';

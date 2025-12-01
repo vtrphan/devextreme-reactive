@@ -41,7 +41,7 @@ DevExtreme React Grid is a component that displays table data from a local or re
 Install the dx-react-grid package and its dependencies using the following command:
 
 ```
-npm i --save @devexpress/dx-react-core.npm-tag() @devexpress/dx-react-grid.npm-tag()
+npm i --save @vtrphan/dx-react-core.npm-tag() @vtrphan/dx-react-grid.npm-tag()
 ```
 
 This package does not contain visual components. In the examples below, visual components are rendered using the Material-UI package. However, you can use any of the following:
@@ -49,7 +49,7 @@ This package does not contain visual components. In the examples below, visual c
 - Material-UI
 
   ```
-  npm i --save @devexpress/dx-react-grid-material-ui.npm-tag()
+  npm i --save @vtrphan/dx-react-grid-material-ui.npm-tag()
   ```
 
   Make sure that the [Material-UI](https://material-ui.com/) dependencies are installed and properly configured. Check the Material-UI's [Getting Started](https://material-ui.com/getting-started/installation) article for configuration details.
@@ -57,7 +57,7 @@ This package does not contain visual components. In the examples below, visual c
 - Bootstrap 4
 
   ```
-  npm i --save @devexpress/dx-react-grid-bootstrap4.npm-tag()
+  npm i --save @vtrphan/dx-react-grid-bootstrap4.npm-tag()
   ```
 
   Make sure that the [OpenIconic](https://useiconic.com/open) icons are installed and properly configured.
@@ -65,7 +65,7 @@ This package does not contain visual components. In the examples below, visual c
   Add the DevExtreme React Grid styles in the root .js file:
 
   ```js
-  import '@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css';
+  import '@vtrphan/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css';
   ```
 
   NOTE: The DevExtreme React Grid does not include Bootstrap CSS.
@@ -73,7 +73,7 @@ This package does not contain visual components. In the examples below, visual c
 - Bootstrap 3
 
   ```
-  npm i --save @devexpress/dx-react-grid-bootstrap3.npm-tag()
+  npm i --save @vtrphan/dx-react-grid-bootstrap3.npm-tag()
   ```
 
   Make sure that the [React-Bootstrap](https://react-bootstrap.github.io) dependencies are installed and properly configured. Check the React-Bootstrap's [Getting Started](https://react-bootstrap.github.io/getting-started/introduction) article for configuration details.

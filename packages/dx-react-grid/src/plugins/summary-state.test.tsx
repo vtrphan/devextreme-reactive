@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { prepareGroupSummaryItems } from '@devexpress/dx-grid-core';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { prepareGroupSummaryItems } from '@vtrphan/dx-grid-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
 import { SummaryState } from './summary-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   prepareGroupSummaryItems: jest.fn(),
 }));
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Popper } from '@mui/material';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import { Overlay, classes } from './overlay';
 
 describe('Overlay', () => {

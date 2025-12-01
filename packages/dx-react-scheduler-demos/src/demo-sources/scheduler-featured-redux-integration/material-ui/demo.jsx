@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 import { styled, alpha } from '@mui/material/styles';
 import { teal, orange, red } from '@mui/material/colors';
 import classNames from 'clsx';
-import { ViewState } from '@devexpress/dx-react-scheduler';
+import { ViewState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   WeekView,
@@ -18,7 +18,7 @@ import {
   DayView,
   ViewSwitcher,
   Resources,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 import { appointments } from '../../../demo-data/appointments';
 

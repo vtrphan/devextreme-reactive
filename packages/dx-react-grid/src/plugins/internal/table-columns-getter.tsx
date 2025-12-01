@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Plugin,
-} from '@devexpress/dx-react-core';
-import { tableColumnsWithDataRows, checkTableColumnExtensions } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { tableColumnsWithDataRows, checkTableColumnExtensions } from '@vtrphan/dx-grid-core';
 import { Table } from '../../types';
 
 export const TableColumnsWithDataRowsGetter: React.FunctionComponent<

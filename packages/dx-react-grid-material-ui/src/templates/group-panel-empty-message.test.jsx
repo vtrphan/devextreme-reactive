@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { GroupPanelEmptyMessage, classes } from './group-panel-empty-message';
 
 describe('GroupPanelEmptyMessage', () => {

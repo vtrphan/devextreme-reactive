@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { createShallow, createMount } from '@devexpress/dx-testing';
+import { createShallow, createMount } from '@vtrphan/dx-testing';
 import {
   SAVE_BUTTON,
   DELETE_BUTTON,
   CANCEL_BUTTON,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { SaveButton } from './save-button';
 import { CommandButton } from './command-button';
 import { CancelButton } from './cancel-button';

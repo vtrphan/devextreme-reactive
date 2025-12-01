@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, StateHelper,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   createRowChangeGetter,
   startEditRows,
@@ -18,7 +18,7 @@ import {
   getColumnExtensionValueGetter,
   startEditCells,
   stopEditCells,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { EditingStateProps, EditingStateState } from '../types';
 
 const columnExtensionValueGetter = (

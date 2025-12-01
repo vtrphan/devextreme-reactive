@@ -1,9 +1,9 @@
 import { shallow } from '@vue/test-utils';
-import { getTableRowColumnsWithColSpan } from '@devexpress/dx-grid-core';
-import { setupConsole } from '@devexpress/dx-testing';
+import { getTableRowColumnsWithColSpan } from '@vtrphan/dx-grid-core';
+import { setupConsole } from '@vtrphan/dx-testing';
 import { RowLayout } from './row-layout';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getTableRowColumnsWithColSpan: jest.fn(),
 }));
 

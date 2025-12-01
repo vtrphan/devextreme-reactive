@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
-import { changeSeriesState, processPointerMove } from '@devexpress/dx-chart-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
+import { changeSeriesState, processPointerMove } from '@vtrphan/dx-chart-core';
 import { HoverState } from './hover-state';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   HOVERED: 'TEST-HOVERED',
   changeSeriesState: jest.fn().mockReturnValue('hovered-series'),
   processPointerMove: jest.fn().mockReturnValue('test-target'),

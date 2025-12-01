@@ -7,13 +7,13 @@ A plugin that renders the menu that allows users to edit recurrent appointments.
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { EditRecurrenceMenu } from '@devexpress/dx-react-scheduler-material-ui';
+import { EditRecurrenceMenu } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you are going to use custom theme components, import the themeless version of this plugin instead:
 
 ```js
-import { EditRecurrenceMenu } from '@devexpress/dx-react-scheduler';
+import { EditRecurrenceMenu } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

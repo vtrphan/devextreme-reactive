@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Plugin,
   Template,
   TemplatePlaceholder,
   TemplateConnector,
   Action,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { ConfirmationDialogProps } from '../types/editing/confirmation-dialog.types';
-import { AppointmentModel } from '@devexpress/dx-scheduler-core';
+import { AppointmentModel } from '@vtrphan/dx-scheduler-core';
 
 const defaultMessages = {
   discardButton: 'Discard',

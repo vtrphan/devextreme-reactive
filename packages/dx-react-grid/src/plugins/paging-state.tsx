@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper,
-} from '@devexpress/dx-react-core';
-import { setCurrentPage, setPageSize } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { setCurrentPage, setPageSize } from '@vtrphan/dx-grid-core';
 import { PagingStateProps, PagingStateState } from '../types';
 
 class PagingStateBase extends React.PureComponent<PagingStateProps, PagingStateState> {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { CommonComponentProps } from '@devexpress/dx-chart-core';
+import { CommonComponentProps } from '@vtrphan/dx-chart-core';
 
 export const withStates = (
   states: { readonly [key: string]: (props: any) => any; },

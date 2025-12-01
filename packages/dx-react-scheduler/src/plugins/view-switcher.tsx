@@ -5,7 +5,7 @@ import {
   TemplatePlaceholder,
   TemplateConnector,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { ViewSwitcherProps } from '../types/view-switcher';
 
 const pluginDependencies = [

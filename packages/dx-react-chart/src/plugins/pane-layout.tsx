@@ -5,7 +5,7 @@ import {
   Template,
   TemplateConnector,
   TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { ClipPath } from '../templates/clip-path';
 
 // Original *Sizer* cannot be used because it ignores (as it should do) *forceUpdate* request.

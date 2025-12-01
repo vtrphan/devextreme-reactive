@@ -6,9 +6,9 @@ import {
   ValueAxis,
   LineSeries,
   ZoomAndPan,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import { scaleTime } from 'd3-scale';
-import { ArgumentScale } from '@devexpress/dx-react-chart';
+import { ArgumentScale } from '@vtrphan/dx-react-chart';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';

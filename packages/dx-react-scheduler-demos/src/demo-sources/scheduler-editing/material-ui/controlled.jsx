@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { ViewState, EditingState } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Appointments,
@@ -10,7 +10,7 @@ import {
   EditRecurrenceMenu,
   AllDayPanel,
   ConfirmationDialog,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import { appointments } from '../../../demo-data/appointments';
 
 export default class Demo extends React.PureComponent {

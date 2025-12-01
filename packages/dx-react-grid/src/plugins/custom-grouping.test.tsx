@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
 import {
   groupRowChecker,
   groupRowLevelKeyGetter,
@@ -8,11 +8,11 @@ import {
   customGroupingRowIdGetter,
   customGroupedRows,
   expandedGroupRows,
-} from '@devexpress/dx-grid-core';
-import { PluginHost } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-grid-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { CustomGrouping } from './custom-grouping';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   groupRowChecker: jest.fn(),
   groupRowLevelKeyGetter: jest.fn(),
   groupCollapsedRowsGetter: jest.fn(),

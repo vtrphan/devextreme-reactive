@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { Text, classes } from './text';
 
 jest.mock('moment', () => () => ({ format: () => 'July 2018' }));

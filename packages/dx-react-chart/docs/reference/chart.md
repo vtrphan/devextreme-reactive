@@ -7,14 +7,14 @@ The Chart is a root container component designed to process and display data spe
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { Chart } from '@devexpress/dx-react-chart-material-ui';
-// import { Chart } from '@devexpress/dx-react-chart-bootstrap4';
+import { Chart } from '@vtrphan/dx-react-chart-material-ui';
+// import { Chart } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 You can import the themeless plugin to use custom components:
 
 ```js
-import { Chart } from '@devexpress/dx-react-chart';
+import { Chart } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

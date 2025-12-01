@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   tableRowsWithExpandedDetail,
   tableDetailCellColSpanGetter,
@@ -10,10 +10,10 @@ import {
   isDetailToggleTableCell,
   isDetailTableRow,
   isDetailTableCell,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableRowDetail } from './table-row-detail';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   tableRowsWithExpandedDetail: jest.fn(),
   tableDetailCellColSpanGetter: jest.fn(),
   isDetailRowExpanded: jest.fn(),

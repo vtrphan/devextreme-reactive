@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import { Typography } from '@mui/material';
 import { classes } from '../utils';
 import { Text } from './text';

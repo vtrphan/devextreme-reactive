@@ -4,7 +4,7 @@ import {
   ViewState,
   GroupingState,
   IntegratedGrouping,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 // #FOLD_BLOCK
 import {
   Scheduler,
@@ -19,8 +19,8 @@ import {
   AppointmentForm,
   GroupingPanel,
   Resources,
-} from '@devexpress/dx-react-scheduler-material-ui';
-import { connectProps } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-scheduler-material-ui';
+import { connectProps } from '@vtrphan/dx-react-core';
 import { styled, alpha } from '@mui/material/styles';
 import PriorityHigh from '@mui/icons-material/PriorityHigh';
 import LowPriority from '@mui/icons-material/LowPriority';

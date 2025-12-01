@@ -1,4 +1,4 @@
-import { FormatterFn, SchedulerDateTime } from '@devexpress/dx-scheduler-core';
+import { FormatterFn, SchedulerDateTime } from '@vtrphan/dx-scheduler-core';
 import { MonthCellsDataComputedFn } from '../index';
 
 // tslint:disable-next-line:no-namespace

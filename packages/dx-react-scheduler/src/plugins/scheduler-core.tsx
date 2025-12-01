@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {
   Plugin, Getter, Template, TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
-import { appointments, formatDateTimeGetter } from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-react-core';
+import { appointments, formatDateTimeGetter } from '@vtrphan/dx-scheduler-core';
 import { SchedulerProps } from '../types';
-import { memoize } from '@devexpress/dx-core';
+import { memoize } from '@vtrphan/dx-core';
 
 class SchedulerCoreBase extends React.PureComponent<SchedulerProps> {
   formatDateTimeGetter = memoize(locale => formatDateTimeGetter(locale));

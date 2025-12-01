@@ -7,8 +7,8 @@ import {
   SelectionState,
   IntegratedSelection,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
-import { GridExporter } from '@devexpress/dx-react-grid-export';
+} from '@vtrphan/dx-react-grid';
+import { GridExporter } from '@vtrphan/dx-react-grid-export';
 import {
   Grid,
   Table,
@@ -20,7 +20,7 @@ import {
   DragDropProvider,
   Toolbar,
   ExportPanel,
-} from '@devexpress/dx-react-grid-<%themeName%>';
+} from '@vtrphan/dx-react-grid-<%themeName%>';
 import saveAs from 'file-saver';
 
 import { orders } from '../../../demo-data/orders';

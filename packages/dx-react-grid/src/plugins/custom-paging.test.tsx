@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
 import { CustomPaging } from './custom-paging';
 
 const defaultDeps = {

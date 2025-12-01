@@ -4,7 +4,7 @@ import {
   JANUARY_DATE, LONG_MONTH_OPTIONS, FEBRUARY_DATE, MARCH_DATE, APRIL_DATE,
   MAY_DATE, AUGUST_DATE, OCTOBER_DATE, NOVEMBER_DATE, DECEMBER_DATE, SEPTEMBER_DATE,
   JULY_DATE, JUNE_DATE, RRULE_REPEAT_TYPES, checkIsNaturalNumber,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import {
   getDaysOfWeek, getMonths, getWeekNumberLabels, getMonthsWithOf,
   getCountDependingOnRecurrenceType, getRecurrenceInterval,

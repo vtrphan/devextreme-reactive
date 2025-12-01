@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { PluginHost, Template } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
+import { PluginHost, Template } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
 import { Title } from './title';
 
 const textComponent = () => null;

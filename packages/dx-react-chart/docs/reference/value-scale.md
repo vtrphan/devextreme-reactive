@@ -7,7 +7,7 @@ The `ValueScale` plugin allows you to customize the value scale and display mult
 Use the following statement to import the plugin:
 
 ```js
-import { ValueScale } from '@devexpress/dx-react-chart';
+import { ValueScale } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

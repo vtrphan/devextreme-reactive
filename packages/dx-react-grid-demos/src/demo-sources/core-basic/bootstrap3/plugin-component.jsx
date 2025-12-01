@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PluginHost, Plugin, Template } from '@devexpress/dx-react-core';
+import { PluginHost, Plugin, Template } from '@vtrphan/dx-react-core';
 
 export default () => {
   const [tasks] = useState([

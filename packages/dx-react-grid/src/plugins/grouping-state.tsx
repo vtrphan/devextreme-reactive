@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, StateHelper, ActionFn, Getters, Actions,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   changeColumnGrouping,
   toggleExpandedGroups,
@@ -12,7 +12,7 @@ import {
   ChangeGroupingPayload,
   ToggleGroupPayload,
   ChangeSortingPayload,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { GroupingStateProps, GroupingStateState } from '../types';
 
 const dependencies = [

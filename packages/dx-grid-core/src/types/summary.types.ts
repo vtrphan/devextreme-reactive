@@ -2,7 +2,7 @@ import {
   GetRowLevelKeyFn, IsSpecificRowFn, GetCollapsedRowsFn, GetRowIdFn, Row, GetCellValueFn, Column,
 } from './grid-core.types';
 import { TableRow } from './table.types';
-import { PureComputed, CustomFunction } from '@devexpress/dx-core';
+import { PureComputed, CustomFunction } from '@vtrphan/dx-core';
 
 /** Describes the summary item associated with a column. */
 export interface SummaryItem {

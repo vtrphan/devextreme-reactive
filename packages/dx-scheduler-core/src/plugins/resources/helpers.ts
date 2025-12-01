@@ -1,5 +1,5 @@
 import { GetAppointmentResources, ValidResourceInstance, ValidResource } from '../../types';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 
 export const getAppointmentResources: GetAppointmentResources = (
   appointment, resources, plainResources,

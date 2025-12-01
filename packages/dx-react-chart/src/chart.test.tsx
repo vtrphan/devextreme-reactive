@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import { Chart } from './chart';
 import { BasicData } from './plugins/basic-data';
 import { ChartCore } from './plugins/chart-core';

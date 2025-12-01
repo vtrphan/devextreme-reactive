@@ -4,14 +4,14 @@ import {
   DxTemplateConnector,
   DxPlugin,
   DxTemplatePlaceholder,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 import {
   tableRowsWithHeading,
   isHeadingTableCell,
   isHeadingTableRow,
   getColumnSortingDirection,
   TABLE_DATA_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const tableHeaderRowsComputed = ({ tableHeaderRows }) => tableRowsWithHeading(tableHeaderRows);
 

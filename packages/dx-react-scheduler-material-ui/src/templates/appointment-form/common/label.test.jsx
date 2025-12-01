@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
-import { TITLE } from '@devexpress/dx-scheduler-core';
+import { createShallow } from '@vtrphan/dx-testing';
+import { TITLE } from '@vtrphan/dx-scheduler-core';
 import { Label, classes } from './label';
 
 describe('AppointmentForm common', () => {

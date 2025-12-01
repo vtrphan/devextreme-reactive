@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createShallow } from '@devexpress/dx-testing';
+import { createShallow } from '@vtrphan/dx-testing';
 import { TableFilterCell, classes } from './table-filter-cell';
 
 const defaultProps = {

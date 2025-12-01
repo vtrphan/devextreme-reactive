@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   changeColumnFilter,
   getColumnExtensionValueGetter,
   filterExpression,
   ChangeFilterPayload,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { FilteringStateProps, FilteringStateState } from '../types';
 
 const columnExtensionValueGetter = (columnExtensions, defaultValue) => (

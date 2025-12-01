@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, testStatePluginField, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, testStatePluginField, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   changeColumnSorting,
   getColumnExtensionValueGetter,
   getPersistentSortedColumns,
   calculateKeepOther,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { SortingState } from './sorting-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   changeColumnSorting: jest.fn(),
   getColumnExtensionValueGetter: jest.fn(),
   getPersistentSortedColumns: jest.fn(),

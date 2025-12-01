@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   closeGroupGetter,
   rowsToExport,
@@ -9,7 +9,7 @@ import {
   groupOutlineLevels,
   exportSummaryGetter,
   maximumGroupLevel,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
   GridExporterCore,
 } from './grid-exporter-core';
@@ -28,7 +28,7 @@ import {
   IntegratedFiltering,
   IntegratedSorting,
   SortingState,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 
 /* tslint:disable no-submodule-imports */
 import {
@@ -48,7 +48,7 @@ jest.mock('../../../dx-react-grid/src/plugins/internal', () => ({
   OrderedTableColumns: () => null,
 }));
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getColumnExtensionValueGetter: jest.fn(),
   groupedRows: jest.fn(),
   expandedGroupRows: jest.fn(),

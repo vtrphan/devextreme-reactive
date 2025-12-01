@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   getAreaPointTransformer as getPointTransformer, createAreaHitTester as createHitTester,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { declareSeries } from '../utils';
 import { Area as Path } from '../templates/series/area';
 import { AreaSeriesProps } from '../types';

@@ -1,4 +1,4 @@
-import { Getters, Actions } from '@devexpress/dx-react-core';
+import { Getters, Actions } from '@vtrphan/dx-react-core';
 
 /*** makes all types in tuple readonly except functions
  * MakeReadonly<[object, Function, string[]]> is equal to

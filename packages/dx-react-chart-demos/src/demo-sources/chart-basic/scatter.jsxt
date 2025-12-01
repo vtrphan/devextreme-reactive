@@ -2,7 +2,7 @@ import * as React from 'react';<%&additionalImports%>
 import {
   Chart,
   ScatterSeries,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
 
 import { dataGenerator } from '../../../demo-data/generator';
 

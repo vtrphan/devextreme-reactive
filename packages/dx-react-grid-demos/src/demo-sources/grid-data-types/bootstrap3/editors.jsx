@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import {
   DataTypeProvider,
   EditingState,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableEditRow,
   TableEditColumn,
-} from '@devexpress/dx-react-grid-bootstrap3';
+} from '@vtrphan/dx-react-grid-bootstrap3';
 
 import {
   generateRows,

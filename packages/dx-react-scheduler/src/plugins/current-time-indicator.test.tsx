@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
 import { CurrentTimeIndicator } from './current-time-indicator';
 import {
   isMonthCell, isCellShaded, isShadedAppointment, getCurrentTimeIndicatorTop,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   isMonthCell: jest.fn(),
   isCellShaded: jest.fn(),
   isShadedAppointment: jest.fn(),

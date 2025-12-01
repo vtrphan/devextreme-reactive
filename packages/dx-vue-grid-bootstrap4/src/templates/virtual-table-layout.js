@@ -1,7 +1,7 @@
 import {
   TableLayout,
   VirtualTableLayout as VirtualTableLayoutCore,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 
 const MINIMAL_COLUMN_WIDTH = 150;
 

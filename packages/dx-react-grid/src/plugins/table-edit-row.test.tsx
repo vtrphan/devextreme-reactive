@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   getRowChange,
   tableRowsWithEditing,
   isEditTableCell,
   isEditTableRow,
   isAddedTableRow,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableEditRow } from './table-edit-row';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getRowChange: jest.fn(),
   tableRowsWithEditing: jest.fn(),
   isEditTableCell: jest.fn(),

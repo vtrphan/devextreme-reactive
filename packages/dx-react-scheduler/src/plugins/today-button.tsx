@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Plugin,
   Template,
   TemplatePlaceholder,
   TemplateConnector,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { TodayButtonProps } from '../types';
 
 const pluginDependencies = [

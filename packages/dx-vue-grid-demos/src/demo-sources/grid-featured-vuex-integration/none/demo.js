@@ -12,7 +12,7 @@ import {
   DxIntegratedSelection,
   DxPagingState,
   DxIntegratedPaging,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
@@ -25,7 +25,7 @@ import {
   DxToolbar,
   DxGroupingPanel,
   DxPagingPanel,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import {
   generateRows,

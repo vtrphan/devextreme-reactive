@@ -7,13 +7,13 @@ The `AppointmentTooltip` plugin allows you to display information about an appoi
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { AppointmentTooltip } from '@devexpress/dx-react-scheduler-material-ui';
+import { AppointmentTooltip } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { AppointmentTooltip } from '@devexpress/dx-react-scheduler';
+import { AppointmentTooltip } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User reference

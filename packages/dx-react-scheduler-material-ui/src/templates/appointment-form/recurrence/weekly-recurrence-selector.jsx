@@ -9,7 +9,7 @@ import {
   changeRecurrenceOptions,
   getDaysOfWeekArray,
   getDaysOfWeekDates
-} from "@devexpress/dx-scheduler-core";
+} from "@vtrphan/dx-scheduler-core";
 import { ensureColor } from "../../utils";
 
 const PREFIX = "WeeklyRecurrenceSelector";

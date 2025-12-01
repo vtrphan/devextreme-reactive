@@ -1,14 +1,14 @@
 import React, { useState } from 'react';<%&additionalImports%>
 import {
   Plugin, Template, TemplateConnector, TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
-import { EditingState } from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-core';
+import { EditingState } from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableEditColumn,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 <%&imports%>
 import {
   generateRows,

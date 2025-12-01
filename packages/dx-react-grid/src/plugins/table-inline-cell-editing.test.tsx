@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   TABLE_DATA_TYPE,
   getRowChange,
   rowsWithEditingCells,
   columnsWithEditingCells,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableInlineCellEditing } from './table-inline-cell-editing';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getRowChange: jest.fn(),
   rowsWithEditingCells: jest.fn(),
   columnsWithEditingCells: jest.fn(),

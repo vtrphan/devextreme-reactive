@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Input from '@mui/material/Input';
 import { styled } from '@mui/material/styles';
-import { DataTypeProvider } from '@devexpress/dx-react-grid';
+import { DataTypeProvider } from '@vtrphan/dx-react-grid';
 
 const PREFIX = 'Demo';
 const classes = {

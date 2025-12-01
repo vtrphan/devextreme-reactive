@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import { pluginDepsToComponents, getComputedState, executeComputedAction } from './test-utils';
 
 export const testStatePluginField = ({

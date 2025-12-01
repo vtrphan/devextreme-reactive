@@ -1,4 +1,4 @@
-import { hasWindow } from '@devexpress/dx-core';
+import { hasWindow } from '@vtrphan/dx-core';
 import { getEventCoords, getOffset } from './common';
 import {
   TrackerTarget, HandlerFnList, SeriesList, HitTesters,

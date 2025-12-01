@@ -2,11 +2,11 @@ import * as React from 'react';
 import {
   Plugin,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   viewCellsData as viewCellsDataCore,
   VIEW_TYPES,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { VerticalViewProps } from '../types';
 import { VerticalView } from './vertical-view';
 

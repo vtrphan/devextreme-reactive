@@ -1,5 +1,5 @@
-import { DxPlugin, DxTemplate, DxGetter } from '@devexpress/dx-vue-core';
-import { getAvailableFilterOperationsGetter } from '@devexpress/dx-grid-core';
+import { DxPlugin, DxTemplate, DxGetter } from '@vtrphan/dx-vue-core';
+import { getAvailableFilterOperationsGetter } from '@vtrphan/dx-grid-core';
 
 export const DxDataTypeProvider = {
   name: 'DxDataTypeProvider',

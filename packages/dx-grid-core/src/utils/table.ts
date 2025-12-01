@@ -1,4 +1,4 @@
-import { easeOutCubic } from '@devexpress/dx-core';
+import { easeOutCubic } from '@vtrphan/dx-core';
 import {
   GetTableColumnGeometriesFn, GetTableTargetColumnIndexFn, ColumnAnimation,
   GetColumnAnimationsFn, ColumnGeometry, FilterActiveAnimationsFn, EvalAnimationsFn,

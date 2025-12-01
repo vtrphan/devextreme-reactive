@@ -7,15 +7,15 @@ A plugin that renders the banded cells.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableBandHeader } from '@devexpress/dx-react-grid-material-ui';
-// import { TableBandHeader } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableBandHeader } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableBandHeader } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableBandHeader } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableBandHeader } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableBandHeader } from '@devexpress/dx-react-grid';
+import { TableBandHeader } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

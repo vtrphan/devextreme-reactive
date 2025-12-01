@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { navigateByOneMonth } from '@devexpress/dx-scheduler-core';
+import { navigateByOneMonth } from '@vtrphan/dx-scheduler-core';
 import { Table } from './table';
 
 export class Root extends React.PureComponent {

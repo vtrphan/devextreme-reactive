@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   tableHeaderRowsWithFilter,
   isFilterTableCell,
@@ -11,11 +11,11 @@ import {
   isFilterValueEmpty,
   getSelectedFilterOperation,
   TOP_POSITION,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableFilterRow } from './table-filter-row';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   tableHeaderRowsWithFilter: jest.fn(),
   isFilterTableCell: jest.fn(),
   isFilterTableRow: jest.fn(),

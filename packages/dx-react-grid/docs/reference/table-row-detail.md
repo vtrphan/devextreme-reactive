@@ -7,15 +7,15 @@ A plugin that renders detail rows.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableRowDetail } from '@devexpress/dx-react-grid-material-ui';
-// import { TableRowDetail } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableRowDetail } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableRowDetail } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableRowDetail } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableRowDetail } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableRowDetail } from '@devexpress/dx-react-grid';
+import { TableRowDetail } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

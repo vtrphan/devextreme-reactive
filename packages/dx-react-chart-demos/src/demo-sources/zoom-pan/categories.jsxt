@@ -6,8 +6,8 @@ import {
   ArgumentAxis,
   ValueAxis,
   ZoomAndPan,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { ValueScale } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { ValueScale } from '@vtrphan/dx-react-chart';
 
 const data = [
   { year: '1950', population: 2.525 },

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { InnerPlugin } from '@devexpress/dx-core';
+import { InnerPlugin } from '@vtrphan/dx-core';
 import {
   PLUGIN_HOST_CONTEXT, POSITION_CONTEXT,
   RERENDER_TEMPLATE_EVENT, RERENDER_TEMPLATE_SCOPE_EVENT,

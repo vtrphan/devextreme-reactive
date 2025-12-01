@@ -3,7 +3,7 @@ import {
   HOVERED, SELECTED, dArea, dRotateArea,
   processAreaAnimation, getPathStart,
   isCoordinatesChanged,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { withStates } from '../../utils/with-states';
 import { withPattern } from '../../utils/with-pattern';
 import { withAnimation } from '../../utils/with-animation';

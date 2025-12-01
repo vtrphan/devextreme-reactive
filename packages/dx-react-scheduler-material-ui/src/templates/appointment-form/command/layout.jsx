@@ -6,7 +6,7 @@ import {
   SAVE_BUTTON,
   DELETE_BUTTON,
   CANCEL_BUTTON,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { TRANSITIONS_TIME, LAYOUT_MEDIA_QUERY } from '../../constants';
 
 const PREFIX = 'Layout';

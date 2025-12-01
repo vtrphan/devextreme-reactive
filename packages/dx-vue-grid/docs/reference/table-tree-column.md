@@ -7,13 +7,13 @@ A plugin that renders a table column with a toggle button and sort indicators.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableTreeColumn } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableTreeColumn } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableTreeColumn } from '@devexpress/dx-vue-grid';
+import { DxTableTreeColumn } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

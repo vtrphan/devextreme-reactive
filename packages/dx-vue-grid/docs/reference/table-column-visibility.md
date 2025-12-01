@@ -7,13 +7,13 @@ A plugin that manages Grid columns' visibility.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableColumnVisibility } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableColumnVisibility } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableColumnVisibility } from '@devexpress/dx-vue-grid';
+import { DxTableColumnVisibility } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

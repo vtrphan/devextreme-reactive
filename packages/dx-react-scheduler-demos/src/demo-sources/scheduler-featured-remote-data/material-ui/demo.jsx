@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 import LinearProgress from '@mui/material/LinearProgress';
 import {
   ViewState,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   WeekView,
@@ -16,7 +16,7 @@ import {
   AppointmentForm,
   AppointmentTooltip,
   TodayButton,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 const PREFIX = 'Demo';
 

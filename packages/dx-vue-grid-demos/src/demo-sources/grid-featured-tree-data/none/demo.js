@@ -10,7 +10,7 @@ import {
   DxIntegratedPaging,
   DxIntegratedSorting,
   DxIntegratedSelection,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
@@ -21,7 +21,7 @@ import {
   DxTableColumnVisibility,
   DxToolbar,
   DxColumnChooser,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { tasks, employees, priorities } from '../data.json';
 

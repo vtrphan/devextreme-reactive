@@ -1,4 +1,4 @@
-import { DxTableEditRow as DxTableEditRowBase } from '@devexpress/dx-vue-grid';
+import { DxTableEditRow as DxTableEditRowBase } from '@vtrphan/dx-vue-grid';
 import { EditCell } from '../templates/table-edit-cell';
 import { TableRow } from '../templates/table-row';
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-import { getDayScaleCells } from "@devexpress/dx-scheduler-core";
+import { getDayScaleCells } from "@vtrphan/dx-scheduler-core";
 import { Table } from "../table";
 
 const DefaultGroupingPanel = () => null;

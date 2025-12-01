@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { memoize, MemoizedComputed } from '@devexpress/dx-core';
+import { memoize, MemoizedComputed } from '@vtrphan/dx-core';
 import {
   Plugin, Getter, Action, createStateHelper, StateHelper, ActionFn, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   tableColumnsWithWidths,
   tableColumnsWithDraftWidths,
@@ -12,7 +12,7 @@ import {
   ColumnWidthPayload,
   TableColumnWidthInfo,
   TABLE_DATA_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableColumnResizingProps, TableColumnResizingState, CellWidthGetter } from '../types';
 
 const pluginDependencies = [

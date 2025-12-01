@@ -7,10 +7,10 @@ import {
   LineSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import { ArgumentScale, Animation } from '@devexpress/dx-react-chart';
+import { ArgumentScale, Animation } from '@vtrphan/dx-react-chart';
 import {
   curveCatmullRom,
   line,

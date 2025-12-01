@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Plugin, Getter, Getters } from '@devexpress/dx-react-core';
+import { Plugin, Getter, Getters } from '@vtrphan/dx-react-core';
 import {
   convertResourcesToPlain, validateResources, addResourcesToAppointments,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { ResourcesProps } from '../types/resources/resources.types';
 
 const pluginDependencies = [

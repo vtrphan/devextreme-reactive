@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import { DragSource } from '@devexpress/dx-react-core';
+import { DragSource } from '@vtrphan/dx-react-core';
 
 import { CellLayout } from './table-header-cell/cell-layout';
 

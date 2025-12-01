@@ -8,7 +8,7 @@ import {
   SortingState,
   IntegratedSorting,
   IntegratedFiltering,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
@@ -24,7 +24,7 @@ import {
   SearchPanel,
   TableFilterRow,
   TableKeyboardNavigation,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

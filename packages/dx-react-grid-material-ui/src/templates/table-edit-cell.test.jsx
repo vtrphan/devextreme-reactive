@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Input, TableCell } from '@mui/material';
-import { createMount, setupConsole } from '@devexpress/dx-testing';
+import { createMount, setupConsole } from '@vtrphan/dx-testing';
 import { EditCell, classes } from './table-edit-cell';
 
 describe('EditCell', () => {

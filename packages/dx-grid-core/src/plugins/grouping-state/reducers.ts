@@ -1,5 +1,5 @@
-import { PureReducer, slice } from '@devexpress/dx-core';
-import { Getters } from '@devexpress/dx-react-core';
+import { PureReducer, slice } from '@vtrphan/dx-core';
+import { Getters } from '@vtrphan/dx-react-core';
 import { GROUP_KEY_SEPARATOR } from './constants';
 import {
   Grouping, ColumnGroupingState, ChangeGroupingPayload, ToggleGroupPayload, DraftGroupingState,

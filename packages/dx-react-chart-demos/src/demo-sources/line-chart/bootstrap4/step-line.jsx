@@ -6,8 +6,8 @@ import {
   LineSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-bootstrap4';
-import { Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-bootstrap4';
+import { Animation } from '@vtrphan/dx-react-chart';
 import { line, curveStep } from 'd3-shape';
 
 import { australianMedals as data } from '../../../demo-data/data-vizualization';

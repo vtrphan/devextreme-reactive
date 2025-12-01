@@ -6,8 +6,8 @@ import {
   BarSeries,
   LineSeries,
   Legend,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { ValueScale } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { ValueScale } from '@vtrphan/dx-react-chart';
 
 export default class Demo extends React.PureComponent {
   constructor(props) {

@@ -3,12 +3,12 @@ import {
   DataTypeProvider,
   TreeDataState, SortingState, SelectionState, FilteringState, PagingState,
   CustomTreeData, IntegratedFiltering, IntegratedPaging, IntegratedSorting, IntegratedSelection,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table, TableHeaderRow, TableFilterRow, TableTreeColumn,
   PagingPanel, TableColumnResizing, Toolbar, TableColumnVisibility, ColumnChooser,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { tasks, employees, priorities } from '../../../demo-data/tree-data';
 

@@ -7,13 +7,13 @@ A plugin that renders the All Day Panel.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { AllDayPanel } from '@devexpress/dx-react-grid-material-ui';
+import { AllDayPanel } from '@vtrphan/dx-react-grid-material-ui';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { AllDayPanel } from '@devexpress/dx-react-grid';
+import { AllDayPanel } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

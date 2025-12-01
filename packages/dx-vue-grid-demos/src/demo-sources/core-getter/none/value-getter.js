@@ -1,6 +1,6 @@
 import {
   DxPluginHost, DxPlugin, DxGetter, DxTemplate, DxTemplateConnector,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 
 export default {
   data() {

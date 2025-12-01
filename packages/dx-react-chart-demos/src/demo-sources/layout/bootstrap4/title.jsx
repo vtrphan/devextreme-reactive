@@ -6,9 +6,9 @@ import {
   BarSeries,
   Legend,
   Title,
-} from '@devexpress/dx-react-chart-bootstrap4';
+} from '@vtrphan/dx-react-chart-bootstrap4';
 
-import { Stack } from '@devexpress/dx-react-chart';
+import { Stack } from '@vtrphan/dx-react-chart';
 
 import { ageStructure } from '../../../demo-data/data-vizualization';
 

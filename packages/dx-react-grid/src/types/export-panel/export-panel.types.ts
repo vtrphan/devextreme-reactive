@@ -8,7 +8,7 @@ export namespace ExportPanel {
     /** An event that initiates menu showing or hiding. */
     onToggle(): void;
     /*** Returns a specified localization message.
-     * Available in the "\@devexpress/dx-react-grid-material-ui" package. */
+     * Available in the "\@vtrphan/dx-react-grid-material-ui" package. */
     getMessage: (messageKey: string) => string;
   }
 

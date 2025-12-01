@@ -5,7 +5,7 @@ import {
 import Paper from '@mui/material/Paper';
 import TableCell from '@mui/material/TableCell';
 import Typography from '@mui/material/Typography';
-import { ViewState, EditingState } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState } from '@vtrphan/dx-react-scheduler';
 import classNames from 'clsx';
 import {
   Scheduler,
@@ -18,7 +18,7 @@ import {
   EditRecurrenceMenu,
   Resources,
   DragDropProvider,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import WbSunny from '@mui/icons-material/WbSunny';
 import FilterDrama from '@mui/icons-material/FilterDrama';
 import Opacity from '@mui/icons-material/Opacity';

@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { createShallow, createMount } from '@devexpress/dx-testing';
+import { createShallow, createMount } from '@vtrphan/dx-testing';
 import {
   NUMBER_EDITOR,
   TITLE_TEXT_EDITOR,
   MULTILINE_TEXT_EDITOR,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { TextEditor, classes } from './text-editor';
 
 describe('AppointmentForm common', () => {

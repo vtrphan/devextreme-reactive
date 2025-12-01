@@ -1,4 +1,4 @@
-import { slice } from '@devexpress/dx-core';
+import { slice } from '@vtrphan/dx-core';
 import { MergeFn, SortArrayToAuxiliaryFn, CompareFn } from '../types';
 
 /* eslint-disable no-plusplus, no-param-reassign, no-use-before-define, no-constant-condition */

@@ -1,4 +1,4 @@
-import { DxTableRowDetail as DxTableRowDetailBase } from '@devexpress/dx-vue-grid';
+import { DxTableRowDetail as DxTableRowDetailBase } from '@vtrphan/dx-vue-grid';
 import { TableDetailToggleCell } from '../templates/table-detail-toggle-cell';
 import { TableDetailCell } from '../templates/table-detail-cell';
 import { TableRow } from '../templates/table-row';

@@ -5,12 +5,12 @@ import {
   Chart,
   ScatterSeries,
   Title,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
 import { scaleLog } from 'd3-scale';
 import { symbolCircle, symbol } from 'd3-shape';
 import { formatPrefix } from 'd3-format';
 
-import { ValueScale } from '@devexpress/dx-react-chart';
+import { ValueScale } from '@vtrphan/dx-react-chart';
 
 const data = [
   { planet: 'Moon', mass: 0.073e24 },

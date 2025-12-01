@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { createClickHandlers } from '@devexpress/dx-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { createClickHandlers } from '@vtrphan/dx-core';
 import { Appointments } from './appointments';
 import {
   calculateRectByDateAndGroupIntervals, getVerticalRectByAppointmentData,
   getHorizontalRectByAppointmentData, getAppointmentStyle,
   isAllDayElementsMetaActual, isTimeTableElementsMetaActual,
   HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 
 // eslint-disable-next-line react/prop-types
 const Appointment = ({ children, forwardedRef }) => <div ref={forwardedRef}>{children}</div>;
@@ -27,13 +27,13 @@ const defaultProps = {
   recurringIconComponent: RecurringIcon,
 };
 
-jest.mock('@devexpress/dx-core', () => ({
-  ...jest.requireActual('@devexpress/dx-core'),
+jest.mock('@vtrphan/dx-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-core'),
   createClickHandlers: jest.fn(),
 }));
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
-  ...jest.requireActual('@devexpress/dx-scheduler-core'),
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-scheduler-core'),
   getVerticalRectByAppointmentData: jest.fn(),
   getHorizontalRectByAppointmentData: jest.fn(),
   calculateRectByDateAndGroupIntervals: jest.fn(),

@@ -1,14 +1,14 @@
 import { mount } from '@vue/test-utils';
-import { setupConsole } from '@devexpress/dx-testing';
+import { setupConsole } from '@vtrphan/dx-testing';
 import {
   groupingPanelItems,
   getColumnSortingDirection,
-} from '@devexpress/dx-grid-core';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-grid-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
 import { DxGroupingPanel } from './grouping-panel';
 import { PluginDepsToComponents } from './test-utils';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   groupingPanelItems: jest.fn(),
   getColumnSortingDirection: jest.fn(),
 }));

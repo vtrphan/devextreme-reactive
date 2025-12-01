@@ -5,7 +5,7 @@ import {
   AppointmentTooltip,
   Scheduler,
   WeekView,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';

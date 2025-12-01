@@ -7,7 +7,7 @@ A plugin that performs built-in data filtering.
 Use the following statement to import the plugin:
 
 ```js
-import { DxIntegratedFiltering } from '@devexpress/dx-vue-grid';
+import { DxIntegratedFiltering } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

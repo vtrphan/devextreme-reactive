@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
-import { getLegendItems } from '@devexpress/dx-chart-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
+import { getLegendItems } from '@vtrphan/dx-chart-core';
 import { Legend } from './legend';
 import { create } from 'react-test-renderer';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   getLegendItems: jest.fn().mockReturnValue([
     { color: 'color 1', text: 'series 1' },
     { color: 'color 2', text: 'series 2' },

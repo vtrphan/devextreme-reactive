@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost, TemplatePlaceholder } from '@devexpress/dx-react-core';
+import { PluginHost, TemplatePlaceholder } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents,
   getComputedState,
   setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   getBandComponent,
   isBandedTableRow,
@@ -21,10 +21,10 @@ import {
   BAND_GROUP_CELL,
   BAND_HEADER_CELL,
   BAND_FILL_LEVEL_CELL,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableBandHeader } from './table-band-header';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   getBandComponent: jest.fn(),
   isBandedTableRow: jest.fn(),
   isBandedOrHeaderRow: jest.fn(),

@@ -1,4 +1,4 @@
-import { DxTableGroupRow as DxTableGroupRowBase } from '@devexpress/dx-vue-grid';
+import { DxTableGroupRow as DxTableGroupRowBase } from '@vtrphan/dx-vue-grid';
 import { TableGroupCell } from '../templates/table-group-row-cell';
 import { TableRow } from '../templates/table-row';
 

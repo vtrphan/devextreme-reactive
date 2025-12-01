@@ -3,8 +3,8 @@ import {
   DxTemplatePlaceholder,
   DxPlugin,
   DxTemplateConnector,
-} from '@devexpress/dx-vue-core';
-import { columnChooserItems } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-vue-core';
+import { columnChooserItems } from '@vtrphan/dx-grid-core';
 
 const pluginDependencies = [
   { name: 'DxTableColumnVisibility' },

@@ -1,4 +1,4 @@
-import { Axis } from '@devexpress/dx-react-chart';
+import { Axis } from '@vtrphan/dx-react-chart';
 import { withClassName, getBorderColor, classes } from '../utils';
 
 const styles = ({ theme }) => ({

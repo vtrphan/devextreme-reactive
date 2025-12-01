@@ -7,13 +7,13 @@ A plugin that renders Grid data as a table. It contains the Table Row and Table 
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTable } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTable } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTable } from '@devexpress/dx-vue-grid';
+import { DxTable } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

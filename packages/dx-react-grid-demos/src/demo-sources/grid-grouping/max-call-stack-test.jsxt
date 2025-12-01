@@ -2,13 +2,13 @@ import React from 'react';<%&additionalImports%>
 import {
   GroupingState,
   IntegratedGrouping,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableGroupRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 const colNames = [...Array(10000)].map((_, index) => `generated_${index}`);
 const columns = colNames.map(value => ({ name: value, title: value }));

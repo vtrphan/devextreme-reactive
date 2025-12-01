@@ -5,14 +5,14 @@ import {
   CustomTreeData,
   IntegratedSummary,
   DataTypeProvider,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable,
   TableHeaderRow,
   TableTreeColumn,
   TableSummaryRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

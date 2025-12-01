@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { AppointmentMoment } from './all-day-panel.types';
 import { AppointmentModel, AppointmentKey } from './scheduler-core.types';
 import { Rect } from './horizontal-rect.types';

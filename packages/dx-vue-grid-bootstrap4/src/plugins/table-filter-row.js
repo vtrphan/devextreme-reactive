@@ -1,4 +1,4 @@
-import { DxTableFilterRow as DxTableFilterRowBase } from '@devexpress/dx-vue-grid';
+import { DxTableFilterRow as DxTableFilterRowBase } from '@vtrphan/dx-vue-grid';
 import { TableFilterCell } from '../templates/table-filter-cell';
 import { TableRow } from '../templates/table-row';
 import { Editor } from '../templates/filter-row/editor';

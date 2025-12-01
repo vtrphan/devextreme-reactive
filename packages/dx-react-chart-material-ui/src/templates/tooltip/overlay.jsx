@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, Popper } from '@mui/material';
-import { RIGHT, TOP } from '@devexpress/dx-chart-core';
+import { RIGHT, TOP } from '@vtrphan/dx-chart-core';
 import classNames from 'clsx';
 import PropTypes from 'prop-types';
 

@@ -1,10 +1,10 @@
-import { DxDataTypeProvider } from '@devexpress/dx-vue-grid';
+import { DxDataTypeProvider } from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxTableBandHeader,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 import { countries } from '../countries';
 
 const PercentFormatter = {

@@ -8,7 +8,7 @@ import {
   DropTarget,
   withComponents,
   Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   TABLE_DATA_TYPE,
   TABLE_REORDERING_TYPE,
@@ -18,7 +18,7 @@ import {
   draftOrder as draftOrderComputed,
   TargetColumnGeometry,
   TableColumn,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { OrderedTableColumns } from './internal/ordered-table-columns';
 import {
   Table as TableNS, CellDimensionsGetter, TableColumnReorderingProps,

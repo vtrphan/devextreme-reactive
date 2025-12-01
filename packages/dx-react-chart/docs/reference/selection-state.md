@@ -7,7 +7,7 @@ The `SelectionState` plugin implements the *selected* state for points and serie
 Use the following statement to import the plugin:
 
 ```js
-import { SelectionState } from '@devexpress/dx-react-chart';
+import { SelectionState } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

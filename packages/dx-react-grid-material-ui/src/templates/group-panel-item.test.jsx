@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Chip, TableSortLabel } from '@mui/material';
-import { createMount, createShallow } from '@devexpress/dx-testing';
+import { createMount, createShallow } from '@vtrphan/dx-testing';
 import { GroupPanelItem, classes } from './group-panel-item';
 
 const ENTER_KEY_CODE = 13;

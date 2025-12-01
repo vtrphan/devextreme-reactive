@@ -7,15 +7,15 @@ A plugin that renders group rows and enables them to expand and collapse.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TableGroupRow } from '@devexpress/dx-react-grid-material-ui';
-// import { TableGroupRow } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableGroupRow } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableGroupRow } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableGroupRow } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableGroupRow } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableGroupRow } from '@devexpress/dx-react-grid';
+import { TableGroupRow } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference
@@ -48,8 +48,8 @@ summaryItemComponent | ComponentType&lt;[TableSummaryRow.ItemProps](table-summar
 stubCellComponent | ComponentType&lt;[TableGroupRow.StubCellProps](#tablegrouprowstubcellprops)&gt; | | A component that renders a stub cell used to align summary items in their columns.
 formatlessSummaryTypes | Array&lt;string&gt; | | Summary types that the `DataTypeProvider` plugin should not format.
 messages? | [TableGroupRow.LocalizationMessages](#localization-messages) | | Localization messages.
-indentColumnWidth | number | `33` for [Bootstrap4](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap4) and for [Bootstrap](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap3); `48` for [Material-UI](https://www.npmjs.com/package/@devexpress/dx-react-grid-material-ui) | The group indent column's width.
-contentCellPadding | string | `0.75rem` for [Bootstrap4](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap4); `8px` for [Bootstrap](https://www.npmjs.com/package/@devexpress/dx-react-grid-bootstrap3) and for [Material-UI](https://www.npmjs.com/package/@devexpress/dx-react-grid-material-ui) | The group cell's left padding value.
+indentColumnWidth | number | `33` for [Bootstrap4](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap4) and for [Bootstrap](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap3); `48` for [Material-UI](https://www.npmjs.com/package/@vtrphan/dx-react-grid-material-ui) | The group indent column's width.
+contentCellPadding | string | `0.75rem` for [Bootstrap4](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap4); `8px` for [Bootstrap](https://www.npmjs.com/package/@vtrphan/dx-react-grid-bootstrap3) and for [Material-UI](https://www.npmjs.com/package/@vtrphan/dx-react-grid-material-ui) | The group cell's left padding value.
 
 ## Interfaces
 

@@ -7,12 +7,12 @@ import {
   Title,
   Legend,
   Tooltip,
-} from '@devexpress/dx-react-chart-bootstrap4';
+} from '@vtrphan/dx-react-chart-bootstrap4';
 import * as d3Format from 'd3-format';
-import { scaleBand } from '@devexpress/dx-chart-core';
+import { scaleBand } from '@vtrphan/dx-chart-core';
 import {
   ArgumentScale, Stack, Animation, EventTracker, HoverState, SelectionState,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import classNames from 'clsx';
 
 import { annualVehiclesSales as data } from '../../../demo-data/data-vizualization';

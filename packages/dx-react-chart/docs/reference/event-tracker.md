@@ -7,7 +7,7 @@ The `EventTracker` plugin allows you to handle a click on the chart's plot.
 Use the following statement to import the plugin:
 
 ```js
-import { EventTracker } from '@devexpress/dx-react-chart';
+import { EventTracker } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

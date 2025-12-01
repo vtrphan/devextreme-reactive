@@ -4,7 +4,7 @@ import {
   SAVE_BUTTON,
   DELETE_BUTTON,
   CANCEL_BUTTON,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { SaveButton } from './save-button';
 import { DeleteButton } from './delete-button';
 import { CancelButton } from './cancel-button';

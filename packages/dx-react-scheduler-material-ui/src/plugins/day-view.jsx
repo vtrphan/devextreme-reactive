@@ -1,5 +1,5 @@
-import { withComponents } from '@devexpress/dx-react-core';
-import { DayView as DayViewBase } from '@devexpress/dx-react-scheduler';
+import { withComponents } from '@vtrphan/dx-react-core';
+import { DayView as DayViewBase } from '@vtrphan/dx-react-scheduler';
 import { MainLayout as Layout } from '../templates/layouts/main-layout';
 
 import { Row } from '../templates/views/common/row';

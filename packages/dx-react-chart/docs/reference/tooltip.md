@@ -7,8 +7,8 @@ The `Tooltip` plugin implements a tooltip that shows information about a point. 
 Use the following statement to import the plugin:
 
 ```js
-import { Tooltip } from '@devexpress/dx-react-chart-material-ui';
-//import { Tooltip } from '@devexpress/dx-react-chart-bootstrap4';
+import { Tooltip } from '@vtrphan/dx-react-chart-material-ui';
+//import { Tooltip } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 ## User Reference

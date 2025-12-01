@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { TABLE_GROUP_TYPE } from '@devexpress/dx-grid-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { TABLE_GROUP_TYPE } from '@vtrphan/dx-grid-core';
 import { flattenGroupInlineSummaries } from './group-summaries';
 
 describe('#flattenGroupInlineSummaries', () => {

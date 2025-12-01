@@ -4,8 +4,8 @@ import {
   ScatterSeries,
   ArgumentAxis,
   ValueAxis,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { Animation } from '@vtrphan/dx-react-chart';
 
 import { dataGenerator } from '../../../demo-data/generator';
 

@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { AppointmentModel, Appointment, FormatDateTimeGetterFn, FormatterFn } from '../../types';
 import { convertToMoment } from '../common/helpers';
 import { dateTimeFormatInstance } from './helpers';

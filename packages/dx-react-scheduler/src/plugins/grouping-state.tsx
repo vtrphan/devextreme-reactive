@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {
   Action, Plugin, Getter, StateHelper, ActionFn, createStateHelper,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   ToggleGroupPayload, toggleExpandedGroups, HORIZONTAL_GROUP_ORIENTATION,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { GroupingStateProps, GroupingStateState } from '../types';
 
 class GroupingStateBase extends React.PureComponent<GroupingStateProps, GroupingStateState> {

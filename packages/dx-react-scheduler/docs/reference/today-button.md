@@ -7,13 +7,13 @@ A plugin that renders the Scheduler's button that is used to navigate to the tod
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { TodayButton } from '@devexpress/dx-react-scheduler-material-ui';
+import { TodayButton } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 You can import the themeless plugin if you want to use custom components:
 
 ```js
-import { TodayButton } from '@devexpress/dx-react-scheduler';
+import { TodayButton } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

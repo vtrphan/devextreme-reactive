@@ -3,8 +3,8 @@ import {
   Plugin,
   Getter,
   Getters,
-} from '@devexpress/dx-react-core';
-import { changeSeriesState, SELECTED } from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-react-core';
+import { changeSeriesState, SELECTED } from '@vtrphan/dx-chart-core';
 import { SelectionStateProps } from '../types';
 
 class SelectionStateBase extends React.PureComponent<SelectionStateProps> {

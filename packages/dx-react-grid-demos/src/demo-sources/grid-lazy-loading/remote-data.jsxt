@@ -7,13 +7,13 @@ import {
   FilteringState,
   SortingState,
   createRowCache,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable,
   TableHeaderRow,
   TableFilterRow,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 import { Loading } from '../../../theme-sources/<%&themeName%>/components/loading';
 
 const VIRTUAL_PAGE_SIZE = 100;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import { EditingState } from '@devexpress/dx-react-scheduler';
+import { EditingState } from '@vtrphan/dx-react-scheduler';
 import {
   Appointments,
   Scheduler,
@@ -8,7 +8,7 @@ import {
   DragDropProvider,
   CurrentTimeIndicator,
   EditRecurrenceMenu,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';

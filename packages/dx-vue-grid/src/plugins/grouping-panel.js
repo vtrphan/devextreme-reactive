@@ -3,12 +3,12 @@ import {
   DxTemplatePlaceholder,
   DxPlugin,
   DxTemplateConnector,
-} from '@devexpress/dx-vue-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+} from '@vtrphan/dx-vue-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   groupingPanelItems,
   getColumnSortingDirection,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 export const DxGroupingPanel = {
   props: {

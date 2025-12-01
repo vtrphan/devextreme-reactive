@@ -7,7 +7,7 @@ A plugin that manages the grouping state.
 Use the following statement to import the plugin:
 
 ```js
-import { GroupingState } from '@devexpress/dx-react-scheduler';
+import { GroupingState } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

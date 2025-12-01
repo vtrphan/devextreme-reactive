@@ -1,14 +1,14 @@
 import {
   DxSearchState,
   DxIntegratedFiltering,
-} from '@devexpress/dx-vue-grid';
+} from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxToolbar,
   DxSearchPanel,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { generateRows } from '../../../demo-data/generator';
 

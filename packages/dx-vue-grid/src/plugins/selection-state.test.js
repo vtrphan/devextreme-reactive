@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils';
-import { DxPluginHost } from '@devexpress/dx-vue-core';
-import { setupConsole } from '@devexpress/dx-testing';
-import { toggleSelection } from '@devexpress/dx-grid-core';
+import { DxPluginHost } from '@vtrphan/dx-vue-core';
+import { setupConsole } from '@vtrphan/dx-testing';
+import { toggleSelection } from '@vtrphan/dx-grid-core';
 import { PluginDepsToComponents, getComputedState, executeComputedAction } from './test-utils';
 import { DxSelectionState } from './selection-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   toggleSelection: jest.fn(),
 }));
 

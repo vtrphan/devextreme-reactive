@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Template, TemplatePlaceholder, TemplateConnector, Plugin, Getters, Actions,
-} from '@devexpress/dx-react-core';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+} from '@vtrphan/dx-react-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   getColumnFilterConfig,
   tableHeaderRowsWithFilter,
@@ -14,7 +14,7 @@ import {
   TABLE_FILTER_TYPE,
   FilterConfig,
   TOP_POSITION,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableFilterRowProps, TableFilterRowState, TableCellProps, TableRowProps } from '../types';
 
 const pluginDependencies = [

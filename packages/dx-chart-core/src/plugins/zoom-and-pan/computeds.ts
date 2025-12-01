@@ -19,7 +19,7 @@ import {
   Location,
   Interaction,
 } from '../../types';
-import { Size } from '@devexpress/dx-react-core';
+import { Size } from '@vtrphan/dx-react-core';
 
 const getArgumentBounds = (viewport?: Viewport): DomainBounds | null => (
   viewport && viewport.argumentStart !== undefined && viewport.argumentEnd !== undefined

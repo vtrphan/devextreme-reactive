@@ -5,7 +5,7 @@ import {
   DxTemplatePlaceholder,
   DxTemplateConnector,
   DxPlugin,
-} from '@devexpress/dx-vue-core';
+} from '@vtrphan/dx-vue-core';
 
 const computedEntries = object => Object.getOwnPropertyNames(object)
   .reduce((acc, key) => Object.assign(acc, { [key]: object[key] }), {});

@@ -7,8 +7,8 @@ import {
   AreaSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Stack, Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-material-ui';
+import { Stack, Animation } from '@vtrphan/dx-react-chart';
 import { stackOffsetExpand } from 'd3-shape';
 import { styled } from '@mui/material/styles';
 import { carbonEmmision as data } from '../../../demo-data/data-vizualization';

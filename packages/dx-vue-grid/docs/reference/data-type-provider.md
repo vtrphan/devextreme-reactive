@@ -7,7 +7,7 @@ A plugin that provides the capability to customize formatting options and editor
 Use the following statement to import the plugin:
 
 ```js
-import { DxDataTypeProvider } from '@devexpress/dx-vue-grid';
+import { DxDataTypeProvider } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

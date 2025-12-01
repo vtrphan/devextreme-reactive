@@ -5,8 +5,8 @@ import {
   Title,
   ArgumentAxis,
   ValueAxis,
-} from '@devexpress/dx-react-chart-<%&themeName%>';<%&cssImports%>
-import { Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-<%&themeName%>';<%&cssImports%>
+import { Animation } from '@vtrphan/dx-react-chart';
 
 const data = [
   { year: '1950', population: 2.525 },

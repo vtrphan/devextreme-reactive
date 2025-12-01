@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getMessagesFormatter, memoize } from '@devexpress/dx-core';
+import { getMessagesFormatter, memoize } from '@vtrphan/dx-core';
 import {
   Getter,
   Plugin,
@@ -7,11 +7,11 @@ import {
   TemplatePlaceholder,
   TemplateConnector,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   allDayCells, calculateAllDayDateIntervals,
   VERTICAL_GROUP_ORIENTATION, VIEW_TYPES,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import moment from 'moment';
 
 import { AllDayPanelProps, AllDayPanelState } from '../types';

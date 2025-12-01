@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   TOP, BOTTOM, LEFT, RIGHT,
-} from '@devexpress/dx-chart-core';
-import { Plugin, Template, TemplatePlaceholder, Getter } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-chart-core';
+import { Plugin, Template, TemplatePlaceholder, Getter } from '@vtrphan/dx-react-core';
 
 export class AxesLayout extends React.PureComponent {
   ref = React.createRef<HTMLDivElement>();

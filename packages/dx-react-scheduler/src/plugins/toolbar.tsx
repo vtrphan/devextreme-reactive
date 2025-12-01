@@ -4,7 +4,7 @@ import {
   Plugin,
   TemplatePlaceholder,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { ToolbarProps } from '../types';
 
 class ToolbarBase extends React.PureComponent<ToolbarProps> {

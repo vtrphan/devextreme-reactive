@@ -1,4 +1,4 @@
-import { DxPluginHost, DxTemplate } from '@devexpress/dx-vue-core';
+import { DxPluginHost, DxTemplate } from '@vtrphan/dx-vue-core';
 
 export default {
   data() {

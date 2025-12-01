@@ -7,7 +7,7 @@ A plugin that allows implementing a custom totalCount calculation logic.
 Use the following statement to import the plugin:
 
 ```js
-import { CustomPaging } from '@devexpress/dx-react-grid';
+import { CustomPaging } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { Group, HorizontalGroupingCellData, VerticalGroupingCellData } from '../../types';
 import { getGroupsLastRow } from '../integrated-grouping/helpers';
 

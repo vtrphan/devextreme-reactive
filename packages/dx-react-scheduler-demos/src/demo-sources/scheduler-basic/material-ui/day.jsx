@@ -5,7 +5,7 @@ import {
   DayView,
   Appointments,
   AppointmentTooltip,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 import appointments from '../../../demo-data/today-appointments';
 

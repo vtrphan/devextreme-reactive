@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { HORIZONTAL_GROUP_ORIENTATION } from '../../constants';
 import { ViewCell, Group, GroupOrientation, TimeScaleLabelData, AllDayCell } from '../../types';
 import { getCellKey } from '../grouping-panel/utils';

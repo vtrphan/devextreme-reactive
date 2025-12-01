@@ -7,7 +7,7 @@ A plugin that manages the scheduler appointment editing state.
 Use the following statement to import the plugin:
 
 ```js
-import { EditingState } from '@devexpress/dx-react-scheduler';
+import { EditingState } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

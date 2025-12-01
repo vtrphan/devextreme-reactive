@@ -7,13 +7,13 @@ A plugin that renders detail rows.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableRowDetail } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableRowDetail } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableRowDetail } from '@devexpress/dx-vue-grid';
+import { DxTableRowDetail } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

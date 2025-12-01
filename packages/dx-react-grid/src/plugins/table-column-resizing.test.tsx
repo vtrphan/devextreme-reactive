@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents, getComputedState,
   executeComputedAction, testStatePluginField, setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   tableColumnsWithWidths,
   tableColumnsWithDraftWidths,
@@ -12,10 +12,10 @@ import {
   draftTableColumnWidth,
   cancelTableColumnWidthDraft,
   TABLE_DATA_TYPE,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableColumnResizing } from './table-column-resizing';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   tableColumnsWithWidths: jest.fn(),
   tableColumnsWithDraftWidths: jest.fn(),
   changeTableColumnWidth: jest.fn(),

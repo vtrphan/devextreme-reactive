@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Select, Menu } from '@mui/material';
-import { createMount } from '@devexpress/dx-testing';
+import { createMount } from '@vtrphan/dx-testing';
 import { PageSizeSelector, classes } from './page-size-selector';
 
 describe('PageSizeSelector', () => {

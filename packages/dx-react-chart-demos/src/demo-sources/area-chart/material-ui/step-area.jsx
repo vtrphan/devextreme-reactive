@@ -7,8 +7,8 @@ import {
   AreaSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-material-ui';
+import { Animation } from '@vtrphan/dx-react-chart';
 import { area, curveStep } from 'd3-shape';
 
 import { australianMedals as data } from '../../../demo-data/data-vizualization';

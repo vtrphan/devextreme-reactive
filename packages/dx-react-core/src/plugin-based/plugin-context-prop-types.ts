@@ -1,4 +1,4 @@
-import { PluginHost, PluginPositionFn } from '@devexpress/dx-core';
+import { PluginHost, PluginPositionFn } from '@vtrphan/dx-core';
 import { PLUGIN_HOST_CONTEXT, POSITION_CONTEXT } from './constants';
 
 /** @internal */

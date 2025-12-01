@@ -1,4 +1,4 @@
-import { DxGetter, DxAction, DxPlugin } from '@devexpress/dx-vue-core';
+import { DxGetter, DxAction, DxPlugin } from '@vtrphan/dx-vue-core';
 import {
   createRowChangeGetter,
   startEditRows,
@@ -13,7 +13,7 @@ import {
   deleteRows,
   cancelDeletedRows,
   getColumnExtensionValueGetter,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 
 const columnExtensionValueGetter = (
   columnExtensions, defaultValue,

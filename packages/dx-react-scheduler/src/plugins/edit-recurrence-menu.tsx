@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { memoize, getMessagesFormatter } from '@devexpress/dx-core';
+import { memoize, getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Plugin, Template, TemplatePlaceholder, TemplateConnector, Action, Getters, Actions,
-} from '@devexpress/dx-react-core';
-import { RECURRENCE_EDIT_SCOPE } from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-react-core';
+import { RECURRENCE_EDIT_SCOPE } from '@vtrphan/dx-scheduler-core';
 import { EditRecurrenceMenuProps, EditRecurrenceMenuState } from '../types';
 
 const pluginDependencies = [

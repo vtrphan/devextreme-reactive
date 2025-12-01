@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { dSpline, dRotateSpline } from '@devexpress/dx-chart-core';
+import { dSpline, dRotateSpline } from '@vtrphan/dx-chart-core';
 import { Path } from './path';
 import { SplineSeries } from '../../types';
 

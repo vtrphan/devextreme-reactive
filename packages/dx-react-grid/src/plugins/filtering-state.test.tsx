@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents, getComputedState, testStatePluginField, setupConsole,
-} from '@devexpress/dx-testing';
-import { changeColumnFilter, getColumnExtensionValueGetter } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-testing';
+import { changeColumnFilter, getColumnExtensionValueGetter } from '@vtrphan/dx-grid-core';
 import { FilteringState } from './filtering-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   changeColumnFilter: jest.fn(),
   getColumnExtensionValueGetter: jest.fn(),
   filterExpression: jest.fn().mockReturnValue('filters'),

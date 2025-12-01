@@ -7,7 +7,7 @@ A plugin that implements editing in the Scheduler. Should not be used with the [
 Use the following statement to import the plugin:
 
 ```js
-import { IntegratedEditing } from '@devexpress/dx-react-scheduler';
+import { IntegratedEditing } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

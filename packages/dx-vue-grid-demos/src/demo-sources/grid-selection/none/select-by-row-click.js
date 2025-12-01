@@ -1,10 +1,10 @@
-import { DxSelectionState } from '@devexpress/dx-vue-grid';
+import { DxSelectionState } from '@vtrphan/dx-vue-grid';
 import {
   DxGrid,
   DxTable,
   DxTableHeaderRow,
   DxTableSelection,
-} from '@devexpress/dx-vue-grid-bootstrap4';
+} from '@vtrphan/dx-vue-grid-bootstrap4';
 
 import { generateRows } from '../../../demo-data/generator';
 

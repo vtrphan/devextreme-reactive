@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   Plugin, Getter, Template, TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import { GridProps } from '../types';
 import { GridCoreGetters } from './internal';
 

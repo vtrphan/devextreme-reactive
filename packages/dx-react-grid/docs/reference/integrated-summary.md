@@ -7,7 +7,7 @@ A plugin that performs a built-in data summary calculation.
 Use the following statement to import the plugin:
 
 ```js
-import { IntegratedSummary } from '@devexpress/dx-react-grid';
+import { IntegratedSummary } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

@@ -4,7 +4,7 @@ import {
   END_REPEAT_RADIO_GROUP,
   MONTHLY_RADIO_GROUP,
   YEARLY_RADIO_GROUP,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { EndRepeatEditor } from './end-repeat-editor';
 import { MonthlyEditor } from './monthly-editor';
 import { YearlyEditor } from './yealy-editor';

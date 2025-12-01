@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled, Table, TableBody } from '@mui/material';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
-import { HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION } from '@devexpress/dx-scheduler-core';
+import { HORIZONTAL_GROUP_ORIENTATION, VERTICAL_GROUP_ORIENTATION } from '@vtrphan/dx-scheduler-core';
 
 const PREFIX = 'TicksLayout';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getMessagesFormatter } from '@devexpress/dx-core';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Action,
   Getter,
@@ -9,12 +9,12 @@ import {
   TemplatePlaceholder,
   createStateHelper,
   ActionFn,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   toggleColumn,
   tableDataColumnsExist,
   getColumnExtensionValueGetter,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { VisibleTableColumns } from './internal/visible-table-columns';
 import { TableColumnVisibilityProps, TableColumnVisibilityState } from '../types';
 

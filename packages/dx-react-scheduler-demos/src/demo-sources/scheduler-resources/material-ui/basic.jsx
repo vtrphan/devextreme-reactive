@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
-import { ViewState } from '@devexpress/dx-react-scheduler';
+import { ViewState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Resources,
   WeekView,
   Appointments,
   AppointmentTooltip,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 

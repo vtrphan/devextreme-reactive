@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { createMount, setupConsole } from '@devexpress/dx-testing';
+import { createMount, setupConsole } from '@vtrphan/dx-testing';
 
 import { InlineSummary, classes } from './inline-summary';
 

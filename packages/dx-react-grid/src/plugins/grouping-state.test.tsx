@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents,
   getComputedState,
   executeComputedAction,
   testStatePluginField,
   setupConsole,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   changeColumnGrouping,
   toggleExpandedGroups,
@@ -15,10 +15,10 @@ import {
   cancelColumnGroupingDraft,
   getColumnExtensionValueGetter,
   adjustSortIndex,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { GroupingState } from './grouping-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   changeColumnGrouping: jest.fn(),
   toggleExpandedGroups: jest.fn(),
   draftColumnGrouping: jest.fn(),

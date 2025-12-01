@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { dLine, dRotateLine } from '@devexpress/dx-chart-core';
+import { dLine, dRotateLine } from '@vtrphan/dx-chart-core';
 import { Path } from './path';
 import { LineSeries } from '../../types';
 

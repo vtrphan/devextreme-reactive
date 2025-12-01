@@ -7,13 +7,13 @@ A plugin that renders a dialog that prompts a user to confirm that an appointmen
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { ConfirmationDialog } from '@devexpress/dx-react-scheduler-material-ui';
+import { ConfirmationDialog } from '@vtrphan/dx-react-scheduler-material-ui';
 ```
 
 If you are going to use custom theme components, import the themeless version of this plugin instead:
 
 ```js
-import { ConfirmationDialog } from '@devexpress/dx-react-scheduler';
+import { ConfirmationDialog } from '@vtrphan/dx-react-scheduler';
 ```
 
 ## User Reference

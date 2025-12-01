@@ -7,13 +7,13 @@ A plugin that renders the Search Panel.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxSearchPanel } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxSearchPanel } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxSearchPanel } from '@devexpress/dx-vue-grid';
+import { DxSearchPanel } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

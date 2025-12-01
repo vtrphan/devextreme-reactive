@@ -6,7 +6,7 @@ import {
   TemplatePlaceholder,
   TemplateConnector,
   Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   isFixedTableRow,
   tableColumnsWithFixed,
@@ -14,7 +14,7 @@ import {
   tableHeaderColumnChainsWithFixed,
   calculateFixedColumnProps,
   isRowHighlighted,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
   TableCellProps, TableRowProps, TableFixedColumnsProps, TableFixedColumnsState,
 } from '../types';

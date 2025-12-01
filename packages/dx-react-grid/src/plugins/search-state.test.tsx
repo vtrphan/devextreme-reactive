@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { changeSearchValue } from '@devexpress/dx-grid-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { changeSearchValue } from '@vtrphan/dx-grid-core';
 import {
   pluginDepsToComponents, getComputedState, testStatePluginField,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import { SearchState } from './search-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   changeSearchValue: jest.fn(),
   searchFilterExpression: jest.fn().mockReturnValue('filters'),
 }));

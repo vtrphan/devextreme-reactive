@@ -13,12 +13,12 @@ import {
   TableHeaderRow,
   TableColumnResizing,
   Toolbar,
-} from '@devexpress/dx-react-grid-material-ui';
+} from '@vtrphan/dx-react-grid-material-ui';
 import {
   Plugin,
   Template,
   TemplatePlaceholder,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 import { generateRows } from '../../../demo-data/generator';
 

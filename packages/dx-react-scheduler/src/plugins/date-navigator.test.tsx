@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { pluginDepsToComponents } from '@devexpress/dx-testing';
-import { monthCellsData, viewBoundText } from '@devexpress/dx-scheduler-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { pluginDepsToComponents } from '@vtrphan/dx-testing';
+import { monthCellsData, viewBoundText } from '@vtrphan/dx-scheduler-core';
 import { DateNavigator } from './date-navigator';
 
-jest.mock('@devexpress/dx-scheduler-core', () => ({
+jest.mock('@vtrphan/dx-scheduler-core', () => ({
   monthCellsData: jest.fn(),
   viewBoundText: jest.fn(),
 }));

@@ -22,7 +22,7 @@ import {
   Table,
   TableHeaderRow,
   Toolbar
-} from '@devexpress/dx-react-grid-material-ui';
+} from '@vtrphan/dx-react-grid-material-ui';
 import customers from "./data.js";
 
 class App extends PureComponent {
@@ -115,7 +115,7 @@ Create a new folder called `plugins` in the project and add a new file, `toolbar
 ```jsx
 import {
   Plugin
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilter extends React.PureComponent {
   render() {
@@ -136,7 +136,7 @@ The Grid's toolbar exports a [template](../../../core/docs/reference/template.md
 import {
   ...,
   Template
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilter extends React.PureComponent {
   render() {
@@ -158,7 +158,7 @@ We should *append* our content to default toolbar. To do this, add the [Template
 import {
   ...,
   TemplatePlaceholder
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilter extends React.PureComponent {
   render() {
@@ -264,7 +264,7 @@ The state management plugin called `ToolbarFilterState` prepares all necessary i
 import * as React from 'react';
 import {
     Plugin
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilterState extends React.PureComponent {
   render() {
@@ -342,7 +342,7 @@ Both computed getters also use the `columnName` property value in calculations.
 ...
 import {
     ..., Getter
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilterState extends React.PureComponent {
   constructor(props) {
@@ -384,7 +384,7 @@ To access `toolbarFilterDataItems` from the `ToolbarFilter` plugin, use the [Tem
 import {
   ...,
   TemplateConnector
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilter extends React.PureComponent {
   render() {
@@ -486,7 +486,7 @@ We need to detect changes in the select box value and filter the grid accordingl
 ...
 import {
     ..., Action
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 
 export class ToolbarFilterState extends React.PureComponent {
   constructor(props) {
@@ -569,7 +569,7 @@ Although we are detecting changes in the select box, the grid does not apply a f
 ...
 import {
   IntegratedFiltering
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 
 class App extends Component {
   ...

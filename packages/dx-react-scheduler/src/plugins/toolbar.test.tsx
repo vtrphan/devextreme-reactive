@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost, TemplatePlaceholder } from '@devexpress/dx-react-core';
+import { PluginHost, TemplatePlaceholder } from '@vtrphan/dx-react-core';
 import { Toolbar } from './toolbar';
 
 describe('Toolbar', () => {

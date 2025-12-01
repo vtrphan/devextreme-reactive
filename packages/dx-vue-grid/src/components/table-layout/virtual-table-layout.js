@@ -1,5 +1,5 @@
-import { getCollapsedGrid } from '@devexpress/dx-grid-core';
-import { DxSizer, DxRefHolder } from '@devexpress/dx-vue-core';
+import { getCollapsedGrid } from '@vtrphan/dx-grid-core';
+import { DxSizer, DxRefHolder } from '@vtrphan/dx-vue-core';
 import { ColumnGroup } from './column-group';
 
 export const VirtualTableLayout = {

@@ -2,7 +2,7 @@ import {
   OutlineLevelsFn, FilterSelectedRowsFn, GetRowsToExportFn, Row, BuildGroupTreeFn,
   GetExportSummaryFn, GetCloseGroupFn, Grouping, RowId,
 } from '../../types';
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { ROOT_GROUP } from './constants';
 import { exportSummaryItems, removeEmptyGroups } from './helpers';
 import { TABLE_DATA_TYPE } from '../table/constants';

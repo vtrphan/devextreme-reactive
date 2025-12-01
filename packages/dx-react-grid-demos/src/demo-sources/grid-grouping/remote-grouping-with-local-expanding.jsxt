@@ -2,7 +2,7 @@ import React, { useReducer, useState, useEffect } from 'react';<%&additionalImpo
 import {
   GroupingState,
   CustomGrouping,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   VirtualTable,
@@ -11,7 +11,7 @@ import {
   GroupingPanel,
   DragDropProvider,
   Toolbar,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import { Loading } from '../../../theme-sources/<%&themeName%>/components/loading';
 

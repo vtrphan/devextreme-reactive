@@ -1,4 +1,4 @@
-import { ScatterSeries, withPatchedProps } from '@devexpress/dx-react-chart';
+import { ScatterSeries, withPatchedProps } from '@vtrphan/dx-react-chart';
 import { styled } from '@mui/material';
 import classNames from 'clsx';
 

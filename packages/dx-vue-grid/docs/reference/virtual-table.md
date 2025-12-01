@@ -7,7 +7,7 @@ A plugin that renders a scrollable table instead of a static one. It contains th
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { DxVirtualTable } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxVirtualTable } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 ## User Reference

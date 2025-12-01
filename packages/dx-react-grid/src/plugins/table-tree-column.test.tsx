@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { create } from 'react-test-renderer';
-import { pluginDepsToComponents, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost } from '@devexpress/dx-react-core';
-import { isTreeTableCell } from '@devexpress/dx-grid-core';
+import { pluginDepsToComponents, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost } from '@vtrphan/dx-react-core';
+import { isTreeTableCell } from '@vtrphan/dx-grid-core';
 import { TableTreeColumn } from './table-tree-column';
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   isTreeTableCell: jest.fn(),
 }));
 

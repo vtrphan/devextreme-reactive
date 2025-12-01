@@ -2,15 +2,15 @@ import * as React from 'react';
 
 import {
   Action, Actions, Plugin, Getter, Template, TemplateConnector, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   exportHeader, exportRows, closeGroupGetter, closeSheet, groupOutlineLevels, rowsToExport,
   buildGroupTree, exportSummaryGetter, maximumGroupLevel,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import {
   IntegratedGrouping, GroupingState, SummaryState, IntegratedSummary, Table, SelectionState,
   FilteringState, IntegratedFiltering, SortingState, IntegratedSorting,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 
 /* tslint:disable no-submodule-imports */
 import {

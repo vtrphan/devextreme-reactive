@@ -9,13 +9,13 @@ The plugin also allows you to manage a column's sorting and grouping state.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableHeaderRow } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableHeaderRow } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 You can import a themeless plugin if you want to use custom components:
 
 ```js
-import { DxTableHeaderRow } from '@devexpress/dx-vue-grid';
+import { DxTableHeaderRow } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

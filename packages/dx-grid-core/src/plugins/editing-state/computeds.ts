@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import {
   EditingColumnExtension, CreateRowChangeFn, Row, RowId, RowChanges,
 } from '../../types';

@@ -8,10 +8,10 @@ import {
   withComponents,
   Getters,
   PluginComponents,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   findSeriesByName, addSeries, extendDomains, getValueDomainName, ARGUMENT_DOMAIN,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import {
   ExtraSeriesParameters, SeriesProps, PathComponentProps, Scales,
 } from '../types';

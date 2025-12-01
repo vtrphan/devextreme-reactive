@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Animation, isScalesChanged } from '@devexpress/dx-chart-core';
+import { Animation, isScalesChanged } from '@vtrphan/dx-chart-core';
 import { GetDelayFn, Scales, AnimatedComponent } from '../types';
 
 export const withAnimation = <T extends AnimatedComponent>(

@@ -1,4 +1,4 @@
-import { SchedulerDateTime } from '@devexpress/dx-scheduler-core';
+import { SchedulerDateTime } from '@vtrphan/dx-scheduler-core';
 import { AppointmentModel } from '../index';
 
 /* tslint:disable no-namespace max-line-length */

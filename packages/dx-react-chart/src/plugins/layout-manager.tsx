@@ -8,8 +8,8 @@ import {
   createStateHelper,
   Getters,
   ActionFn,
-} from '@devexpress/dx-react-core';
-import { bBoxes, getRanges } from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-react-core';
+import { bBoxes, getRanges } from '@vtrphan/dx-chart-core';
 import { LayoutManagerProps, LayoutManagerState, BBoxesChange } from '../types';
 
 const doGetRanges = ({ layouts, rotated }: Getters) => getRanges(layouts.pane, rotated);

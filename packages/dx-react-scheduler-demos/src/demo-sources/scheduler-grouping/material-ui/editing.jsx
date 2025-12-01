@@ -3,7 +3,7 @@ import Paper from '@mui/material/Paper';
 import { blue, teal } from '@mui/material/colors';
 import {
   ViewState, EditingState, GroupingState, IntegratedGrouping, IntegratedEditing,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Resources,
@@ -14,7 +14,7 @@ import {
   GroupingPanel,
   WeekView,
   AllDayPanel,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import { data as appointments } from '../../../demo-data/grouping';
 
 const priorityData = [

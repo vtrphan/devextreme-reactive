@@ -1,6 +1,6 @@
 import * as React from "react";
-import { Getter, Plugin, Getters } from "@devexpress/dx-react-core";
-import { tableColumnsWithGrouping } from "@devexpress/dx-grid-core";
+import { Getter, Plugin, Getters } from "@vtrphan/dx-react-core";
+import { tableColumnsWithGrouping } from "@vtrphan/dx-grid-core";
 import {
   ShowColumnWhenGroupedGetterFn,
   TableColumnsWithGroupingProps

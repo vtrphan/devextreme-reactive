@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Getter, Template, Plugin,
   TemplateConnector, TemplatePlaceholder, Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   getBandComponent, tableHeaderColumnChainsWithBands,
   isBandedTableRow, isBandedOrHeaderRow,
@@ -14,7 +14,7 @@ import {
   bandLevelsVisibility,
   columnBandLevels,
   columnVisibleIntervals,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableBandHeaderProps, TableBandHeader as BandHeaderNS, TableRowProps } from '../types';
 
 const CellPlaceholder = (props: BandHeaderNS.CellProps) => <TemplatePlaceholder params={props} />;

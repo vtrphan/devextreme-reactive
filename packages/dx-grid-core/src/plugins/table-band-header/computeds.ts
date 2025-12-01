@@ -1,4 +1,4 @@
-import { PureComputed } from '@devexpress/dx-core';
+import { PureComputed } from '@vtrphan/dx-core';
 import { TABLE_BAND_TYPE } from './constants';
 import { TABLE_DATA_TYPE } from '../table/constants';
 import { TABLE_GROUP_TYPE } from '../table-group-row/constants';

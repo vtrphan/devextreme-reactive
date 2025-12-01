@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
-import { ViewState, EditingState } from '@devexpress/dx-react-scheduler';
+import { ViewState, EditingState } from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   WeekView,
@@ -10,7 +10,7 @@ import {
   Toolbar,
   DragDropProvider,
   EditRecurrenceMenu,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 
 const appointments = [{
   title: 'Website Re-Design Plan',

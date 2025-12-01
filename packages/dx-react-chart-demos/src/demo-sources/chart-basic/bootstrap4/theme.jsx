@@ -2,7 +2,7 @@ import * as React from 'react';
 import {
   Chart,
   PieSeries,
-} from '@devexpress/dx-react-chart-bootstrap4';
+} from '@vtrphan/dx-react-chart-bootstrap4';
 import {
   schemeCategory10,
   schemeAccent,
@@ -15,7 +15,7 @@ import {
   schemeSet3,
 } from 'd3-scale-chromatic';
 
-import { Palette } from '@devexpress/dx-react-chart';
+import { Palette } from '@vtrphan/dx-react-chart';
 
 const schemeCollection = [
   schemeCategory10,

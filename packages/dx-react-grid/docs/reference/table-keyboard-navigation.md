@@ -7,15 +7,15 @@ A plugin that visualizes a focused table cell.
 Use the following statement to import the plugin with embedded theme components:
 
 ```js
-import { TableKeyboardNavigation } from '@devexpress/dx-react-grid-material-ui';
-// import { TableKeyboardNavigation } from '@devexpress/dx-react-grid-bootstrap4';
-// import { TableKeyboardNavigation } from '@devexpress/dx-react-grid-bootstrap3';
+import { TableKeyboardNavigation } from '@vtrphan/dx-react-grid-material-ui';
+// import { TableKeyboardNavigation } from '@vtrphan/dx-react-grid-bootstrap4';
+// import { TableKeyboardNavigation } from '@vtrphan/dx-react-grid-bootstrap3';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { TableKeyboardNavigation } from '@devexpress/dx-react-grid';
+import { TableKeyboardNavigation } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

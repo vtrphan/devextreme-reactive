@@ -1,1 +1,1 @@
-export { SplineSeries } from '@devexpress/dx-react-chart';
+export { SplineSeries } from '@vtrphan/dx-react-chart';

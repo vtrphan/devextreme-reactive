@@ -7,7 +7,7 @@ A plugin that allows you to calculate a custom summary.
 Use the following statement to import the plugin:
 
 ```js
-import { CustomSummary } from '@devexpress/dx-react-grid';
+import { CustomSummary } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

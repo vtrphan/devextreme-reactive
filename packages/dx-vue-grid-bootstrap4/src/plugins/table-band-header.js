@@ -1,4 +1,4 @@
-import { DxTableBandHeader as DxTableBandHeaderBase } from '@devexpress/dx-vue-grid';
+import { DxTableBandHeader as DxTableBandHeaderBase } from '@vtrphan/dx-vue-grid';
 import { Cell } from '../templates/table-band-header/cell';
 import { BandedHeaderCell } from '../templates/table-band-header/banded-header-cell';
 import { InvisibleCell } from '../templates/table-band-header/invisible-cell';

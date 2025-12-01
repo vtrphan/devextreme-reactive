@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { makeVirtualTable } from '@devexpress/dx-react-grid';
+import { makeVirtualTable } from '@vtrphan/dx-react-grid';
 import { Table } from './table';
 import { Table as TableComponent } from '../templates/table';
 import { VirtualTableLayout as VirtualLayout } from '../templates/virtual-table-layout';

@@ -7,8 +7,8 @@ import {
   BarSeries,
   Title,
   Legend,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Stack, Animation } from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart-material-ui';
+import { Stack, Animation } from '@vtrphan/dx-react-chart';
 
 import { energyConsumption as data } from '../../../demo-data/data-vizualization';
 

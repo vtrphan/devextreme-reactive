@@ -3,7 +3,7 @@ import {
   Getter, Template, Plugin,
   TemplateConnector,
   Getters,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   TABLE_SELECT_TYPE,
   tableColumnsWithSelection,
@@ -11,7 +11,7 @@ import {
   isSelectAllTableCell,
   isDataTableRow,
   isRowHighlighted,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableSelectionProps, TableCellProps, TableRowProps } from '../types';
 
 class TableSelectionBase extends React.PureComponent<TableSelectionProps> {

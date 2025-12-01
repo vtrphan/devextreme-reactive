@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { pluginDepsToComponents, getComputedState, setupConsole } from '@devexpress/dx-testing';
-import { PluginHost, Template, TemplatePlaceholder } from '@devexpress/dx-react-core';
+import { pluginDepsToComponents, getComputedState, setupConsole } from '@vtrphan/dx-testing';
+import { PluginHost, Template, TemplatePlaceholder } from '@vtrphan/dx-react-core';
 import {
   FIXED_COLUMN_LEFT_SIDE,
   FIXED_COLUMN_RIGHT_SIDE,
@@ -12,11 +12,11 @@ import {
   tableHeaderColumnChainsWithFixed,
   isFixedTableRow,
   isRowHighlighted,
-} from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-grid-core';
 import { TableFixedColumns } from './table-fixed-columns';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
-  ...jest.requireActual('@devexpress/dx-grid-core'),
+jest.mock('@vtrphan/dx-grid-core', () => ({
+  ...jest.requireActual('@vtrphan/dx-grid-core'),
   getFixedColumnKeys: jest.fn(),
   tableColumnsWithFixed: jest.fn(),
   tableHeaderRowsWithFixed: jest.fn(),

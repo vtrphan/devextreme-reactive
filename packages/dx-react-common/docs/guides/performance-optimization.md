@@ -22,7 +22,7 @@ Do not declare functions and variables inside render methods. Otherwise, these f
 
 ## Access the Parent Component's State Correctly
 
-Use a management library like [Redux](https://redux.js.org/) to access the parent component's state. If you do not use such libraries in your application, we recommend that you use the [connectProps](../../../dx-react-core/docs/reference/connect-props.md) function available in the `@devexpress/dx-react-core` package.
+Use a management library like [Redux](https://redux.js.org/) to access the parent component's state. If you do not use such libraries in your application, we recommend that you use the [connectProps](../../../dx-react-core/docs/reference/connect-props.md) function available in the `@vtrphan/dx-react-core` package.
 
 In the following example, [React Chart](https://devexpress.github.io/devextreme-reactive/react/chart) uses the `connectionProps`'s `update` method to update a legend label's style when the parent serie's hover state changes.
 

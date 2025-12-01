@@ -11,7 +11,7 @@ import {
   getDaysOfWeek,
   getMonths,
   getMonthsWithOf,
-} from '@devexpress/dx-scheduler-core';
+} from '@vtrphan/dx-scheduler-core';
 import { ChangeMonthEditor } from './change-month-editor';
 import { ChangeWeekNumberEditor } from './change-week-number-editor';
 

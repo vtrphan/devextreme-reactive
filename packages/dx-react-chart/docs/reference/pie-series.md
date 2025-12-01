@@ -7,14 +7,14 @@ The PieSeries plugin visualizes pie series.
 Use the following statement to import the plugin:
 
 ```js
-import { PieSeries } from '@devexpress/dx-react-chart-material-ui';
-// import { PieSeries } from '@devexpress/dx-react-chart-bootstrap4';
+import { PieSeries } from '@vtrphan/dx-react-chart-material-ui';
+// import { PieSeries } from '@vtrphan/dx-react-chart-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { PieSeries } from '@devexpress/dx-react-chart';
+import { PieSeries } from '@vtrphan/dx-react-chart';
 ```
 
 ## User Reference

@@ -4,7 +4,7 @@ import {
   VirtualTable,
   TableHeaderRow,
   TableFixedColumns,
-} from '@devexpress/dx-react-grid-<%&themeName%>';<%&cssImports%>
+} from '@vtrphan/dx-react-grid-<%&themeName%>';<%&cssImports%>
 
 import {
   generateRows,

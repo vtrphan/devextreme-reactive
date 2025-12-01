@@ -7,13 +7,13 @@ A plugin that renders group rows and enables them to expand and collapse.
 Use the following statement to import a plugin with embedded theme components:
 
 ```js
-import { DxTableGroupRow } from '@devexpress/dx-vue-grid-bootstrap4';
+import { DxTableGroupRow } from '@vtrphan/dx-vue-grid-bootstrap4';
 ```
 
 If you want to use custom components, you can import the themeless plugin:
 
 ```js
-import { DxTableGroupRow } from '@devexpress/dx-vue-grid';
+import { DxTableGroupRow } from '@vtrphan/dx-vue-grid';
 ```
 
 ## User Reference

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createShallow, createMount } from "@devexpress/dx-testing";
+import { createShallow, createMount } from "@vtrphan/dx-testing";
 import { MainLayout, classes } from "./main-layout";
 import { scrollingStrategy } from "../utils";
 

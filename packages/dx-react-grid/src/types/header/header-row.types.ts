@@ -60,7 +60,7 @@ export namespace TableHeaderRow {
   }
 
   export interface LocalizationMessages {
-    /** Specifies the 'Sort' hint's text. Available in the "\@devexpress/dx-react-grid-material-ui" package. */
+    /** Specifies the 'Sort' hint's text. Available in the "\@vtrphan/dx-react-grid-material-ui" package. */
     sortingHint?: string;
   }
 }

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, ActionFn,
-} from '@devexpress/dx-react-core';
-import { toggleDetailRowExpanded, ToggleRowPayload } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { toggleDetailRowExpanded, ToggleRowPayload } from '@vtrphan/dx-grid-core';
 import { RowDetailStateProps, RowDetailStateState } from '../types';
 
 // tslint:disable-next-line: max-line-length

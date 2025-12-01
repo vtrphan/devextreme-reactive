@@ -6,7 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import {
   ViewState, EditingState, GroupingState, IntegratedGrouping, IntegratedEditing,
-} from '@devexpress/dx-react-scheduler';
+} from '@vtrphan/dx-react-scheduler';
 import {
   Scheduler,
   Resources,
@@ -19,7 +19,7 @@ import {
   MonthView,
   Toolbar,
   ViewSwitcher,
-} from '@devexpress/dx-react-scheduler-material-ui';
+} from '@vtrphan/dx-react-scheduler-material-ui';
 import { data as appointments } from '../../../demo-data/grouping';
 
 const PREFIX = 'Demo';

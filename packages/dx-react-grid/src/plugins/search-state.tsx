@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {
   Getter, Action, Plugin, createStateHelper, ActionFn, Getters,
-} from '@devexpress/dx-react-core';
-import { changeSearchValue, searchFilterExpression } from '@devexpress/dx-grid-core';
+} from '@vtrphan/dx-react-core';
+import { changeSearchValue, searchFilterExpression } from '@vtrphan/dx-grid-core';
 import { SearchStateProps, SearchStateState } from '../types';
 
 class SearchStateBase extends React.PureComponent<SearchStateProps, SearchStateState> {

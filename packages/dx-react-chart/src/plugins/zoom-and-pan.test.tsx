@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import { PluginHost } from '@devexpress/dx-react-core';
+import { PluginHost } from '@vtrphan/dx-react-core';
 import {
   pluginDepsToComponents, getComputedState,
-} from '@devexpress/dx-testing';
+} from '@vtrphan/dx-testing';
 import {
   adjustLayout, attachEvents, detachEvents, setCursorType,
   isKeyPressed, getViewport, getEventCoords,
-} from '@devexpress/dx-chart-core';
+} from '@vtrphan/dx-chart-core';
 import { ZoomAndPan } from './zoom-and-pan';
 
-jest.mock('@devexpress/dx-chart-core', () => ({
+jest.mock('@vtrphan/dx-chart-core', () => ({
   adjustLayout: jest.fn().mockReturnValue('adjusted-ranges'),
   attachEvents: jest.fn(),
   detachEvents: jest.fn(),

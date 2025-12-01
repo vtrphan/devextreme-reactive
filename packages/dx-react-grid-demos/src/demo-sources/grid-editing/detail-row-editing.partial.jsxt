@@ -1,16 +1,16 @@
 import React, { useState } from 'react';<%&additionalImports%>
 import {
   Plugin, Template, TemplateConnector, TemplatePlaceholder, Action,
-} from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-core';
 import {
   EditingState, RowDetailState,
-} from '@devexpress/dx-react-grid';
+} from '@vtrphan/dx-react-grid';
 import {
   Grid,
   Table,
   TableHeaderRow,
   TableRowDetail,
-} from '@devexpress/dx-react-grid-<%&themeName%>';
+} from '@vtrphan/dx-react-grid-<%&themeName%>';
 // eslint-disable-next-line
 import moment from 'moment';
 <%&imports%>

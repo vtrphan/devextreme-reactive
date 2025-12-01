@@ -1,8 +1,8 @@
-import { testStatePluginField, setupConsole } from '@devexpress/dx-testing';
-import { setCurrentPage, setPageSize } from '@devexpress/dx-grid-core';
+import { testStatePluginField, setupConsole } from '@vtrphan/dx-testing';
+import { setCurrentPage, setPageSize } from '@vtrphan/dx-grid-core';
 import { PagingState } from './paging-state';
 
-jest.mock('@devexpress/dx-grid-core', () => ({
+jest.mock('@vtrphan/dx-grid-core', () => ({
   setCurrentPage: jest.fn(),
   setPageSize: jest.fn(),
 }));

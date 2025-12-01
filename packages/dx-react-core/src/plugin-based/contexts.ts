@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { PluginHost, PluginPositionFn } from '@devexpress/dx-core';
+import { PluginHost, PluginPositionFn } from '@vtrphan/dx-core';
 
 /** @internal */
 export interface TemplateHostInterface {

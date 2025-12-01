@@ -7,7 +7,7 @@ A plugin that manages grid rows' editing state. It arranges grid rows by differe
 Use the following statement to import the plugin:
 
 ```js
-import { EditingState } from '@devexpress/dx-react-grid';
+import { EditingState } from '@vtrphan/dx-react-grid';
 ```
 
 ## User Reference

@@ -7,16 +7,16 @@ import {
   Legend,
   BarSeries,
   Title,
-} from '@devexpress/dx-react-chart-material-ui';
-import { Plugin, Template, TemplatePlaceholder } from '@devexpress/dx-react-core';
+} from '@vtrphan/dx-react-chart-material-ui';
+import { Plugin, Template, TemplatePlaceholder } from '@vtrphan/dx-react-core';
 import domtoimage from 'dom-to-image';
 import JsPDF from 'jspdf';
 import IconButton from '@mui/material/IconButton';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { scaleBand } from '@devexpress/dx-chart-core';
-import { ArgumentScale, Stack, Animation } from '@devexpress/dx-react-chart';
+import { scaleBand } from '@vtrphan/dx-chart-core';
+import { ArgumentScale, Stack, Animation } from '@vtrphan/dx-react-chart';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 

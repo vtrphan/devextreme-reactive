@@ -8,12 +8,12 @@ import {
   Title,
   Legend,
   Tooltip,
-} from '@devexpress/dx-react-chart-material-ui';
+} from '@vtrphan/dx-react-chart-material-ui';
 import * as d3Format from 'd3-format';
-import { scaleBand } from '@devexpress/dx-chart-core';
+import { scaleBand } from '@vtrphan/dx-chart-core';
 import {
   ArgumentScale, Stack, Animation, EventTracker, HoverState, SelectionState,
-} from '@devexpress/dx-react-chart';
+} from '@vtrphan/dx-react-chart';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import {
