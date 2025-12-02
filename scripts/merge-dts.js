@@ -1,24 +1,24 @@
-import { join, sep } from 'path';
-import { existsSync } from 'fs';
-import rimraf from 'rimraf';
-import replace from 'replace-in-file';
-import dts from 'dts-bundle';
+import { join, sep } from "path";
+import { existsSync } from "fs";
+import rimraf from "rimraf";
+import replace from "replace-in-file";
+import dts from "dts-bundle";
 
-import { copyCommonJsTypes, getPackageInfo } from './utils.js';
+import { copyCommonJsTypes, getPackageInfo } from "./utils.js";
 
 const getIndexDts = (packageDirectory, dtsPath) => {
-  let indexDts = join(dtsPath, 'index.d.ts');
+  let indexDts = join(dtsPath, "index.d.ts");
 
   if (!existsSync(indexDts)) {
     const parentDir = packageDirectory.split(sep).pop();
-    indexDts = join(dtsPath, parentDir, 'src', 'index.d.ts');
+    indexDts = join(dtsPath, parentDir, "src", "index.d.ts");
   }
 
   return indexDts;
 };
 
 export default (packageDirectory, skipBundle = false) => {
-  const dtsPath = join(packageDirectory, 'dist', 'dts');
+  const dtsPath = join(packageDirectory, "dist", "dts");
 
   if (!skipBundle) {
     const pkg = getPackageInfo(packageDirectory);
@@ -27,23 +27,23 @@ export default (packageDirectory, skipBundle = false) => {
 
     replace.sync({
       files: `${dtsPath}/**/*.ts`,
-      from: 'export {};',
-      to: '',
+      from: "export {};",
+      to: ""
     });
 
     dts.bundle({
       name: pkg.name,
       main: indexDts,
       out: dtsOutFile,
-      indent: '  ',
+      indent: "  ",
       outputAsModuleFolder: true,
-      headerPath: 'none',
+      headerPath: "none"
     });
 
     replace.sync({
       files: dtsOutFile,
       from: /import \* as React from ['"]react['"];\s+import \* as React from ['"]react['"];?/g,
-      to: "import * as React from 'react';\n",
+      to: "import * as React from 'react';\n"
     });
 
     copyCommonJsTypes(dtsOutFile);
