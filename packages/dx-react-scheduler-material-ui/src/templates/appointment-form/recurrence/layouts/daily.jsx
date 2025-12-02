@@ -13,8 +13,8 @@ export const Daily = ({
   textEditorComponent,
   labelComponent,
   getMessage,
-  readOnly,
-  onFieldChange,
+  readOnly = false,
+  onFieldChange = () => undefined,
   appointmentData,
   selectComponent,
   formatDate,
@@ -65,9 +65,4 @@ Daily.propTypes = {
   readOnly: PropTypes.bool,
   formatDate: PropTypes.func.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-Daily.defaultProps = {
-  onFieldChange: () => undefined,
-  readOnly: false,
 };

@@ -5,7 +5,7 @@ import { StyleContext } from './layout';
 import { getStickyPosition, getStickyStyles } from '../utils/css-fallback-properties';
 
 export const Table = ({
-  children, use, style, className, forwardedRef,
+  children, use = undefined, style = null, className = undefined, forwardedRef = undefined,
   ...restProps
 }) => {
   const [stickyPosition, setStickyPosition] = React.useState(getStickyPosition());
@@ -27,15 +27,15 @@ export const Table = ({
         tableLayout: 'fixed',
         borderCollapse: 'separate',
         marginBottom: 0,
-        ...use ? {
+        ...(use ? {
           ...getStickyStyles({ stickyPosition, backgroundColor }),
-        } : null,
-        ...use === 'head' ? {
+        } : null),
+        ...(use === 'head' ? {
           top: 0,
-        } : null,
-        ...use === 'foot' ? {
+        } : null),
+        ...(use === 'foot' ? {
           bottom: 0,
-        } : null,
+        } : null),
         ...style,
       }}
       {...restProps}
@@ -51,11 +51,4 @@ Table.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-Table.defaultProps = {
-  use: undefined,
-  style: null,
-  className: undefined,
-  forwardedRef: undefined,
 };

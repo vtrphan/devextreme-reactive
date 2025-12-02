@@ -13,7 +13,7 @@ import { OrderedTableColumnsProps } from '../../types';
 export const OrderedTableColumns: React.FunctionComponent<
   OrderedTableColumnsProps
 > = ({
-  order,
+  order = [],
 }) => {
   const columnsComputed = (
     { tableColumns }: Getters,
@@ -24,8 +24,4 @@ export const OrderedTableColumns: React.FunctionComponent<
       <Getter name="tableColumns" computed={columnsComputed} />
     </Plugin>
   );
-};
-
-OrderedTableColumns.defaultProps = {
-  order: [],
 };

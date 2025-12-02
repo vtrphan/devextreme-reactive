@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const PaginationItem = ({
-  active,
-  disabled,
+  active = false,
+  disabled = false,
   ...restProps
 }) => (
   <li
@@ -16,9 +16,4 @@ export const PaginationItem = ({
 PaginationItem.propTypes = {
   active: PropTypes.bool,
   disabled: PropTypes.bool,
-};
-
-PaginationItem.defaultProps = {
-  active: false,
-  disabled: false,
 };

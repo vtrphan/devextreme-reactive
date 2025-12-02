@@ -26,7 +26,7 @@ const styles = ({ theme }) => ({
 });
 
 const BandedHeaderCellBase = ({
-  component: HeaderCellComponent, className, beforeBorder, ...restProps
+  component: HeaderCellComponent, className = undefined, beforeBorder = false, ...restProps
 }) => (
   <HeaderCellComponent
     className={classNames({
@@ -41,11 +41,6 @@ BandedHeaderCellBase.propTypes = {
   component: PropTypes.func.isRequired,
   className: PropTypes.string,
   beforeBorder: PropTypes.bool,
-};
-
-BandedHeaderCellBase.defaultProps = {
-  className: undefined,
-  beforeBorder: false,
 };
 
 export const BandedHeaderCell = styled(BandedHeaderCellBase)(styles);

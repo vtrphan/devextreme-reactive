@@ -4,7 +4,10 @@ import { Sizer } from '@vtrphan/dx-react-core';
 import classNames from 'clsx';
 import { TableStubCell } from './table-stub-cell';
 
-const TableBorderlessStubCell = ({ className, ...restProps }) => (
+const TableBorderlessStubCell = ({
+  className = undefined,
+  ...restProps
+}) => (
   <TableStubCell
     className={classNames('border-0', className)}
     {...restProps}
@@ -13,10 +16,6 @@ const TableBorderlessStubCell = ({ className, ...restProps }) => (
 
 TableBorderlessStubCell.propTypes = {
   className: PropTypes.string,
-};
-
-TableBorderlessStubCell.defaultProps = {
-  className: undefined,
 };
 
 export const TableListenerCell = ({ listen, onSizeChange, ...restProps }) => (listen ? (

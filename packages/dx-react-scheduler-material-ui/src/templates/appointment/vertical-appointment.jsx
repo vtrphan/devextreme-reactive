@@ -94,8 +94,8 @@ const StyledDiv = styled('div')(({
 
 export const VerticalAppointment = ({
   data,
-  children,
-  className,
+  children = undefined,
+  className = undefined,
   formatDate,
   recurringIconComponent: RecurringIcon,
   durationType,
@@ -173,9 +173,4 @@ VerticalAppointment.propTypes = {
   durationType: PropTypes.string.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-VerticalAppointment.defaultProps = {
-  children: undefined,
-  className: undefined,
 };

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Plugin,
   TemplatePlaceholder,
@@ -9,34 +9,49 @@ import {
   PluginComponents,
   withComponents,
   Size,
-  clearSelection,
-} from '@vtrphan/dx-react-core';
-import { DragBox } from '../templates/drag-box';
+  clearSelection
+} from "@vtrphan/dx-react-core";
+import { DragBox } from "../templates/drag-box";
 import {
-  adjustLayout, getViewport, isKeyPressed, getOffset, getDeltaForTouches, getRect,
-  ScalesCache, getWheelDelta, getEventCoords, isMultiTouch, attachEvents, detachEvents,
-  setCursorType,
-} from '@vtrphan/dx-chart-core';
+  adjustLayout,
+  getViewport,
+  isKeyPressed,
+  getOffset,
+  getDeltaForTouches,
+  getRect,
+  ScalesCache,
+  getWheelDelta,
+  getEventCoords,
+  isMultiTouch,
+  attachEvents,
+  detachEvents,
+  setCursorType
+} from "@vtrphan/dx-chart-core";
 import {
-  ZoomAndPanProps, ZoomAndPanState, Location, NumberArray, ZoomPanProviderProps, EventHandlers,
-} from '../types';
+  ZoomAndPanProps,
+  ZoomAndPanState,
+  Location,
+  NumberArray,
+  ZoomPanProviderProps,
+  EventHandlers
+} from "../types";
 
 const events = {
-  wheel: { func: 'onWheel' },
+  wheel: { func: "onWheel" },
   mousedown: {
-    func: 'onStart',
-    extraEvents: ['mousemove', 'mouseup'],
+    func: "onStart",
+    extraEvents: ["mousemove", "mouseup"]
   },
   touchstart: {
-    func: 'onStart',
-    extraEvents: ['touchmove', 'touchend'],
-  },
+    func: "onStart",
+    extraEvents: ["touchmove", "touchend"]
+  }
 };
 
 class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
   handlers!: EventHandlers;
   svgElement!: SVGElement;
-  windowHandlers!: { [key: string]: EventHandlers};
+  windowHandlers!: { [key: string]: EventHandlers };
 
   componentDidMount() {
     this.svgElement = this.props.rootRef.current!;
@@ -55,8 +70,8 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
               this.props.onEnd(event);
               setCursorType(this.svgElement);
               detachEvents(window, this.windowHandlers[key]);
-            },
-          },
+            }
+          }
         };
       }
       return prev;
@@ -70,7 +85,7 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
           if (events[key].extraEvents) {
             attachEvents(window, this.windowHandlers[key]);
           }
-        },
+        }
       };
     }, {});
     attachEvents(this.svgElement, this.handlers);
@@ -78,7 +93,7 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
 
   componentWillUnmount() {
     detachEvents(this.svgElement, this.handlers);
-    Object.keys(this.windowHandlers).forEach((el) => {
+    Object.keys(this.windowHandlers).forEach(el => {
       detachEvents(window, this.windowHandlers[el]);
     });
   }
@@ -89,14 +104,12 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanState> {
+class ZoomAndPanBase extends React.PureComponent<
+  ZoomAndPanProps,
+  ZoomAndPanState
+> {
   static components: PluginComponents = {
-    dragBoxComponent: 'DragBox',
-  };
-  static defaultProps: Partial<ZoomAndPanProps> = {
-    interactionWithValues: 'none',
-    interactionWithArguments: 'both',
-    zoomRegionKey: 'shift',
+    dragBoxComponent: "DragBox"
   };
 
   multiTouchDelta: number | null = null;
@@ -109,13 +122,16 @@ class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanStat
 
     this.state = {
       viewport: props.viewport || props.defaultViewport,
-      rectBox: null,
+      rectBox: null
     };
   }
 
-  static getDerivedStateFromProps(props: ZoomAndPanProps, state: ZoomAndPanState): ZoomAndPanState {
+  static getDerivedStateFromProps(
+    props: ZoomAndPanProps,
+    state: ZoomAndPanState
+  ): ZoomAndPanState {
     return {
-      viewport: props.viewport !== undefined ? props.viewport : state.viewport,
+      viewport: props.viewport !== undefined ? props.viewport : state.viewport
     };
   }
 
@@ -128,14 +144,14 @@ class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanStat
     e.preventDefault();
     this.offset = getOffset(e.currentTarget);
     const coords = getEventCoords(e, this.offset);
-      // Rectangle mode should be canceled if "zoomRegionKey" is released during mouse movevent or
-      // not pressed when mouse is up. To do it access to "event" object is required in
-      // "handleMove" and "handleEnd".
-      // TODO: Provide rectangle mode canceling.
+    // Rectangle mode should be canceled if "zoomRegionKey" is released during mouse movevent or
+    // not pressed when mouse is up. To do it access to "event" object is required in
+    // "handleMove" and "handleEnd".
+    // TODO: Provide rectangle mode canceling.
     if (isKeyPressed(e, zoomRegionKey)) {
       this.rectOrigin = coords;
     } else {
-      setCursorType(e.currentTarget, 'grabbing');
+      setCursorType(e.currentTarget, "grabbing");
     }
     if (isMultiTouch(e)) {
       this.multiTouchDelta = getDeltaForTouches(e.touches).delta;
@@ -148,7 +164,12 @@ class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanStat
     clearSelection();
     if (isMultiTouch(e)) {
       const current = getDeltaForTouches(e.touches);
-      this.zoom(scales, rotated, current.delta - this.multiTouchDelta!, current.center);
+      this.zoom(
+        scales,
+        rotated,
+        current.delta - this.multiTouchDelta!,
+        current.center
+      );
       this.multiTouchDelta = current.delta;
     } else {
       this.scroll(scales, rotated, e, pane);
@@ -160,65 +181,102 @@ class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanStat
     const deltaX = coords[0] - this.lastCoordinates![0];
     const deltaY = coords[1] - this.lastCoordinates![1];
     this.lastCoordinates = coords;
-    this.setState((
-      { viewport }, { onViewportChange, interactionWithArguments, interactionWithValues },
-    ) => {
-      if (this.rectOrigin) {
-        return {
-          rectBox: getRect(
-            rotated,
-            interactionWithArguments!,
-            interactionWithValues!,
-            this.rectOrigin,
-            coords,
-            pane,
-          ),
-        };
+    this.setState(
+      (
+        { viewport },
+        { onViewportChange, interactionWithArguments, interactionWithValues }
+      ) => {
+        const argsInteraction = interactionWithArguments ?? "both";
+        const valuesInteraction = interactionWithValues ?? "none";
+        if (this.rectOrigin) {
+          return {
+            rectBox: getRect(
+              rotated,
+              argsInteraction,
+              valuesInteraction,
+              this.rectOrigin,
+              coords,
+              pane
+            )
+          };
+        }
+        return getViewport(
+          scales,
+          rotated,
+          [argsInteraction, valuesInteraction],
+          "pan",
+          [-deltaX, -deltaY],
+          null,
+          null,
+          viewport,
+          onViewportChange
+        );
       }
-      return getViewport(
-        scales, rotated, [interactionWithArguments!, interactionWithValues!], 'pan',
-        [-deltaX, -deltaY], null, null, viewport, onViewportChange,
-      );
-    });
+    );
   }
 
   handleEnd(scales: ScalesCache, rotated: boolean) {
     this.lastCoordinates = null;
     this.multiTouchDelta = null;
     if (this.rectOrigin) {
-      this.setState((
-        { viewport, rectBox },
-        { onViewportChange, interactionWithArguments, interactionWithValues },
-      ) => {
-        if (rectBox === null) return {};
+      this.setState(
+        (
+          { viewport, rectBox },
+          { onViewportChange, interactionWithArguments, interactionWithValues }
+        ) => {
+          if (rectBox === null) return {};
+          const argsInteraction = interactionWithArguments ?? "both";
+          const valuesInteraction = interactionWithValues ?? "none";
 
-        this.rectOrigin = null;
-        return {
-          rectBox: null,
-          ...getViewport(
-            scales, rotated, [interactionWithArguments!, interactionWithValues!], 'zoom',
-            null,
-            null,
-            [
-              [rectBox!.x, rectBox!.x + rectBox!.width],
-              [rectBox!.y, rectBox!.y + rectBox!.height],
-            ],
-            viewport, onViewportChange,
-          ),
-        };
-      });
+          this.rectOrigin = null;
+          return {
+            rectBox: null,
+            ...getViewport(
+              scales,
+              rotated,
+              [argsInteraction, valuesInteraction],
+              "zoom",
+              null,
+              null,
+              [
+                [rectBox!.x, rectBox!.x + rectBox!.width],
+                [rectBox!.y, rectBox!.y + rectBox!.height]
+              ],
+              viewport,
+              onViewportChange
+            )
+          };
+        }
+      );
     }
   }
 
-  zoom(scales: ScalesCache, rotated: boolean, delta: number, anchors: Location) {
-    this.setState((
-      { viewport }, { onViewportChange, interactionWithArguments, interactionWithValues },
-    ) => {
-      return getViewport(
-        scales, rotated, [interactionWithArguments!, interactionWithValues!], 'zoom',
-        [delta, delta], anchors, null, viewport, onViewportChange,
-      );
-    });
+  zoom(
+    scales: ScalesCache,
+    rotated: boolean,
+    delta: number,
+    anchors: Location
+  ) {
+    this.setState(
+      (
+        { viewport },
+        { onViewportChange, interactionWithArguments, interactionWithValues }
+      ) => {
+        const argsInteraction = interactionWithArguments ?? "both";
+        const valuesInteraction = interactionWithValues ?? "none";
+        return getViewport(
+          scales,
+          rotated,
+          [argsInteraction, valuesInteraction],
+          "zoom",
+          [delta, delta],
+          anchors,
+          null,
+          viewport,
+          onViewportChange
+        );
+      }
+    );
   }
 
   handleZoom(scales: ScalesCache, rotated: boolean, e: any) {
@@ -231,42 +289,36 @@ class ZoomAndPanBase extends React.PureComponent<ZoomAndPanProps, ZoomAndPanStat
     const { viewport, rectBox } = this.state;
     const {
       dragBoxComponent: DragBoxComponent,
-      zoomRegionKey,
-     } = this.props;
-    const getAdjustedLayout = ({
-      domains,
-      ranges,
-    }: Getters) => adjustLayout(domains, ranges, viewport);
+      zoomRegionKey = "shift"
+    } = this.props;
+    const getAdjustedLayout = ({ domains, ranges }: Getters) =>
+      adjustLayout(domains, ranges, viewport);
     return (
       <Plugin name="zoomAndPan">
-      <Getter name="ranges" computed={getAdjustedLayout} />
+        <Getter name="ranges" computed={getAdjustedLayout} />
         <Template name="root">
-        <TemplatePlaceholder />
+          <TemplatePlaceholder />
           <TemplateConnector>
             {({ scales, rotated, rootRef, layouts }) => (
-                <ZoomPanProvider
-                  rootRef={rootRef}
-                  onWheel={e => this.handleZoom(scales, rotated, e)}
-                  onStart={e => this.handleStart(zoomRegionKey!, e)}
-                  onMove={e => this.handleMove(scales, rotated, e, layouts.pane)}
-                  onEnd={e => this.handleEnd(scales, rotated)}
-                />
-              )}
+              <ZoomPanProvider
+                rootRef={rootRef}
+                onWheel={e => this.handleZoom(scales, rotated, e)}
+                onStart={e => this.handleStart(zoomRegionKey, e)}
+                onMove={e => this.handleMove(scales, rotated, e, layouts.pane)}
+                onEnd={e => this.handleEnd(scales, rotated)}
+              />
+            )}
           </TemplateConnector>
         </Template>
         <Template name="series">
           <TemplatePlaceholder />
-          {rectBox ? (
-              <DragBoxComponent
-                rect={rectBox!}
-              />
-          ) : null}
+          {rectBox ? <DragBoxComponent rect={rectBox!} /> : null}
         </Template>
       </Plugin>
     );
   }
 }
 
-export const ZoomAndPan: React.ComponentType<
-  ZoomAndPanProps
-> =  withComponents({ DragBox })(ZoomAndPanBase);
+export const ZoomAndPan: React.ComponentType<ZoomAndPanProps> = withComponents({
+  DragBox
+})(ZoomAndPanBase);

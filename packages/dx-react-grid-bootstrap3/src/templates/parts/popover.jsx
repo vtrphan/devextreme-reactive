@@ -1,7 +1,7 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-export const Popover = ({ children, style }) => (
+export const Popover = ({ children, style = null }) => (
   <div
     className="dropdown-menu"
     style={{
@@ -18,8 +18,4 @@ export const Popover = ({ children, style }) => (
 Popover.propTypes = {
   children: PropTypes.node.isRequired,
   style: PropTypes.object,
-};
-
-Popover.defaultProps = {
-  style: null,
 };

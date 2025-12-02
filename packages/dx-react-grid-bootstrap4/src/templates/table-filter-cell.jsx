@@ -2,10 +2,15 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableFilterCell = ({
-  filter, onFilter, children,
-  column, tableRow, tableColumn, getMessage,
-  filteringEnabled,
-  forwardedRef,
+  filter = null,
+  onFilter = () => {},
+  children = undefined,
+  column = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  getMessage = undefined,
+  filteringEnabled = true,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -31,16 +36,4 @@ TableFilterCell.propTypes = {
   getMessage: PropTypes.func,
   filteringEnabled: PropTypes.bool,
   forwardedRef: PropTypes.func,
-};
-
-TableFilterCell.defaultProps = {
-  filter: null,
-  onFilter: () => {},
-  children: undefined,
-  column: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  getMessage: undefined,
-  filteringEnabled: true,
-  forwardedRef: undefined,
 };

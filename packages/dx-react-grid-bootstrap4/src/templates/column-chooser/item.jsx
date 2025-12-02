@@ -7,8 +7,10 @@ const handleBlur = (e) => { e.currentTarget.style.outline = ''; };
 
 export const Item = ({
   item: { column, hidden },
-  onToggle, className,
-  disabled, ...restProps
+  onToggle = () => {},
+  className = undefined,
+  disabled = false,
+  ...restProps
 }) => (
   <button
     className={classNames({
@@ -49,10 +51,4 @@ Item.propTypes = {
   onToggle: PropTypes.func,
   className: PropTypes.string,
   disabled: PropTypes.bool,
-};
-
-Item.defaultProps = {
-  onToggle: () => {},
-  className: undefined,
-  disabled: false,
 };

@@ -5,10 +5,10 @@ import classNames from 'clsx';
 import { ExpandButton } from './parts/expand-button';
 
 export const TableTreeExpandButton = ({
-  className,
-  visible,
-  expanded,
-  onToggle,
+  className = undefined,
+  visible = false,
+  expanded = false,
+  onToggle = () => {},
   ...restProps
 }) => (
   <ExpandButton
@@ -25,11 +25,4 @@ TableTreeExpandButton.propTypes = {
   visible: PropTypes.bool,
   expanded: PropTypes.bool,
   onToggle: PropTypes.func,
-};
-
-TableTreeExpandButton.defaultProps = {
-  className: undefined,
-  visible: false,
-  expanded: false,
-  onToggle: () => {},
 };

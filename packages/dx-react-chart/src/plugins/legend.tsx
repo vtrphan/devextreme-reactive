@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Plugin,
   TemplateConnector,
@@ -6,54 +6,51 @@ import {
   TemplatePlaceholder,
   withComponents,
   Getters,
-  PluginComponents,
-} from '@vtrphan/dx-react-core';
-import { getLegendItems } from '@vtrphan/dx-chart-core';
-import { Marker } from '../templates/legend/marker';
-import { LegendProps } from '../types';
+  PluginComponents
+} from "@vtrphan/dx-react-core";
+import { getLegendItems } from "@vtrphan/dx-chart-core";
+import { Marker } from "../templates/legend/marker";
+import { LegendProps } from "../types";
 
-class RawLegend extends React.PureComponent<LegendProps> {
-  static defaultProps: Partial<LegendProps> = {
-    position: 'right',
-    getItems: ({ series }: Getters) => getLegendItems(series),
-  };
-  static components: PluginComponents = {
-    rootComponent: 'Root',
-    itemComponent: 'Item',
-    markerComponent: 'Marker',
-    labelComponent: 'Label',
-  };
+const defaultGetItems = ({ series }: Getters) => getLegendItems(series);
 
-  render() {
-    const {
-      markerComponent: MarkerComponent,
-      labelComponent: Label,
-      rootComponent: Root,
-      itemComponent: Item,
-      position,
-      getItems,
-    } = this.props;
-    const placeholder = position!;
-    return (
-      <Plugin name="Legend">
-        <Template name={placeholder}>
-          <TemplatePlaceholder />
-          <TemplateConnector>
-            {getters => (
-              <Root name={`legend-${placeholder}`}>
-                {getItems!(getters).map(({ text, color }) => (
-                  <Item key={text}>
-                    <MarkerComponent name={text} color={color} />
-                    <Label text={text} />
-                  </Item>
-                ))}
-              </Root>
-            )}
-          </TemplateConnector>
-        </Template>
-      </Plugin>
-    );
-  }
-}
+const RawLegend: React.FC<LegendProps> & { components: PluginComponents } = ({
+  markerComponent: MarkerComponent,
+  labelComponent: Label,
+  rootComponent: Root,
+  itemComponent: Item,
+  position = "right",
+  getItems = defaultGetItems
+}) => {
+  const placeholder = position;
+  return (
+    <Plugin name="Legend">
+      <Template name={placeholder}>
+        <TemplatePlaceholder />
+        <TemplateConnector>
+          {getters => (
+            <Root name={`legend-${placeholder}`}>
+              {getItems(getters).map(({ text, color }) => (
+                <Item key={text}>
+                  <MarkerComponent name={text} color={color} />
+                  <Label text={text} />
+                </Item>
+              ))}
+            </Root>
+          )}
+        </TemplateConnector>
+      </Template>
+    </Plugin>
+  );
+};
 
-export const Legend: React.ComponentType<LegendProps> = withComponents({ Marker })(RawLegend);
+RawLegend.components = {
+  rootComponent: "Root",
+  itemComponent: "Item",
+  markerComponent: "Marker",
+  labelComponent: "Label"
+};
+
+export const Legend: React.ComponentType<LegendProps> = withComponents({
+  Marker
+})(RawLegend);

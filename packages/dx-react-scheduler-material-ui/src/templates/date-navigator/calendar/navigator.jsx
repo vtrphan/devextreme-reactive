@@ -17,11 +17,11 @@ const StyledToolbar = styled(Toolbar)({
 });
 
 export const Navigator = ({
-  className,
+  className = undefined,
   currentDate,
   textComponent: Text,
   navigationButtonComponent: NavigationButton,
-  onNavigate,
+  onNavigate = () => {},
   formatDate,
   ...restProps
 }) => (
@@ -53,9 +53,4 @@ Navigator.propTypes = {
   formatDate: PropTypes.func.isRequired,
   className: PropTypes.string,
   onNavigate: PropTypes.func,
-};
-
-Navigator.defaultProps = {
-  className: undefined,
-  onNavigate: () => {},
 };

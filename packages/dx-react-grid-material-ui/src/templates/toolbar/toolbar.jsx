@@ -17,7 +17,7 @@ const StyledToolbarMUI = styled(ToolbarMUI)(({ theme }) => ({
 }));
 
 const ToolbarBase = ({
-  children, className, style, forwardedRef, ...restProps
+  children, className = undefined, style = null, forwardedRef = undefined, ...restProps
 }) => (
   <StyledToolbarMUI
     style={style}
@@ -34,12 +34,6 @@ ToolbarBase.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-ToolbarBase.defaultProps = {
-  className: undefined,
-  style: null,
-  forwardedRef: undefined,
 };
 
 export const Toolbar = withKeyboardNavigation('toolbar', 'none')(ToolbarBase);

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableStubCell = ({
-  className,
-  tableRow,
-  tableColumn,
-  forwardedRef,
+  className = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -21,11 +21,4 @@ TableStubCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableStubCell.defaultProps = {
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  forwardedRef: undefined,
 };

@@ -1,72 +1,56 @@
-import * as React from 'react';
-import { ColumnGroup } from './column-group';
-import { RowsBlockLayout } from './rows-block-layout';
-import { TableLayoutProps } from '../../types';
-
-const defaultProps = {
-  headerRows: [],
-  footerRows: [],
-  headComponent: () => null,
-  footerComponent: () => null,
-};
+import * as React from "react";
+import { ColumnGroup } from "./column-group";
+import { RowsBlockLayout } from "./rows-block-layout";
+import { TableLayoutProps } from "../../types";
 
 /** @internal */
-export class StaticTableLayout extends React.PureComponent<TableLayoutProps & typeof defaultProps> {
-  static defaultProps = defaultProps;
+export const StaticTableLayout: React.FC<TableLayoutProps> = ({
+  headerRows = [],
+  footerRows = [],
+  headComponent = () => null,
+  footerComponent = () => null,
+  bodyRows,
+  columns,
+  minWidth,
+  containerComponent: Container,
+  tableComponent: Table,
+  bodyComponent,
+  rowComponent,
+  cellComponent,
+  getCellColSpan,
+  tableRef
+}) => {
+  const commonProps = {
+    columns,
+    rowComponent,
+    cellComponent,
+    getCellColSpan
+  };
 
-  render() {
-    const {
-      headerRows,
-      bodyRows,
-      footerRows,
-      columns,
-      minWidth,
-      containerComponent: Container,
-      tableComponent: Table,
-      headComponent,
-      bodyComponent,
-      footerComponent,
-      rowComponent,
-      cellComponent,
-      getCellColSpan,
-      tableRef,
-    } = this.props;
-
-    const commonProps = {
-      columns,
-      rowComponent,
-      cellComponent,
-      getCellColSpan,
-    };
-
-    return (
-      <Container>
-        <Table
-          forwardedRef={tableRef}
-          style={{ minWidth: `calc(${minWidth})` }}
-        >
-          <ColumnGroup columns={columns} />
-          {!!headerRows.length && (
-            <RowsBlockLayout
-              rows={headerRows}
-              blockComponent={headComponent}
-              {...commonProps}
-            />
-          )}
+  return (
+    <Container>
+      <Table forwardedRef={tableRef} style={{ minWidth: `calc(${minWidth})` }}>
+        <ColumnGroup columns={columns} />
+        {!!headerRows.length && (
           <RowsBlockLayout
-            rows={bodyRows}
-            blockComponent={bodyComponent}
+            rows={headerRows}
+            blockComponent={headComponent}
             {...commonProps}
           />
-          {!!footerRows.length && (
-            <RowsBlockLayout
-              rows={footerRows}
-              blockComponent={footerComponent}
-              {...commonProps}
-            />
-          )}
-        </Table>
-      </Container>
-    );
-  }
-}
+        )}
+        <RowsBlockLayout
+          rows={bodyRows}
+          blockComponent={bodyComponent}
+          {...commonProps}
+        />
+        {!!footerRows.length && (
+          <RowsBlockLayout
+            rows={footerRows}
+            blockComponent={footerComponent}
+            {...commonProps}
+          />
+        )}
+      </Table>
+    </Container>
+  );
+};

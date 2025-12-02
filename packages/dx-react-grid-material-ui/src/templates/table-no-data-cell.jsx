@@ -28,12 +28,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableNoDataCell = ({
-  style,
-  colSpan,
+  style = null,
+  colSpan = 1,
   getMessage,
-  className,
-  tableRow,
-  tableColumn,
+  className = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -57,12 +57,4 @@ TableNoDataCell.propTypes = {
   className: PropTypes.string,
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
-};
-
-TableNoDataCell.defaultProps = {
-  style: null,
-  colSpan: 1,
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
 };

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Menu as MenuMUI } from '@mui/material';
 
 export const Menu = ({
-  visible, target, onHide, children, ...restProps
+  visible = false, target = null, onHide, children, ...restProps
 }) => (
   <MenuMUI
     keepMounted
@@ -24,9 +24,4 @@ Menu.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Menu.defaultProps = {
-  visible: false,
-  target: null,
 };

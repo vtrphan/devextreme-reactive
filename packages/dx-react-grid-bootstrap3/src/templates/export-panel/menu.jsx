@@ -4,7 +4,7 @@ import { ListGroup } from 'react-bootstrap';
 import { Overlay } from '../parts/overlay';
 
 export const Menu = ({
-  visible, target, onHide, children, ...restProps
+  visible = false, target = null, onHide, children, ...restProps
 }) => (
   <Overlay
     visible={visible}
@@ -29,9 +29,4 @@ Menu.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Menu.defaultProps = {
-  visible: false,
-  target: null,
 };

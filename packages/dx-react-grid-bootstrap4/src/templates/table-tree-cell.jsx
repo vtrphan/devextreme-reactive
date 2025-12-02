@@ -1,23 +1,24 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'clsx';
+import * as React from "react";
+import PropTypes from "prop-types";
+import classNames from "clsx";
 
 export const TableTreeCell = ({
-  column, children, tableRow,
-  tableColumn, row,
-  forwardedRef,
+  column = undefined,
+  children = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = undefined,
+  forwardedRef = undefined,
+  style = null,
   ...restProps
 }) => (
-  <td
-    ref={forwardedRef}
-    {...restProps}
-  >
+  <td ref={forwardedRef} style={style} {...restProps}>
     <div
       className={classNames({
-        'd-flex flex-direction-row align-items-center': true,
-        'text-nowrap': !(tableColumn && tableColumn.wordWrapEnabled),
-        'text-right': tableColumn && tableColumn.align === 'right',
-        'text-center': tableColumn && tableColumn.align === 'center',
+        "d-flex flex-direction-row align-items-center": true,
+        "text-nowrap": !(tableColumn && tableColumn.wordWrapEnabled),
+        "text-right": tableColumn && tableColumn.align === "right",
+        "text-center": tableColumn && tableColumn.align === "center"
       })}
     >
       {children}
@@ -32,15 +33,5 @@ TableTreeCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   style: PropTypes.object,
-  forwardedRef: PropTypes.func,
-};
-
-TableTreeCell.defaultProps = {
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  style: null,
-  forwardedRef: undefined,
+  forwardedRef: PropTypes.func
 };

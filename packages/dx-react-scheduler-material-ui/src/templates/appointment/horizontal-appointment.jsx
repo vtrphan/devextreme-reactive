@@ -48,11 +48,11 @@ const StyledDiv = styled('div')(({ theme: { palette, spacing } }) => ({
 
 export const HorizontalAppointment = ({
   data,
-  children,
-  className,
+  children = undefined,
+  className = undefined,
   recurringIconComponent: RecurringIcon,
-  formatDate,
-  durationType,
+  formatDate = () => '',
+  durationType = undefined,
   ...restProps
 }) => {
   const repeat = !!data.rRule;
@@ -85,11 +85,4 @@ HorizontalAppointment.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   formatDate: PropTypes.func,
-};
-
-HorizontalAppointment.defaultProps = {
-  formatDate: () => '',
-  children: undefined,
-  className: undefined,
-  durationType: undefined,
 };

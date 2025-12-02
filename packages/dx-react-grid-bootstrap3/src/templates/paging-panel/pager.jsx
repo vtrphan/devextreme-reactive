@@ -14,9 +14,9 @@ const PagerBase = ({
   pageSizes,
   totalCount,
   getMessage,
-  className,
-  style,
-  forwardedRef,
+  className = undefined,
+  style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <div
@@ -59,12 +59,6 @@ PagerBase.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-PagerBase.defaultProps = {
-  className: undefined,
-  style: null,
-  forwardedRef: undefined,
 };
 
 export const Pager = withKeyboardNavigation('paging', 'none')(PagerBase);

@@ -34,7 +34,7 @@ const StyledTableMUI = styled(TableMUI)(({ theme }) => ({
 }));
 
 export const Table = ({
-  children, className, use, forwardedRef,
+  children, className = undefined, use = undefined, forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableMUI
@@ -56,10 +56,4 @@ Table.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-Table.defaultProps = {
-  use: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

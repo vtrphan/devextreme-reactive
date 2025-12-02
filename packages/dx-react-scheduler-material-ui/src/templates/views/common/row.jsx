@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TableRow } from '@mui/material';
 
 export const Row = ({
-  children,
+  children = null,
   ...restProps
 }) => (
   <TableRow
@@ -15,8 +15,4 @@ export const Row = ({
 
 Row.propTypes = {
   children: PropTypes.node,
-};
-
-Row.defaultProps = {
-  children: null,
 };

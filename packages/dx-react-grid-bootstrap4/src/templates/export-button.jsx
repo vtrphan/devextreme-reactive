@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const ExportButton = ({
-  onClick, getMessage, className, ...restProps
+  onClick,
+  getMessage,
+  className = undefined,
+  ...restProps
 }) => (
   <button
     type="button"
@@ -19,8 +22,4 @@ ExportButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
-};
-
-ExportButton.defaultProps = {
-  className: undefined,
 };

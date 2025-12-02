@@ -17,7 +17,7 @@ const StyledDiv = styled('div')(() => ({
 }));
 
 export const TableTreeContent = ({
-  children, className, ...restProps
+  children = undefined, className = undefined, ...restProps
 }) => (
   <StyledDiv
     className={classNames([classes.content], className)}
@@ -30,9 +30,4 @@ export const TableTreeContent = ({
 TableTreeContent.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-TableTreeContent.defaultProps = {
-  children: undefined,
-  className: undefined,
 };

@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { ExpandButton } from './parts/expand-button';
 
 export const TableDetailToggleCell = ({
-  expanded, onToggle,
-  tableColumn, tableRow, row, style,
-  forwardedRef,
+  expanded = false, onToggle = () => {},
+  tableColumn = undefined, tableRow = undefined, row = undefined, style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -34,14 +34,4 @@ TableDetailToggleCell.propTypes = {
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-TableDetailToggleCell.defaultProps = {
-  style: null,
-  expanded: false,
-  onToggle: () => {},
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  forwardedRef: undefined,
 };

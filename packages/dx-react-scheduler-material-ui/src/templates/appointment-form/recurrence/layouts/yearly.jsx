@@ -26,8 +26,8 @@ export const Yearly = ({
   textEditorComponent,
   labelComponent,
   getMessage,
-  readOnly,
-  onFieldChange,
+  readOnly = false,
+  onFieldChange = () => undefined,
   appointmentData,
   selectComponent,
   weeklyRecurrenceSelectorComponent,
@@ -95,9 +95,4 @@ Yearly.propTypes = {
   readOnly: PropTypes.bool,
   formatDate: PropTypes.func.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-Yearly.defaultProps = {
-  onFieldChange: () => undefined,
-  readOnly: false,
 };

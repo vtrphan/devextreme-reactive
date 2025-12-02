@@ -5,11 +5,11 @@ import classNames from 'clsx';
 import { SelectionControl } from './parts/selection-control';
 
 export const TableTreeCheckbox = ({
-  className,
-  checked,
-  indeterminate,
-  disabled,
-  onChange,
+  className = undefined,
+  checked = false,
+  indeterminate = false,
+  disabled = false,
+  onChange = () => {},
   ...restProps
 }) => (
   <SelectionControl
@@ -28,12 +28,4 @@ TableTreeCheckbox.propTypes = {
   indeterminate: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
-};
-
-TableTreeCheckbox.defaultProps = {
-  className: undefined,
-  checked: false,
-  indeterminate: false,
-  disabled: false,
-  onChange: () => {},
 };

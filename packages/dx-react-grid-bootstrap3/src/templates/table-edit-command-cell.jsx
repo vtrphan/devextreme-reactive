@@ -5,7 +5,7 @@ import classNames from 'clsx';
 export const CommandButton = ({
   onExecute,
   text,
-  className,
+  className = undefined,
   ...restProps
 }) => (
   <button
@@ -30,15 +30,11 @@ CommandButton.propTypes = {
   className: PropTypes.string,
 };
 
-CommandButton.defaultProps = {
-  className: undefined,
-};
-
 export const EditCommandHeadingCell = ({
-  children,
-  style,
-  tableColumn, tableRow,
-  forwardedRef,
+  children = undefined,
+  style = null,
+  tableColumn = undefined, tableRow = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -63,18 +59,10 @@ EditCommandHeadingCell.propTypes = {
   forwardedRef: PropTypes.func,
 };
 
-EditCommandHeadingCell.defaultProps = {
-  children: undefined,
-  style: null,
-  tableColumn: undefined,
-  tableRow: undefined,
-  forwardedRef: undefined,
-};
-
 export const EditCommandCell = ({
-  tableColumn, tableRow, row,
-  children, style,
-  forwardedRef,
+  tableColumn = undefined, tableRow = undefined, row = undefined,
+  children = undefined, style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -98,13 +86,4 @@ EditCommandCell.propTypes = {
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-EditCommandCell.defaultProps = {
-  children: undefined,
-  style: null,
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  forwardedRef: undefined,
 };

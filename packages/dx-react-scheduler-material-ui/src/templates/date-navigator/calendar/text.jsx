@@ -19,7 +19,7 @@ const StyledTypography = styled(Typography)({
 });
 
 export const Text = ({
-  className,
+  className = undefined,
   currentDate,
   formatDate,
   ...restProps
@@ -43,8 +43,4 @@ Text.propTypes = {
   ]).isRequired,
   formatDate: PropTypes.func.isRequired,
   className: PropTypes.string,
-};
-
-Text.defaultProps = {
-  className: undefined,
 };

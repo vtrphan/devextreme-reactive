@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const Pagination = ({
-  className,
-  listClassName,
+  className = undefined,
+  listClassName = undefined,
   ...restProps
 }) => (
   <nav className={className}>
@@ -18,9 +18,4 @@ export const Pagination = ({
 Pagination.propTypes = {
   className: PropTypes.string,
   listClassName: PropTypes.string,
-};
-
-Pagination.defaultProps = {
-  className: undefined,
-  listClassName: undefined,
 };

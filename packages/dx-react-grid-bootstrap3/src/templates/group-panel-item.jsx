@@ -10,9 +10,9 @@ const isActionKey = keyCode => keyCode === ENTER_KEY_CODE || keyCode === SPACE_K
 
 export const GroupPanelItem = ({
   item: { column, draft },
-  onGroup, showGroupingControls, groupingEnabled,
-  showSortingControls, sortingDirection, onSort, sortingEnabled,
-  className, style, forwardedRef,
+  onGroup = undefined, showGroupingControls = false, groupingEnabled = false,
+  showSortingControls = false, sortingDirection = undefined, onSort = undefined, sortingEnabled = false,
+  className = undefined, style = null, forwardedRef = undefined,
   ...restProps
 }) => {
   const handleSortingChange = (e) => {
@@ -52,7 +52,7 @@ export const GroupPanelItem = ({
       style={{
         marginRight: '5px',
         marginBottom: '5px',
-        ...draft ? { opacity: 0.3 } : null,
+        ...(draft ? { opacity: 0.3 } : null),
         ...style,
       }}
       {...restProps}
@@ -73,7 +73,6 @@ export const GroupPanelItem = ({
           </span>
         )}
       </span>
-
       {showGroupingControls && (
         <span
           className={getButtonClasses(!groupingEnabled)}
@@ -112,17 +111,4 @@ GroupPanelItem.propTypes = {
   sortingEnabled: PropTypes.bool,
   style: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelItem.defaultProps = {
-  showSortingControls: false,
-  sortingDirection: undefined,
-  className: undefined,
-  onSort: undefined,
-  onGroup: undefined,
-  showGroupingControls: false,
-  sortingEnabled: false,
-  groupingEnabled: false,
-  style: null,
-  forwardedRef: undefined,
 };

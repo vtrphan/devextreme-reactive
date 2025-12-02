@@ -4,11 +4,11 @@ import classNames from 'clsx';
 
 export const SearchPanelInput = ({
   onValueChange,
-  value,
+  value = null,
   getMessage,
-  style,
-  className,
-  inputRef,
+  style = null,
+  className = undefined,
+  inputRef = undefined,
   ...restProps
 }) => (
   <input
@@ -30,11 +30,4 @@ SearchPanelInput.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
   inputRef: PropTypes.object,
-};
-
-SearchPanelInput.defaultProps = {
-  value: null,
-  style: null,
-  className: undefined,
-  inputRef: undefined,
 };

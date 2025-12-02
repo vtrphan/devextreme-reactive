@@ -9,7 +9,11 @@ const handleMouseDown = (e) => { e.target.style.outline = 'none'; };
 const handleBlur = (e) => { e.target.style.outline = ''; };
 
 export const ExpandButton = ({
-  visible, expanded, onToggle, className, ...restProps
+  visible = true,
+  expanded = false,
+  onToggle = () => {},
+  className = undefined,
+  ...restProps
 }) => {
   const fireToggle = () => {
     if (!visible) return;
@@ -48,11 +52,4 @@ ExpandButton.propTypes = {
   expanded: PropTypes.bool,
   onToggle: PropTypes.func,
   className: PropTypes.string,
-};
-
-ExpandButton.defaultProps = {
-  visible: true,
-  expanded: false,
-  onToggle: () => {},
-  className: undefined,
 };

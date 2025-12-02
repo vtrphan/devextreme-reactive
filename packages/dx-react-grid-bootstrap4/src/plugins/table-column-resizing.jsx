@@ -1,26 +1,20 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { TableColumnResizing as TableColumnResizingBase } from '@vtrphan/dx-react-grid';
+import * as React from "react";
+import PropTypes from "prop-types";
+import { TableColumnResizing as TableColumnResizingBase } from "@vtrphan/dx-react-grid";
 
-export class TableColumnResizing extends React.PureComponent {
-  render() {
-    const { minColumnWidth, maxColumnWidth, ...restProps } = this.props;
-    return (
-      <TableColumnResizingBase
-        {...restProps}
-        minColumnWidth={minColumnWidth}
-        maxColumnWidth={maxColumnWidth}
-      />
-    );
-  }
-}
+export const TableColumnResizing = ({
+  minColumnWidth = 55,
+  maxColumnWidth = Infinity,
+  ...restProps
+}) => (
+  <TableColumnResizingBase
+    {...restProps}
+    minColumnWidth={minColumnWidth}
+    maxColumnWidth={maxColumnWidth}
+  />
+);
 
 TableColumnResizing.propTypes = {
   minColumnWidth: PropTypes.number,
-  maxColumnWidth: PropTypes.number,
-};
-
-TableColumnResizing.defaultProps = {
-  minColumnWidth: 55,
-  maxColumnWidth: Infinity,
+  maxColumnWidth: PropTypes.number
 };

@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableTreeContent = ({
-  children, style, ...restProps
+  children = undefined, style = null, ...restProps
 }) => (
   <div
     style={{
@@ -20,9 +20,4 @@ export const TableTreeContent = ({
 TableTreeContent.propTypes = {
   children: PropTypes.node,
   style: PropTypes.object,
-};
-
-TableTreeContent.defaultProps = {
-  children: undefined,
-  style: null,
 };

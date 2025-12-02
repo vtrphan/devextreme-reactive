@@ -38,17 +38,17 @@ const StyledDiv = styled('div')(({
 }));
 
 export const Header = ({
-  appointmentData,
+  appointmentData = undefined,
   commandButtonComponent: CommandButton,
   showOpenButton,
   showCloseButton,
   showDeleteButton,
   commandButtonIds,
-  onOpenButtonClick,
+  onOpenButtonClick = () => undefined,
   onDeleteButtonClick,
-  onHide,
-  className,
-  children,
+  onHide = () => undefined,
+  className = undefined,
+  children = undefined,
   ...restProps
 }) => {
   const handleOpenButtonClick = () => {
@@ -88,12 +88,4 @@ Header.propTypes = {
   onOpenButtonClick: PropTypes.func,
   onDeleteButtonClick: PropTypes.func.isRequired,
   onHide: PropTypes.func,
-};
-
-Header.defaultProps = {
-  appointmentData: undefined,
-  className: undefined,
-  children: undefined,
-  onOpenButtonClick: () => undefined,
-  onHide: () => undefined,
 };

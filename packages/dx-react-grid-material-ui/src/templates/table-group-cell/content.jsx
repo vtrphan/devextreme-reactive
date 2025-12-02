@@ -14,7 +14,7 @@ const StyledSpan = styled('span')(() => ({
 }));
 
 export const Content = ({
-  column, row, className, children, ...restProps
+  column = {}, row = {}, className = undefined, children = undefined, ...restProps
 }) => (
   <StyledSpan
     className={classNames(classes.columnTitle, className)}
@@ -34,11 +34,4 @@ Content.propTypes = {
   column: PropTypes.object,
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-Content.defaultProps = {
-  row: {},
-  column: {},
-  children: undefined,
-  className: undefined,
 };

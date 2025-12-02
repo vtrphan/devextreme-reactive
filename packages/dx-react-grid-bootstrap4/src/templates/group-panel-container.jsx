@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const GroupPanelContainer = ({
-  children, className, forwardedRef, ...restProps
+  children = null,
+  className = undefined,
+  forwardedRef = undefined,
+  ...restProps
 }) => (
   <div
     ref={forwardedRef}
@@ -21,10 +24,4 @@ GroupPanelContainer.propTypes = {
   ]),
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelContainer.defaultProps = {
-  children: null,
-  className: undefined,
-  forwardedRef: undefined,
 };

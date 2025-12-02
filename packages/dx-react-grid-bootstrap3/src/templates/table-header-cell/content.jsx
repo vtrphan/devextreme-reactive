@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const Content = ({
-  column, children, align, style, ...restProps
+  column = undefined, children = undefined, align = 'left', style = null, ...restProps
 }) => (
   <div
     style={{
@@ -29,11 +29,4 @@ Content.propTypes = {
   ]),
   align: PropTypes.string,
   style: PropTypes.object,
-};
-
-Content.defaultProps = {
-  column: undefined,
-  align: 'left',
-  style: null,
-  children: undefined,
 };

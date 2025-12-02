@@ -38,9 +38,9 @@ const StyledTableCellMUI = styled(TableCellMUI)(({ theme }) => ({
 }));
 
 export const TableCell = ({
-  column, value, children,
-  tableRow, tableColumn, row,
-  className, forwardedRef,
+  column = undefined, value = undefined, children = undefined,
+  tableRow = undefined, tableColumn = undefined, row = undefined,
+  className = undefined, forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCellMUI
@@ -67,15 +67,4 @@ TableCell.propTypes = {
   tableColumn: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-TableCell.defaultProps = {
-  value: undefined,
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

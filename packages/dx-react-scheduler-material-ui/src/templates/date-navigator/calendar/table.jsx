@@ -24,11 +24,11 @@ export const Table = ({
   cellComponent: Cell,
   headerRowComponent: HeaderRow,
   headerCellComponent: HeaderCell,
-  className,
+  className = undefined,
   cells,
-  headerCells,
-  selectedDate,
-  onCellClick,
+  headerCells = [],
+  selectedDate = undefined,
+  onCellClick = () => {},
   formatDate,
   ...restProps
 }) => (
@@ -97,11 +97,4 @@ Table.propTypes = {
   headerCells: PropTypes.array,
   className: PropTypes.string,
   onCellClick: PropTypes.func,
-};
-
-Table.defaultProps = {
-  className: undefined,
-  headerCells: [],
-  onCellClick: () => {},
-  selectedDate: undefined,
 };

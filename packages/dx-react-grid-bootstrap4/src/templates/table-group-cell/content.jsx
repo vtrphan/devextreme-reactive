@@ -2,7 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const Content = ({
-  column, row, children, ...restProps
+  column = {},
+  row = {},
+  children = undefined,
+  ...restProps
 }) => (
   <span {...restProps}>
     <strong>
@@ -18,10 +21,4 @@ Content.propTypes = {
   row: PropTypes.any,
   column: PropTypes.object,
   children: PropTypes.node,
-};
-
-Content.defaultProps = {
-  row: {},
-  column: {},
-  children: undefined,
 };

@@ -21,8 +21,8 @@ export const Weekly = ({
   textEditorComponent,
   labelComponent,
   getMessage,
-  readOnly,
-  onFieldChange,
+  readOnly = false,
+  onFieldChange = () => undefined,
   appointmentData,
   selectComponent,
   weeklyRecurrenceSelectorComponent: WeeklyRecurrenceSelector,
@@ -86,9 +86,4 @@ Weekly.propTypes = {
   readOnly: PropTypes.bool,
   formatDate: PropTypes.func.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-Weekly.defaultProps = {
-  onFieldChange: () => undefined,
-  readOnly: false,
 };

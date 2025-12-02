@@ -4,8 +4,8 @@ import classNames from 'clsx';
 
 export const GroupPanelEmptyMessage = ({
   getMessage,
-  className,
-  forwardedRef,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <div
@@ -21,9 +21,4 @@ GroupPanelEmptyMessage.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelEmptyMessage.defaultProps = {
-  className: undefined,
-  forwardedRef: undefined,
 };

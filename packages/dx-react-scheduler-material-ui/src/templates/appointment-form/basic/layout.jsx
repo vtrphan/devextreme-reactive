@@ -105,16 +105,16 @@ const StyledDiv = styled('div')(({
 }));
 
 export const Layout = ({
-  children,
+  children = null,
   locale,
-  className,
+  className = undefined,
   getMessage,
-  readOnly,
-  onFieldChange,
+  readOnly = false,
+  onFieldChange = () => undefined,
   appointmentData,
   fullSize,
-  resources,
-  appointmentResources,
+  resources = [],
+  appointmentResources = [],
   textEditorComponent: TextEditor,
   dateEditorComponent: DateEditor,
   selectComponent: Select,
@@ -255,13 +255,4 @@ Layout.propTypes = {
   appointmentResources: PropTypes.array,
   readOnly: PropTypes.bool,
   fullSize: PropTypes.bool.isRequired,
-};
-
-Layout.defaultProps = {
-  onFieldChange: () => undefined,
-  resources: [],
-  appointmentResources: [],
-  className: undefined,
-  readOnly: false,
-  children: null,
 };

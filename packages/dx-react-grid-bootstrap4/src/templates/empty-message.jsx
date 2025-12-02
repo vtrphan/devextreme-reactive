@@ -2,7 +2,11 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
-export const EmptyMessage = ({ getMessage, className, ...restProps }) => (
+export const EmptyMessage = ({
+  getMessage,
+  className = undefined,
+  ...restProps
+}) => (
   <div
     className={classNames('py-5 text-center', className)}
     {...restProps}
@@ -16,8 +20,4 @@ export const EmptyMessage = ({ getMessage, className, ...restProps }) => (
 EmptyMessage.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
-};
-
-EmptyMessage.defaultProps = {
-  className: undefined,
 };

@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const Title = ({
-  children, style, ...restProps
+  children = undefined, style = null, ...restProps
 }) => (
   <span
     style={{
@@ -22,9 +22,4 @@ Title.propTypes = {
     PropTypes.node,
   ]),
   style: PropTypes.object,
-};
-
-Title.defaultProps = {
-  style: null,
-  children: undefined,
 };

@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableCell = ({
-  column, value, children,
-  tableRow, tableColumn, row,
-  forwardedRef,
-  className, ...restProps
+  column = undefined,
+  value = undefined,
+  children = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = undefined,
+  forwardedRef = undefined,
+  className = undefined,
+  ...restProps
 }) => (
   <td
     className={classNames({
@@ -34,15 +39,4 @@ TableCell.propTypes = {
   tableColumn: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-TableCell.defaultProps = {
-  value: undefined,
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

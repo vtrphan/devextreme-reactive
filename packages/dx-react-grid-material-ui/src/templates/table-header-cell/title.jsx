@@ -15,7 +15,7 @@ const StyledSpan = styled('span')(() => ({
 }));
 
 export const Title = ({
-  children, className, ...restProps
+  children = undefined, className = null, ...restProps
 }) => (
   <StyledSpan
     className={classNames(classes.title, className)}
@@ -31,9 +31,4 @@ Title.propTypes = {
     PropTypes.node,
   ]),
   className: PropTypes.string,
-};
-
-Title.defaultProps = {
-  className: null,
-  children: undefined,
 };

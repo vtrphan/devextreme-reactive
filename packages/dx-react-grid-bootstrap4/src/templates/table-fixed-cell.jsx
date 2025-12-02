@@ -1,43 +1,42 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'clsx';
-import { BodyColorContext } from './layout';
+import * as React from "react";
+import PropTypes from "prop-types";
+import classNames from "clsx";
+import { BodyColorContext } from "./layout";
 
-export class FixedCell extends React.PureComponent {
-  render() {
-    const {
-      className,
-      component: CellPlaceholder,
-      position,
-      selected,
-      showLeftDivider,
-      showRightDivider,
-      side,
-      style,
-      ...restProps
-    } = this.props;
-    const backgroundColor = selected ? 'inherit' : this.context;
+export const FixedCell = ({
+  className,
+  component: CellPlaceholder,
+  position,
+  selected = false,
+  showLeftDivider = false,
+  showRightDivider = false,
+  side,
+  style = null,
+  ...restProps
+}) => {
+  const contextBackground = React.useContext(BodyColorContext);
+  const backgroundColor = selected ? "inherit" : contextBackground;
 
-    return (
-      <CellPlaceholder
-        className={classNames({
-          'border-left': showLeftDivider,
-          'border-right': showRightDivider,
-          'dx-g-bs4-fixed-cell': true,
-          'position-sticky': true,
-        }, className)}
-        style={{
-          backgroundColor,
-          [side]: position,
-          ...style,
-        }}
-        {...restProps}
-      />
-    );
-  }
-}
-
-FixedCell.contextType = BodyColorContext;
+  return (
+    <CellPlaceholder
+      className={classNames(
+        {
+          "border-left": showLeftDivider,
+          "border-right": showRightDivider,
+          "dx-g-bs4-fixed-cell": true,
+          "position-sticky": true
+        },
+        className
+      )}
+      style={{
+        backgroundColor,
+        [side]: position,
+        ...style
+      }}
+      {...restProps}
+    />
+  );
+};
 
 FixedCell.propTypes = {
   className: PropTypes.string,
@@ -47,14 +46,5 @@ FixedCell.propTypes = {
   showLeftDivider: PropTypes.bool,
   showRightDivider: PropTypes.bool,
   side: PropTypes.string.isRequired,
-  style: PropTypes.object,
-};
-
-FixedCell.defaultProps = {
-  className: undefined,
-  position: undefined,
-  selected: false,
-  showLeftDivider: false,
-  showRightDivider: false,
-  style: null,
+  style: PropTypes.object
 };

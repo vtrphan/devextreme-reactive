@@ -4,9 +4,9 @@ import classNames from "clsx";
 
 export const Container = ({
   clientOffset,
-  style,
-  className,
-  children,
+  style = null,
+  className = undefined,
+  children = undefined,
   ...restProps
 }) => (
   <ul
@@ -36,12 +36,6 @@ Container.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.node
-};
-
-Container.defaultProps = {
-  style: null,
-  className: undefined,
-  children: undefined
 };
 
 export const Column = React.memo(

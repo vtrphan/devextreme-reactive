@@ -18,7 +18,7 @@ const StyledInput = styled(Input)(({ theme }) => ({
 }));
 
 export const SearchPanelInput = ({
-  onValueChange, value, getMessage, inputRef, ...restProps
+  onValueChange, value = '', getMessage, inputRef = undefined, ...restProps
 }) => (
   <StyledInput
     className={classes.root}
@@ -41,8 +41,4 @@ SearchPanelInput.propTypes = {
   value: PropTypes.string,
   getMessage: PropTypes.func.isRequired,
   inputRef: PropTypes.object,
-};
-SearchPanelInput.defaultProps = {
-  value: '',
-  inputRef: undefined,
 };

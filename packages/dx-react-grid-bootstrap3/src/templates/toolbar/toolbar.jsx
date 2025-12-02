@@ -5,9 +5,9 @@ import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
 
 const ToolbarBase = ({
   children,
-  className,
-  style,
-  forwardedRef,
+  className = undefined,
+  style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <div
@@ -33,12 +33,6 @@ ToolbarBase.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-ToolbarBase.defaultProps = {
-  className: undefined,
-  style: null,
-  forwardedRef: undefined,
 };
 
 export const Toolbar = withKeyboardNavigation('toolbar', 'none')(ToolbarBase);

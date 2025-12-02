@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const ToggleButton = ({
-  buttonRef, onToggle, disabled, children, className, ...restProps
+  buttonRef, onToggle, disabled = false, children = undefined, className = undefined, ...restProps
 }) => (
   <button
     type="button"
@@ -23,10 +23,4 @@ ToggleButton.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-};
-
-ToggleButton.defaultProps = {
-  children: undefined,
-  disabled: false,
-  className: undefined,
 };

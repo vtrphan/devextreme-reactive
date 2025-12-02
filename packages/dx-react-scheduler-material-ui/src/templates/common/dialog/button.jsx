@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Button as ButtonMUI } from '@mui/material';
 
 export const Button = ({
-  onClick, title, ...restProps
+  onClick, title = '', ...restProps
 }) => (
   <ButtonMUI
     onClick={onClick}
@@ -16,8 +16,4 @@ export const Button = ({
 Button.propTypes = {
   onClick: PropTypes.func.isRequired,
   title: PropTypes.string,
-};
-
-Button.defaultProps = {
-  title: '',
 };

@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const CommandButton = ({
-  onExecute, text,
-  className,
+  onExecute,
+  text,
+  className = undefined,
   ...restProps
 }) => (
   <button
@@ -26,14 +27,12 @@ CommandButton.propTypes = {
   className: PropTypes.string,
 };
 
-CommandButton.defaultProps = {
-  className: undefined,
-};
-
 export const EditCommandHeadingCell = ({
-  children, className,
-  tableColumn, tableRow,
-  forwardedRef,
+  children = undefined,
+  className = undefined,
+  tableColumn = undefined,
+  tableRow = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -58,18 +57,13 @@ EditCommandHeadingCell.propTypes = {
   forwardedRef: PropTypes.func,
 };
 
-EditCommandHeadingCell.defaultProps = {
-  children: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  className: undefined,
-  forwardedRef: undefined,
-};
-
 export const EditCommandCell = ({
-  tableColumn, tableRow, row,
-  children, className,
-  forwardedRef,
+  tableColumn = undefined,
+  tableRow = undefined,
+  row = undefined,
+  children = undefined,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -93,13 +87,4 @@ EditCommandCell.propTypes = {
   row: PropTypes.any,
   className: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-EditCommandCell.defaultProps = {
-  children: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

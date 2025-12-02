@@ -15,12 +15,12 @@ export const RadioGroup = ({
   selectComponent,
   labelComponent,
   getMessage,
-  readOnly,
+  readOnly = false,
   appointmentData,
   formatDate,
   onFieldChange,
   type,
-  locale,
+  locale = undefined,
   firstDayOfWeek,
   ...restProps
 }) => {
@@ -88,9 +88,4 @@ RadioGroup.propTypes = {
   onFieldChange: PropTypes.func.isRequired,
   formatDate: PropTypes.func.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-RadioGroup.defaultProps = {
-  locale: undefined,
-  readOnly: false,
 };

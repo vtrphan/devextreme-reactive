@@ -4,12 +4,12 @@ import { SchedulerCore } from './plugins/scheduler-core';
 import { SchedulerProps } from './types';
 
 const SchedulerBase: React.FunctionComponent<SchedulerProps> = ({
-  data,
+  data = [],
   rootComponent,
   children,
-  locale,
-  height,
-  firstDayOfWeek,
+  locale = 'en-US',
+  height = 'auto',
+  firstDayOfWeek = 0,
 }) => (
   <PluginHost>
     <SchedulerCore
@@ -22,13 +22,6 @@ const SchedulerBase: React.FunctionComponent<SchedulerProps> = ({
     {children}
   </PluginHost>
 );
-
-SchedulerBase.defaultProps = {
-  data: [],
-  locale: 'en-US',
-  height: 'auto',
-  firstDayOfWeek: 0,
-};
 
 // tslint:disable: max-line-length
 /***

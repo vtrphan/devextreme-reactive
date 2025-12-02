@@ -1,36 +1,28 @@
-import * as React from 'react';
+import * as React from "react";
 
 import {
   Plugin,
   Template,
   TemplatePlaceholder,
-  PluginComponents,
-} from '@vtrphan/dx-react-core';
-import { TitleProps } from '../types';
+  PluginComponents
+} from "@vtrphan/dx-react-core";
+import { TitleProps } from "../types";
 
-class TitleBase extends React.PureComponent<TitleProps> {
-  static components: PluginComponents = {
-    textComponent: 'Text',
-  };
-  static defaultProps: Partial<TitleProps> = {
-    position: 'top',
-  };
+const TitleBase: React.FC<TitleProps> & { components: PluginComponents } = ({
+  textComponent: Text,
+  text,
+  position = "top"
+}) => (
+  <Plugin name="Title">
+    <Template name={position}>
+      <TemplatePlaceholder />
+      <Text text={text} />
+    </Template>
+  </Plugin>
+);
 
-  render() {
-    const {
-      textComponent: Text,
-      text,
-      position,
-    } = this.props;
-    const placeholder = position!;
-    return (
-      <Plugin name="Title">
-        <Template name={placeholder}>
-          <TemplatePlaceholder />
-          <Text text={text} />
-        </Template>
-      </Plugin>
-    );
-  }
-}
+TitleBase.components = {
+  textComponent: "Text"
+};
+
 export const Title: React.ComponentType<TitleProps> = TitleBase;

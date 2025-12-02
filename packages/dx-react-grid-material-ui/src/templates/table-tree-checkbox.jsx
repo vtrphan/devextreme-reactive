@@ -19,11 +19,11 @@ const StyledCheckboxMUI = styled(CheckboxMUI)(({ theme }) => ({
 }));
 
 export const TableTreeCheckbox = ({
-  disabled,
-  checked,
-  indeterminate,
-  onChange,
-  className,
+  disabled = false,
+  checked = false,
+  indeterminate = false,
+  onChange = () => {},
+  className = undefined,
   ...restProps
 }) => (
   <StyledCheckboxMUI
@@ -46,12 +46,4 @@ TableTreeCheckbox.propTypes = {
   indeterminate: PropTypes.bool,
   onChange: PropTypes.func,
   className: PropTypes.string,
-};
-
-TableTreeCheckbox.defaultProps = {
-  disabled: false,
-  checked: false,
-  indeterminate: false,
-  onChange: () => {},
-  className: undefined,
 };

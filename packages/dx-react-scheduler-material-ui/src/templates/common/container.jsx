@@ -9,7 +9,7 @@ export const classes = {
 };
 
 export const ContainerBase = ({
-  children, className, ...restProps
+  children, className = undefined, ...restProps
 }) => (
   <div className={classNames(classes.container, className)} {...restProps}>
     {children}
@@ -19,8 +19,4 @@ export const ContainerBase = ({
 ContainerBase.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-};
-
-ContainerBase.defaultProps = {
-  className: undefined,
 };

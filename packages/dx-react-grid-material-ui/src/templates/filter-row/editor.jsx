@@ -19,7 +19,7 @@ const StyledInput = styled(Input)(({ theme }) => ({
 }));
 
 export const Editor = ({
-  value, disabled, getMessage, onChange,
+  value = '', disabled = false, getMessage, onChange = () => {},
   ...restProps
 }) => (
   <StyledInput
@@ -41,10 +41,4 @@ Editor.propTypes = {
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
   getMessage: PropTypes.func.isRequired,
-};
-
-Editor.defaultProps = {
-  value: '',
-  disabled: false,
-  onChange: () => {},
 };

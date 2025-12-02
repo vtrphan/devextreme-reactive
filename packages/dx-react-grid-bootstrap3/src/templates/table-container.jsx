@@ -4,9 +4,9 @@ import classNames from 'clsx';
 
 export const TableContainer = ({
   children,
-  style,
-  className,
-  forwardedRef,
+  style = null,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <div
@@ -36,10 +36,4 @@ TableContainer.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableContainer.defaultProps = {
-  className: undefined,
-  style: null,
-  forwardedRef: undefined,
 };

@@ -36,9 +36,9 @@ export const Layout = ({
   basicLayoutComponent: BasicLayout,
   commandLayoutComponent: CommandLayout,
   recurrenceLayoutComponent: RecurrenceLayout,
-  isRecurrence,
-  children,
-  className,
+  isRecurrence = false,
+  children = null,
+  className = undefined,
   ...restProps
 }) => (
   <StyledDiv
@@ -63,10 +63,4 @@ Layout.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   isRecurrence: PropTypes.bool,
-};
-
-Layout.defaultProps = {
-  className: undefined,
-  isRecurrence: false,
-  children: null,
 };

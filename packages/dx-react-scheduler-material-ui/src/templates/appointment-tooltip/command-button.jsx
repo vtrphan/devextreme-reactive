@@ -17,7 +17,7 @@ const getIcon = (id) => {
 };
 
 export const CommandButton = ({
-  id, onExecute, ...restProps
+  id = '', onExecute = () => undefined, ...restProps
 }) => (
   <IconButton onClick={onExecute} {...restProps} size="large">
     {getIcon(id)}
@@ -27,9 +27,4 @@ export const CommandButton = ({
 CommandButton.propTypes = {
   id: PropTypes.string,
   onExecute: PropTypes.func,
-};
-
-CommandButton.defaultProps = {
-  onExecute: () => undefined,
-  id: '',
 };

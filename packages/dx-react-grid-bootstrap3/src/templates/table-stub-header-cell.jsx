@@ -2,10 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableStubHeaderCell = ({
-  style,
-  tableRow,
-  tableColumn,
-  forwardedRef,
+  style = null,
+  tableRow = undefined,
+  tableColumn = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -23,11 +23,4 @@ TableStubHeaderCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-TableStubHeaderCell.defaultProps = {
-  style: null,
-  tableRow: undefined,
-  tableColumn: undefined,
-  forwardedRef: undefined,
 };

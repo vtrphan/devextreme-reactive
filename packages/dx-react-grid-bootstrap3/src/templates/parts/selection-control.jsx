@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const SelectionControl = ({
-  disabled, checked, indeterminate, onChange, style, ...restProps
+  disabled = false, checked = false, indeterminate = false, onChange = () => {}, style = null, ...restProps
 }) => (
   <input
     style={{
@@ -35,12 +35,4 @@ SelectionControl.propTypes = {
   indeterminate: PropTypes.bool,
   onChange: PropTypes.func,
   style: PropTypes.object,
-};
-
-SelectionControl.defaultProps = {
-  disabled: false,
-  checked: false,
-  indeterminate: false,
-  onChange: () => {},
-  style: null,
 };

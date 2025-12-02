@@ -2,9 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableSkeletonCell = ({
-  style,
-  tableRow,
-  tableColumn,
+  style = null,
+  tableRow = undefined,
+  tableColumn = undefined,
   ...restProps
 }) => (
   <td
@@ -23,10 +23,4 @@ TableSkeletonCell.propTypes = {
   style: PropTypes.object,
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
-};
-
-TableSkeletonCell.defaultProps = {
-  style: null,
-  tableRow: undefined,
-  tableColumn: undefined,
 };

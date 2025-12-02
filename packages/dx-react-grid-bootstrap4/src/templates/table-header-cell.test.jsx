@@ -1,81 +1,88 @@
-import * as React from 'react';
-import { mount, shallow } from 'enzyme';
-import { DragDropProvider, DragSource } from '@vtrphan/dx-react-core';
-import { setupConsole } from '@vtrphan/dx-testing';
+import * as React from "react";
+import { act } from "react-dom/test-utils";
+import { mount, shallow } from "enzyme";
+import { DragDropProvider, DragSource } from "@vtrphan/dx-react-core";
+import { setupConsole } from "@vtrphan/dx-testing";
 
-import { TableHeaderCell } from './table-header-cell';
-import { ResizingControl } from './table-header-cell/resizing-control';
+import { TableHeaderCell } from "./table-header-cell";
+import { ResizingControl } from "./table-header-cell/resizing-control";
 
-describe('TableHeaderCell', () => {
+describe("TableHeaderCell", () => {
   let resetConsole;
   beforeAll(() => {
-    resetConsole = setupConsole({ ignore: ['validateDOMNesting'] });
+    resetConsole = setupConsole({ ignore: ["validateDOMNesting"] });
   });
   afterAll(() => {
     resetConsole();
   });
 
-  it('should have correct classes when user interaction disallowed', () => {
-    const tree = shallow((
-      <TableHeaderCell
-        column={{}}
-      />
-    ));
+  it("should have correct classes when user interaction disallowed", () => {
+    const tree = shallow(<TableHeaderCell column={{}} />);
 
-    expect(tree.dive().find('th').is('.dx-g-bs4-user-select-none.dx-g-bs4-cursor-pointer'))
-      .toBeFalsy();
+    expect(
+      tree
+        .dive()
+        .find("th")
+        .is(".dx-g-bs4-user-select-none.dx-g-bs4-cursor-pointer")
+    ).toBeFalsy();
   });
 
-  it('should have correct classes when dragging is allowed', () => {
+  it("should have correct classes when dragging is allowed", () => {
     const getCellWidth = () => {};
-    const tree = mount((
+    const tree = mount(
       <DragDropProvider>
         <TableHeaderCell
-          column={{ name: 'a' }}
+          column={{ name: "a" }}
           draggingEnabled
           getCellWidth={getCellWidth}
         />
       </DragDropProvider>
-    ));
+    );
 
-    expect(tree.find('th').is('.dx-g-bs4-user-select-none.dx-g-bs4-cursor-pointer.position-relative'))
-      .toBeTruthy();
+    expect(
+      tree
+        .find("th")
+        .is(
+          ".dx-g-bs4-user-select-none.dx-g-bs4-cursor-pointer.position-relative"
+        )
+    ).toBeTruthy();
   });
 
-  it('should have correct classes when dragging', () => {
+  it("should have correct classes when dragging", () => {
     const getCellWidth = () => {};
-    const tree = mount((
+    const tree = mount(
       <DragDropProvider>
         <TableHeaderCell
-          column={{ name: 'a' }}
+          column={{ name: "a" }}
           draggingEnabled
           getCellWidth={getCellWidth}
         />
       </DragDropProvider>
-    ));
+    );
 
-    expect(tree.find('th').is('.dx-g-bs4-inactive'))
-      .toBeFalsy();
+    expect(tree.find("th").is(".dx-g-bs4-inactive")).toBeFalsy();
 
-    tree.find(DragSource).prop('onStart')();
+    act(() => {
+      tree.find(DragSource).prop("onStart")();
+    });
     tree.update();
 
-    expect(tree.find('th').is('.dx-g-bs4-inactive'))
-      .toBeTruthy();
+    expect(tree.find("th").is(".dx-g-bs4-inactive")).toBeTruthy();
 
-    tree.find(DragSource).prop('onEnd')();
+    act(() => {
+      tree.find(DragSource).prop("onEnd")();
+    });
     tree.update();
 
-    expect(tree.find('th').is('.dx-g-bs4-inactive'))
-      .toBeFalsy();
+    expect(tree.find("th").is(".dx-g-bs4-inactive")).toBeFalsy();
   });
 
-  it('should render resize control if resizing is allowed', () => {
+  it("should render resize control if resizing is allowed", () => {
     const onWidthChange = () => {};
     const onWidthDraft = () => {};
     const onWidthDraftCancel = () => {};
 
-    const tree = shallow((
+    const tree = shallow(
       <TableHeaderCell
         column={{}}
         resizingEnabled
@@ -83,46 +90,40 @@ describe('TableHeaderCell', () => {
         onWidthDraft={onWidthDraft}
         onWidthDraftCancel={onWidthDraftCancel}
       />
-    ));
+    );
 
     const resizingControl = tree.dive().find(ResizingControl);
-    expect(resizingControl.exists())
-      .toBeTruthy();
-    expect(resizingControl.prop('onWidthChange'))
-      .toBe(onWidthChange);
-    expect(resizingControl.prop('onWidthDraft'))
-      .toBe(onWidthDraft);
-    expect(resizingControl.prop('onWidthDraftCancel'))
-      .toBe(onWidthDraftCancel);
+    expect(resizingControl.exists()).toBeTruthy();
+    expect(resizingControl.prop("onWidthChange")).toBe(onWidthChange);
+    expect(resizingControl.prop("onWidthDraft")).toBe(onWidthDraft);
+    expect(resizingControl.prop("onWidthDraftCancel")).toBe(onWidthDraftCancel);
   });
 
-  it('should pass custom class to the root element', () => {
-    const tree = shallow((
-      <TableHeaderCell
-        column={{ title: 'a' }}
-        className="custom-class"
-      />
-    ));
+  it("should pass custom class to the root element", () => {
+    const tree = shallow(
+      <TableHeaderCell column={{ title: "a" }} className="custom-class" />
+    );
 
-    expect(tree.dive().find('th').is('.position-relative.dx-g-bs4-header-cell.custom-class'))
-      .toBeTruthy();
+    expect(
+      tree
+        .dive()
+        .find("th")
+        .is(".position-relative.dx-g-bs4-header-cell.custom-class")
+    ).toBeTruthy();
   });
 
-  it('should pass rest props to the root element', () => {
-    const tree = shallow((
-      <TableHeaderCell column={{ title: 'a' }} data={{ a: 1 }} />
-    ));
-    expect(tree.props().data)
-      .toMatchObject({ a: 1 });
+  it("should pass rest props to the root element", () => {
+    const tree = shallow(
+      <TableHeaderCell column={{ title: "a" }} data={{ a: 1 }} />
+    );
+    expect(tree.props().data).toMatchObject({ a: 1 });
   });
 
-  it('should consider the `wordWrapEnabled` property', () => {
+  it("should consider the `wordWrapEnabled` property", () => {
     let tree = shallow(<TableHeaderCell />);
-    expect(tree.dive().is('.text-nowrap'))
-      .toBeTruthy();
+    expect(tree.dive().is(".text-nowrap")).toBeTruthy();
 
     tree = shallow(<TableHeaderCell tableColumn={{ wordWrapEnabled: true }} />);
-    expect(tree.dive().is('.text-nowrap'))
-      .toBeFalsy();
+    expect(tree.dive().is(".text-nowrap")).toBeFalsy();
   });
 });

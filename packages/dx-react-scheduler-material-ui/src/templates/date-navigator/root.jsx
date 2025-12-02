@@ -21,11 +21,11 @@ const StyledDiv = styled('div')(({ theme: { spacing } }) => ({
 const RootBase = ({
   navigationButtonComponent: NavigationButton,
   openButtonComponent: OpenButton,
-  navigatorText,
+  navigatorText = '',
   rootRef,
   onVisibilityToggle,
   onNavigate,
-  className,
+  className = undefined,
   ...restProps
 }) => {
   const navigateBack = React.useCallback(() => onNavigate('back'), [onNavigate]);
@@ -62,11 +62,6 @@ RootBase.propTypes = {
   rootRef: PropTypes.func.isRequired,
   navigatorText: PropTypes.string,
   className: PropTypes.string,
-};
-
-RootBase.defaultProps = {
-  navigatorText: '',
-  className: undefined,
 };
 
 export const Root = (RootBase);

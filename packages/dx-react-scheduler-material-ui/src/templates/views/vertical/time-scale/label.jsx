@@ -41,11 +41,11 @@ const StyledDiv = styled('div')(({ theme }) => ({
 }));
 
 export const Label = ({
-  className,
-  time,
-  formatDate,
-  groupingInfo,
-  endOfGroup,
+  className = undefined,
+  time = undefined,
+  formatDate = () => undefined,
+  groupingInfo = undefined,
+  endOfGroup = false,
   ...restProps
 }) => (
   <StyledDiv
@@ -70,12 +70,4 @@ Label.propTypes = {
   groupingInfo: PropTypes.arrayOf(PropTypes.object),
   endOfGroup: PropTypes.bool,
   className: PropTypes.string,
-};
-
-Label.defaultProps = {
-  className: undefined,
-  time: undefined,
-  formatDate: () => undefined,
-  groupingInfo: undefined,
-  endOfGroup: false,
 };

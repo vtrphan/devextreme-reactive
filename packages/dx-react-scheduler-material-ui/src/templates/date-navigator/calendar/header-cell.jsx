@@ -23,8 +23,8 @@ const StyledTableCell = styled(TableCell)({
 });
 
 export const HeaderCell = ({
-  children,
-  className,
+  children = undefined,
+  className = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -40,9 +40,4 @@ export const HeaderCell = ({
 HeaderCell.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-HeaderCell.defaultProps = {
-  children: undefined,
-  className: undefined,
 };

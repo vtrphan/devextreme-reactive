@@ -21,10 +21,10 @@ export const TicksLayout = ({
   cellComponent: Cell,
   rowComponent: Row,
   cellsData,
-  groupOrientation,
-  className,
-  groupCount,
-  includeAllDayCell,
+  groupOrientation = HORIZONTAL_GROUP_ORIENTATION,
+  className = undefined,
+  groupCount = 1,
+  includeAllDayCell = false,
   ...restProps
 }) => {
   const groupHeight = cellsData.length / groupCount;
@@ -69,11 +69,4 @@ TicksLayout.propTypes = {
   groupCount: PropTypes.number,
   includeAllDayCell: PropTypes.bool,
   className: PropTypes.string,
-};
-
-TicksLayout.defaultProps = {
-  className: undefined,
-  groupOrientation: HORIZONTAL_GROUP_ORIENTATION,
-  groupCount: 1,
-  includeAllDayCell: false,
 };

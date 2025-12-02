@@ -5,11 +5,13 @@ import classNames from 'clsx';
 import { SelectionControl } from './parts/selection-control';
 
 export const TableSelectCell = ({
-  className,
-  selected,
-  onToggle,
-  row, tableRow, tableColumn,
-  forwardedRef,
+  className = undefined,
+  selected = false,
+  onToggle = () => {},
+  row = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -32,14 +34,4 @@ TableSelectCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-TableSelectCell.defaultProps = {
-  className: undefined,
-  selected: false,
-  onToggle: () => {},
-  row: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  forwardedRef: undefined,
 };

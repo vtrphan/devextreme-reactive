@@ -5,9 +5,15 @@ import classNames from 'clsx';
 import { SelectionControl } from './parts/selection-control';
 
 export const TableSelectAllCell = ({
-  className, allSelected, someSelected, disabled, onToggle,
-  tableColumn, tableRow, rowSpan,
-  forwardedRef,
+  className = undefined,
+  allSelected = false,
+  someSelected = false,
+  disabled = false,
+  onToggle = () => {},
+  tableColumn = undefined,
+  tableRow = undefined,
+  rowSpan = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -39,16 +45,4 @@ TableSelectAllCell.propTypes = {
   tableColumn: PropTypes.object,
   rowSpan: PropTypes.number,
   forwardedRef: PropTypes.func,
-};
-
-TableSelectAllCell.defaultProps = {
-  className: undefined,
-  allSelected: false,
-  someSelected: false,
-  disabled: false,
-  onToggle: () => {},
-  tableRow: undefined,
-  tableColumn: undefined,
-  rowSpan: undefined,
-  forwardedRef: undefined,
 };

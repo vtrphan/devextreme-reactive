@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableSelectRow = ({
-  highlighted, selectByRowClick, onToggle,
-  children, className,
-  row, tableRow, tableColumn, forwardedRef,
+  highlighted = false, selectByRowClick = false, onToggle = () => {},
+  children = undefined, className = undefined,
+  row = undefined, tableRow = undefined, tableColumn = undefined, forwardedRef = undefined,
   ...restProps
 }) => (
   <tr
@@ -32,16 +32,4 @@ TableSelectRow.propTypes = {
   tableColumn: PropTypes.object,
   tableRow: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableSelectRow.defaultProps = {
-  children: undefined,
-  onToggle: () => {},
-  highlighted: false,
-  selectByRowClick: false,
-  className: undefined,
-  row: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  forwardedRef: undefined,
 };

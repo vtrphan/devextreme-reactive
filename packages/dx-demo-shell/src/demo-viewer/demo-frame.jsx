@@ -1,23 +1,21 @@
 /* eslint-disable max-classes-per-file */
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Frame from 'react-frame-component';
-import {
-  FormGroup, Label, Input, InputGroup, Button,
-} from 'reactstrap';
-import { DemoRenderer } from './demo-renderer';
-import { EmbeddedDemoContext } from '../context';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Frame from "react-frame-component";
+import { FormGroup, Label, Input, InputGroup, Button } from "reactstrap";
+import { DemoRenderer } from "./demo-renderer";
+import { EmbeddedDemoContext } from "../context";
 
 class DemoFrameRenderer extends React.PureComponent {
   constructor(props, context) {
     super(props, context);
 
     this.state = {
-      frameHeight: 600,
+      frameHeight: 600
     };
     this.nodeRef = React.createRef();
 
-    this.onSubmitCustomLink = (e) => {
+    this.onSubmitCustomLink = e => {
       e.preventDefault();
       const { onEditableLinkChange } = this.props;
       onEditableLinkChange(this.customThemeLinkNode.value);
@@ -29,15 +27,12 @@ class DemoFrameRenderer extends React.PureComponent {
   }
 
   getThemeVariantOptions() {
-    const {
-      themeName,
-      variantName,
-    } = this.props;
+    const { themeName, variantName } = this.props;
     const { themeSources } = this.context;
 
     return themeSources
-      .find(theme => theme.name === themeName).variants
-      .find(variant => variant.name === variantName);
+      .find(theme => theme.name === themeName)
+      .variants.find(variant => variant.name === variantName);
   }
 
   updateFrameHeight() {
@@ -62,55 +57,51 @@ class DemoFrameRenderer extends React.PureComponent {
       <div>
         {!frame && !!editableLink ? (
           <form
-            style={{ marginBottom: '20px' }}
+            style={{ marginBottom: "20px" }}
             onSubmit={this.onSubmitCustomLink}
           >
             <FormGroup controlId="customThemeLink">
-              <Label>
-                Custom theme link
-              </Label>
+              <Label>Custom theme link</Label>
               <InputGroup>
                 <Input
                   type="text"
                   id="customLink"
-                  innerRef={(node) => { this.customThemeLinkNode = node; }}
+                  innerRef={node => {
+                    this.customThemeLinkNode = node;
+                  }}
                   defaultValue={editableLink}
                 />
-                <Button type="submit">
-                  Apply
-                </Button>
+                <Button type="submit">Apply</Button>
               </InputGroup>
             </FormGroup>
           </form>
         ) : null}
 
-        {frame
-          ? (
-            <DemoRenderer {...this.props} />
-          )
-          : (
-            <div
+        {frame ? (
+          <DemoRenderer {...this.props} />
+        ) : (
+          <div
+            style={{
+              margin: "-8px"
+            }}
+          >
+            <Frame
+              key={editableLink} // NOTE: re-render frame once theme link has changed
               style={{
-                margin: '-8px',
+                border: "none",
+                minWidth: "100%",
+                width: "100px",
+                height: `${frameHeight}px`,
+                marginBottom: "20px"
               }}
+              initialContent={markup}
+              mountTarget="#mountPoint"
+              scrolling="no"
             >
-              <Frame
-                key={editableLink} // NOTE: re-render frame once theme link has changed
-                style={{
-                  border: 'none',
-                  minWidth: '100%',
-                  width: '100px',
-                  height: `${frameHeight}px`,
-                  marginBottom: '20px',
-                }}
-                initialContent={markup}
-                mountTarget="#mountPoint"
-                scrolling="no"
-              >
-                <div ref={this.nodeRef} />
-              </Frame>
-            </div>
-          )}
+              <div ref={this.nodeRef} />
+            </Frame>
+          </div>
+        )}
       </div>
     );
   }
@@ -124,11 +115,7 @@ DemoFrameRenderer.propTypes = {
   markup: PropTypes.string.isRequired,
   editableLink: PropTypes.string.isRequired,
   onEditableLinkChange: PropTypes.func.isRequired,
-  perfSamplesCount: PropTypes.number,
-};
-
-DemoFrameRenderer.defaultProps = {
-  perfSamplesCount: undefined,
+  perfSamplesCount: PropTypes.number
 };
 
 DemoFrameRenderer.contextType = EmbeddedDemoContext;

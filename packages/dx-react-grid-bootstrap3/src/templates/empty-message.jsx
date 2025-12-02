@@ -4,8 +4,8 @@ import classNames from 'clsx';
 
 export const EmptyMessage = ({
   getMessage,
-  className,
-  style,
+  className = undefined,
+  style = null,
   ...restProps
 }) => (
   <div
@@ -27,9 +27,4 @@ EmptyMessage.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
   style: PropTypes.object,
-};
-
-EmptyMessage.defaultProps = {
-  className: undefined,
-  style: null,
 };

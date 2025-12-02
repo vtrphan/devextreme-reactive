@@ -15,7 +15,7 @@ const StyledTableRow = styled(TableRow)(() => ({
 }));
 
 export const Row = ({
-  children, className, ...restProps
+  children = null, className = undefined, ...restProps
 }) => (
   <StyledTableRow
     {...restProps}
@@ -28,9 +28,4 @@ export const Row = ({
 Row.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-Row.defaultProps = {
-  children: null,
-  className: undefined,
 };

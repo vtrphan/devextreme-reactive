@@ -22,7 +22,7 @@ const StyledDiv = styled('div')(({ theme }) => ({
 }));
 
 export const GroupButton = ({
-  disabled, onGroup, className, ...restProps
+  disabled = false, onGroup, className = undefined, ...restProps
 }) => (
   <StyledDiv
     onClick={(e) => {
@@ -44,9 +44,4 @@ GroupButton.propTypes = {
   onGroup: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-};
-
-GroupButton.defaultProps = {
-  disabled: false,
-  className: undefined,
 };

@@ -4,7 +4,11 @@ import classNames from 'clsx';
 import { BodyColorContext } from './layout';
 
 export const Table = ({
-  children, use, style, className, forwardedRef,
+  children,
+  use = undefined,
+  style = null,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => {
   const backgroundColor = React.useContext(BodyColorContext);
@@ -21,9 +25,9 @@ export const Table = ({
       {...restProps}
       style={{
         ...style,
-        ...use ? {
+        ...(use ? {
           backgroundColor,
-        } : null,
+        } : null),
       }}
     >
       {children}
@@ -40,11 +44,4 @@ Table.propTypes = {
   style: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-Table.defaultProps = {
-  className: undefined,
-  use: undefined,
-  style: null,
-  forwardedRef: undefined,
 };

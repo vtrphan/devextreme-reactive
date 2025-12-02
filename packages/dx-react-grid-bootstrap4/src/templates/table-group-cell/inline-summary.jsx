@@ -3,9 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const InlineSummary = ({
-  inlineSummaries, getMessage,
+  inlineSummaries = [],
+  getMessage,
   inlineSummaryItemComponent: InlineSummaryItem,
-  className, ...restProps
+  className = undefined,
+  ...restProps
 }) => (
   <span className={classNames('ml-2', className)} {...restProps}>
     {'('}
@@ -27,9 +29,4 @@ InlineSummary.propTypes = {
   getMessage: PropTypes.func.isRequired,
   inlineSummaries: PropTypes.array,
   inlineSummaryItemComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
-};
-
-InlineSummary.defaultProps = {
-  className: undefined,
-  inlineSummaries: [],
 };

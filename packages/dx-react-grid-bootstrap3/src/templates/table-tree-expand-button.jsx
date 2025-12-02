@@ -4,10 +4,10 @@ import PropTypes from 'prop-types';
 import { ExpandButton } from './parts/expand-button';
 
 export const TableTreeExpandButton = ({
-  style,
-  visible,
-  expanded,
-  onToggle,
+  style = null,
+  visible = false,
+  expanded = false,
+  onToggle = () => {},
   ...restProps
 }) => (
   <ExpandButton
@@ -27,11 +27,4 @@ TableTreeExpandButton.propTypes = {
   visible: PropTypes.bool,
   expanded: PropTypes.bool,
   onToggle: PropTypes.func,
-};
-
-TableTreeExpandButton.defaultProps = {
-  style: null,
-  visible: false,
-  expanded: false,
-  onToggle: () => {},
 };

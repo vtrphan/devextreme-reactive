@@ -16,15 +16,15 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 }));
 
 export const TableSelectRow = ({
-  children,
-  className,
-  onToggle,
-  row,
-  selectByRowClick,
-  highlighted,
-  tableColumn,
-  tableRow,
-  forwardedRef,
+  children = undefined,
+  className = undefined,
+  onToggle = () => {},
+  row = undefined,
+  selectByRowClick = false,
+  highlighted = false,
+  tableColumn = undefined,
+  tableRow = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableRow
@@ -51,16 +51,4 @@ TableSelectRow.propTypes = {
   tableColumn: PropTypes.object,
   tableRow: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableSelectRow.defaultProps = {
-  children: undefined,
-  className: undefined,
-  onToggle: () => {},
-  row: undefined,
-  selectByRowClick: false,
-  highlighted: false,
-  tableColumn: undefined,
-  tableRow: undefined,
-  forwardedRef: undefined,
 };

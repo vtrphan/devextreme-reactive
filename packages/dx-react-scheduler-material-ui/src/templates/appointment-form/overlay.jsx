@@ -59,10 +59,10 @@ const StyledDrawer = styled(Drawer)(({ theme: { spacing } }) => ({
 
 export const Overlay = ({
   children,
-  visible,
-  className,
+  visible = false,
+  className = undefined,
   fullSize,
-  target,
+  target = null,
   onHide,
   ...restProps
 }) => {
@@ -106,10 +106,4 @@ Overlay.propTypes = {
   visible: PropTypes.bool,
   className: PropTypes.string,
   target: PropTypes.object,
-};
-
-Overlay.defaultProps = {
-  className: undefined,
-  visible: false,
-  target: null,
 };

@@ -19,7 +19,7 @@ const StyledDiv = styled('div')(({ theme }) => ({
 }));
 
 export const Container = ({
-  children, style, className, side, position, ...restProps
+  children = undefined, style = null, className = undefined, side = 'left', position = '', ...restProps
 }) => (
   <StyledDiv
     className={classNames(classes.wrapper, className)}
@@ -36,12 +36,4 @@ Container.propTypes = {
   style: PropTypes.object,
   side: PropTypes.string,
   position: PropTypes.string,
-};
-
-Container.defaultProps = {
-  children: undefined,
-  className: undefined,
-  style: null,
-  side: 'left',
-  position: '',
 };

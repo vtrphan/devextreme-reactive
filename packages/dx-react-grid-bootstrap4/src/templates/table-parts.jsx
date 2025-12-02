@@ -5,7 +5,10 @@ import classNames from 'clsx';
 import { BodyColorContext } from './layout';
 
 export const TableHead = ({
-  isFixed, className, style, ...restProps
+  isFixed = undefined,
+  className = undefined,
+  style = undefined,
+  ...restProps
 }) => {
   const backgroundColor = React.useContext(BodyColorContext);
   return (
@@ -28,23 +31,17 @@ TableHead.propTypes = {
   style: PropTypes.object,
 };
 
-TableHead.defaultProps = {
-  isFixed: undefined,
-  style: undefined,
-  className: undefined,
-};
-
-export const TableBody = ({ isFixed, ...restProps }) => <tbody {...restProps} />;
+export const TableBody = ({
+  isFixed = undefined,
+  ...restProps
+}) => <tbody {...restProps} />;
 TableBody.propTypes = {
   isFixed: PropTypes.bool,
 };
 
-TableBody.defaultProps = {
-  isFixed: undefined,
-};
-
 export const TableFooter = ({
-  isFixed, ...restProps
+  isFixed = undefined,
+  ...restProps
 }) => {
   const backgroundColor = React.useContext(BodyColorContext);
   return (
@@ -63,8 +60,4 @@ export const TableFooter = ({
 
 TableFooter.propTypes = {
   isFixed: PropTypes.bool,
-};
-
-TableFooter.defaultProps = {
-  isFixed: undefined,
 };

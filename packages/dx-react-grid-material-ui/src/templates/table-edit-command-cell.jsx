@@ -38,7 +38,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 export const CommandButton = ({
   onExecute,
   text,
-  className,
+  className = undefined,
   ...restProps
 }) => (
   <StyledButton
@@ -59,16 +59,12 @@ CommandButton.propTypes = {
   className: PropTypes.string,
 };
 
-CommandButton.defaultProps = {
-  className: undefined,
-};
-
 export const EditCommandHeadingCell = ({
-  children,
-  className,
-  tableRow, tableColumn,
-  rowSpan,
-  forwardedRef,
+  children = undefined,
+  className = undefined,
+  tableRow = undefined, tableColumn = undefined,
+  rowSpan = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -93,18 +89,9 @@ EditCommandHeadingCell.propTypes = {
   forwardedRef: PropTypes.func,
 };
 
-EditCommandHeadingCell.defaultProps = {
-  children: undefined,
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  rowSpan: undefined,
-  forwardedRef: undefined,
-};
-
 export const EditCommandCell = ({
-  tableRow, tableColumn, row, children,
-  className, forwardedRef,
+  tableRow = undefined, tableColumn = undefined, row = undefined, children = undefined,
+  className = undefined, forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -123,13 +110,4 @@ EditCommandCell.propTypes = {
   tableColumn: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-EditCommandCell.defaultProps = {
-  children: undefined,
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  row: undefined,
-  forwardedRef: undefined,
 };

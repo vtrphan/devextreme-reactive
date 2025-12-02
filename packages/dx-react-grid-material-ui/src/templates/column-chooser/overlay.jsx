@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Popover } from '@mui/material';
 
 export const Overlay = ({
-  visible, onHide, children, target, ...restProps
+  visible = false, onHide, children, target = null, ...restProps
 }) => (
   <Popover
     open={visible}
@@ -25,9 +25,4 @@ Overlay.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Overlay.defaultProps = {
-  visible: false,
-  target: null,
 };

@@ -118,14 +118,14 @@ export const Layout = ({
   dateEditorComponent,
   selectComponent: Select,
   weeklyRecurrenceSelectorComponent,
-  children,
-  className,
+  children = null,
+  className = undefined,
   getMessage,
-  readOnly,
-  onFieldChange,
+  readOnly = false,
+  onFieldChange = () => undefined,
   appointmentData,
   formatDate,
-  locale,
+  locale = 'en-US',
   visible,
   firstDayOfWeek,
   ...restProps
@@ -231,12 +231,4 @@ Layout.propTypes = {
   formatDate: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-Layout.defaultProps = {
-  locale: 'en-US',
-  onFieldChange: () => undefined,
-  className: undefined,
-  readOnly: false,
-  children: null,
 };

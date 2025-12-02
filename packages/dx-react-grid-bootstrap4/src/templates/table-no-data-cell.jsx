@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableNoDataCell = ({
-  className, colSpan,
-  getMessage, tableRow,
-  tableColumn, ...restProps
+  className = undefined,
+  colSpan = 1,
+  getMessage,
+  tableRow = undefined,
+  tableColumn = undefined,
+  ...restProps
 }) => (
   <td
     className={classNames('py-5 dx-g-bs4-no-data-cell', className)}
@@ -26,11 +29,4 @@ TableNoDataCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   className: PropTypes.string,
-};
-
-TableNoDataCell.defaultProps = {
-  className: undefined,
-  colSpan: 1,
-  tableRow: undefined,
-  tableColumn: undefined,
 };

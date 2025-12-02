@@ -66,14 +66,14 @@ const StyledRadioGroup = styled(RadioGroup)(({ theme: { spacing } }) => ({
 }));
 
 export const MonthlyEditor = ({
-  getMessage,
+  getMessage = () => undefined,
   labelComponent: Label,
   textEditorComponent: TextEditor,
   selectComponent: Select,
-  readOnly,
+  readOnly = false,
   appointmentData,
   formatDate,
-  onFieldChange,
+  onFieldChange = () => undefined,
   firstDayOfWeek,
   ...restProps
 }) => {
@@ -232,10 +232,4 @@ MonthlyEditor.propTypes = {
   readOnly: PropTypes.bool,
   formatDate: PropTypes.func.isRequired,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-MonthlyEditor.defaultProps = {
-  getMessage: () => undefined,
-  onFieldChange: () => undefined,
-  readOnly: false,
 };

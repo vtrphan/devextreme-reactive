@@ -56,14 +56,10 @@ const Root = styled('div')(({ theme }) => {
 });
 
 export const Arrow = React.forwardRef(({
-  className, placement, ...restProps
+  className = undefined, placement, ...restProps
 }, ref) => <Root className={classNames(classes[`arrow-${placement}`], className)} ref={ref} {...restProps} />);
 
 Arrow.propTypes = {
   placement: PropTypes.string.isRequired,
   className: PropTypes.string,
-};
-
-Arrow.defaultProps = {
-  className: undefined,
 };

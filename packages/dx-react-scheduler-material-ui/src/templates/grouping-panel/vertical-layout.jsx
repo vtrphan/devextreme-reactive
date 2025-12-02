@@ -30,9 +30,9 @@ export const VerticalLayout = ({
   groups,
   rowSpan,
   viewType,
-  className,
-  cellTextTopOffset,
-  alignWithAllDayRow,
+  className = undefined,
+  cellTextTopOffset = undefined,
+  alignWithAllDayRow = false,
   ...restProps
 }) => {
   const timeTableCellHeight = BASIC_CELL_HEIGHT[viewType];
@@ -77,10 +77,4 @@ VerticalLayout.propTypes = {
   viewType: PropTypes.string.isRequired,
   cellTextTopOffset: PropTypes.number,
   className: PropTypes.string,
-};
-
-VerticalLayout.defaultProps = {
-  cellTextTopOffset: undefined,
-  className: undefined,
-  alignWithAllDayRow: false,
 };

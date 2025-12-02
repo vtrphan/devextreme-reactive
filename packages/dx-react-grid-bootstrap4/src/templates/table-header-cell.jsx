@@ -1,45 +1,50 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import PropTypes from "prop-types";
 
-import { DragSource } from '@vtrphan/dx-react-core';
+import { DragSource } from "@vtrphan/dx-react-core";
 
-import { CellLayout } from './table-header-cell/cell-layout';
+import { CellLayout } from "./table-header-cell/cell-layout";
 
-export class TableHeaderCell extends React.PureComponent {
-  constructor(props) {
-    super(props);
+export const TableHeaderCell = ({
+  column,
+  draggingEnabled = false,
+  getCellWidth = () => {},
+  ...restProps
+}) => {
+  const dragRef = React.useRef(null);
+  const [dragging, setDragging] = React.useState(false);
 
-    this.state = {
-      dragging: false,
-    };
-    this.dragRef = React.createRef();
+  const handleDragStart = React.useCallback(() => {
+    setDragging(true);
+  }, []);
 
-    this.onDragStart = () => {
-      this.setState({ dragging: true });
-    };
-    this.onDragEnd = () => {
-      if (this.dragRef.current) {
-        this.setState({ dragging: false });
-      }
-    };
-  }
+  const handleDragEnd = React.useCallback(() => {
+    if (dragRef.current) {
+      setDragging(false);
+    }
+  }, []);
 
-  render() {
-    const { column, draggingEnabled } = this.props;
-    const { dragging } = this.state;
+  const cellLayoutProps = {
+    column,
+    draggingEnabled,
+    getCellWidth,
+    ...restProps,
+    dragging
+  };
 
-    return draggingEnabled ? (
-      <DragSource
-        ref={this.dragRef}
-        payload={[{ type: 'column', columnName: column.name }]}
-        onStart={this.onDragStart}
-        onEnd={this.onDragEnd}
-      >
-        <CellLayout {...this.props} dragging={dragging} />
-      </DragSource>
-    ) : <CellLayout {...this.props} dragging={dragging} />;
-  }
-}
+  return draggingEnabled ? (
+    <DragSource
+      ref={dragRef}
+      payload={[{ type: "column", columnName: column?.name }]}
+      onStart={handleDragStart}
+      onEnd={handleDragEnd}
+    >
+      <CellLayout {...cellLayoutProps} />
+    </DragSource>
+  ) : (
+    <CellLayout {...cellLayoutProps} />
+  );
+};
 
 TableHeaderCell.propTypes = {
   tableColumn: PropTypes.object,
@@ -53,21 +58,7 @@ TableHeaderCell.propTypes = {
   onWidthDraftCancel: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
+    PropTypes.node
   ]),
-  getCellWidth: PropTypes.func,
-};
-
-TableHeaderCell.defaultProps = {
-  column: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  className: undefined,
-  draggingEnabled: false,
-  resizingEnabled: false,
-  onWidthChange: undefined,
-  onWidthDraft: undefined,
-  onWidthDraftCancel: undefined,
-  children: undefined,
-  getCellWidth: () => {},
+  getCellWidth: PropTypes.func
 };

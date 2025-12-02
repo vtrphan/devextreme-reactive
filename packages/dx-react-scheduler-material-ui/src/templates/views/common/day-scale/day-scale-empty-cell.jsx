@@ -17,8 +17,8 @@ const StyledDiv = styled('div')({
 });
 
 export const DayScaleEmptyCell = ({
-  className,
-  children,
+  className = undefined,
+  children = undefined,
   ...restProps
 }) => (
   <StyledDiv {...restProps} className={classNames(classes.emptyCell, className)}>
@@ -29,9 +29,4 @@ export const DayScaleEmptyCell = ({
 DayScaleEmptyCell.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
-};
-
-DayScaleEmptyCell.defaultProps = {
-  className: undefined,
-  children: undefined,
 };

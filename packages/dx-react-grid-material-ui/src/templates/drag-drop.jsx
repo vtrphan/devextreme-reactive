@@ -21,9 +21,9 @@ const StyledDiv = styled("div")(() => ({
 
 export const Container = ({
   clientOffset,
-  style,
-  className,
-  children,
+  style = null,
+  className = undefined,
+  children = undefined,
   ...restProps
 }) => (
   <StyledDiv
@@ -47,12 +47,6 @@ Container.propTypes = {
   children: PropTypes.node,
   style: PropTypes.object,
   className: PropTypes.string
-};
-
-Container.defaultProps = {
-  style: null,
-  className: undefined,
-  children: undefined
 };
 
 const StyledChip = styled(Chip)(({ theme }) => ({

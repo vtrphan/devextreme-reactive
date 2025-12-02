@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const GroupButton = ({
-  disabled, onGroup, className, style, ...restProps
+  disabled = false, onGroup, className = undefined, style = null, ...restProps
 }) => (
   <i
     className={classNames('glyphicon glyphicon-th-list', className)}
@@ -27,10 +27,4 @@ GroupButton.propTypes = {
   disabled: PropTypes.bool,
   className: PropTypes.string,
   style: PropTypes.object,
-};
-
-GroupButton.defaultProps = {
-  disabled: false,
-  className: undefined,
-  style: null,
 };

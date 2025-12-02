@@ -23,14 +23,14 @@ const getCurrentMonth = (recurrenceOptions, appointmentData) => {
 };
 
 export const YearlyEditor = ({
-  getMessage,
+  getMessage = () => undefined,
   labelComponent: Label,
   textEditorComponent: TextEditor,
   selectComponent: Select,
-  readOnly,
+  readOnly = false,
   appointmentData,
   formatDate,
-  onFieldChange,
+  onFieldChange = () => undefined,
   firstDayOfWeek,
   ...restProps
 }) => {
@@ -164,10 +164,4 @@ YearlyEditor.propTypes = {
   formatDate: PropTypes.func.isRequired,
   readOnly: PropTypes.bool,
   firstDayOfWeek: PropTypes.number.isRequired,
-};
-
-YearlyEditor.defaultProps = {
-  onFieldChange: () => undefined,
-  getMessage: () => undefined,
-  readOnly: false,
 };

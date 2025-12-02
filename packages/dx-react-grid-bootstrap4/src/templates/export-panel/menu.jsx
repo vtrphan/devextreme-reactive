@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { Popover } from '../../../../dx-react-bootstrap4/components';
 
 export const Menu = ({
-  visible, target, onHide, children, ...restProps
+  visible = false,
+  target = null,
+  onHide,
+  children,
+  ...restProps
 }) => (
   <Popover
     placement="bottom"
@@ -26,9 +30,4 @@ Menu.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Menu.defaultProps = {
-  visible: false,
-  target: null,
 };

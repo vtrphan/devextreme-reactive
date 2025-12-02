@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   Plugin,
   Getter,
@@ -7,17 +7,18 @@ import {
   TemplatePlaceholder,
   createStateHelper,
   Getters,
-  ActionFn,
-} from '@vtrphan/dx-react-core';
-import { bBoxes, getRanges } from '@vtrphan/dx-chart-core';
-import { LayoutManagerProps, LayoutManagerState, BBoxesChange } from '../types';
+  ActionFn
+} from "@vtrphan/dx-react-core";
+import { bBoxes, getRanges } from "@vtrphan/dx-chart-core";
+import { LayoutManagerProps, LayoutManagerState, BBoxesChange } from "../types";
 
-const doGetRanges = ({ layouts, rotated }: Getters) => getRanges(layouts.pane, rotated);
+const doGetRanges = ({ layouts, rotated }: Getters) =>
+  getRanges(layouts.pane, rotated);
 
-export class LayoutManager extends React.PureComponent<LayoutManagerProps, LayoutManagerState> {
-  static defaultProps: Partial<LayoutManagerProps> = {
-    width: 0,
-  };
+export class LayoutManager extends React.PureComponent<
+  LayoutManagerProps,
+  LayoutManagerState
+> {
   changeBBox: ActionFn<BBoxesChange>;
 
   constructor(props: LayoutManagerProps) {
@@ -28,15 +29,13 @@ export class LayoutManager extends React.PureComponent<LayoutManagerProps, Layou
     const stateHelper = createStateHelper(this);
     this.changeBBox = stateHelper.applyFieldReducer.bind(
       stateHelper,
-      'bBoxes',
-      bBoxes,
+      "bBoxes",
+      bBoxes
     );
   }
 
   render() {
-    const {
-      width, height, rootComponent: Root, ...restProps
-    } = this.props;
+    const { width = 0, height, rootComponent: Root, ...restProps } = this.props;
     const { bBoxes: stateBBoxes } = this.state;
 
     return (
@@ -46,11 +45,7 @@ export class LayoutManager extends React.PureComponent<LayoutManagerProps, Layou
         <Action name="changeBBox" action={this.changeBBox} />
 
         <Template name="root">
-          <Root
-            width={width!}
-            height={height}
-            {...restProps}
-          >
+          <Root width={width!} height={height} {...restProps}>
             <TemplatePlaceholder name="canvas" />
           </Root>
         </Template>

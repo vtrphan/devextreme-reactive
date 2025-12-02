@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { TableRow } from './table-row';
 
-export const TableInvisibleRow = ({ style, ...restParams }) => (
+export const TableInvisibleRow = ({ style = null, ...restParams }) => (
   <TableRow
     style={{
       visibility: 'hidden',
@@ -14,8 +14,4 @@ export const TableInvisibleRow = ({ style, ...restParams }) => (
 
 TableInvisibleRow.propTypes = {
   style: PropTypes.object,
-};
-
-TableInvisibleRow.defaultProps = {
-  style: null,
 };

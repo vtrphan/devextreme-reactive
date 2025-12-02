@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Sizer } from '@vtrphan/dx-react-core';
 import { TableStubCell } from './table-stub-cell';
 
-export const TableBorderlessStubCell = ({ style, ...restParams }) => (
+export const TableBorderlessStubCell = ({ style = null, ...restParams }) => (
   <TableStubCell
     style={{
       border: 'none',
@@ -15,10 +15,6 @@ export const TableBorderlessStubCell = ({ style, ...restParams }) => (
 
 TableBorderlessStubCell.propTypes = {
   style: PropTypes.object,
-};
-
-TableBorderlessStubCell.defaultProps = {
-  style: null,
 };
 
 export const TableListenerCell = ({ listen, onSizeChange, ...restProps }) => (listen ? (

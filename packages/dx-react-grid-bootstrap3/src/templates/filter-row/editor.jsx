@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const Editor = ({
-  value, disabled, getMessage, onChange, className,
+  value = '', disabled = false, getMessage, onChange = () => {}, className = undefined,
   ...restProps
 }) => (
   <input
@@ -23,11 +23,4 @@ Editor.propTypes = {
   onChange: PropTypes.func,
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
-};
-
-Editor.defaultProps = {
-  value: '',
-  disabled: false,
-  onChange: () => {},
-  className: undefined,
 };

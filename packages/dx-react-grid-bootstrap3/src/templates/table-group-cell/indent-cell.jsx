@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { StyleContext } from '../layout';
 
 export const IndentCell = ({
-  tableRow,
-  tableColumn,
-  row, column,
-  style, position, side,
-  forwardedRef,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = {}, column = {},
+  style = null, position = undefined, side = 'left',
+  forwardedRef = undefined,
   ...restProps
 }) => {
   const { backgroundColor, stickyPosition } = useContext(StyleContext);
@@ -37,15 +37,4 @@ IndentCell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.number,
   forwardedRef: PropTypes.func,
-};
-
-IndentCell.defaultProps = {
-  tableRow: undefined,
-  tableColumn: undefined,
-  row: {},
-  column: {},
-  style: null,
-  side: 'left',
-  position: undefined,
-  forwardedRef: undefined,
 };

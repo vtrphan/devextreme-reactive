@@ -95,10 +95,10 @@ const StyledDiv = styled('div')(({
 }));
 
 export const Content = ({
-  className,
-  children,
-  appointmentData,
-  appointmentResources,
+  className = undefined,
+  children = undefined,
+  appointmentData = undefined,
+  appointmentResources = [],
   formatDate,
   recurringIconComponent: RecurringIcon,
   ...restProps
@@ -173,11 +173,4 @@ Content.propTypes = {
   className: PropTypes.string,
   formatDate: PropTypes.func.isRequired,
   recurringIconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
-};
-
-Content.defaultProps = {
-  appointmentData: undefined,
-  appointmentResources: [],
-  className: undefined,
-  children: undefined,
 };

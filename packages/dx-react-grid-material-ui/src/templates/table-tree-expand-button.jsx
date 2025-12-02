@@ -27,10 +27,10 @@ const StyledIconButton = styled(IconButton)(({ theme }) => ({
 }));
 
 export const TableTreeExpandButton = ({
-  visible,
-  expanded,
-  onToggle,
-  className,
+  visible = false,
+  expanded = false,
+  onToggle = () => {},
+  className = undefined,
   ...restProps
 }) => (
   <StyledIconButton
@@ -58,11 +58,4 @@ TableTreeExpandButton.propTypes = {
   expanded: PropTypes.bool,
   onToggle: PropTypes.func,
   className: PropTypes.string,
-};
-
-TableTreeExpandButton.defaultProps = {
-  visible: false,
-  expanded: false,
-  onToggle: () => {},
-  className: undefined,
 };

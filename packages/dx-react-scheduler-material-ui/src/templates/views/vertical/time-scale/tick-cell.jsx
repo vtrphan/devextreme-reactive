@@ -33,12 +33,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TickCell = ({
-  className,
-  startDate,
-  endDate,
-  endOfGroup,
-  groupingInfo,
-  isAllDay,
+  className = undefined,
+  startDate = undefined,
+  endDate = undefined,
+  endOfGroup = false,
+  groupingInfo = undefined,
+  isAllDay = false,
   ...restProps
 }) => (
   <StyledTableCell
@@ -58,13 +58,4 @@ TickCell.propTypes = {
   groupingInfo: PropTypes.arrayOf(PropTypes.object),
   isAllDay: PropTypes.bool,
   className: PropTypes.string,
-};
-
-TickCell.defaultProps = {
-  className: undefined,
-  startDate: undefined,
-  endDate: undefined,
-  endOfGroup: false,
-  groupingInfo: undefined,
-  isAllDay: false,
 };

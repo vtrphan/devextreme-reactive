@@ -3,12 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const IndentCell = ({
-  tableRow,
-  tableColumn,
-  row, column,
-  style, className,
-  position, side,
-  forwardedRef,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = {},
+  column = {},
+  style = null,
+  className = undefined,
+  position = undefined,
+  side = 'left',
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -29,16 +32,4 @@ IndentCell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.number,
   forwardedRef: PropTypes.func,
-};
-
-IndentCell.defaultProps = {
-  tableRow: undefined,
-  tableColumn: undefined,
-  row: {},
-  column: {},
-  className: undefined,
-  style: null,
-  side: 'left',
-  position: undefined,
-  forwardedRef: undefined,
 };

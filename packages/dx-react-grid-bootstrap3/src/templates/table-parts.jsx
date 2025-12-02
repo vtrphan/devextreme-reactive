@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { StyleContext } from './layout';
 import { getStickyStyles } from '../utils/css-fallback-properties';
 
-export const TableHead = ({ isFixed, style, ...restProps }) => (
+export const TableHead = ({ isFixed = undefined, style = undefined, ...restProps }) => (
   <thead
     {...restProps}
     style={{
@@ -22,21 +22,12 @@ TableHead.propTypes = {
   isFixed: PropTypes.bool,
 };
 
-TableHead.defaultProps = {
-  isFixed: undefined,
-  style: undefined,
-};
-
-export const TableBody = ({ isFixed, ...restProps }) => <tbody {...restProps} />;
+export const TableBody = ({ isFixed = undefined, ...restProps }) => <tbody {...restProps} />;
 TableBody.propTypes = {
   isFixed: PropTypes.bool,
 };
 
-TableBody.defaultProps = {
-  isFixed: undefined,
-};
-
-export const TableFooter = ({ isFixed, ...restProps }) => (
+export const TableFooter = ({ isFixed = undefined, ...restProps }) => (
   <tfoot
     {...restProps}
     style={{
@@ -50,8 +41,4 @@ export const TableFooter = ({ isFixed, ...restProps }) => (
 
 TableFooter.propTypes = {
   isFixed: PropTypes.bool,
-};
-
-TableFooter.defaultProps = {
-  isFixed: undefined,
 };

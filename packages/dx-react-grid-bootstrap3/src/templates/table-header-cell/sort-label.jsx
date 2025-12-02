@@ -25,7 +25,7 @@ const onClick = (e, onSort) => {
 };
 
 export const SortLabel = ({
-  align, direction, disabled, children, onSort, getMessage, className, column, style, ...restProps
+  align = 'left', direction = null, disabled = false, children = undefined, onSort, getMessage = () => {}, className = undefined, column = undefined, style = null, ...restProps
 }) => (
   <span
     className={direction ? 'text-primary' : ''}
@@ -40,7 +40,7 @@ export const SortLabel = ({
       userSelect: 'none',
       MozUserSelect: 'none',
       WebkitUserSelect: 'none',
-      ...!disabled ? { cursor: 'pointer' } : null,
+      ...(!disabled ? { cursor: 'pointer' } : null),
       ...(align === 'right' ? { flexDirection: 'row-reverse' } : null),
       ...style,
     }}
@@ -70,15 +70,4 @@ SortLabel.propTypes = {
   className: PropTypes.string,
   getMessage: PropTypes.func,
   style: PropTypes.object,
-};
-
-SortLabel.defaultProps = {
-  column: undefined,
-  direction: null,
-  disabled: false,
-  children: undefined,
-  className: undefined,
-  align: 'left',
-  getMessage: () => {},
-  style: null,
 };

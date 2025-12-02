@@ -18,9 +18,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableSkeletonCell = ({
-  className,
-  tableRow,
-  tableColumn,
+  className = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -33,10 +33,4 @@ TableSkeletonCell.propTypes = {
   className: PropTypes.string,
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
-};
-
-TableSkeletonCell.defaultProps = {
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
 };

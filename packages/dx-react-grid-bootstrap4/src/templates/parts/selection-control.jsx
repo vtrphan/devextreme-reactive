@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const SelectionControl = ({
-  disabled, checked, indeterminate, onChange, className, ...restProps
+  disabled = false,
+  checked = false,
+  indeterminate = false,
+  onChange = () => {},
+  className = undefined,
+  ...restProps
 }) => (
   <input
     className={classNames({
@@ -33,12 +38,4 @@ SelectionControl.propTypes = {
   indeterminate: PropTypes.bool,
   onChange: PropTypes.func,
   className: PropTypes.string,
-};
-
-SelectionControl.defaultProps = {
-  disabled: false,
-  checked: false,
-  indeterminate: false,
-  onChange: () => {},
-  className: undefined,
 };

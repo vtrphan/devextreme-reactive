@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import { SelectionControl } from './parts/selection-control';
 
 export const TableSelectAllCell = ({
-  style, allSelected, someSelected, disabled, onToggle,
-  tableColumn, tableRow, rowSpan,
-  forwardedRef,
+  style = null, allSelected = false, someSelected = false, disabled = false, onToggle = () => {},
+  tableColumn = undefined, tableRow = undefined, rowSpan = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <th
@@ -39,16 +39,4 @@ TableSelectAllCell.propTypes = {
   tableColumn: PropTypes.object,
   rowSpan: PropTypes.number,
   forwardedRef: PropTypes.func,
-};
-
-TableSelectAllCell.defaultProps = {
-  style: null,
-  allSelected: false,
-  someSelected: false,
-  disabled: false,
-  onToggle: () => {},
-  tableRow: undefined,
-  tableColumn: undefined,
-  rowSpan: undefined,
-  forwardedRef: undefined,
 };

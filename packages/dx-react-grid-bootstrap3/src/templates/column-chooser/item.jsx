@@ -4,10 +4,10 @@ import classNames from 'clsx';
 
 export const Item = ({
   item: { column, hidden },
-  onToggle,
-  className,
-  style,
-  disabled,
+  onToggle = () => {},
+  className = undefined,
+  style = null,
+  disabled = false,
   ...restProps
 }) => (
   <button
@@ -44,11 +44,4 @@ Item.propTypes = {
   onToggle: PropTypes.func,
   className: PropTypes.string,
   style: PropTypes.object,
-};
-
-Item.defaultProps = {
-  onToggle: () => {},
-  disabled: false,
-  className: undefined,
-  style: null,
 };

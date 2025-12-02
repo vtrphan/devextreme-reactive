@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableSkeletonCell = ({
-  className,
-  tableRow,
-  tableColumn,
+  className = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
   ...restProps
 }) => (
   <td
@@ -18,10 +18,4 @@ TableSkeletonCell.propTypes = {
   className: PropTypes.string,
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
-};
-
-TableSkeletonCell.defaultProps = {
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
 };

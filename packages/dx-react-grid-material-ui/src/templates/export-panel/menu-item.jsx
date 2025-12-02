@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MenuItem as MenuItemMUI } from '@mui/material';
 
 export const MenuItem = React.forwardRef(({
-  text, onClick, ...restProps
+  text, onClick = () => {}, ...restProps
 }, ref) => (
   <MenuItemMUI
     onClick={onClick}
@@ -17,8 +17,4 @@ export const MenuItem = React.forwardRef(({
 MenuItem.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-};
-
-MenuItem.defaultProps = {
-  onClick: () => {},
 };

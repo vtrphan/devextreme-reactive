@@ -2,9 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const PaginationLink = ({
-  previous,
-  next,
-  children,
+  previous = false,
+  next = false,
+  children = undefined,
   ...restProps
 }) => {
   let ariaLabel = '';
@@ -46,10 +46,4 @@ PaginationLink.propTypes = {
   previous: PropTypes.bool,
   next: PropTypes.bool,
   children: PropTypes.node,
-};
-
-PaginationLink.defaultProps = {
-  previous: false,
-  next: false,
-  children: undefined,
 };

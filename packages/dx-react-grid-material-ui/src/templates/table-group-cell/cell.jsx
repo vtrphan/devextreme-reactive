@@ -27,14 +27,14 @@ export const Cell = ({
   containerComponent: Container,
   inlineSummaryComponent: InlineSummary,
   inlineSummaryItemComponent: InlineSummaryItem,
-  inlineSummaries, getMessage,
-  style, colSpan, row,
-  column, expanded,
-  onToggle,
-  children,
-  className, tableRow,
-  forwardedRef,
-  tableColumn, side, position,
+  inlineSummaries = [], getMessage,
+  style = null, colSpan = 1, row = {},
+  column = {}, expanded = false,
+  onToggle = () => {},
+  children = undefined,
+  className = undefined, tableRow = undefined,
+  forwardedRef = undefined,
+  tableColumn = undefined, side = 'left', position = '',
   ...restProps
 }) => {
   const handleClick = () => onToggle();
@@ -97,21 +97,4 @@ Cell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-Cell.defaultProps = {
-  style: null,
-  colSpan: 1,
-  row: {},
-  column: {},
-  expanded: false,
-  inlineSummaries: [],
-  onToggle: () => {},
-  children: undefined,
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  side: 'left',
-  position: '',
-  forwardedRef: undefined,
 };

@@ -26,14 +26,14 @@ export const Layout = ({
   contentComponent: Content,
   commandButtonComponent,
   recurringIconComponent,
-  appointmentMeta,
-  appointmentResources,
+  appointmentMeta = {},
+  appointmentResources = [],
   showOpenButton,
   showCloseButton,
   showDeleteButton,
-  visible, onHide,
+  visible = false, onHide = () => undefined,
   commandButtonIds,
-  onOpenButtonClick,
+  onOpenButtonClick = () => undefined,
   onDeleteButtonClick,
   formatDate,
   ...restProps
@@ -96,11 +96,4 @@ Layout.propTypes = {
   appointmentResources: PropTypes.array,
   visible: PropTypes.bool,
   onHide: PropTypes.func,
-};
-Layout.defaultProps = {
-  onOpenButtonClick: () => undefined,
-  onHide: () => undefined,
-  appointmentMeta: {},
-  appointmentResources: [],
-  visible: false,
 };

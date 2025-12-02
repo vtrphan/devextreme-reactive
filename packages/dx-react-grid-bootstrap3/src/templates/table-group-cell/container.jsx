@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyleContext } from '../layout';
 
 export const Container = ({
-  children, side, position, style, ...restProps
+  children = undefined, side = 'left', position = '', style = null, ...restProps
 }) => {
   const { backgroundColor, stickyPosition } = useContext(StyleContext);
 
@@ -33,11 +33,4 @@ Container.propTypes = {
   side: PropTypes.string,
   position: PropTypes.string,
   style: PropTypes.object,
-};
-
-Container.defaultProps = {
-  children: undefined,
-  style: null,
-  side: 'left',
-  position: '',
 };

@@ -4,7 +4,7 @@ import { Glyphicon } from 'react-bootstrap';
 import classNames from 'clsx';
 
 export const ToggleButton = ({
-  onToggle, getMessage, buttonRef, className,
+  onToggle, getMessage, buttonRef, className = undefined,
   ...restProps
 }) => (
   <button
@@ -23,8 +23,4 @@ ToggleButton.propTypes = {
   getMessage: PropTypes.func.isRequired,
   buttonRef: PropTypes.func.isRequired,
   className: PropTypes.string,
-};
-
-ToggleButton.defaultProps = {
-  className: undefined,
 };

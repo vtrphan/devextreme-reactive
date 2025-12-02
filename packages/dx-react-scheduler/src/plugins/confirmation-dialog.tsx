@@ -34,7 +34,7 @@ const ConfirmationDialogBase: React.FunctionComponent<ConfirmationDialogProps> &
   layoutComponent: string, buttonComponent: string,
 }} = ({
   messages, overlayComponent: Overlay, layoutComponent: Layout, containerComponent: Container,
-  buttonComponent, ignoreDelete, ignoreCancel,
+  buttonComponent, ignoreDelete = false, ignoreCancel = false,
 }) => {
   const getMessage = getMessagesFormatter({ ...defaultMessages, ...messages });
   const modalContainer = React.useRef();
@@ -137,11 +137,6 @@ ConfirmationDialogBase.components = {
   containerComponent: 'Container',
   layoutComponent: 'Layout',
   buttonComponent: 'Button',
-};
-
-ConfirmationDialogBase.defaultProps = {
-  ignoreCancel: false,
-  ignoreDelete: false,
 };
 
 // tslint:disable-next-line: max-line-length

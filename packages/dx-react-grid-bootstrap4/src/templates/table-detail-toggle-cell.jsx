@@ -5,9 +5,13 @@ import classNames from 'clsx';
 import { ExpandButton } from './parts/expand-button';
 
 export const TableDetailToggleCell = ({
-  expanded, onToggle,
-  tableColumn, tableRow, row, className,
-  forwardedRef,
+  expanded = false,
+  onToggle = () => {},
+  tableColumn = undefined,
+  tableRow = undefined,
+  row = undefined,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -30,14 +34,4 @@ TableDetailToggleCell.propTypes = {
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-TableDetailToggleCell.defaultProps = {
-  className: undefined,
-  expanded: false,
-  onToggle: () => {},
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  forwardedRef: undefined,
 };

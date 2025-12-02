@@ -14,7 +14,7 @@ const StyledTableRow = styled(TableRow)(() => ({
 }));
 
 export const Row = ({
-  children, className, row, tableRow, tableColumn, forwardedRef, ...restProps
+  children = undefined, className = undefined, row = undefined, tableRow = undefined, tableColumn = undefined, forwardedRef = undefined, ...restProps
 }) => (
   <StyledTableRow
     className={classNames(classes.row, className)}
@@ -31,13 +31,4 @@ Row.propTypes = {
   tableColumn: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-Row.defaultProps = {
-  children: undefined,
-  row: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

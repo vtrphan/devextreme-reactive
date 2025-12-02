@@ -65,7 +65,7 @@ const StyledDiv = styled('div')(({ theme }) => ({
 }));
 
 const PageButton = ({
-  text, isActive, isDisabled, onClick,
+  text, isActive = false, isDisabled = false, onClick = () => {},
 }) => {
   const buttonClasses = classNames({
     [classes.button]: true,
@@ -90,12 +90,6 @@ PageButton.propTypes = {
   isActive: PropTypes.bool,
   isDisabled: PropTypes.bool,
   onClick: PropTypes.func,
-};
-
-PageButton.defaultProps = {
-  onClick: () => {},
-  isDisabled: false,
-  isActive: false,
 };
 
 const ellipsisSymbol = '\u2026';

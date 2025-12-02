@@ -35,7 +35,7 @@ const StyledDiv = styled('div', {
 }));
 
 export const Indicator = ({
-  top, ...restProps
+  top = 0, ...restProps
 }) => (
   <StyledDiv topValue={top} {...restProps}>
     <div className={classNames(classes.nowIndicator, classes.circle)} />
@@ -45,8 +45,4 @@ export const Indicator = ({
 
 Indicator.propTypes = {
   top: PropTypes.string,
-};
-
-Indicator.defaultProps = {
-  top: 0,
 };

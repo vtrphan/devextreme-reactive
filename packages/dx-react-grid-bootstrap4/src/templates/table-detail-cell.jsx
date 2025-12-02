@@ -1,17 +1,23 @@
-import * as React from 'react';
-import classNames from 'clsx';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import classNames from "clsx";
+import PropTypes from "prop-types";
 
 export const TableDetailCell = ({
-  colSpan, children, className,
-  tableColumn, tableRow, row,
-  forwardedRef,
+  colSpan = 1,
+  children = undefined,
+  className = undefined,
+  tableColumn = undefined,
+  tableRow = undefined,
+  row = undefined,
+  forwardedRef = undefined,
+  style = null,
   ...restProps
 }) => (
   <td
     colSpan={colSpan}
     ref={forwardedRef}
-    className={classNames('table-active', className)}
+    className={classNames("table-active", className)}
+    style={style}
     {...restProps}
   >
     {children}
@@ -19,26 +25,15 @@ export const TableDetailCell = ({
 );
 
 TableDetailCell.propTypes = {
-  style: PropTypes.object,
   colSpan: PropTypes.number,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
+    PropTypes.node
   ]),
   className: PropTypes.string,
   tableColumn: PropTypes.object,
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-TableDetailCell.defaultProps = {
-  style: null,
-  colSpan: 1,
-  className: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  children: undefined,
-  forwardedRef: undefined,
+  style: PropTypes.object
 };

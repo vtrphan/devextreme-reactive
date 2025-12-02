@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { Plugin, Getter } from '@vtrphan/dx-react-core';
-import { buildAnimation, easeOutCubic } from '@vtrphan/dx-chart-core';
-import { AnimationProps } from '../types';
+import * as React from "react";
+import { Plugin, Getter } from "@vtrphan/dx-react-core";
+import { buildAnimation, easeOutCubic } from "@vtrphan/dx-chart-core";
+import { AnimationProps } from "../types";
 
-class AnimationBase extends React.PureComponent<AnimationProps> {
-  static defaultProps: Partial<AnimationProps> = {
-    easing: easeOutCubic,
-    duration: 1000,
-  };
-  render() {
-    const { easing, duration } = this.props;
-    const buildAnimationGetter = () => buildAnimation(easing!, duration!);
-    return (
-      <Plugin name="Animation">
-        <Getter name="animation" computed={buildAnimationGetter} />
-      </Plugin>
-    );
-  }
-}
+const AnimationBase: React.FC<AnimationProps> = ({
+  easing = easeOutCubic,
+  duration = 1000
+}) => {
+  const buildAnimationGetter = React.useMemo(
+    () => () => buildAnimation(easing, duration),
+    [easing, duration]
+  );
+
+  return (
+    <Plugin name="Animation">
+      <Getter name="animation" computed={buildAnimationGetter} />
+    </Plugin>
+  );
+};
 
 export const Animation: React.ComponentType<AnimationProps> = AnimationBase;

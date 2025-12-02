@@ -4,7 +4,7 @@ import classNames from 'clsx';
 
 export const Container = ({
   children,
-  className,
+  className = undefined,
   ...restProps
 }) => (
   <div
@@ -18,8 +18,4 @@ export const Container = ({
 Container.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-};
-
-Container.defaultProps = {
-  className: undefined,
 };

@@ -24,7 +24,7 @@ const StyledDialog = styled(Dialog)({
 });
 
 export const Overlay = ({
-  children, visible, onHide, target, className, ...restProps
+  children, visible = false, onHide, target, className = undefined, ...restProps
 }) => (
   <StyledDialog
     open={visible}
@@ -46,9 +46,4 @@ Overlay.propTypes = {
   target: PropTypes.object.isRequired,
   visible: PropTypes.bool,
   className: PropTypes.string,
-};
-
-Overlay.defaultProps = {
-  className: undefined,
-  visible: false,
 };

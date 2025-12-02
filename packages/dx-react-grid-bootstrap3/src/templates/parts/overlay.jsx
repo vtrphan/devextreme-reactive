@@ -4,7 +4,7 @@ import { Overlay as OverlayBS3 } from 'react-bootstrap';
 import { Popover } from './popover';
 
 export const Overlay = ({
-  visible, target, children, onHide, ...restProps
+  visible = false, target = null, children, onHide, ...restProps
 }) => (
   <OverlayBS3
     show={visible}
@@ -30,9 +30,4 @@ Overlay.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Overlay.defaultProps = {
-  visible: false,
-  target: null,
 };

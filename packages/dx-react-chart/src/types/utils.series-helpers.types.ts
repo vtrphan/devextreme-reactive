@@ -1,15 +1,14 @@
-import {
-  GetPointTransformerFn, CreateHitTesterFn,
-} from './index';
+import { GetPointTransformerFn, CreateHitTesterFn, SeriesProps } from "./index";
 
 /** @internal */
 export type Components = {
-  readonly Path: React.ComponentType<any>,
-  readonly Point?: React.ComponentType<any>,
+  readonly Path: React.ComponentType<any>;
+  readonly Point?: React.ComponentType<any>;
 };
 /** @internal */
-export type ExtraSeriesParameters = {
-  components: Components,
-  getPointTransformer: GetPointTransformerFn,
-  createHitTester: CreateHitTesterFn,
+export type ExtraSeriesParameters<T extends SeriesProps = SeriesProps> = {
+  components: Components;
+  getPointTransformer: GetPointTransformerFn;
+  createHitTester: CreateHitTesterFn;
+  defaults?: Partial<T>;
 };

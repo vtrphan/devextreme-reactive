@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const MenuItem = ({
-  text, onClick, className, ...restProps
+  text,
+  onClick = () => {},
+  className = undefined,
+  ...restProps
 }) => (
   <button
     type="button"
@@ -19,9 +22,4 @@ MenuItem.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   className: PropTypes.string,
-};
-
-MenuItem.defaultProps = {
-  onClick: () => {},
-  className: undefined,
 };

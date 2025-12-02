@@ -27,7 +27,7 @@ const StyledFooter = styled(TableFooter)(({ theme }) => ({
 }));
 
 export const Head = ({
-  isFixed, className, ...restProps
+  isFixed = undefined, className = undefined, ...restProps
 }) => (
   <StyledHead
     className={classNames({ [classes.fixedHeader]: isFixed }, className)}
@@ -40,28 +40,15 @@ Head.propTypes = {
   isFixed: PropTypes.bool,
 };
 
-Head.defaultProps = {
-  isFixed: undefined,
-  className: undefined,
-};
-
-export const Body = ({ isFixed, ...props }) => <TableBody {...props} />;
+export const Body = ({ isFixed = undefined, ...props }) => <TableBody {...props} />;
 Body.propTypes = {
   isFixed: PropTypes.bool,
 };
 
-Body.defaultProps = {
-  isFixed: undefined,
-};
-
-export const Footer = ({ isFixed, ...props }) => (
+export const Footer = ({ isFixed = undefined, ...props }) => (
   <StyledFooter className={classNames({ [classes.fixedFooter]: isFixed })} {...props} />
 );
 
 Footer.propTypes = {
   isFixed: PropTypes.bool,
-};
-
-Footer.defaultProps = {
-  isFixed: undefined,
 };

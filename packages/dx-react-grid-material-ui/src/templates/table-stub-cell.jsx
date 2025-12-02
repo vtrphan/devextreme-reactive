@@ -20,10 +20,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableStubCell = ({
-  className,
-  tableRow,
-  tableColumn,
-  forwardedRef,
+  className = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -39,11 +39,4 @@ TableStubCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableStubCell.defaultProps = {
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  forwardedRef: undefined,
 };

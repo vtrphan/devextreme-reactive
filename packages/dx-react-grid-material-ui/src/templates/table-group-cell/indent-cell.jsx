@@ -16,12 +16,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const IndentCell = ({
-  tableRow,
-  tableColumn,
-  row, column,
-  style, className,
-  position, side,
-  forwardedRef,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = {}, column = {},
+  style = null, className = undefined,
+  position = undefined, side = 'left',
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -42,16 +42,4 @@ IndentCell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.number,
   forwardedRef: PropTypes.func,
-};
-
-IndentCell.defaultProps = {
-  tableRow: undefined,
-  tableColumn: undefined,
-  row: {},
-  column: {},
-  style: null,
-  className: undefined,
-  side: 'left',
-  position: undefined,
-  forwardedRef: undefined,
 };

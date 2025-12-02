@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IconButton } from '@mui/material';
 
 export const ToggleButton = ({
-  buttonRef, onToggle, disabled, children, ...restProps
+  buttonRef, onToggle, disabled = false, children = undefined, ...restProps
 }) => (
   <IconButton
     ref={buttonRef}
@@ -21,9 +21,4 @@ ToggleButton.propTypes = {
   onToggle: PropTypes.func.isRequired,
   children: PropTypes.node,
   disabled: PropTypes.bool,
-};
-
-ToggleButton.defaultProps = {
-  children: undefined,
-  disabled: false,
 };

@@ -27,7 +27,7 @@ const StyledDiv = styled('div')(() => ({
 }));
 
 export const Content = ({
-  column, align, children, className, ...restProps
+  column = undefined, align = 'left', children = undefined, className = null, ...restProps
 }) => (
   <StyledDiv
     className={classNames({
@@ -49,11 +49,4 @@ Content.propTypes = {
     PropTypes.node,
   ]),
   className: PropTypes.string,
-};
-
-Content.defaultProps = {
-  column: undefined,
-  align: 'left',
-  className: null,
-  children: undefined,
 };

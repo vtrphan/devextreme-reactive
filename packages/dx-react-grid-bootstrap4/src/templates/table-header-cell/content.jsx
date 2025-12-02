@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const Content = ({
-  column, children, align, className, ...restProps
+  column = undefined,
+  children = undefined,
+  align = 'left',
+  className = null,
+  ...restProps
 }) => (
   <div
     className={classNames({
@@ -25,11 +29,4 @@ Content.propTypes = {
   ]),
   align: PropTypes.string,
   className: PropTypes.string,
-};
-
-Content.defaultProps = {
-  column: undefined,
-  align: 'left',
-  className: null,
-  children: undefined,
 };

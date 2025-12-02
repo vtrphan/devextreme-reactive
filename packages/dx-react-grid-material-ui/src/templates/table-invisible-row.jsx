@@ -15,7 +15,7 @@ const StyledTableRow = styled(TableRow)(() => ({
   },
 }));
 
-export const TableInvisibleRow = ({ className, ...restParams }) => (
+export const TableInvisibleRow = ({ className = undefined, ...restParams }) => (
   <StyledTableRow
     className={classNames(classes.row, className)}
     {...restParams}
@@ -24,8 +24,4 @@ export const TableInvisibleRow = ({ className, ...restParams }) => (
 
 TableInvisibleRow.propTypes = {
   className: PropTypes.string,
-};
-
-TableInvisibleRow.defaultProps = {
-  className: undefined,
 };

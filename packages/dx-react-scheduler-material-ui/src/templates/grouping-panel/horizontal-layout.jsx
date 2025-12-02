@@ -8,7 +8,7 @@ export const HorizontalLayout = ({
   groups,
   colSpan,
   cellStyle,
-  showHeaderForEveryDate,
+  showHeaderForEveryDate = false,
   ...restProps
 }) => (
   <>
@@ -56,8 +56,4 @@ HorizontalLayout.propTypes = {
   colSpan: PropTypes.number.isRequired,
   cellStyle: PropTypes.object.isRequired,
   showHeaderForEveryDate: PropTypes.bool,
-};
-
-HorizontalLayout.defaultProps = {
-  showHeaderForEveryDate: false,
 };

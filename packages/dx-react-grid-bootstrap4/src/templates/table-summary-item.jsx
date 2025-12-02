@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const TableSummaryItem = ({
-  children,
+  children = undefined,
   type,
-  value,
+  value = null,
   getMessage,
-  className,
-  tagName: Tag,
+  className = undefined,
+  tagName: Tag = 'div',
   ...restProps
 }) => (
   <Tag
@@ -32,11 +32,4 @@ TableSummaryItem.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
   children: PropTypes.node,
-};
-
-TableSummaryItem.defaultProps = {
-  tagName: 'div',
-  value: null,
-  className: undefined,
-  children: undefined,
 };

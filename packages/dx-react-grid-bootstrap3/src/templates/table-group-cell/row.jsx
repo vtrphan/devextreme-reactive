@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { TableRow as RowBase } from '../table-row';
 
-export const Row = ({ style, ...props }) => (
+export const Row = ({ style = null, ...props }) => (
   <RowBase
     {...props}
     style={{
@@ -14,8 +14,4 @@ export const Row = ({ style, ...props }) => (
 
 Row.propTypes = {
   style: PropTypes.object,
-};
-
-Row.defaultProps = {
-  style: null,
 };

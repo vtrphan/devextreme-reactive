@@ -4,12 +4,12 @@ import { StyleContext } from './layout';
 
 export const FixedCell = ({
   component: CellPlaceholder,
-  position,
-  selected,
-  showLeftDivider,
-  showRightDivider,
+  position = undefined,
+  selected = false,
+  showLeftDivider = false,
+  showRightDivider = false,
   side,
-  style,
+  style = null,
   ...restProps
 }) => {
   const { backgroundColor, borderColor, stickyPosition } = useContext(StyleContext);
@@ -22,10 +22,10 @@ export const FixedCell = ({
         position: stickyPosition,
         zIndex: 300,
         [side]: position,
-        ...borderColor ? {
-          ...showLeftDivider ? { borderLeft: `1px solid ${borderColor}` } : null,
-          ...showRightDivider ? { borderRight: `1px solid ${borderColor}` } : null,
-        } : null,
+        ...(borderColor ? {
+          ...(showLeftDivider ? { borderLeft: `1px solid ${borderColor}` } : null),
+          ...(showRightDivider ? { borderRight: `1px solid ${borderColor}` } : null),
+        } : null),
         ...style,
       }}
       {...restProps}
@@ -41,12 +41,4 @@ FixedCell.propTypes = {
   showRightDivider: PropTypes.bool,
   side: PropTypes.string.isRequired,
   style: PropTypes.object,
-};
-
-FixedCell.defaultProps = {
-  position: undefined,
-  selected: false,
-  showLeftDivider: false,
-  showRightDivider: false,
-  style: null,
 };

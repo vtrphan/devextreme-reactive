@@ -3,17 +3,25 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const Cell = ({
-  className, colSpan, row, column,
-  expanded, onToggle,
-  children, tableRow, tableColumn,
-  iconComponent: Icon, contentComponent: Content,
+  className = undefined,
+  colSpan = 1,
+  row = {},
+  column = {},
+  expanded = false,
+  onToggle = () => {},
+  children = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  iconComponent: Icon,
+  contentComponent: Content,
   inlineSummaryComponent: InlineSummary,
   inlineSummaryItemComponent: InlineSummaryItem,
-  inlineSummaries,
+  inlineSummaries = [],
   getMessage,
   containerComponent: Container,
-  side, position,
-  forwardedRef,
+  side = 'left',
+  position = '',
+  forwardedRef = undefined,
   ...restProps
 }) => {
   const handleClick = () => onToggle();
@@ -78,20 +86,4 @@ Cell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-Cell.defaultProps = {
-  row: {},
-  column: {},
-  expanded: false,
-  inlineSummaries: [],
-  className: undefined,
-  colSpan: 1,
-  onToggle: () => {},
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  side: 'left',
-  position: '',
-  forwardedRef: undefined,
 };

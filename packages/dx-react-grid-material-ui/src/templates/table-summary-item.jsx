@@ -17,11 +17,11 @@ const StyledDiv = styled('div')(({ theme }) => ({
 }));
 
 export const TableSummaryItem = ({
-  children,
+  children = undefined,
   type,
-  value,
+  value = null,
   getMessage,
-  className,
+  className = undefined,
   ...restProps
 }) => (
   <StyledDiv
@@ -44,10 +44,4 @@ TableSummaryItem.propTypes = {
   getMessage: PropTypes.func.isRequired,
   children: PropTypes.node,
   className: PropTypes.string,
-};
-
-TableSummaryItem.defaultProps = {
-  value: null,
-  children: undefined,
-  className: undefined,
 };

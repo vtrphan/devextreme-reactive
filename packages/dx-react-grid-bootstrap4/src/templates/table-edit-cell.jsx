@@ -3,10 +3,21 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const EditCell = ({
-  column, value, onValueChange, className, children,
-  row, tableRow, tableColumn, editingEnabled,
-  autoFocus, onBlur, onFocus, onKeyDown,
-  forwardedRef, ...restProps
+  column = undefined,
+  value = '',
+  onValueChange = () => {},
+  className = undefined,
+  children = undefined,
+  row = undefined,
+  tableRow = undefined,
+  tableColumn = undefined,
+  editingEnabled = true,
+  autoFocus = false,
+  onBlur = () => {},
+  onFocus = () => {},
+  onKeyDown = () => {},
+  forwardedRef = undefined,
+  ...restProps
 }) => {
   const patchedChildren = children
     ? React.cloneElement(children, {
@@ -61,20 +72,4 @@ EditCell.propTypes = {
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
   forwardedRef: PropTypes.func,
-};
-EditCell.defaultProps = {
-  column: undefined,
-  row: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  className: undefined,
-  children: undefined,
-  editingEnabled: true,
-  value: '',
-  onValueChange: () => {},
-  autoFocus: false,
-  onBlur: () => {},
-  onFocus: () => {},
-  onKeyDown: () => {},
-  forwardedRef: undefined,
 };

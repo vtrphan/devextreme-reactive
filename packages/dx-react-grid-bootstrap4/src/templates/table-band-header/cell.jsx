@@ -3,10 +3,15 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const Cell = ({
-  column, children, beforeBorder,
-  tableRow, tableColumn, row,
-  forwardedRef,
-  className, ...restProps
+  column = undefined,
+  children = undefined,
+  beforeBorder = false,
+  tableRow = undefined,
+  tableColumn = undefined,
+  row = undefined,
+  forwardedRef = undefined,
+  className = undefined,
+  ...restProps
 }) => (
   <th
     className={classNames({
@@ -32,15 +37,4 @@ Cell.propTypes = {
   className: PropTypes.string,
   beforeBorder: PropTypes.bool,
   forwardedRef: PropTypes.func,
-};
-
-Cell.defaultProps = {
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  className: undefined,
-  beforeBorder: false,
-  forwardedRef: undefined,
 };

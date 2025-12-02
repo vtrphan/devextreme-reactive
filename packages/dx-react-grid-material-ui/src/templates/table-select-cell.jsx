@@ -24,9 +24,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableSelectCell = ({
-  style, selected, onToggle,
-  className, row, tableRow, tableColumn,
-  forwardedRef,
+  style = null, selected = false, onToggle = () => {},
+  className = undefined, row = undefined, tableRow = undefined, tableColumn = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -56,15 +56,4 @@ TableSelectCell.propTypes = {
   tableColumn: PropTypes.object,
   className: PropTypes.string,
   forwardedRef: PropTypes.func,
-};
-
-TableSelectCell.defaultProps = {
-  style: null,
-  selected: false,
-  onToggle: () => {},
-  row: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  className: undefined,
-  forwardedRef: undefined,
 };

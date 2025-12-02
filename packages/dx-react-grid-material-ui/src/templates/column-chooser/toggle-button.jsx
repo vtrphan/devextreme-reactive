@@ -5,7 +5,7 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 export const ToggleButton = ({
   onToggle, getMessage,
-  buttonRef, active,
+  buttonRef, active = false,
   ...restProps
 }) => (
   <Tooltip
@@ -29,8 +29,4 @@ ToggleButton.propTypes = {
   getMessage: PropTypes.func.isRequired,
   buttonRef: PropTypes.func.isRequired,
   active: PropTypes.bool,
-};
-
-ToggleButton.defaultProps = {
-  active: false,
 };

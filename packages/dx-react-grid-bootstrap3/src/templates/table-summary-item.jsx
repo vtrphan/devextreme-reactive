@@ -2,11 +2,11 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableSummaryItem = ({
-  children,
+  children = undefined,
   type,
-  value,
+  value = null,
   getMessage,
-  style,
+  style = null,
   ...restProps
 }) => (
   <div
@@ -32,10 +32,4 @@ TableSummaryItem.propTypes = {
   getMessage: PropTypes.func.isRequired,
   children: PropTypes.node,
   style: PropTypes.object,
-};
-
-TableSummaryItem.defaultProps = {
-  value: null,
-  children: undefined,
-  style: null,
 };

@@ -53,8 +53,8 @@ const onClick = (e, onSort) => {
 };
 
 export const SortLabel = ({
-  column, align, direction, children, onSort,
-  getMessage, disabled, className, ...restProps
+  column = undefined, align = 'left', direction = undefined, children = undefined, onSort,
+  getMessage, disabled = false, className = null, ...restProps
 }) => (
   <StyledDiv
     className={classNames(classes.root, className)}
@@ -96,13 +96,4 @@ SortLabel.propTypes = {
   getMessage: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-};
-
-SortLabel.defaultProps = {
-  column: undefined,
-  direction: undefined,
-  disabled: false,
-  align: 'left',
-  className: null,
-  children: undefined,
 };

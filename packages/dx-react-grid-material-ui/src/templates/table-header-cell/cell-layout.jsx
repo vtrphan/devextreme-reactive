@@ -99,10 +99,10 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const CellLayout = ({
-  style, column, tableColumn,
-  draggingEnabled, resizingEnabled, dragging,
-  onWidthChange, onWidthDraft, onWidthDraftCancel, getCellWidth,
-  tableRow, className, children, forwardedRef,
+  style = null, column = undefined, tableColumn = undefined,
+  draggingEnabled = false, resizingEnabled = false, dragging = false,
+  onWidthChange = undefined, onWidthDraft = undefined, onWidthDraftCancel = undefined, getCellWidth = () => {},
+  tableRow = undefined, className = undefined, children = undefined, forwardedRef = undefined,
   ...restProps
 }) => {
   const cellRef = React.useRef();
@@ -173,21 +173,4 @@ CellLayout.propTypes = {
   children: PropTypes.node,
   getCellWidth: PropTypes.func,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-CellLayout.defaultProps = {
-  column: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  style: null,
-  dragging: false,
-  draggingEnabled: false,
-  resizingEnabled: false,
-  onWidthChange: undefined,
-  onWidthDraft: undefined,
-  onWidthDraftCancel: undefined,
-  className: undefined,
-  children: undefined,
-  getCellWidth: () => {},
-  forwardedRef: undefined,
 };

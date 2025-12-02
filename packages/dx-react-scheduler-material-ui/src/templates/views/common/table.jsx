@@ -35,7 +35,7 @@ const StyledTableMUI = styled(TableMUI, { shouldForwardProp: prop => prop !== 'c
   to use material-ui's makeStyles).
 */
 export const Table = React.forwardRef(({
-  className,
+  className = undefined,
   cellsNumber,
   children,
   ...restProps
@@ -56,8 +56,4 @@ Table.propTypes = {
   cellsNumber: PropTypes.number.isRequired,
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-};
-
-Table.defaultProps = {
-  className: undefined,
 };

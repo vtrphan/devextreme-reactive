@@ -1,7 +1,7 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { EmbeddedDemoContext } from '../context';
-import { wrapDemo } from './perf-wrapper';
+import * as React from "react";
+import PropTypes from "prop-types";
+import { EmbeddedDemoContext } from "../context";
+import { wrapDemo } from "./perf-wrapper";
 
 export class DemoRenderer extends React.Component {
   constructor(props) {
@@ -24,19 +24,14 @@ export class DemoRenderer extends React.Component {
       demoName,
       themeName,
       variantName,
-      perfSamplesCount,
+      perfSamplesCount
     } = this.props;
-    const {
-      renderDemo,
-      unmountDemo,
-      demoSources,
-      themeSources,
-    } = this.context;
+    const { renderDemo, unmountDemo, demoSources, themeSources } = this.context;
     const rootElement = this.rootRef.current;
 
     if (this.demoRenderSkipped) {
       unmountDemo({
-        element: rootElement,
+        element: rootElement
       });
     }
 
@@ -47,28 +42,27 @@ export class DemoRenderer extends React.Component {
 
     if (!demoSource) {
       this.demoRenderSkipped = true;
-      rootElement.textContent = 'DEMO NOT AVALIABLE!';
+      rootElement.textContent = "DEMO NOT AVALIABLE!";
       return;
     }
 
     const demoContainerSource = themeSources
-      .find(({ name }) => name === themeName).variants
-      .find(({ name }) => name === variantName).DemoContainer;
+      .find(({ name }) => name === themeName)
+      .variants.find(({ name }) => name === variantName).DemoContainer;
 
     renderDemo({
       element: rootElement,
-      demo: perfSamplesCount > 0 ? wrapDemo(demoSource, perfSamplesCount) : demoSource,
-      demoContainer: demoContainerSource,
+      demo:
+        perfSamplesCount > 0
+          ? wrapDemo(demoSource, perfSamplesCount)
+          : demoSource,
+      demoContainer: demoContainerSource
     });
     this.demoRenderSkipped = false;
   }
 
   render() {
-    return (
-      <div
-        ref={this.rootRef}
-      />
-    );
+    return <div ref={this.rootRef} />;
   }
 }
 
@@ -77,11 +71,7 @@ DemoRenderer.propTypes = {
   demoName: PropTypes.string.isRequired,
   themeName: PropTypes.string.isRequired,
   variantName: PropTypes.string.isRequired,
-  perfSamplesCount: PropTypes.number,
-};
-
-DemoRenderer.defaultProps = {
-  perfSamplesCount: undefined,
+  perfSamplesCount: PropTypes.number
 };
 
 DemoRenderer.contextType = EmbeddedDemoContext;

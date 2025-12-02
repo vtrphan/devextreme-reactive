@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ListGroupItem } from 'react-bootstrap';
 
 export const MenuItem = ({
-  text, onClick, ...restProps
+  text, onClick = () => {}, ...restProps
 }) => (
   <ListGroupItem
     style={{
@@ -22,8 +22,4 @@ export const MenuItem = ({
 MenuItem.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-};
-
-MenuItem.defaultProps = {
-  onClick: () => {},
 };

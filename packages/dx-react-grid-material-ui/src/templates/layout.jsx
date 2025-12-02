@@ -16,7 +16,7 @@ const StyledDiv = styled('div')(() => ({
 }));
 
 export const Root = ({
-  children, className, rootRef, ...restProps
+  children, className = undefined, rootRef = undefined, ...restProps
 }) => (
   <StyledDiv
     className={classNames(classes.root, className)}
@@ -31,9 +31,4 @@ Root.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   rootRef: PropTypes.object,
-};
-
-Root.defaultProps = {
-  className: undefined,
-  rootRef: undefined,
 };

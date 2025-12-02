@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export const GroupPanelEmptyMessage = ({
   getMessage,
-  style,
-  forwardedRef,
+  style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <div
@@ -23,9 +23,4 @@ GroupPanelEmptyMessage.propTypes = {
   getMessage: PropTypes.func.isRequired,
   style: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelEmptyMessage.defaultProps = {
-  style: null,
-  forwardedRef: undefined,
 };

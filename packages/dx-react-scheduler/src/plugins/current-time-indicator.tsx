@@ -21,7 +21,7 @@ const pluginDependencies = [
 const CurrentTimeIndicatorBase: React.FunctionComponent<CurrentTimeIndicatorProps>  & {components: {
   indicatorComponent: string,
 }} = ({
-  indicatorComponent, shadePreviousAppointments, shadePreviousCells, updateInterval,
+  indicatorComponent, shadePreviousAppointments = false, shadePreviousCells = false, updateInterval = 60000,
 }) => {
   const [currentTime, setCurrentTime] = React.useState(Date.now);
 
@@ -95,12 +95,6 @@ const CurrentTimeIndicatorBase: React.FunctionComponent<CurrentTimeIndicatorProp
       </Template>
     </Plugin>
   );
-};
-
-CurrentTimeIndicatorBase.defaultProps = {
-  updateInterval: 60000,
-  shadePreviousCells: false,
-  shadePreviousAppointments: false,
 };
 
 CurrentTimeIndicatorBase.components = {

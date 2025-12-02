@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const ToggleButton = ({
-  onToggle, className,
+  onToggle, className = undefined,
   getMessage, buttonRef,
-  active, ...restProps
+  active = false, ...restProps
 }) => (
   <button
     type="button"
@@ -24,9 +24,4 @@ ToggleButton.propTypes = {
   buttonRef: PropTypes.func.isRequired,
   className: PropTypes.string,
   active: PropTypes.bool,
-};
-
-ToggleButton.defaultProps = {
-  className: undefined,
-  active: false,
 };

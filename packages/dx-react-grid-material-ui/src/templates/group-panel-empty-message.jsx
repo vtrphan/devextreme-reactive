@@ -18,8 +18,8 @@ const StyledDiv = styled('div')(({ theme }) => ({
 
 export const GroupPanelEmptyMessage = ({
   getMessage,
-  className,
-  forwardedRef,
+  className = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledDiv
@@ -35,9 +35,4 @@ GroupPanelEmptyMessage.propTypes = {
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelEmptyMessage.defaultProps = {
-  className: undefined,
-  forwardedRef: undefined,
 };

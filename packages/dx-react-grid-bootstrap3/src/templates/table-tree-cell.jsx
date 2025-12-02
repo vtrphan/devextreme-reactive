@@ -2,10 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableTreeCell = ({
-  column, value, children,
-  tableRow, tableColumn, row,
-  style,
-  forwardedRef,
+  column = undefined, value = undefined, children = undefined,
+  tableRow = undefined, tableColumn = undefined, row = undefined,
+  style = null,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -38,15 +38,4 @@ TableTreeCell.propTypes = {
   tableColumn: PropTypes.object,
   style: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-TableTreeCell.defaultProps = {
-  value: undefined,
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  style: null,
-  forwardedRef: undefined,
 };

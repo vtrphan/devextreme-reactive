@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import classNames from 'clsx';
 
 export const GroupButton = ({
-  disabled, onGroup, className, ...restProps
+  disabled = false,
+  onGroup,
+  className = undefined,
+  ...restProps
 }) => (
   <div
     className={classNames({
@@ -30,9 +33,4 @@ GroupButton.propTypes = {
   onGroup: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
   className: PropTypes.string,
-};
-
-GroupButton.defaultProps = {
-  disabled: false,
-  className: undefined,
 };

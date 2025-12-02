@@ -48,7 +48,7 @@ const StyledDiv = styled('div')(({ theme }) => ({
   },
 }));
 
-const ResizeHandle = ({ children, forwardedRef, ...restProps }) => (
+const ResizeHandle = ({ children = undefined, forwardedRef = undefined, ...restProps }) => (
   <StyledDiv
     ref={forwardedRef}
     {...restProps}
@@ -60,11 +60,6 @@ const ResizeHandle = ({ children, forwardedRef, ...restProps }) => (
 ResizeHandle.propTypes = {
   children: PropTypes.node,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-ResizeHandle.defaultProps = {
-  children: undefined,
-  forwardedRef: undefined,
 };
 
 export class ResizingControl extends React.PureComponent {

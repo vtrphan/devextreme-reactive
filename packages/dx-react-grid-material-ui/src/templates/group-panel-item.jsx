@@ -46,10 +46,10 @@ const label = (showSortingControls, sortingEnabled, sortingDirection, column, ho
 
 export const GroupPanelItem = ({
   item: { column, draft },
-  onGroup, showGroupingControls,
-  showSortingControls, sortingDirection, onSort,
-  sortingEnabled, groupingEnabled,
-  className, forwardedRef,
+  onGroup = undefined, showGroupingControls = false,
+  showSortingControls = false, sortingDirection = undefined, onSort = undefined,
+  sortingEnabled = false, groupingEnabled = false,
+  className = undefined, forwardedRef = undefined,
   ...restProps
 }) => {
   const [hovered, setHovered] = React.useState(false);
@@ -109,16 +109,4 @@ GroupPanelItem.propTypes = {
   sortingEnabled: PropTypes.bool,
   groupingEnabled: PropTypes.bool,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-GroupPanelItem.defaultProps = {
-  showSortingControls: false,
-  sortingEnabled: false,
-  sortingDirection: undefined,
-  onSort: undefined,
-  onGroup: undefined,
-  showGroupingControls: false,
-  groupingEnabled: false,
-  className: undefined,
-  forwardedRef: undefined,
 };

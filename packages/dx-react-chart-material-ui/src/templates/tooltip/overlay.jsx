@@ -43,7 +43,7 @@ const popperModifiers = arrowRef => ([
 ]);
 
 export const Overlay = ({
-  className, children, target, rotated, arrowComponent: ArrowComponent, ...restProps
+  className = undefined, children, target, rotated, arrowComponent: ArrowComponent, ...restProps
 }) => {
   const [arrowRef, setArrowRef] = React.useState(null);
   const placement = rotated ? RIGHT : TOP;
@@ -69,8 +69,4 @@ Overlay.propTypes = {
   target: PropTypes.any.isRequired,
   rotated: PropTypes.bool.isRequired,
   arrowComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
-};
-
-Overlay.defaultProps = {
-  className: undefined,
 };

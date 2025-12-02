@@ -2,9 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const InlineSummary = ({
-  inlineSummaries, getMessage,
+  inlineSummaries = [], getMessage,
   inlineSummaryItemComponent: InlineSummaryItem,
-  style, ...restProps
+  style = null, ...restProps
 }) => (
   <span
     style={{
@@ -32,9 +32,4 @@ InlineSummary.propTypes = {
   inlineSummaries: PropTypes.array,
   inlineSummaryItemComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
   style: PropTypes.object,
-};
-
-InlineSummary.defaultProps = {
-  inlineSummaries: [],
-  style: null,
 };

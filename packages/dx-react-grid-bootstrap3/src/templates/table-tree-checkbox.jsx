@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { SelectionControl } from './parts/selection-control';
 
 export const TableTreeCheckbox = ({
-  style,
-  checked,
-  indeterminate,
-  disabled,
-  onChange,
+  style = null,
+  checked = false,
+  indeterminate = false,
+  disabled = false,
+  onChange = () => {},
   ...restProps
 }) => (
   <SelectionControl
@@ -30,12 +30,4 @@ TableTreeCheckbox.propTypes = {
   indeterminate: PropTypes.bool,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
-};
-
-TableTreeCheckbox.defaultProps = {
-  style: null,
-  checked: false,
-  indeterminate: false,
-  disabled: false,
-  onChange: () => {},
 };

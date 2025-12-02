@@ -53,14 +53,14 @@ export const Layout = ({
   labelComponent: Label,
   rowComponent,
   tickCellComponent,
-  allDayTitleComponent: AllDayTitle,
+  allDayTitleComponent: AllDayTitle = () => null,
   cellsData,
   formatDate,
-  groupOrientation,
-  groups,
-  showAllDayTitle,
-  height,
-  className,
+  groupOrientation = HORIZONTAL_GROUP_ORIENTATION,
+  groups = [[{}]],
+  showAllDayTitle = false,
+  height = 0,
+  className = undefined,
   ...restProps
 }) => {
   const groupCount = getGroupsLastRow(groups).length;
@@ -143,13 +143,4 @@ Layout.propTypes = {
   showAllDayTitle: PropTypes.bool,
   height: PropTypes.number,
   className: PropTypes.string,
-};
-
-Layout.defaultProps = {
-  groups: [[{}]],
-  groupOrientation: HORIZONTAL_GROUP_ORIENTATION,
-  allDayTitleComponent: () => null,
-  showAllDayTitle: false,
-  height: 0,
-  className: undefined,
 };

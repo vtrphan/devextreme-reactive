@@ -15,9 +15,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableDetailCell = ({
-  colSpan, style, children,
-  className, forwardedRef,
-  tableColumn, tableRow, row,
+  colSpan = 1, style = null, children = undefined,
+  className = undefined, forwardedRef = undefined,
+  tableColumn = undefined, tableRow = undefined, row = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -40,15 +40,4 @@ TableDetailCell.propTypes = {
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-TableDetailCell.defaultProps = {
-  style: null,
-  colSpan: 1,
-  className: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  children: undefined,
-  forwardedRef: undefined,
 };

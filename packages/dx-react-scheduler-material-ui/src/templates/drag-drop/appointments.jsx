@@ -17,8 +17,8 @@ export const classes = {
 };
 
 export const AppointmentBase = ({
-  className, data, formatDate, type, fromPrev,
-  toNext, durationType, isShaded, ...restProps
+  className = undefined, data, formatDate, type = undefined, fromPrev,
+  toNext, durationType = undefined, isShaded = false, ...restProps
 }) => (
   <Appointment
     className={className}
@@ -49,13 +49,6 @@ AppointmentBase.propTypes = {
   isShaded: PropTypes.bool,
 };
 
-AppointmentBase.defaultProps = {
-  durationType: undefined,
-  className: undefined,
-  type: undefined,
-  isShaded: false,
-};
-
 const StyledDraftAppointmentBase = styled(AppointmentBase)(({ theme, resources }) => ({
   [`&.${classes.appointment}`]: {
     boxShadow: theme.shadows[3],
@@ -74,7 +67,7 @@ const StyledDraftAppointmentBase = styled(AppointmentBase)(({ theme, resources }
 }));
 
 export const DraftAppointment = ({
-  className, resources, isShaded, ...restProps
+  className = undefined, resources = [], isShaded = false, ...restProps
 }) => (
   <StyledDraftAppointmentBase
     className={classNames({
@@ -92,19 +85,13 @@ DraftAppointment.propTypes = {
   isShaded: PropTypes.bool,
 };
 
-DraftAppointment.defaultProps = {
-  className: undefined,
-  resources: [],
-  isShaded: false,
-};
-
 const StyledSourceAppointmentBase = styled(AppointmentBase)(() => ({
   [`&.${classes.appointment}`]: {
     opacity: 0.5,
   },
 }));
 
-export const SourceAppointment = ({ className, ...restProps }) => (
+export const SourceAppointment = ({ className = undefined, ...restProps }) => (
   <StyledSourceAppointmentBase
     className={classNames(classes.appointment, className)}
     {...restProps}
@@ -113,8 +100,4 @@ export const SourceAppointment = ({ className, ...restProps }) => (
 
 SourceAppointment.propTypes = {
   className: PropTypes.string,
-};
-
-SourceAppointment.defaultProps = {
-  className: undefined,
 };

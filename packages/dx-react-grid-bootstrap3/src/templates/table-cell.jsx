@@ -2,9 +2,9 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const TableCell = ({
-  style, column, value, children,
-  tableRow, tableColumn, row,
-  forwardedRef,
+  style = null, column = undefined, value = undefined, children = undefined,
+  tableRow = undefined, tableColumn = undefined, row = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <td
@@ -31,15 +31,4 @@ TableCell.propTypes = {
   tableRow: PropTypes.object,
   tableColumn: PropTypes.object,
   forwardedRef: PropTypes.func,
-};
-
-TableCell.defaultProps = {
-  style: null,
-  value: undefined,
-  column: undefined,
-  row: undefined,
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  forwardedRef: undefined,
 };

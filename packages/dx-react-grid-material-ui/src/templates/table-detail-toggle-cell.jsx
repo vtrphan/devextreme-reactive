@@ -23,9 +23,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableDetailToggleCell = ({
-  style, expanded, onToggle,
-  tableColumn, tableRow, row,
-  className, forwardedRef,
+  style = null, expanded = false, onToggle = () => {},
+  tableColumn = undefined, tableRow = undefined, row = undefined,
+  className = undefined, forwardedRef = undefined,
   ...restProps
 }) => {
   const handleClick = (e) => {
@@ -59,15 +59,4 @@ TableDetailToggleCell.propTypes = {
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-};
-
-TableDetailToggleCell.defaultProps = {
-  style: null,
-  expanded: false,
-  onToggle: () => {},
-  className: undefined,
-  tableColumn: undefined,
-  tableRow: undefined,
-  row: undefined,
-  forwardedRef: undefined,
 };

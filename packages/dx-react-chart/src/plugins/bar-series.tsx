@@ -1,20 +1,21 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   getBarPointTransformer as getPointTransformer,
-  createBarHitTester as createHitTester,
-} from '@vtrphan/dx-chart-core';
-import { declareSeries } from '../utils';
-import { PointCollection as Path } from '../templates/series/point-collection';
-import { Bar as Point } from '../templates/series/bar';
-import { BarSeriesProps } from '../types';
+  createBarHitTester as createHitTester
+} from "@vtrphan/dx-chart-core";
+import { declareSeries } from "../utils";
+import { PointCollection as Path } from "../templates/series/point-collection";
+import { Bar as Point } from "../templates/series/bar";
+import { BarSeriesProps } from "../types";
 
 // tslint:disable-next-line: max-line-length
-export const BarSeries: React.ComponentType<BarSeriesProps> = declareSeries<BarSeriesProps>('BarSeries', {
+export const BarSeries: React.ComponentType<BarSeriesProps> = declareSeries<
+  BarSeriesProps
+>("BarSeries", {
   getPointTransformer,
   createHitTester,
   components: { Path, Point },
+  defaults: {
+    barWidth: 0.9
+  }
 });
-
-BarSeries.defaultProps = {
-  barWidth: 0.9,
-};

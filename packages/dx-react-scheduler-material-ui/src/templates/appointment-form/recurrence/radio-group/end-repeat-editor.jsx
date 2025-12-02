@@ -51,14 +51,14 @@ const StyledRadioGroup = styled(RadioGroup)(({ theme: { spacing, typography } })
 }));
 
 export const EndRepeatEditor = ({
-  getMessage,
+  getMessage = () => undefined,
   labelComponent: Label,
   textEditorComponent: TextEditor,
   dateEditorComponent: DateEditor,
-  onFieldChange,
+  onFieldChange = () => undefined,
   appointmentData,
   locale,
-  readOnly,
+  readOnly = false,
   ...restProps
 }) => {
   const [count, setCount] = React.useState(1);
@@ -209,10 +209,4 @@ EndRepeatEditor.propTypes = {
     allDay: PropTypes.bool,
   }).isRequired,
   readOnly: PropTypes.bool,
-};
-
-EndRepeatEditor.defaultProps = {
-  onFieldChange: () => undefined,
-  getMessage: () => undefined,
-  readOnly: false,
 };

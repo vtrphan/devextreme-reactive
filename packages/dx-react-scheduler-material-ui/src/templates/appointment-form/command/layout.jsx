@@ -72,12 +72,12 @@ export const Layout = ({
   onCancelButtonClick,
   onDeleteButtonClick,
   getMessage,
-  children,
-  className,
-  fullSize,
-  readOnly,
-  disableSaveButton,
-  hideDeleteButton,
+  children = undefined,
+  className = undefined,
+  fullSize = false,
+  readOnly = false,
+  disableSaveButton = false,
+  hideDeleteButton = false,
   ...restProps
 }) => (
   <StyledGrid
@@ -131,13 +131,4 @@ Layout.propTypes = {
   children: PropTypes.node,
   disableSaveButton: PropTypes.bool,
   hideDeleteButton: PropTypes.bool,
-};
-
-Layout.defaultProps = {
-  className: undefined,
-  children: undefined,
-  fullSize: false,
-  readOnly: false,
-  disableSaveButton: false,
-  hideDeleteButton: false,
 };

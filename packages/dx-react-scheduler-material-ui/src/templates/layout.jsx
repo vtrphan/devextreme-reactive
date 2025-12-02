@@ -17,7 +17,7 @@ const StyledContainerBase = styled(ContainerBase)({
 });
 
 export const Root = ({
-  height, style, ...restProps
+  height, style = null, ...restProps
 }) => {
   const containerStyle = height === AUTO_HEIGHT ? { height: '100%' } : { height: `${height}px` };
 
@@ -32,8 +32,4 @@ export const Root = ({
 Root.propTypes = {
   height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   style: PropTypes.object,
-};
-
-Root.defaultProps = {
-  style: null,
 };

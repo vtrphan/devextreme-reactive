@@ -17,7 +17,7 @@ const StyledTableStubCell = styled(TableStubCell)(() => ({
 }));
 
 const TableBorderlessStubCell = ({
-  className,
+  className = undefined,
   ...restProps
 }) => (
   <StyledTableStubCell
@@ -28,10 +28,6 @@ const TableBorderlessStubCell = ({
 
 TableBorderlessStubCell.propTypes = {
   className: PropTypes.string,
-};
-
-TableBorderlessStubCell.defaultProps = {
-  className: undefined,
 };
 
 export const TableListenerCell = ({ listen, onSizeChange, ...restProps }) => (listen ? (

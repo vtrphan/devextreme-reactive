@@ -24,9 +24,9 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 }));
 
 export const TableFilterCell = ({
-  filter, getMessage, onFilter,
-  children, className,
-  tableRow, tableColumn, column, filteringEnabled, forwardedRef,
+  filter = null, getMessage, onFilter = () => {},
+  children = undefined, className = undefined,
+  tableRow = undefined, tableColumn = undefined, column = undefined, filteringEnabled = true, forwardedRef = undefined,
   ...restProps
 }) => (
   <StyledTableCell
@@ -51,16 +51,4 @@ TableFilterCell.propTypes = {
   column: PropTypes.object,
   filteringEnabled: PropTypes.bool,
   forwardedRef: PropTypes.func,
-};
-
-TableFilterCell.defaultProps = {
-  filter: null,
-  onFilter: () => {},
-  children: undefined,
-  className: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  column: undefined,
-  filteringEnabled: true,
-  forwardedRef: undefined,
 };

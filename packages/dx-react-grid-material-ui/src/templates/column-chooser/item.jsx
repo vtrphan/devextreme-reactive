@@ -21,7 +21,7 @@ const StyledListItem = styled(ListItem)(({ theme }) => ({
 
 export const Item = ({
   item: { column, hidden },
-  disabled, onToggle,
+  disabled = false, onToggle = () => { },
   ...restProps
 }) => (
   <StyledListItem
@@ -53,9 +53,4 @@ Item.propTypes = {
   }).isRequired,
   disabled: PropTypes.bool,
   onToggle: PropTypes.func,
-};
-
-Item.defaultProps = {
-  onToggle: () => { },
-  disabled: false,
 };

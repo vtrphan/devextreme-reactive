@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { TableRow as TableRowMUI } from '@mui/material';
 
 export const TableRow = ({
-  children,
-  row, tableRow,
-  forwardedRef,
+  children = undefined,
+  row = undefined, tableRow = undefined,
+  forwardedRef = undefined,
   ...restProps
 }) => (
   <TableRowMUI
@@ -21,11 +21,4 @@ TableRow.propTypes = {
   row: PropTypes.any,
   tableRow: PropTypes.object,
   forwardedRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-};
-
-TableRow.defaultProps = {
-  children: undefined,
-  row: undefined,
-  tableRow: undefined,
-  forwardedRef: undefined,
 };

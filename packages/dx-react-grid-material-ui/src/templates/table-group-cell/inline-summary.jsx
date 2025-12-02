@@ -15,9 +15,9 @@ const StyledSpan = styled('span')(({ theme }) => ({
 }));
 
 export const InlineSummary = ({
-  inlineSummaries, getMessage,
+  inlineSummaries = [], getMessage,
   inlineSummaryItemComponent: InlineSummaryItem,
-  className, ...restProps
+  className = undefined, ...restProps
 }) => (
   <StyledSpan className={classNames(classes.inlineSummary, className)} {...restProps}>
     {'('}
@@ -39,9 +39,4 @@ InlineSummary.propTypes = {
   getMessage: PropTypes.func.isRequired,
   inlineSummaries: PropTypes.array,
   inlineSummaryItemComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]).isRequired,
-};
-
-InlineSummary.defaultProps = {
-  className: undefined,
-  inlineSummaries: [],
 };

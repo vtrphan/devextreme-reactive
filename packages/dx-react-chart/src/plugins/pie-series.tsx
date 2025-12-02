@@ -1,21 +1,22 @@
-import * as React from 'react';
+import * as React from "react";
 import {
   getPiePointTransformer as getPointTransformer,
-  createPieHitTester as createHitTester,
-} from '@vtrphan/dx-chart-core';
-import { declareSeries } from '../utils';
-import { PointCollection as Path } from '../templates/series/point-collection';
-import { Slice as Point } from '../templates/series/slice';
-import { PieSeriesProps } from '../types';
+  createPieHitTester as createHitTester
+} from "@vtrphan/dx-chart-core";
+import { declareSeries } from "../utils";
+import { PointCollection as Path } from "../templates/series/point-collection";
+import { Slice as Point } from "../templates/series/slice";
+import { PieSeriesProps } from "../types";
 
 // tslint:disable-next-line: max-line-length
-export const PieSeries: React.ComponentType<PieSeriesProps> = declareSeries<PieSeriesProps>('PieSeries', {
+export const PieSeries: React.ComponentType<PieSeriesProps> = declareSeries<
+  PieSeriesProps
+>("PieSeries", {
   getPointTransformer,
   createHitTester,
   components: { Path, Point },
+  defaults: {
+    innerRadius: 0,
+    outerRadius: 1
+  }
 });
-
-PieSeries.defaultProps = {
-  innerRadius: 0,
-  outerRadius: 1,
-};

@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import { Popover } from '../../../../dx-react-bootstrap4/components';
 
 export const Overlay = ({
-  visible, children, target, onHide, ...restProps
+  visible = false,
+  children,
+  target = null,
+  onHide,
+  ...restProps
 }) => {
   const handleToggle = () => {
     if (visible) onHide();
@@ -32,9 +36,4 @@ Overlay.propTypes = {
     PropTypes.object,
     PropTypes.func,
   ]),
-};
-
-Overlay.defaultProps = {
-  visible: false,
-  target: null,
 };
