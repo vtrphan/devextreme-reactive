@@ -73,7 +73,7 @@
     "@vtrphan/dx-grid-core": "^4.0.12"
   },
   "peerDependencies": {
-    "@vtrphan/dx-vue-core": "4.0.11",
+    "@vtrphan/dx-vue-core": "4.0.12",
     "vue": ">=2.6.10"
   }
 }

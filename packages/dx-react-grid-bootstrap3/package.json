@@ -99,9 +99,9 @@
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "@vtrphan/dx-grid-core": "4.0.11",
-    "@vtrphan/dx-react-core": "4.0.11",
-    "@vtrphan/dx-react-grid": "4.0.11",
+    "@vtrphan/dx-grid-core": "4.0.12",
+    "@vtrphan/dx-react-core": "4.0.12",
+    "@vtrphan/dx-react-grid": "4.0.12",
     "react": "^17.0.2",
     "react-bootstrap": "=0.33.0",
     "react-dom": "^17.0.2"

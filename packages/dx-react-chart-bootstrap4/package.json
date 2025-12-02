@@ -103,9 +103,9 @@
     "react-popper": "~2.2.5"
   },
   "peerDependencies": {
-    "@vtrphan/dx-chart-core": "4.0.11",
-    "@vtrphan/dx-react-chart": "4.0.11",
-    "@vtrphan/dx-react-core": "4.0.11",
+    "@vtrphan/dx-chart-core": "4.0.12",
+    "@vtrphan/dx-react-chart": "4.0.12",
+    "@vtrphan/dx-react-core": "4.0.12",
     "react": ">=17.0.2"
   }
 }
