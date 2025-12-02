@@ -32,6 +32,7 @@ export const FilledSelect = React.memo(
     className = undefined,
     ...restProps
   }) => {
+    const { notched: _notched, ...restSelectProps } = restProps;
     const handleChange = event => {
       if (event.target.value !== value) onValueChange(event.target.value);
     };
@@ -45,7 +46,7 @@ export const FilledSelect = React.memo(
         margin="normal"
         hiddenLabel
         disabled={readOnly}
-        {...restProps}
+        {...restSelectProps}
       >
         {availableOptions.map(option => (
           <MenuItem

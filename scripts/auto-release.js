@@ -1,10 +1,5 @@
 import { execSync } from "child_process";
-import {
-  readFileSync,
-  writeFileSync,
-  readdirSync,
-  existsSync
-} from "fs";
+import { readFileSync, writeFileSync, readdirSync, existsSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
@@ -18,29 +13,47 @@ const run = command => {
 };
 
 const runAndCapture = command =>
-  execSync(command, { cwd: rootDir, stdio: "pipe" }).toString().trim();
+  execSync(command, { cwd: rootDir, stdio: "pipe" })
+    .toString()
+    .trim();
 
 const ensureCleanWorkingTree = () => {
   const status = runAndCapture("git status --porcelain");
   if (status) {
-    throw new Error("Working tree is not clean. Commit or stash changes before releasing.");
+    throw new Error(
+      "Working tree is not clean. Commit or stash changes before releasing."
+    );
   }
 };
 
 const loadJSON = path => JSON.parse(readFileSync(path, "utf8"));
-const saveJSON = (path, data) => writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
+const saveJSON = (path, data) =>
+  writeFileSync(path, `${JSON.stringify(data, null, 2)}\n`);
 
 const getPackageJsonPaths = () => {
-  const paths = [join(rootDir, "package.json")];
-  readdirSync(packagesDir, { withFileTypes: true })
-    .filter(entry => entry.isDirectory())
-    .forEach(entry => {
-      const candidate = join(packagesDir, entry.name, "package.json");
-      if (existsSync(candidate)) {
-        paths.push(candidate);
+  const results = new Set([join(rootDir, "package.json")]);
+  const queue = [packagesDir];
+  const skipDirs = new Set(["node_modules", "dist", "build", "tmp"]);
+
+  while (queue.length) {
+    const currentDir = queue.pop();
+    readdirSync(currentDir, { withFileTypes: true }).forEach(entry => {
+      if (!entry.isDirectory()) {
+        return;
       }
+      if (skipDirs.has(entry.name)) {
+        return;
+      }
+      const dirPath = join(currentDir, entry.name);
+      const candidate = join(dirPath, "package.json");
+      if (existsSync(candidate)) {
+        results.add(candidate);
+      }
+      queue.push(dirPath);
     });
-  return paths;
+  }
+
+  return Array.from(results);
 };
 
 const updateVersionReferences = targetVersion => {
@@ -56,33 +69,36 @@ const updateVersionReferences = targetVersion => {
       changed = true;
     }
 
-    ["dependencies", "devDependencies", "peerDependencies", "optionalDependencies"].forEach(
-      sectionName => {
-        const section = data[sectionName];
-        if (!section || typeof section !== "object") {
+    [
+      "dependencies",
+      "devDependencies",
+      "peerDependencies",
+      "optionalDependencies"
+    ].forEach(sectionName => {
+      const section = data[sectionName];
+      if (!section || typeof section !== "object") {
+        return;
+      }
+      Object.entries(section).forEach(([depName, range]) => {
+        if (typeof range !== "string") {
           return;
         }
-        Object.entries(section).forEach(([depName, range]) => {
-          if (typeof range !== "string") {
-            return;
-          }
-          if (!depName.startsWith("@vtrphan/")) {
-            return;
-          }
-          const match = range.match(/^(\^|~)?(\d+\.\d+\.\d+)$/);
-          if (!match) {
-            return;
-          }
-          const prefix = match[1] ?? "";
-          const current = match[2];
-          if (current === targetVersion) {
-            return;
-          }
-          section[depName] = `${prefix}${targetVersion}`;
-          changed = true;
-        });
-      }
-    );
+        if (!depName.startsWith("@vtrphan/")) {
+          return;
+        }
+        const match = range.match(/^(\^|~)?(\d+\.\d+\.\d+)$/);
+        if (!match) {
+          return;
+        }
+        const prefix = match[1] ?? "";
+        const current = match[2];
+        if (current === targetVersion) {
+          return;
+        }
+        section[depName] = `${prefix}${targetVersion}`;
+        changed = true;
+      });
+    });
 
     if (changed) {
       saveJSON(path, data);

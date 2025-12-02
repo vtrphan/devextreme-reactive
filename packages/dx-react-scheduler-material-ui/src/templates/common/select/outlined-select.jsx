@@ -36,6 +36,7 @@ export const OutlinedSelect = React.memo(
     inputClasses = null,
     ...restProps
   }) => {
+    const { notched: _notched, ...restSelectProps } = restProps;
     const handleChange = event => {
       if (event.target.value !== value) onValueChange(event.target.value);
     };
@@ -53,7 +54,7 @@ export const OutlinedSelect = React.memo(
             }
           />
         }
-        {...restProps}
+        {...restSelectProps}
       >
         {availableOptions.map(option => (
           <MenuItem
