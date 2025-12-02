@@ -1,7 +1,7 @@
 {
   "name": "@vtrphan/dx-vue-core",
   "private": true,
-  "version": "4.0.13",
+  "version": "4.0.14",
   "description": "Core library for DevExtreme Vue Components",
   "author": {
     "name": "Developer Express Inc.",
@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@vtrphan/dx-testing": "^4.0.13",
+    "@vtrphan/dx-testing": "^4.0.14",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -69,7 +69,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@vtrphan/dx-core": "^4.0.13"
+    "@vtrphan/dx-core": "^4.0.14"
   },
   "peerDependencies": {
     "vue": ">=2.6.10"

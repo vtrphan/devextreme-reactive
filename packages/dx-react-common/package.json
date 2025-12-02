@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@vtrphan/dx-react-common",
-  "version": "4.0.13",
+  "version": "4.0.14",
   "description": "DevExtreme React Components",
   "author": {
     "name": "Developer Express Inc.",
@@ -16,10 +16,10 @@
     "build:watch": "webpack-dev-server --config webpack.config.cjs --env"
   },
   "dependencies": {
-    "@vtrphan/dx-demo-shell": "^4.0.13",
-    "@vtrphan/dx-react-chart-demos": "^4.0.13",
-    "@vtrphan/dx-react-grid-demos": "^4.0.13",
-    "@vtrphan/dx-react-scheduler-demos": "^4.0.13",
+    "@vtrphan/dx-demo-shell": "^4.0.14",
+    "@vtrphan/dx-react-chart-demos": "^4.0.14",
+    "@vtrphan/dx-react-grid-demos": "^4.0.14",
+    "@vtrphan/dx-react-scheduler-demos": "^4.0.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "whatwg-fetch": "^3.0.0"
@@ -31,7 +31,7 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.8.3",
     "@types/jest": "^26.0.23",
-    "@vtrphan/dx-testing": "^4.0.13",
+    "@vtrphan/dx-testing": "^4.0.14",
     "babel-loader": "^8.0.6",
     "concurrently": "^5.0.0",
     "css-loader": "^3.2.0",
