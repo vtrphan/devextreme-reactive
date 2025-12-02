@@ -33,21 +33,11 @@ export const declareSeries = <T extends SeriesProps>(
     defaults
   }: ExtraSeriesParameters<T>
 ): React.ComponentType<T> => {
-  const defaultComponentProps: Partial<T> = {
-    name: "defaultSeriesName" as T["name"],
-    ...(defaults || {})
-  };
-
   const applyDefaultProps = (props: T): T => {
-    if (!defaultComponentProps) {
-      return props;
+    const result = { ...(defaults || {}), ...props } as T;
+    if (result.name === undefined) {
+      result.name = "defaultSeriesName" as T["name"];
     }
-    const result = { ...props } as T;
-    (Object.keys(defaultComponentProps) as Array<keyof T>).forEach(key => {
-      if (result[key] === undefined) {
-        result[key] = defaultComponentProps[key] as T[keyof T];
-      }
-    });
     return result;
   };
 

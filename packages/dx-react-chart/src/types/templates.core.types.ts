@@ -9,7 +9,7 @@ export interface RootLayoutProps {
 /** @internal */
 export interface PatternProps {
   size?: number;
-  opacity: number;
+  opacity?: number;
   id: string;
   color: string;
 }

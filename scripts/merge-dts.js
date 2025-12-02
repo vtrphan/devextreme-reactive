@@ -40,6 +40,12 @@ export default (packageDirectory, skipBundle = false) => {
       headerPath: 'none',
     });
 
+    replace.sync({
+      files: dtsOutFile,
+      from: /import \* as React from ['"]react['"];\s+import \* as React from ['"]react['"];?/g,
+      to: "import * as React from 'react';\n",
+    });
+
     copyCommonJsTypes(dtsOutFile);
   }
 
