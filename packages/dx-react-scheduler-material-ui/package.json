@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-react-scheduler-material-ui",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "description": "Material-UI templates for DevExtreme React Scheduler component",
   "author": {
     "name": "Developer Express Inc.",
@@ -70,10 +70,10 @@
     "@mui/material": "^5.11.6",
     "@mui/x-date-pickers": "^5.0.15",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@vtrphan/dx-react-core": "^4.0.12",
-    "@vtrphan/dx-react-scheduler": "^4.0.12",
-    "@vtrphan/dx-scheduler-core": "^4.0.12",
-    "@vtrphan/dx-testing": "^4.0.12",
+    "@vtrphan/dx-react-core": "^4.0.13",
+    "@vtrphan/dx-react-scheduler": "^4.0.13",
+    "@vtrphan/dx-scheduler-core": "^4.0.13",
+    "@vtrphan/dx-testing": "^4.0.13",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
@@ -112,9 +112,9 @@
     "@mui/lab": "^5.0.0-alpha.117",
     "@mui/material": ">=5.0.0",
     "@mui/x-date-pickers": "^5.0.15",
-    "@vtrphan/dx-react-core": "4.0.12",
-    "@vtrphan/dx-react-scheduler": "4.0.12",
-    "@vtrphan/dx-scheduler-core": "4.0.12",
+    "@vtrphan/dx-react-core": "4.0.13",
+    "@vtrphan/dx-react-scheduler": "4.0.13",
+    "@vtrphan/dx-scheduler-core": "4.0.13",
     "moment": "^2.24.0",
     "react": ">=17.0.2"
   }

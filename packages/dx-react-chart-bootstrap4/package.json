@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-react-chart-bootstrap4",
-  "version": "4.0.12",
+  "version": "4.0.13",
   "description": "Bootstrap 4 templates for DevExtreme React Chart component",
   "author": {
     "name": "Developer Express Inc.",
@@ -68,10 +68,10 @@
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.8.3",
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@vtrphan/dx-chart-core": "^4.0.12",
-    "@vtrphan/dx-react-chart": "^4.0.12",
-    "@vtrphan/dx-react-core": "^4.0.12",
-    "@vtrphan/dx-testing": "^4.0.12",
+    "@vtrphan/dx-chart-core": "^4.0.13",
+    "@vtrphan/dx-react-chart": "^4.0.13",
+    "@vtrphan/dx-react-core": "^4.0.13",
+    "@vtrphan/dx-testing": "^4.0.13",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
@@ -103,9 +103,9 @@
     "react-popper": "~2.2.5"
   },
   "peerDependencies": {
-    "@vtrphan/dx-chart-core": "4.0.12",
-    "@vtrphan/dx-react-chart": "4.0.12",
-    "@vtrphan/dx-react-core": "4.0.12",
+    "@vtrphan/dx-chart-core": "4.0.13",
+    "@vtrphan/dx-react-chart": "4.0.13",
+    "@vtrphan/dx-react-core": "4.0.13",
     "react": ">=17.0.2"
   }
 }
