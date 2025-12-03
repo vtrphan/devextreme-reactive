@@ -12,13 +12,8 @@
     "noImplicitThis": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true
   },
-  "include": [
-    "./src/**/*"
-  ],
-  "exclude": [
-    "**/*.g.test.tsx"
-  ]
+  "include": ["./src/**/*"],
+  "exclude": ["**/*.g.test.tsx"]
 }
