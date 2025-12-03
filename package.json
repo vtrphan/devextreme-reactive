@@ -91,7 +91,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "yarn build:ts && yarn update-api:ci"
+      "pre-push": "[ -z \"$NODE_AUTH_TOKEN\" ] && export NODE_AUTH_TOKEN= || true; yarn build:ts && yarn update-api:ci"
     }
   },
   "workspaces": [
