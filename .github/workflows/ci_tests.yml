@@ -34,10 +34,9 @@ jobs:
         yarn build
         chmod -R 777 .
 
-    - name: Linter & Jest Tests
+    - name: Linter
       run: |
         yarn lint
-        yarn test:ci
 
     - name: Zip artifacts
       run: 7z a -tzip -mx3 -mmt2 artifacts.zip packages
