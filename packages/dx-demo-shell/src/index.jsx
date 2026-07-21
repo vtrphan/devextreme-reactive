@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render, unmountComponentAtNode } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import PropTypes from 'prop-types';
 import {
   HashRouter,
@@ -69,7 +69,9 @@ export const initialize = ({
     placeholder,
   }));
   embeddedDemoConfigs.forEach((config) => {
-    render(
+    const root = createRoot(config.placeholder);
+    config.placeholder.__reactRoot = root;
+    root.render(
       <App
         {...config.options}
         themeComponents={themeComponents}
@@ -79,12 +81,16 @@ export const initialize = ({
         migrationSamples={migrationSamples}
         renderDemo={renderDemo}
         unmountDemo={unmountDemo}
-      />,
-      config.placeholder,
+      />
     );
   });
 
   window.deinitializeDemos = () => {
-    embeddedDemoPlaceholders.forEach(placeholder => unmountComponentAtNode(placeholder));
+    embeddedDemoPlaceholders.forEach((placeholder) => {
+      if (placeholder.__reactRoot) {
+        placeholder.__reactRoot.unmount();
+        delete placeholder.__reactRoot;
+      }
+    });
   };
 };

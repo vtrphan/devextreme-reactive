@@ -4,10 +4,11 @@ import { getParameters } from 'codesandbox/lib/api/define';
 import './codesandbox-button.css';
 
 const indexCode = `import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 import Demo from "./demo";
 
-render(<Demo />, document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
+root.render(<Demo />);
 `;
 // prevent Potential infinite loop error in virtual table demos (100k rows)
 const sandboxConfig = `{
@@ -34,7 +35,8 @@ export const CodeSandBoxButton = ({
       'package.json': {
         content: {
           dependencies: {
-            'react-dom': '^17.0.2',
+            'react-dom': '^19.0.0',
+            'react': '^19.0.0',
             ...externalDeps,
           },
           ...devDeps,

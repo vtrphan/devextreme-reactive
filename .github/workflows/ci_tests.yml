@@ -14,6 +14,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
     name: Build, Lint & Jest Test
     steps:
     - name: Get sources
@@ -51,6 +53,8 @@ jobs:
   test_cafe:
     runs-on: ubuntu-22.04
     needs: build
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
     strategy:
       matrix:
         component: ['grid', 'chart', 'scheduler']
@@ -83,6 +87,8 @@ jobs:
   site:
     runs-on: ubuntu-22.04
     needs: build
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
     name: Site
     steps:
     - name: Get sources

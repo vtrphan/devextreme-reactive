@@ -34,7 +34,10 @@ module.exports = ({ production }) => ({
   },
   resolve: {
     modules: [path.join(__dirname, "node_modules"), "node_modules"],
-    extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".ts", ".tsx"]
+    extensions: [".webpack.js", ".web.js", ".js", ".jsx", ".ts", ".tsx"],
+    alias: {
+      'react-dom/client': require.resolve('react-dom/client')
+    }
   },
   plugins: [
     new WriteFilePlugin(),

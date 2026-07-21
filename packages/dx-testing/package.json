@@ -51,8 +51,8 @@
   "dependencies": {
     "@vtrphan/dx-react-core": "^5.0.0",
     "enzyme": "3.10.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "util": "^0.12.1"
   },
   "peerDependencies": {
