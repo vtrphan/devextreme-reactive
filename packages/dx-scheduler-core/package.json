@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-scheduler-core",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Core library for the DevExtreme Reactive Scheduler component",
   "author": {
     "name": "Developer Express Inc.",
@@ -60,7 +60,7 @@
     "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
     "@rollup/plugin-replace": "^2.3.1",
-    "@vtrphan/dx-core": "^5.0.0",
+    "@vtrphan/dx-core": "^5.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^29.2.2",
     "core-js": "^3.4.1",
