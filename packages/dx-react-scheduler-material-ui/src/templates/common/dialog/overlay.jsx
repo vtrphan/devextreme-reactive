@@ -30,8 +30,10 @@ export const Overlay = ({
     open={visible}
     onClose={onHide}
     className={classNames(classes.modal, classes.root, className)}
-    BackdropProps={{ className: classes.modal }}
-    PaperProps={{ className: classes.paper }}
+    slotProps={{
+      backdrop: { className: classes.modal },
+      paper: { className: classes.paper },
+    }}
     container={target.current}
     onBackdropClick={onHide}
     {...restProps}

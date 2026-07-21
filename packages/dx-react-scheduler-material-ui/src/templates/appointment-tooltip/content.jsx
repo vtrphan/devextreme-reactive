@@ -114,7 +114,7 @@ export const Content = ({
       {...restProps}
     >
       <Grid container alignItems="flex-start" className={classes.titleContainer}>
-        <Grid item xs={2}>
+        <Grid size={{ xs: 2 }}>
           <div className={classes.relativeContainer}>
             <Lens className={classes.lens} />
             {!!appointmentData.rRule && (
@@ -122,7 +122,7 @@ export const Content = ({
             )}
           </div>
         </Grid>
-        <Grid item xs={10}>
+        <Grid size={{ xs: 10 }}>
           <div>
             <div className={classNames(classes.title, classes.dateAndTitle)}>
               {appointmentData.title}
@@ -134,10 +134,10 @@ export const Content = ({
         </Grid>
       </Grid>
       <Grid container alignItems="center" className={classes.contentContainer}>
-        <Grid item xs={2} className={classes.textCenter}>
+        <Grid size={{ xs: 2 }} className={classes.textCenter}>
           <AccessTime className={classes.icon} />
         </Grid>
-        <Grid item xs={10}>
+        <Grid size={{ xs: 10 }}>
           <div className={classes.text}>
             {`${formatDate(appointmentData.startDate, HOUR_MINUTE_OPTIONS)}
               - ${formatDate(appointmentData.endDate, HOUR_MINUTE_OPTIONS)}`}
@@ -146,7 +146,7 @@ export const Content = ({
       </Grid>
       {appointmentResources.map(resourceItem => (
         <Grid container alignItems="center" className={classes.resourceContainer} key={`${resourceItem.fieldName}_${resourceItem.id}`}>
-          <Grid item xs={2} className={classes.textCenter}>
+          <Grid size={{ xs: 2 }} className={classes.textCenter}>
             <div className={classes.relativeContainer}>
               <Lens
                 className={classNames(classes.lens, classes.lensMini)}
@@ -154,7 +154,7 @@ export const Content = ({
               />
             </div>
           </Grid>
-          <Grid item xs={10}>
+          <Grid size={{ xs: 10 }}>
             <div className={classes.text}>
               {resourceItem.text}
             </div>

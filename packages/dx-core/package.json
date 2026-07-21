@@ -1,18 +1,18 @@
 {
   "name": "@vtrphan/dx-core",
-  "version": "4.0.14",
+  "version": "5.0.0",
   "description": "Core library for DevExtreme Reactive Components",
   "author": {
     "name": "Developer Express Inc.",
     "url": "https://www.devexpress.com/"
   },
   "bugs": {
-    "url": "https://github.com/DevExpress/devextreme-reactive/issues"
+    "url": "https://github.com/vtrphan/devextreme-reactive/issues"
   },
   "homepage": "https://devexpress.github.io/devextreme-reactive/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevExpress/devextreme-reactive.git"
+    "url": "git+https://github.com/vtrphan/devextreme-reactive.git"
   },
   "type": "module",
   "exports": {

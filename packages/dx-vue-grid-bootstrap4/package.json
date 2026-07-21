@@ -1,19 +1,19 @@
 {
   "name": "@vtrphan/dx-vue-grid-bootstrap4",
   "private": true,
-  "version": "4.0.14",
+  "version": "5.0.0",
   "description": "Bootstrap 4 templates for DevExtreme Vue Grid component",
   "author": {
     "name": "Developer Express Inc.",
     "url": "https://www.devexpress.com/"
   },
   "bugs": {
-    "url": "https://github.com/DevExpress/devextreme-reactive/issues"
+    "url": "https://github.com/vtrphan/devextreme-reactive/issues"
   },
   "homepage": "https://devexpress.github.io/devextreme-reactive/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevExpress/devextreme-reactive.git"
+    "url": "git+https://github.com/vtrphan/devextreme-reactive.git"
   },
   "keywords": [
     "vue",
@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.1.1",
-    "@vtrphan/dx-testing": "^4.0.14",
+    "@vtrphan/dx-testing": "^5.0.0",
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "^6.26.3",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -65,14 +65,14 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-license": "^0.12.1",
-    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-sass": "^1.2.14",
     "vue": "^2.6.10",
     "vue-server-renderer": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@vtrphan/dx-core": "^4.0.14",
-    "@vtrphan/dx-grid-core": "^4.0.14"
+    "@vtrphan/dx-core": "^5.0.0",
+    "@vtrphan/dx-grid-core": "^5.0.0"
   },
   "peerDependencies": {
     "@vtrphan/dx-vue-core": "4.0.14",

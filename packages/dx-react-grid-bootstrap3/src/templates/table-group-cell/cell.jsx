@@ -2,10 +2,10 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 export const Cell = ({
-  row, column,
-  tableRow, tableColumn,
-  onToggle, children, style,
-  forwardedRef,
+  row = {}, column = {},
+  tableRow = undefined, tableColumn = undefined,
+  onToggle = () => {}, children = undefined, style = null,
+  forwardedRef = undefined, colSpan = 1,
   ...restProps
 }) => {
   const handleClick = () => onToggle();
@@ -20,6 +20,7 @@ export const Cell = ({
       }}
       ref={forwardedRef}
       onClick={handleClick}
+      colSpan={colSpan}
       {...restProps}
     >
       {children}
@@ -42,14 +43,4 @@ Cell.propTypes = {
   forwardedRef: PropTypes.func,
 };
 
-Cell.defaultProps = {
-  row: {},
-  column: {},
-  colSpan: 1,
-  onToggle: () => {},
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  style: null,
-  forwardedRef: undefined,
-};
+

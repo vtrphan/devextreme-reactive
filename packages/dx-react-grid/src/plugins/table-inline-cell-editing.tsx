@@ -33,7 +33,7 @@ const INLINE_CELL_EDITING_ERROR = 'The startEditAction property of the InlineCel
 
 // tslint:disable-next-line: max-line-length
 const TableInlineCellEditingBase: React.FunctionComponent<TableInlineCellEditingProps> & {components: {cellComponent: string}} = (props) => {
-  const { cellComponent: EditCell, startEditAction, selectTextOnEditStart } = props;
+  const { cellComponent: EditCell, startEditAction = 'click', selectTextOnEditStart = false } = props;
 
   return (
     <Plugin name="TableInlineCellEditing" dependencies={pluginDependencies}>
@@ -153,10 +153,7 @@ TableInlineCellEditingBase.components = {
   cellComponent: 'Cell',
 };
 
-TableInlineCellEditingBase.defaultProps = {
-  startEditAction: 'click',
-  selectTextOnEditStart: false,
-};
+
 
 // tslint:disable-next-line: max-line-length
 export const TableInlineCellEditing: React.ComponentType<TableInlineCellEditingProps> = TableInlineCellEditingBase;

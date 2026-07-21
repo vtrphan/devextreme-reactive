@@ -1,5 +1,5 @@
 {
-  "private": false,
+  "private": true,
   "name": "@vtrphan/devextreme-reactive",
   "version": "4.0.14",
   "author": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevExpress/devextreme-reactive.git"
+    "url": "git+https://github.com/vtrphan/devextreme-reactive.git"
   },
   "type": "module",
   "main": "index.js",
@@ -50,7 +50,7 @@
   },
   "scripts": {
     "postinstall": "check-node-version --node \">=6.11.1\" --npm \">=5.3.0\" --yarn \">=1.0.0\"",
-    "build": "yarn build:ts && lerna run build --ignore @vtrphan/dx-vue-*",
+    "build": "yarn build:ts && lerna run build --no-private",
     "build:ts": "node ./scripts/ts-generator.js && lerna run dts",
     "build:ts:watch": "nodemon --exec \"yarn build:ts\" --watch \"packages/*/docs/reference/*.md\" --watch \"scripts/ts-generator.js\" --ext md,js",
     "build:watch": "concurrently \"yarn build:ts:watch\" \"lerna run --parallel build:watch --ignore @vtrphan/dx-vue-*\"",

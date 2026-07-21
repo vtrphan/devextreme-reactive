@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 const analyze = (list) => {
   const items = list.slice().sort((a, b) => a - b);
@@ -47,7 +48,10 @@ export const wrapDemo = (Demo, count = 16) => {
         const node = React.createElement(Demo, {});
         const times = this.itemsRefs.map((ref) => {
           const start = performance.now();
-          ReactDOM.render(node, ref.current);
+          if (!ref.current._reactRoot) {
+            ref.current._reactRoot = createRoot(ref.current);
+          }
+          ref.current._reactRoot.render(node);
           const end = performance.now();
           return end - start;
         });
@@ -61,7 +65,9 @@ export const wrapDemo = (Demo, count = 16) => {
       if (this.initialized) {
         const node = React.createElement(Demo, {});
         this.itemsRefs.forEach((ref) => {
-          ReactDOM.render(node, ref.current);
+          if (ref.current._reactRoot) {
+            ref.current._reactRoot.render(node);
+          }
         });
       }
     }
@@ -70,7 +76,10 @@ export const wrapDemo = (Demo, count = 16) => {
       clearTimeout(this.timeout);
       if (this.initialized) {
         this.itemsRefs.forEach((ref) => {
-          ReactDOM.unmountComponentAtNode(ref.current);
+          if (ref.current._reactRoot) {
+            ref.current._reactRoot.unmount();
+            delete ref.current._reactRoot;
+          }
         });
       }
     }

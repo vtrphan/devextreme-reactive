@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import { Cell } from './cell';
 
 export const CaptionCell = ({
-  row, column,
-  expanded, onToggle,
-  children, tableRow, tableColumn,
+  row = {}, column = {},
+  expanded = false, onToggle = () => {},
+  children = undefined, tableRow = undefined, tableColumn = undefined,
   iconComponent: Icon, contentComponent: Content,
   inlineSummaryComponent: InlineSummary,
   inlineSummaryItemComponent: InlineSummaryItem,
-  inlineSummaries, getMessage,
+  inlineSummaries = [], getMessage,
   containerComponent: Container,
-  side, position,
+  side = 'left', position = '',
+  colSpan = 1,
   ...restProps
 }) => (
   <Cell
     onToggle={onToggle}
+    colSpan={colSpan}
     {...restProps}
   >
     <Container side={side} position={position}>
@@ -68,16 +70,4 @@ CaptionCell.propTypes = {
   position: PropTypes.string,
 };
 
-CaptionCell.defaultProps = {
-  colSpan: 1,
-  row: {},
-  column: {},
-  expanded: false,
-  inlineSummaries: [],
-  onToggle: () => {},
-  children: undefined,
-  tableRow: undefined,
-  tableColumn: undefined,
-  side: 'left',
-  position: '',
-};
+

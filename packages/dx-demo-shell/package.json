@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@vtrphan/dx-demo-shell",
-  "version": "4.0.14",
+  "version": "5.0.0",
   "description": "DevExtreme Reactive Components Demo Shell",
   "author": {
     "name": "Developer Express Inc.",
@@ -47,7 +47,7 @@
     "mustache": "^3.1.0",
     "rollup": "^1.27.2",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-sass": "^1.2.2"
+    "rollup-plugin-sass": "^1.2.14"
   },
   "dependencies": {
     "codesandbox": "^2.1.6",

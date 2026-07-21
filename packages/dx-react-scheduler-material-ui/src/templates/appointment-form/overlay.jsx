@@ -78,14 +78,16 @@ export const Overlay = ({
   return (
     <StyledDrawer
       className={classNames(classes.root, className)}
-      PaperProps={{ className: paperClasses }}
-      BackdropProps={{ className: classes.absolutePosition }}
+      slotProps={{
+        paper: { className: paperClasses },
+        backdrop: { className: classes.absolutePosition },
+        transition: {
+          onEntered: () => setPreviouslyOpen(true),
+          onExited: () => setPreviouslyOpen(false),
+        }
+      }}
       ModalProps={{
         container: target.current,
-      }}
-      SlideProps={{
-        onEntered: () => setPreviouslyOpen(true),
-        onExited: () => setPreviouslyOpen(false),
       }}
       open={visible}
       variant="temporary"
