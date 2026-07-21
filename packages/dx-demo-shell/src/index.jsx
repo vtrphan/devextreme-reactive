@@ -81,7 +81,7 @@ export const initialize = ({
         migrationSamples={migrationSamples}
         renderDemo={renderDemo}
         unmountDemo={unmountDemo}
-      />
+      />,
     );
   });
 

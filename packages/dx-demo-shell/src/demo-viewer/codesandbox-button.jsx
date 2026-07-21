@@ -36,7 +36,7 @@ export const CodeSandBoxButton = ({
         content: {
           dependencies: {
             'react-dom': '^19.0.0',
-            'react': '^19.0.0',
+            react: '^19.0.0',
             ...externalDeps,
           },
           ...devDeps,
