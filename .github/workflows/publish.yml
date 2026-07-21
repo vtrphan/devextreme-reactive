@@ -1,0 +1,41 @@
+name: Publish to GitHub Packages
+
+on:
+  workflow_dispatch: # Allows manual triggering from the GitHub Actions UI (the "push a button" feature)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    # These permissions are required for the GITHUB_TOKEN to be able to publish packages
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Lerna often needs git history to verify tags and commits
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Using modern Node.js
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@vtrphan'
+
+      - name: Install dependencies
+        run: yarn install
+        env:
+          # yarn install will read the local .npmrc, so we must provide the token here too
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build packages
+        run: yarn build
+
+      - name: Publish with Lerna
+        run: npx lerna publish from-package --yes --registry https://npm.pkg.github.com
+        env:
+          # The GITHUB_TOKEN automatically has permissions to push to GitHub Packages for this repository
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
