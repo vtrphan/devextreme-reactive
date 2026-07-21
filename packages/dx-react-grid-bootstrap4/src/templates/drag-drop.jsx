@@ -1,6 +1,6 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
 
 export const Container = ({
   clientOffset,
@@ -11,8 +11,8 @@ export const Container = ({
 }) => (
   <ul
     className={classNames(
-      "list-group d-inline-block position-fixed dx-g-bs4-drag-drop",
-      className
+      'list-group d-inline-block position-fixed dx-g-bs4-drag-drop',
+      className,
     )}
     style={{
       transform: `translate(calc(${clientOffset.x}px - 50%), calc(${clientOffset.y}px - 50%))`,
@@ -20,7 +20,7 @@ export const Container = ({
       zIndex: 1000,
       left: 0,
       top: 0,
-      ...style
+      ...style,
     }}
     {...restProps}
   >
@@ -31,25 +31,25 @@ export const Container = ({
 Container.propTypes = {
   clientOffset: PropTypes.shape({
     x: PropTypes.number.isRequired,
-    y: PropTypes.number.isRequired
+    y: PropTypes.number.isRequired,
   }).isRequired,
   style: PropTypes.object,
   className: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node,
-    PropTypes.arrayOf(PropTypes.node)
-  ])
+    PropTypes.arrayOf(PropTypes.node),
+  ]),
 };
 
 export const Column = React.memo(
   ({ column, className = undefined, ...restProps }) => (
-    <li className={classNames("list-group-item", className)} {...restProps}>
+    <li className={classNames('list-group-item', className)} {...restProps}>
       {column.title}
     </li>
-  )
+  ),
 );
 
 Column.propTypes = {
   column: PropTypes.object.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -1,6 +1,6 @@
-import * as React from "react";
-import classNames from "clsx";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import classNames from 'clsx';
+import PropTypes from 'prop-types';
 
 export const TableDetailCell = ({
   colSpan = 1,
@@ -16,7 +16,7 @@ export const TableDetailCell = ({
   <td
     colSpan={colSpan}
     ref={forwardedRef}
-    className={classNames("table-active", className)}
+    className={classNames('table-active', className)}
     style={style}
     {...restProps}
   >
@@ -28,12 +28,12 @@ TableDetailCell.propTypes = {
   colSpan: PropTypes.number,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   className: PropTypes.string,
   tableColumn: PropTypes.object,
   tableRow: PropTypes.object,
   row: PropTypes.any,
   forwardedRef: PropTypes.func,
-  style: PropTypes.object
+  style: PropTypes.object,
 };

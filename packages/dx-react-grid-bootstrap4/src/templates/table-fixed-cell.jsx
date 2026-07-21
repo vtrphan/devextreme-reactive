@@ -1,7 +1,7 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { BodyColorContext } from "./layout";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { BodyColorContext } from './layout';
 
 export const FixedCell = ({
   className,
@@ -15,23 +15,23 @@ export const FixedCell = ({
   ...restProps
 }) => {
   const contextBackground = React.useContext(BodyColorContext);
-  const backgroundColor = selected ? "inherit" : contextBackground;
+  const backgroundColor = selected ? 'inherit' : contextBackground;
 
   return (
     <CellPlaceholder
       className={classNames(
         {
-          "border-left": showLeftDivider,
-          "border-right": showRightDivider,
-          "dx-g-bs4-fixed-cell": true,
-          "position-sticky": true
+          'border-left': showLeftDivider,
+          'border-right': showRightDivider,
+          'dx-g-bs4-fixed-cell': true,
+          'position-sticky': true,
         },
-        className
+        className,
       )}
       style={{
         backgroundColor,
         [side]: position,
-        ...style
+        ...style,
       }}
       {...restProps}
     />
@@ -46,5 +46,5 @@ FixedCell.propTypes = {
   showLeftDivider: PropTypes.bool,
   showRightDivider: PropTypes.bool,
   side: PropTypes.string.isRequired,
-  style: PropTypes.object
+  style: PropTypes.object,
 };

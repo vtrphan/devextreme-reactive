@@ -1,9 +1,9 @@
-import * as React from "react";
-import { flushSync } from "react-dom";
-import { DropTarget } from "@vtrphan/dx-react-core";
-import { getGroupCellTargetIndex } from "@vtrphan/dx-grid-core";
-import { ItemLayout } from "./group-panel-layout/item-layout";
-import { GroupingPanel as GP } from "../types";
+import * as React from 'react';
+import { flushSync } from 'react-dom';
+import { DropTarget } from '@vtrphan/dx-react-core';
+import { getGroupCellTargetIndex } from '@vtrphan/dx-grid-core';
+import { ItemLayout } from './group-panel-layout/item-layout';
+import { GroupingPanel as GP } from '../types';
 
 /** @internal */
 export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
@@ -15,11 +15,11 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
   items,
   emptyMessageComponent: EmptyMessage,
   containerComponent: Container,
-  itemComponent: Item
+  itemComponent: Item,
 }) => {
   const dragStateRef = React.useRef<GP.GroupingItemLayoutState>({
     sourceColumnName: null,
-    targetItemIndex: -1
+    targetItemIndex: -1,
   });
   const setDragState = React.useCallback(
     <
@@ -27,16 +27,16 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
         | GP.GroupingItemLayoutState
         | ((state: GP.GroupingItemLayoutState) => GP.GroupingItemLayoutState)
     >(
-      stateOrUpdater: T
+      stateOrUpdater: T,
     ) => {
       dragStateRef.current =
-        typeof stateOrUpdater === "function"
+        typeof stateOrUpdater === 'function'
           ? (stateOrUpdater as (
-              state: GP.GroupingItemLayoutState
+              state: GP.GroupingItemLayoutState,
             ) => GP.GroupingItemLayoutState)(dragStateRef.current)
           : stateOrUpdater;
     },
-    []
+    [],
   );
   const draggingColumnName = React.useRef<string | null>(null);
   const itemRefs = React.useRef<Element[]>([]);
@@ -54,15 +54,15 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
         eventHandler({ payload, ...restArgs });
       }
     },
-    [isColumnGroupingEnabled]
+    [isColumnGroupingEnabled],
   );
 
   const onEnter = React.useCallback(({ payload }) => {
     flushSync(() =>
       setDragState(prev => ({
         ...prev,
-        sourceColumnName: payload[0].columnName
-      }))
+        sourceColumnName: payload[0].columnName,
+      })),
     );
   }, []);
 
@@ -71,26 +71,26 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
       const { sourceColumnName, targetItemIndex } = dragStateRef.current;
       // eslint-disable-next-line react/no-find-dom-node
       const itemGeometries = itemRefs.current.map(ref =>
-        ref.getBoundingClientRect()
+        ref.getBoundingClientRect(),
       );
       const sourceItemIndex = items.findIndex(
-        ({ column }) => column.name === sourceColumnName
+        ({ column }) => column.name === sourceColumnName,
       );
       const nextTargetItemIndex = getGroupCellTargetIndex(
         itemGeometries,
         sourceItemIndex,
-        clientOffset
+        clientOffset,
       );
 
       if (targetItemIndex === nextTargetItemIndex) return;
 
       onGroupDraft({
         columnName: sourceColumnName,
-        groupIndex: nextTargetItemIndex
+        groupIndex: nextTargetItemIndex,
       });
       setDragState(prev => ({ ...prev, targetItemIndex: nextTargetItemIndex }));
     },
-    [items, onGroupDraft, setDragState]
+    [items, onGroupDraft, setDragState],
   );
 
   const onLeave = React.useCallback(() => {
@@ -101,7 +101,7 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
     }
     onGroupDraft({
       columnName: sourceColumnName,
-      groupIndex: -1
+      groupIndex: -1,
     });
     setDragState(prev => ({ ...prev, targetItemIndex: -1 }));
   }, [onGroupDraft, resetState, setDragState]);
@@ -111,7 +111,7 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
     resetState();
     onGroup({
       columnName: sourceColumnName,
-      groupIndex: targetItemIndex
+      groupIndex: targetItemIndex,
     });
   }, [onGroup, resetState]);
 
@@ -124,7 +124,7 @@ export const GroupPanelLayout: React.ComponentType<GP.LayoutProps> = ({
     draggingColumnName.current = null;
     if (sourceColumnName && targetItemIndex === -1) {
       onGroup({
-        columnName: sourceColumnName
+        columnName: sourceColumnName,
       });
     }
     resetState();

@@ -1,33 +1,33 @@
-import * as React from "react";
-import { render, unmountComponentAtNode } from "react-dom";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import { render, unmountComponentAtNode } from 'react-dom';
+import PropTypes from 'prop-types';
 import {
   HashRouter,
   MemoryRouter,
   Route,
   Redirect,
-  Switch
-} from "react-router-dom";
-import { DemoViewer } from "./demo-viewer/demo-viewer";
-import { SectionsViewer } from "./demo-viewer/sections-viewer";
-import { EmbeddedDemoContext } from "./context";
+  Switch,
+} from 'react-router-dom';
+import { DemoViewer } from './demo-viewer/demo-viewer';
+import { SectionsViewer } from './demo-viewer/sections-viewer';
+import { EmbeddedDemoContext } from './context';
 
 const App = ({
-  router = "memory",
+  router = 'memory',
   path = undefined,
-  scriptPath = "/dist/index.js",
+  scriptPath = '/dist/index.js',
   showThemeSelector = false,
   showThemeVariants = false,
-  defaultTab = "preview",
+  defaultTab = 'preview',
   ...restProps
 }) => {
-  const Router = router === "hash" ? HashRouter : MemoryRouter;
+  const Router = router === 'hash' ? HashRouter : MemoryRouter;
   const contextValue = {
     ...restProps,
     scriptPath,
     showThemeSelector,
     showThemeVariants,
-    defaultTab
+    defaultTab,
   };
 
   return (
@@ -49,7 +49,7 @@ App.propTypes = {
   scriptPath: PropTypes.string,
   showThemeSelector: PropTypes.bool,
   showThemeVariants: PropTypes.bool,
-  defaultTab: PropTypes.string
+  defaultTab: PropTypes.string,
 };
 
 export const initialize = ({
@@ -59,16 +59,16 @@ export const initialize = ({
   renderDemo,
   unmountDemo,
   themeComponents,
-  demoData
+  demoData,
 }) => {
   const embeddedDemoPlaceholders = [
-    ...document.getElementsByClassName("embedded-demo")
+    ...document.getElementsByClassName('embedded-demo'),
   ];
   const embeddedDemoConfigs = embeddedDemoPlaceholders.map(placeholder => ({
-    options: JSON.parse(placeholder.getAttribute("data-options") || "{}"),
-    placeholder
+    options: JSON.parse(placeholder.getAttribute('data-options') || '{}'),
+    placeholder,
   }));
-  embeddedDemoConfigs.forEach(config => {
+  embeddedDemoConfigs.forEach((config) => {
     render(
       <App
         {...config.options}
@@ -80,13 +80,11 @@ export const initialize = ({
         renderDemo={renderDemo}
         unmountDemo={unmountDemo}
       />,
-      config.placeholder
+      config.placeholder,
     );
   });
 
   window.deinitializeDemos = () => {
-    embeddedDemoPlaceholders.forEach(placeholder =>
-      unmountComponentAtNode(placeholder)
-    );
+    embeddedDemoPlaceholders.forEach(placeholder => unmountComponentAtNode(placeholder));
   };
 };

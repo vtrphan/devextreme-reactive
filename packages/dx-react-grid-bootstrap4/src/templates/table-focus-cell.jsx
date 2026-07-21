@@ -1,7 +1,7 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { withKeyboardNavigation } from "@vtrphan/dx-react-grid";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
 
 const FocusCellBase = ({
   className,
@@ -12,10 +12,10 @@ const FocusCellBase = ({
   <CellPlaceholder
     className={classNames(
       {
-        "border border-primary dx-g-bs-focus-cell": !!focused,
-        "dx-g-bs4-simple-cell": true
+        'border border-primary dx-g-bs-focus-cell': !!focused,
+        'dx-g-bs4-simple-cell': true,
       },
-      className
+      className,
     )}
     {...restProps}
   />
@@ -24,7 +24,7 @@ const FocusCellBase = ({
 FocusCellBase.propTypes = {
   className: PropTypes.string,
   component: PropTypes.func.isRequired,
-  focused: PropTypes.bool
+  focused: PropTypes.bool,
 };
 
 export const FocusCell = withKeyboardNavigation()(FocusCellBase);

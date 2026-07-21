@@ -69,5 +69,3 @@ CaptionCell.propTypes = {
   side: PropTypes.string,
   position: PropTypes.string,
 };
-
-

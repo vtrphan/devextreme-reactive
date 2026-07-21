@@ -1,9 +1,9 @@
-import * as React from "react";
-import PropTypes from "prop-types";
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
-import { DragSource } from "@vtrphan/dx-react-core";
+import { DragSource } from '@vtrphan/dx-react-core';
 
-import { CellLayout } from "./table-header-cell/cell-layout";
+import { CellLayout } from './table-header-cell/cell-layout';
 
 export const TableHeaderCell = ({
   column,
@@ -29,13 +29,13 @@ export const TableHeaderCell = ({
     draggingEnabled,
     getCellWidth,
     ...restProps,
-    dragging
+    dragging,
   };
 
   return draggingEnabled ? (
     <DragSource
       ref={dragRef}
-      payload={[{ type: "column", columnName: column?.name }]}
+      payload={[{ type: 'column', columnName: column?.name }]}
       onStart={handleDragStart}
       onEnd={handleDragEnd}
     >
@@ -58,7 +58,7 @@ TableHeaderCell.propTypes = {
   onWidthDraftCancel: PropTypes.func,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
-  getCellWidth: PropTypes.func
+  getCellWidth: PropTypes.func,
 };

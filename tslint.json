@@ -32,7 +32,18 @@
     "array-type": false,
     "member-ordering": false,
     "jsx-wrap-multiline": false,
-    "no-this-assignment": [true, {"allow-destructuring": true}]
+    "no-this-assignment": [true, {"allow-destructuring": true}],
+    "max-line-length": false,
+    "arrow-parens": false,
+    "variable-name": false,
+    "whitespace": false,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-submodule-imports": false,
+    "no-object-literal-type-assertion": false,
+    "quotemark": false,
+    "trailing-comma": false,
+    "ter-arrow-parens": false
   },
   "jsRules": {
     "object-literal-sort-keys": false

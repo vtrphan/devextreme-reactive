@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Plugin,
   TemplateConnector,
@@ -7,8 +7,8 @@ import {
   withComponents,
   PluginComponents,
   onSizeChangeFn,
-  Getter
-} from "@vtrphan/dx-react-core";
+  Getter,
+} from '@vtrphan/dx-react-core';
 import {
   ARGUMENT_DOMAIN,
   getValueDomainName,
@@ -20,20 +20,20 @@ import {
   gridCoordinatesGetter,
   tickCoordinatesGetter,
   Tick,
-  Grid
-} from "@vtrphan/dx-chart-core";
-import { RawAxisProps } from "../types";
-import { Root } from "../templates/axis/root";
-import { Label } from "../templates/axis/label";
-import { Line } from "../templates/axis/line";
+  Grid,
+} from '@vtrphan/dx-chart-core';
+import { RawAxisProps } from '../types';
+import { Root } from '../templates/axis/root';
+import { Label } from '../templates/axis/label';
+import { Line } from '../templates/axis/line';
 
-import { withPatchedProps } from "../utils";
+import { withPatchedProps } from '../utils';
 
 const SVG_STYLE: React.CSSProperties = {
-  position: "absolute",
+  position: 'absolute',
   left: 0,
   top: 0,
-  overflow: "visible"
+  overflow: 'visible',
 };
 
 const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
@@ -50,7 +50,7 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
   tickComponent: TickComponent,
   labelComponent: LabelComponent,
   lineComponent: LineComponent,
-  gridComponent: GridComponent
+  gridComponent: GridComponent,
 }) => {
   const rootRef = React.useRef<HTMLDivElement | null>(null);
   const adjustedWidthRef = React.useRef(0);
@@ -73,13 +73,13 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
             }
             const { width, height } = layouts[layoutName] || {
               width: 0,
-              height: 0
+              height: 0,
             };
             const paneSize = layouts.pane;
 
             const {
               sides: [dx, dy],
-              ticks
+              ticks,
             } = getTickCoordinates({
               callback: tickCoordinatesGetter,
               scaleName: scaleName!,
@@ -89,14 +89,14 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
               indentFromAxis: indentFromAxis!,
               scale,
               paneSize: [paneSize.width, paneSize.height],
-              rotated
+              rotated,
             });
 
             const handleSizeChange: onSizeChangeFn = size => {
               const rect = rootRef.current!.getBoundingClientRect();
               const rectSize = [
                 dx ? rect.width : size.width,
-                dy ? rect.height : size.height
+                dy ? rect.height : size.height,
               ];
 
               if (
@@ -113,10 +113,10 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
             return (
               <div
                 style={{
-                  position: "relative",
+                  position: 'relative',
                   width: dy * width || undefined,
                   height: dx * height || undefined,
-                  flexGrow: dx || undefined
+                  flexGrow: dx || undefined,
                 }}
                 ref={rootRef}
               >
@@ -156,7 +156,7 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
                           yText,
                           dy: delta,
                           textAnchor,
-                          key
+                          key,
                         }) => (
                           <LabelComponent
                             key={key}
@@ -166,7 +166,7 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
                             dy={delta}
                             textAnchor={textAnchor}
                           />
-                        )
+                        ),
                       )}
                   </RootComponent>
                 </svg>
@@ -190,13 +190,13 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
           const { width, height } = layouts.pane;
           const {
             ticks,
-            sides: [dx, dy]
+            sides: [dx, dy],
           } = getTickCoordinates({
             callback: gridCoordinatesGetter,
             scaleName: scaleName!,
             scale,
             paneSize: [width, height],
-            rotated
+            rotated,
           });
           return (
             <React.Fragment>
@@ -228,11 +228,11 @@ const RawAxis: React.FC<RawAxisProps> & { components: PluginComponents } = ({
 };
 
 RawAxis.components = {
-  rootComponent: "Root",
-  tickComponent: "Tick",
-  labelComponent: "Label",
-  lineComponent: "Line",
-  gridComponent: "Grid"
+  rootComponent: 'Root',
+  tickComponent: 'Tick',
+  labelComponent: 'Label',
+  lineComponent: 'Line',
+  gridComponent: 'Grid',
 };
 /** @internal */
 export const Axis: React.ComponentType<RawAxisProps> = withComponents({
@@ -240,7 +240,7 @@ export const Axis: React.ComponentType<RawAxisProps> = withComponents({
   Line,
   Root,
   Tick: Line,
-  Grid: Line
+  Grid: Line,
 })(RawAxis);
 
 // TODO: It is not axis who defines that argument is HORIZONTAL and value is VERTICAL.
@@ -257,8 +257,8 @@ export const ArgumentAxis: React.ComponentType<RawAxisProps> = withPatchedProps(
     showLine: true,
     showLabels: true,
     ...props,
-    scaleName: ARGUMENT_DOMAIN
-  })
+    scaleName: ARGUMENT_DOMAIN,
+  }),
 )(Axis);
 
 export const ValueAxis: React.ComponentType<RawAxisProps> = withPatchedProps(
@@ -269,6 +269,6 @@ export const ValueAxis: React.ComponentType<RawAxisProps> = withPatchedProps(
     showLine: false,
     showLabels: true,
     ...props,
-    scaleName: getValueDomainName((props as RawAxisProps).scaleName)
-  })
+    scaleName: getValueDomainName((props as RawAxisProps).scaleName),
+  }),
 )(Axis);

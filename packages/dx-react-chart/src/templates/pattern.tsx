@@ -1,11 +1,11 @@
-import * as React from "react";
-import { PatternProps } from "../types";
+import * as React from 'react';
+import { PatternProps } from '../types';
 
 export const Pattern: React.FC<PatternProps> = ({
   id,
   size = 6,
   color,
-  opacity = 0.75
+  opacity = 0.75,
 }) => (
   <defs>
     <pattern id={id} width={size} height={size} patternUnits="userSpaceOnUse">

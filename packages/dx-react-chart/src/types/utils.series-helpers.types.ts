@@ -1,4 +1,4 @@
-import { GetPointTransformerFn, CreateHitTesterFn, SeriesProps } from "./index";
+import { GetPointTransformerFn, CreateHitTesterFn, SeriesProps } from './index';
 
 /** @internal */
 export type Components = {

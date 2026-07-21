@@ -1,7 +1,7 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { getDayScaleCells } from "@vtrphan/dx-scheduler-core";
-import { Table } from "../table";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { getDayScaleCells } from '@vtrphan/dx-scheduler-core';
+import { Table } from '../table';
 
 const DefaultGroupingPanel = () => null;
 
@@ -26,7 +26,7 @@ export const Layout = React.memo(
             key,
             endOfGroup,
             groupingInfo,
-            colSpan
+            colSpan,
           }) => (
             <Cell
               key={key}
@@ -39,12 +39,12 @@ export const Layout = React.memo(
               groupingInfo={groupingInfo}
               colSpan={colSpan}
             />
-          )
+          ),
         )}
       </Row>
       {groupedByDate && <GroupingPanel />}
     </Table>
-  )
+  ),
 );
 
 Layout.propTypes = {
@@ -55,5 +55,5 @@ Layout.propTypes = {
     .isRequired,
   groupingPanelComponent: PropTypes.func,
   formatDate: PropTypes.func.isRequired,
-  groupedByDate: PropTypes.bool
+  groupedByDate: PropTypes.bool,
 };

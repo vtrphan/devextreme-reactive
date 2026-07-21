@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
 import { initialize } from '@vtrphan/dx-demo-shell';
 import '@vtrphan/dx-demo-shell/dist/index.css';
@@ -21,14 +20,17 @@ initialize({
     demoContainer,
   }) => {
     const DemoContainer = demoContainer || 'div';
-    if (!element._reactRoot) { element._reactRoot = createRoot(element); } element._reactRoot.render(
+    if (!element._reactRoot) {
+      element._reactRoot = createRoot(element);
+    }
+    element._reactRoot.render(
       (
         <React.StrictMode>
           <DemoContainer>
             <Demo />
           </DemoContainer>
         </React.StrictMode>
-      )
+      ),
     );
   },
   unmountDemo: ({

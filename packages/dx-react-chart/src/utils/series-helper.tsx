@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Template,
   Plugin,
@@ -7,21 +7,21 @@ import {
   TemplateConnector,
   withComponents,
   Getters,
-  PluginComponents
-} from "@vtrphan/dx-react-core";
+  PluginComponents,
+} from '@vtrphan/dx-react-core';
 import {
   findSeriesByName,
   addSeries,
   extendDomains,
   getValueDomainName,
-  ARGUMENT_DOMAIN
-} from "@vtrphan/dx-chart-core";
+  ARGUMENT_DOMAIN,
+} from '@vtrphan/dx-chart-core';
 import {
   ExtraSeriesParameters,
   SeriesProps,
   PathComponentProps,
-  Scales
-} from "../types";
+  Scales,
+} from '../types';
 
 /** @internal */
 export const declareSeries = <T extends SeriesProps>(
@@ -30,13 +30,13 @@ export const declareSeries = <T extends SeriesProps>(
     components,
     getPointTransformer,
     createHitTester,
-    defaults
-  }: ExtraSeriesParameters<T>
+    defaults,
+  }: ExtraSeriesParameters<T>,
 ): React.ComponentType<T> => {
   const applyDefaultProps = (props: T): T => {
     const result = { ...(defaults || {}), ...props } as T;
     if (result.name === undefined) {
-      result.name = "defaultSeriesName" as T["name"];
+      result.name = 'defaultSeriesName' as T['name'];
     }
     return result;
   };
@@ -58,7 +58,7 @@ export const declareSeries = <T extends SeriesProps>(
       getPointTransformer,
       createHitTester,
       ...computedProps,
-      symbolName
+      symbolName,
     };
     const getSeries = ({ series, data, palette }: Getters) =>
       addSeries(series, data, palette, seriesItem, restProps);
@@ -78,13 +78,13 @@ export const declareSeries = <T extends SeriesProps>(
               rotated,
               layouts,
               clipPathId,
-              readyToRenderSeries
+              readyToRenderSeries,
             }) => {
               const { pane } = layouts;
               const currentSeries = findSeriesByName(symbolName, series);
               const currentScales: Scales = {
                 argScale: scales[ARGUMENT_DOMAIN],
-                valScale: scales[getValueDomainName(currentSeries!.scaleName)]
+                valScale: scales[getValueDomainName(currentSeries!.scaleName)],
               };
               const Path: React.ComponentType<PathComponentProps> = currentSeries.seriesComponent as any;
               return (
@@ -111,10 +111,10 @@ export const declareSeries = <T extends SeriesProps>(
 
   Component.components = {};
   if (components.Path) {
-    Component.components.seriesComponent = "Path";
+    Component.components.seriesComponent = 'Path';
   }
   if (components.Point) {
-    Component.components.pointComponent = "Point";
+    Component.components.pointComponent = 'Point';
   }
   return withComponents(components)(Component);
 };

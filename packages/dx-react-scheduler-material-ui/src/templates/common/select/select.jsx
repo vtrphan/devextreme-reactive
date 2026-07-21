@@ -1,8 +1,8 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { STANDARD_SELECT } from "@vtrphan/dx-scheduler-core";
-import { FilledSelect } from "./filled-select";
-import { OutlinedSelect } from "./outlined-select";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { STANDARD_SELECT } from '@vtrphan/dx-scheduler-core';
+import { FilledSelect } from './filled-select';
+import { OutlinedSelect } from './outlined-select';
 
 export const Select = React.memo(
   ({
@@ -13,8 +13,7 @@ export const Select = React.memo(
     type = STANDARD_SELECT,
     ...restProps
   }) => {
-    const ResultingSelect =
-      type === STANDARD_SELECT ? FilledSelect : OutlinedSelect;
+    const ResultingSelect = type === STANDARD_SELECT ? FilledSelect : OutlinedSelect;
 
     return (
       <ResultingSelect
@@ -25,7 +24,7 @@ export const Select = React.memo(
         {...restProps}
       />
     );
-  }
+  },
 );
 
 Select.propTypes = {
@@ -34,9 +33,9 @@ Select.propTypes = {
   availableOptions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ),
   readOnly: PropTypes.bool,
-  type: PropTypes.string
+  type: PropTypes.string,
 };

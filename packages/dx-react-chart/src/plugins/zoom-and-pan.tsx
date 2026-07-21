@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Plugin,
   TemplatePlaceholder,
@@ -9,9 +9,9 @@ import {
   PluginComponents,
   withComponents,
   Size,
-  clearSelection
-} from "@vtrphan/dx-react-core";
-import { DragBox } from "../templates/drag-box";
+  clearSelection,
+} from '@vtrphan/dx-react-core';
+import { DragBox } from '../templates/drag-box';
 import {
   adjustLayout,
   getViewport,
@@ -25,27 +25,27 @@ import {
   isMultiTouch,
   attachEvents,
   detachEvents,
-  setCursorType
-} from "@vtrphan/dx-chart-core";
+  setCursorType,
+} from '@vtrphan/dx-chart-core';
 import {
   ZoomAndPanProps,
   ZoomAndPanState,
   Location,
   NumberArray,
   ZoomPanProviderProps,
-  EventHandlers
-} from "../types";
+  EventHandlers,
+} from '../types';
 
 const events = {
-  wheel: { func: "onWheel" },
+  wheel: { func: 'onWheel' },
   mousedown: {
-    func: "onStart",
-    extraEvents: ["mousemove", "mouseup"]
+    func: 'onStart',
+    extraEvents: ['mousemove', 'mouseup'],
   },
   touchstart: {
-    func: "onStart",
-    extraEvents: ["touchmove", "touchend"]
-  }
+    func: 'onStart',
+    extraEvents: ['touchmove', 'touchend'],
+  },
 };
 
 class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
@@ -70,8 +70,8 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
               this.props.onEnd(event);
               setCursorType(this.svgElement);
               detachEvents(window, this.windowHandlers[key]);
-            }
-          }
+            },
+          },
         };
       }
       return prev;
@@ -85,7 +85,7 @@ class ZoomPanProvider extends React.PureComponent<ZoomPanProviderProps> {
           if (events[key].extraEvents) {
             attachEvents(window, this.windowHandlers[key]);
           }
-        }
+        },
       };
     }, {});
     attachEvents(this.svgElement, this.handlers);
@@ -109,7 +109,7 @@ class ZoomAndPanBase extends React.PureComponent<
   ZoomAndPanState
 > {
   static components: PluginComponents = {
-    dragBoxComponent: "DragBox"
+    dragBoxComponent: 'DragBox',
   };
 
   multiTouchDelta: number | null = null;
@@ -122,16 +122,16 @@ class ZoomAndPanBase extends React.PureComponent<
 
     this.state = {
       viewport: props.viewport || props.defaultViewport,
-      rectBox: null
+      rectBox: null,
     };
   }
 
   static getDerivedStateFromProps(
     props: ZoomAndPanProps,
-    state: ZoomAndPanState
+    state: ZoomAndPanState,
   ): ZoomAndPanState {
     return {
-      viewport: props.viewport !== undefined ? props.viewport : state.viewport
+      viewport: props.viewport !== undefined ? props.viewport : state.viewport,
     };
   }
 
@@ -151,7 +151,7 @@ class ZoomAndPanBase extends React.PureComponent<
     if (isKeyPressed(e, zoomRegionKey)) {
       this.rectOrigin = coords;
     } else {
-      setCursorType(e.currentTarget, "grabbing");
+      setCursorType(e.currentTarget, 'grabbing');
     }
     if (isMultiTouch(e)) {
       this.multiTouchDelta = getDeltaForTouches(e.touches).delta;
@@ -168,7 +168,7 @@ class ZoomAndPanBase extends React.PureComponent<
         scales,
         rotated,
         current.delta - this.multiTouchDelta!,
-        current.center
+        current.center,
       );
       this.multiTouchDelta = current.delta;
     } else {
@@ -184,10 +184,10 @@ class ZoomAndPanBase extends React.PureComponent<
     this.setState(
       (
         { viewport },
-        { onViewportChange, interactionWithArguments, interactionWithValues }
+        { onViewportChange, interactionWithArguments, interactionWithValues },
       ) => {
-        const argsInteraction = interactionWithArguments ?? "both";
-        const valuesInteraction = interactionWithValues ?? "none";
+        const argsInteraction = interactionWithArguments ?? 'both';
+        const valuesInteraction = interactionWithValues ?? 'none';
         if (this.rectOrigin) {
           return {
             rectBox: getRect(
@@ -196,22 +196,22 @@ class ZoomAndPanBase extends React.PureComponent<
               valuesInteraction,
               this.rectOrigin,
               coords,
-              pane
-            )
+              pane,
+            ),
           };
         }
         return getViewport(
           scales,
           rotated,
           [argsInteraction, valuesInteraction],
-          "pan",
+          'pan',
           [-deltaX, -deltaY],
           null,
           null,
           viewport,
-          onViewportChange
+          onViewportChange,
         );
-      }
+      },
     );
   }
 
@@ -222,11 +222,11 @@ class ZoomAndPanBase extends React.PureComponent<
       this.setState(
         (
           { viewport, rectBox },
-          { onViewportChange, interactionWithArguments, interactionWithValues }
+          { onViewportChange, interactionWithArguments, interactionWithValues },
         ) => {
           if (rectBox === null) return {};
-          const argsInteraction = interactionWithArguments ?? "both";
-          const valuesInteraction = interactionWithValues ?? "none";
+          const argsInteraction = interactionWithArguments ?? 'both';
+          const valuesInteraction = interactionWithValues ?? 'none';
 
           this.rectOrigin = null;
           return {
@@ -235,18 +235,18 @@ class ZoomAndPanBase extends React.PureComponent<
               scales,
               rotated,
               [argsInteraction, valuesInteraction],
-              "zoom",
+              'zoom',
               null,
               null,
               [
                 [rectBox!.x, rectBox!.x + rectBox!.width],
-                [rectBox!.y, rectBox!.y + rectBox!.height]
+                [rectBox!.y, rectBox!.y + rectBox!.height],
               ],
               viewport,
-              onViewportChange
-            )
+              onViewportChange,
+            ),
           };
-        }
+        },
       );
     }
   }
@@ -255,27 +255,27 @@ class ZoomAndPanBase extends React.PureComponent<
     scales: ScalesCache,
     rotated: boolean,
     delta: number,
-    anchors: Location
+    anchors: Location,
   ) {
     this.setState(
       (
         { viewport },
-        { onViewportChange, interactionWithArguments, interactionWithValues }
+        { onViewportChange, interactionWithArguments, interactionWithValues },
       ) => {
-        const argsInteraction = interactionWithArguments ?? "both";
-        const valuesInteraction = interactionWithValues ?? "none";
+        const argsInteraction = interactionWithArguments ?? 'both';
+        const valuesInteraction = interactionWithValues ?? 'none';
         return getViewport(
           scales,
           rotated,
           [argsInteraction, valuesInteraction],
-          "zoom",
+          'zoom',
           [delta, delta],
           anchors,
           null,
           viewport,
-          onViewportChange
+          onViewportChange,
         );
-      }
+      },
     );
   }
 
@@ -289,7 +289,7 @@ class ZoomAndPanBase extends React.PureComponent<
     const { viewport, rectBox } = this.state;
     const {
       dragBoxComponent: DragBoxComponent,
-      zoomRegionKey = "shift"
+      zoomRegionKey = 'shift',
     } = this.props;
     const getAdjustedLayout = ({ domains, ranges }: Getters) =>
       adjustLayout(domains, ranges, viewport);
@@ -320,5 +320,5 @@ class ZoomAndPanBase extends React.PureComponent<
 }
 
 export const ZoomAndPan: React.ComponentType<ZoomAndPanProps> = withComponents({
-  DragBox
+  DragBox,
 })(ZoomAndPanBase);

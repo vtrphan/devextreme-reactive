@@ -1,33 +1,33 @@
-import * as React from "react";
-import { getMessagesFormatter, memoize } from "@vtrphan/dx-core";
+import * as React from 'react';
+import { getMessagesFormatter, memoize } from '@vtrphan/dx-core';
 import {
   Getter,
   Plugin,
   Template,
   TemplatePlaceholder,
   TemplateConnector,
-  PluginComponents
-} from "@vtrphan/dx-react-core";
+  PluginComponents,
+} from '@vtrphan/dx-react-core';
 import {
   allDayCells,
   calculateAllDayDateIntervals,
   VERTICAL_GROUP_ORIENTATION,
-  VIEW_TYPES
-} from "@vtrphan/dx-scheduler-core";
-import moment from "moment";
+  VIEW_TYPES,
+} from '@vtrphan/dx-scheduler-core';
+import moment from 'moment';
 
-import { AllDayPanelProps, AllDayPanelState } from "../types";
+import { AllDayPanelProps, AllDayPanelState } from '../types';
 
 const isMonthView = currentView => currentView.type === VIEW_TYPES.MONTH;
 const isVerticalGrouping = (currentView, groupOrientation) =>
   groupOrientation?.(currentView.name) === VERTICAL_GROUP_ORIENTATION;
 
 const pluginDependencies = [
-  { name: "DayView", optional: true },
-  { name: "WeekView", optional: true }
+  { name: 'DayView', optional: true },
+  { name: 'WeekView', optional: true },
 ];
 const defaultMessages = {
-  allDay: "All Day"
+  allDay: 'All Day',
 };
 const AllDayAppointmentLayerPlaceholder = () => (
   <TemplatePlaceholder name="allDayAppointmentLayer" />
@@ -51,15 +51,11 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
   rowComponent,
   titleCellComponent: TitleCell,
   containerComponent: Container,
-  messages = {}
+  messages = {},
 }) => {
-  const [elementsMeta, setElementsMeta] = React.useState<
-    AllDayPanelState["elementsMeta"]
-  >({});
-  const [layoutKey, setLayoutKey] = React.useState<
-    AllDayPanelState["layoutKey"]
-  >(() => Math.random());
-  const previousCellRef = React.useRef<AllDayPanelState["previousCell"]>(Cell);
+  const [elementsMeta, setElementsMeta] = React.useState<AllDayPanelState['elementsMeta']>({});
+  const [layoutKey, setLayoutKey] = React.useState<AllDayPanelState['layoutKey']>(() => Math.random());
+  const previousCellRef = React.useRef<AllDayPanelState['previousCell']>(Cell);
 
   React.useEffect(() => {
     if (previousCellRef.current !== Cell) {
@@ -70,14 +66,14 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
 
   const allDayCellsDataComputed = React.useMemo(
     () => memoize(({ viewCellsData }) => allDayCells(viewCellsData)),
-    []
+    [],
   );
   const updateCellElementsMeta = React.useMemo(
     () =>
       memoize(cellElementsMeta => {
         setElementsMeta(cellElementsMeta);
       }),
-    [setElementsMeta]
+    [setElementsMeta],
   );
   const allDayAppointmentsComputed = React.useMemo(
     () =>
@@ -94,21 +90,21 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
           appointments,
           allDayLeftBound,
           allDayRightBound,
-          excludedDays
+          excludedDays,
         );
       }),
-    []
+    [],
   );
   const allDayPanelExistsComputed = React.useMemo(
     () => memoize(({ currentView }) => !isMonthView(currentView)),
-    []
+    [],
   );
   const getMessageFormatter = React.useMemo(
     () =>
       memoize((messagesMap, allDayPanelDefaultMessages) =>
-        getMessagesFormatter({ ...allDayPanelDefaultMessages, ...messagesMap })
+        getMessagesFormatter({ ...allDayPanelDefaultMessages, ...messagesMap }),
       ),
-    []
+    [],
   );
   const getMessage = getMessageFormatter(messages, defaultMessages);
 
@@ -136,7 +132,7 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
                       ...params,
                       allDayCellComponent: CellPlaceholder,
                       allDayRowComponent: rowComponent,
-                      allDayCellsData
+                      allDayCellsData,
                     }}
                   />
                   <AppointmentLayer>
@@ -180,7 +176,7 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
                   params={{
                     ...params,
                     allDayTitleComponent: AllDayTitlePlaceholder,
-                    showAllDayTitle: true
+                    showAllDayTitle: true,
                   }}
                 />
               );
@@ -245,13 +241,13 @@ const AllDayPanelBase: React.FC<AllDayPanelProps> & {
 };
 
 AllDayPanelBase.components = {
-  appointmentLayerComponent: "AppointmentLayer",
-  layoutComponent: "Layout",
-  layoutContainerComponent: "LayoutContainer",
-  cellComponent: "Cell",
-  rowComponent: "Row",
-  titleCellComponent: "TitleCell",
-  containerComponent: "Container"
+  appointmentLayerComponent: 'AppointmentLayer',
+  layoutComponent: 'Layout',
+  layoutContainerComponent: 'LayoutContainer',
+  cellComponent: 'Cell',
+  rowComponent: 'Row',
+  titleCellComponent: 'TitleCell',
+  containerComponent: 'Container',
 };
 
 /** A plugin that renders the All Day Panel. */

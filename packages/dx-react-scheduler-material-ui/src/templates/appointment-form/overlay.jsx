@@ -84,7 +84,7 @@ export const Overlay = ({
         transition: {
           onEntered: () => setPreviouslyOpen(true),
           onExited: () => setPreviouslyOpen(false),
-        }
+        },
       }}
       ModalProps={{
         container: target.current,

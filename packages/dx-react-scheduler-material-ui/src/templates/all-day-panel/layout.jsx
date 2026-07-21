@@ -1,19 +1,19 @@
-import * as React from "react";
-import { styled, Table, TableBody } from "@mui/material";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { cellsMeta, getViewCellKey } from "../utils";
+import * as React from 'react';
+import { styled, Table, TableBody } from '@mui/material';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { cellsMeta, getViewCellKey } from '../utils';
 
-const PREFIX = "Layout";
+const PREFIX = 'Layout';
 
 export const classes = {
-  table: `${PREFIX}-table`
+  table: `${PREFIX}-table`,
 };
 
 const StyledTable = styled(Table)({
   [`&.${classes.table}`]: {
-    tableLayout: "fixed"
-  }
+    tableLayout: 'fixed',
+  },
 });
 
 export const Layout = React.memo(
@@ -42,7 +42,9 @@ export const Layout = React.memo(
         <TableBody>
           <Row>
             {cellsData.map(
-              ({ startDate, endDate, endOfGroup, groupingInfo }) => (
+              ({
+                startDate, endDate, endOfGroup, groupingInfo,
+              }) => (
                 <Cell
                   key={getViewCellKey(startDate, groupingInfo)}
                   startDate={startDate}
@@ -51,13 +53,13 @@ export const Layout = React.memo(
                   hasRightBorder={endOfGroup}
                   groupingInfo={groupingInfo}
                 />
-              )
+              ),
             )}
           </Row>
         </TableBody>
       </StyledTable>
     );
-  }
+  },
 );
 
 Layout.propTypes = {
@@ -68,5 +70,5 @@ Layout.propTypes = {
   rowComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object])
     .isRequired,
   setCellElementsMeta: PropTypes.func.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

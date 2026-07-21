@@ -1,17 +1,17 @@
-import * as React from "react";
+import * as React from 'react';
 
 import {
   Plugin,
   Template,
   TemplatePlaceholder,
-  PluginComponents
-} from "@vtrphan/dx-react-core";
-import { TitleProps } from "../types";
+  PluginComponents,
+} from '@vtrphan/dx-react-core';
+import { TitleProps } from '../types';
 
 const TitleBase: React.FC<TitleProps> & { components: PluginComponents } = ({
   textComponent: Text,
   text,
-  position = "top"
+  position = 'top',
 }) => (
   <Plugin name="Title">
     <Template name={position}>
@@ -22,7 +22,7 @@ const TitleBase: React.FC<TitleProps> & { components: PluginComponents } = ({
 );
 
 TitleBase.components = {
-  textComponent: "Text"
+  textComponent: 'Text',
 };
 
 export const Title: React.ComponentType<TitleProps> = TitleBase;

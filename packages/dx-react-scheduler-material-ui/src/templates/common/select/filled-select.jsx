@@ -1,26 +1,26 @@
-import * as React from "react";
-import { styled, MenuItem, TextField } from "@mui/material";
-import PropTypes from "prop-types";
-import classNames from "clsx";
+import * as React from 'react';
+import { styled, MenuItem, TextField } from '@mui/material';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
 
-const PREFIX = "FilledSelect";
+const PREFIX = 'FilledSelect';
 
 export const classes = {
   filledSelect: `${PREFIX}-filledSelect`,
-  menuItem: `${PREFIX}-menuItem`
+  menuItem: `${PREFIX}-menuItem`,
 };
 
 const StyledTextField = styled(TextField)(
   ({ theme: { typography, spacing } }) => ({
     [`&.${classes.filledSelect}`]: {
       marginTop: spacing(0.375),
-      marginBottom: spacing(0.125)
+      marginBottom: spacing(0.125),
     },
     [`& .${classes.menuItem}`]: {
       fontSize: typography.fontSize,
-      textTransform: "uppercase"
-    }
-  })
+      textTransform: 'uppercase',
+    },
+  }),
 );
 
 export const FilledSelect = React.memo(
@@ -33,7 +33,7 @@ export const FilledSelect = React.memo(
     ...restProps
   }) => {
     const { notched: _notched, ...restSelectProps } = restProps;
-    const handleChange = event => {
+    const handleChange = (event) => {
       if (event.target.value !== value) onValueChange(event.target.value);
     };
 
@@ -59,7 +59,7 @@ export const FilledSelect = React.memo(
         ))}
       </StyledTextField>
     );
-  }
+  },
 );
 
 FilledSelect.propTypes = {
@@ -68,9 +68,9 @@ FilledSelect.propTypes = {
   availableOptions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ),
   readOnly: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

@@ -1,7 +1,10 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-export const Content = ({ text, targetItem = undefined, ...restProps }) => (<span {...restProps}>{text}</span>);
+// eslint-disable-next-line no-unused-vars
+export const Content = ({ text, targetItem = undefined, ...restProps }) => (
+  <span {...restProps}>{text}</span>
+);
 
 Content.propTypes = {
   text: PropTypes.string.isRequired,

@@ -1,14 +1,14 @@
-import * as React from "react";
-import { Getter, Plugin, Getters } from "@vtrphan/dx-react-core";
-import { tableColumnsWithGrouping } from "@vtrphan/dx-grid-core";
+import * as React from 'react';
+import { Getter, Plugin, Getters } from '@vtrphan/dx-react-core';
+import { tableColumnsWithGrouping } from '@vtrphan/dx-grid-core';
 import {
   ShowColumnWhenGroupedGetterFn,
-  TableColumnsWithGroupingProps
-} from "../../types";
+  TableColumnsWithGroupingProps,
+} from '../../types';
 
 const showColumnWhenGroupedGetter: ShowColumnWhenGroupedGetterFn = (
   showColumnsWhenGrouped,
-  columnExtensions = []
+  columnExtensions = [],
 ) => {
   const map = columnExtensions.reduce((acc, columnExtension) => {
     acc[columnExtension.columnName] = columnExtension.showWhenGrouped;
@@ -25,7 +25,7 @@ export const TableColumnsWithGrouping: React.FunctionComponent<TableColumnsWithG
       columns,
       tableColumns,
       grouping,
-      draftGrouping
+      draftGrouping,
     }: Getters) =>
       tableColumnsWithGrouping(
         columns,
@@ -33,7 +33,7 @@ export const TableColumnsWithGrouping: React.FunctionComponent<TableColumnsWithG
         grouping,
         draftGrouping,
         indentColumnWidth!,
-        showColumnWhenGroupedGetter(showColumnsWhenGrouped!, columnExtensions)
+        showColumnWhenGroupedGetter(showColumnsWhenGrouped!, columnExtensions),
       );
 
     return (
@@ -41,5 +41,5 @@ export const TableColumnsWithGrouping: React.FunctionComponent<TableColumnsWithG
         <Getter name="tableColumns" computed={tableColumnsComputed} />
       </Plugin>
     );
-  }
+  },
 );

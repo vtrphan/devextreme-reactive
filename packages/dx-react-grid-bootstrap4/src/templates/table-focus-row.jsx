@@ -1,6 +1,6 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
 
 export const FocusRow = ({
   component: RowPlaceholder,
@@ -11,9 +11,9 @@ export const FocusRow = ({
   <RowPlaceholder
     className={classNames(
       {
-        "bg-light": !!focused
+        'bg-light': !!focused,
       },
-      className
+      className,
     )}
     {...restProps}
   />
@@ -22,5 +22,5 @@ export const FocusRow = ({
 FocusRow.propTypes = {
   className: PropTypes.string,
   component: PropTypes.func.isRequired,
-  focused: PropTypes.bool
+  focused: PropTypes.bool,
 };

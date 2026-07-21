@@ -4,7 +4,7 @@ import { getCellGeometries } from '@vtrphan/dx-grid-core';
 
 export const TableReorderingCell = ({
   style = null,
-  getCellDimensions
+  getCellDimensions,
 }) => {
   const refHandler = node => node && getCellDimensions(() => getCellGeometries(node));
   return (

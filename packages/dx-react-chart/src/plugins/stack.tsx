@@ -1,8 +1,8 @@
-import * as React from "react";
-import { Plugin, Getter, Getters } from "@vtrphan/dx-react-core";
-import { getStackedSeries, getStackedDomains } from "@vtrphan/dx-chart-core";
-import { StackProps, StacksOptions, OffsetFn, OrderFn } from "../types";
-import { stackOrderNone, stackOffsetDiverging } from "d3-shape";
+import * as React from 'react';
+import { Plugin, Getter, Getters } from '@vtrphan/dx-react-core';
+import { getStackedSeries, getStackedDomains } from '@vtrphan/dx-chart-core';
+import { StackProps, StacksOptions, OffsetFn, OrderFn } from '../types';
+import { stackOrderNone, stackOffsetDiverging } from 'd3-shape';
 
 const getDomains = ({ domains, series }: Getters) =>
   getStackedDomains(domains, series);
@@ -10,19 +10,19 @@ const getDomains = ({ domains, series }: Getters) =>
 const StackBase: React.FC<StackProps> = ({
   stacks = [],
   offset = stackOffsetDiverging as OffsetFn,
-  order = stackOrderNone as OrderFn
+  order = stackOrderNone as OrderFn,
 }) => {
   const params = React.useMemo<StacksOptions>(
     () => ({
       stacks,
       offset,
-      order
+      order,
     }),
-    [stacks, offset, order]
+    [stacks, offset, order],
   );
   const getSeries = React.useCallback(
     ({ series, data }: Getters) => getStackedSeries(series, data, params),
-    [params]
+    [params],
   );
 
   return (

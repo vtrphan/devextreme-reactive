@@ -1,7 +1,7 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { Popover } from "../../../../dx-react-bootstrap4/components";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { Popover } from '../../../../dx-react-bootstrap4/components';
 
 export const FilterSelector = ({
   value,
@@ -22,7 +22,7 @@ export const FilterSelector = ({
   }, []);
 
   const handleOverlayToggle = React.useCallback(() => {
-    setOpened(prevState => {
+    setOpened((prevState) => {
       if (!prevState) {
         return prevState;
       }
@@ -31,11 +31,11 @@ export const FilterSelector = ({
   }, []);
 
   const handleMenuItemClick = React.useCallback(
-    nextValue => {
+    (nextValue) => {
       setOpened(false);
       onChange(nextValue);
     },
-    [onChange]
+    [onChange],
   );
 
   if (!availableValues.length) {
@@ -44,13 +44,13 @@ export const FilterSelector = ({
 
   return (
     <div
-      className={classNames("input-group-prepend", className)}
+      className={classNames('input-group-prepend', className)}
       {...restProps}
     >
       <ToggleButton
         disabled={disabled || availableValues.length === 1}
         onToggle={handleButtonClick}
-        buttonRef={ref => {
+        buttonRef={(ref) => {
           targetElement.current = ref;
         }}
       >
@@ -69,9 +69,9 @@ export const FilterSelector = ({
                 type="button"
                 key={valueItem}
                 className={classNames({
-                  "dropdown-item d-flex align-items-center": true,
-                  "dx-g-bs4-cursor-pointer dx-g-bs4-filter-selector-item": true,
-                  active: valueItem === value
+                  'dropdown-item d-flex align-items-center': true,
+                  'dx-g-bs4-cursor-pointer dx-g-bs4-filter-selector-item': true,
+                  active: valueItem === value,
                 })}
                 onClick={() => handleMenuItemClick(valueItem)}
               >
@@ -98,5 +98,5 @@ FilterSelector.propTypes = {
     .isRequired,
   toggleButtonComponent: PropTypes.func.isRequired,
   getMessage: PropTypes.func.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };

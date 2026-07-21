@@ -1,7 +1,7 @@
-import * as React from "react";
-import { ColumnGroup } from "./column-group";
-import { RowsBlockLayout } from "./rows-block-layout";
-import { TableLayoutProps } from "../../types";
+import * as React from 'react';
+import { ColumnGroup } from './column-group';
+import { RowsBlockLayout } from './rows-block-layout';
+import { TableLayoutProps } from '../../types';
 
 /** @internal */
 export const StaticTableLayout: React.FC<TableLayoutProps> = ({
@@ -18,13 +18,13 @@ export const StaticTableLayout: React.FC<TableLayoutProps> = ({
   rowComponent,
   cellComponent,
   getCellColSpan,
-  tableRef
+  tableRef,
 }) => {
   const commonProps = {
     columns,
     rowComponent,
     cellComponent,
-    getCellColSpan
+    getCellColSpan,
   };
 
   return (

@@ -1,11 +1,11 @@
-import * as React from "react";
-import { Getter, Plugin, Getters } from "@vtrphan/dx-react-core";
-import { visibleTableColumns } from "@vtrphan/dx-grid-core";
-import { VisibleTableColumnsProps } from "../../types";
+import * as React from 'react';
+import { Getter, Plugin, Getters } from '@vtrphan/dx-react-core';
+import { visibleTableColumns } from '@vtrphan/dx-grid-core';
+import { VisibleTableColumnsProps } from '../../types';
 
 const visibleTableColumnsComputed = ({
   tableColumns,
-  hiddenColumnNames
+  hiddenColumnNames,
 }: Getters) => visibleTableColumns(tableColumns, hiddenColumnNames);
 
 /** @internal */
@@ -15,5 +15,5 @@ export const VisibleTableColumns: React.FunctionComponent<VisibleTableColumnsPro
       <Getter name="hiddenColumnNames" value={hiddenColumnNames} />
       <Getter name="tableColumns" computed={visibleTableColumnsComputed} />
     </Plugin>
-  )
+  ),
 );

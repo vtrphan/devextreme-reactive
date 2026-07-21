@@ -153,7 +153,5 @@ TableInlineCellEditingBase.components = {
   cellComponent: 'Cell',
 };
 
-
-
 // tslint:disable-next-line: max-line-length
 export const TableInlineCellEditing: React.ComponentType<TableInlineCellEditingProps> = TableInlineCellEditingBase;

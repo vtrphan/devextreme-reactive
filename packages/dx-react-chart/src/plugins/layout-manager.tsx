@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Plugin,
   Getter,
@@ -7,10 +7,10 @@ import {
   TemplatePlaceholder,
   createStateHelper,
   Getters,
-  ActionFn
-} from "@vtrphan/dx-react-core";
-import { bBoxes, getRanges } from "@vtrphan/dx-chart-core";
-import { LayoutManagerProps, LayoutManagerState, BBoxesChange } from "../types";
+  ActionFn,
+} from '@vtrphan/dx-react-core';
+import { bBoxes, getRanges } from '@vtrphan/dx-chart-core';
+import { LayoutManagerProps, LayoutManagerState, BBoxesChange } from '../types';
 
 const doGetRanges = ({ layouts, rotated }: Getters) =>
   getRanges(layouts.pane, rotated);
@@ -29,8 +29,8 @@ export class LayoutManager extends React.PureComponent<
     const stateHelper = createStateHelper(this);
     this.changeBBox = stateHelper.applyFieldReducer.bind(
       stateHelper,
-      "bBoxes",
-      bBoxes
+      'bBoxes',
+      bBoxes,
     );
   }
 

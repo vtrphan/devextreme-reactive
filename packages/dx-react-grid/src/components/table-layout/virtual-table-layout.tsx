@@ -1,6 +1,6 @@
-import * as React from "react";
-import { unstable_batchedUpdates } from "react-dom";
-import { MemoizedFunction, memoize } from "@vtrphan/dx-core";
+import * as React from 'react';
+import { unstable_batchedUpdates } from 'react-dom';
+import { MemoizedFunction, memoize } from '@vtrphan/dx-core';
 import {
   TableColumn,
   GetColumnWidthFn,
@@ -10,14 +10,14 @@ import {
   getViewport,
   GridViewport,
   getScrollLeft,
-  isColumnsWidthDifferent
-} from "@vtrphan/dx-grid-core";
-import { VirtualTableLayoutProps } from "../../types";
-import { VirtualTableLayoutBlock } from "./virtual-table-layout-block";
-import { Sizer } from "@vtrphan/dx-react-core";
-import { ColumnGroup } from "./column-group";
+  isColumnsWidthDifferent,
+} from '@vtrphan/dx-grid-core';
+import { VirtualTableLayoutProps } from '../../types';
+import { VirtualTableLayoutBlock } from './virtual-table-layout-block';
+import { Sizer } from '@vtrphan/dx-react-core';
+import { ColumnGroup } from './column-group';
 
-const AUTO_HEIGHT = "auto";
+const AUTO_HEIGHT = 'auto';
 const MAX_WINDOW_HEIGHT = 10000000;
 const FACTOR = 3;
 
@@ -57,17 +57,17 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
   getCellColSpan,
   estimatedRowHeight,
   isDataRemote,
-  setViewport
+  setViewport,
 }) => {
   const [layoutState, setLayoutState] = React.useState<LayoutState>({
     viewportTop: 0,
     viewportLeft: 0,
     skipItems: [0, 0],
     containerHeight: 600,
-    containerWidth: 800
+    containerWidth: 800,
   });
   const [rowHeights, setRowHeights] = React.useState<Map<any, number>>(
-    new Map()
+    new Map(),
   );
   const rowRefs = React.useRef(new Map<any, HTMLElement>());
   const rowHeightsRef = React.useRef(rowHeights);
@@ -75,13 +75,11 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
   const layoutStateRef = React.useRef(layoutState);
   layoutStateRef.current = layoutState;
 
-  const getColumnWidthGetterRef = React.useRef<
-    MemoizedFunction<[TableColumn[], number, number], GetColumnWidthFn>
-  >();
+  const getColumnWidthGetterRef = React.useRef<MemoizedFunction<[TableColumn[], number, number], GetColumnWidthFn>>();
   if (!getColumnWidthGetterRef.current) {
     getColumnWidthGetterRef.current = memoize(
       (tableColumns, tableWidth, minColumnWidthValue) =>
-        getColumnWidthGetter(tableColumns, tableWidth, minColumnWidthValue)
+        getColumnWidthGetter(tableColumns, tableWidth, minColumnWidthValue),
     );
   }
 
@@ -105,7 +103,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       }
       return estimatedRowHeight;
     },
-    [estimatedRowHeight]
+    [estimatedRowHeight],
   );
 
   const storeRowHeights = React.useCallback(() => {
@@ -114,14 +112,14 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       .map(([row, node]) => [row, node.getBoundingClientRect().height])
       .filter(
         ([row, height]) =>
-          row.type !== TABLE_STUB_TYPE && height !== getRowHeight(row)
+          row.type !== TABLE_STUB_TYPE && height !== getRowHeight(row),
       );
 
     if (rowsWithChangedHeights.length) {
       setRowHeights(prev => {
         const next = new Map(prev);
         rowsWithChangedHeights.forEach(([row, height]) =>
-          next.set(row.key, height)
+          next.set(row.key, height),
         );
         return next;
       });
@@ -198,7 +196,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       const {
         containerHeight,
         skipItems,
-        viewportTop: prevViewPort
+        viewportTop: prevViewPort,
       } = layoutStateRef.current;
       const countSkipRows = getCountSkipRows();
       const dif = viewportTop - prevViewPort;
@@ -206,18 +204,18 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       const isDif = Math.abs(dif) < FACTOR * containerHeight;
       const top = Math.min(
         Math.round(pxInPercent * countSkipRows),
-        countSkipRows
+        countSkipRows,
       );
       unstable_batchedUpdates(() => {
         setLayoutState(prev => ({
           ...prev,
           viewportTop,
           viewportLeft,
-          skipItems: isDif ? skipItems : [top, countSkipRows - top]
+          skipItems: isDif ? skipItems : [top, countSkipRows - top],
         }));
       });
     },
-    [getCountSkipRows]
+    [getCountSkipRows],
   );
 
   const handleContainerSizeChange = React.useCallback(({ width, height }) => {
@@ -225,7 +223,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       setLayoutState(prev => ({
         ...prev,
         containerHeight: height,
-        containerWidth: width
+        containerWidth: width,
       }));
     });
   }, []);
@@ -236,12 +234,12 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       skipItems,
       viewportLeft,
       containerHeight,
-      containerWidth
+      containerWidth,
     } = layoutState;
     const getColumnWidth = getColumnWidthGetterRef.current!(
       columns,
       containerWidth,
-      minColumnWidth || 0
+      minColumnWidth || 0,
     );
 
     return getViewport(
@@ -253,10 +251,10 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
         headerRows,
         footerRows,
         isDataRemote,
-        viewport
+        viewport,
       },
       getRowHeight,
-      getColumnWidth
+      getColumnWidth,
     );
   }, [
     columns,
@@ -268,7 +266,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
     isDataRemote,
     viewport,
     getRowHeight,
-    layoutState
+    layoutState,
   ]);
 
   const updateViewport = React.useCallback(() => {
@@ -283,7 +281,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
     viewportLeft,
     containerWidth,
     containerHeight,
-    skipItems
+    skipItems,
   } = layoutState;
   const prevMetricsRef = React.useRef({
     bodyRows,
@@ -292,7 +290,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
     viewportTop,
     viewportLeft,
     containerWidth,
-    containerHeight
+    containerHeight,
   });
 
   React.useLayoutEffect(() => {
@@ -325,7 +323,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       if (countSkipRows !== 0 && skipItems[0] === 0 && skipItems[1] === 0) {
         setLayoutState(prevState => ({
           ...prevState,
-          skipItems: [0, countSkipRows]
+          skipItems: [0, countSkipRows],
         }));
       }
     }
@@ -337,7 +335,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       viewportTop,
       viewportLeft,
       containerWidth,
-      containerHeight
+      containerHeight,
     };
   }, [
     bodyRows,
@@ -349,14 +347,14 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
     containerHeight,
     skipItems,
     updateViewport,
-    getCountSkipRows
+    getCountSkipRows,
   ]);
   const getCollapsedGridsComputed = React.useCallback(
     (currentViewport: GridViewport) => {
       const getColumnWidth = getColumnWidthGetterRef.current!(
         columns,
         containerWidth,
-        minColumnWidth || 0
+        minColumnWidth || 0,
       );
 
       return getCollapsedGrids({
@@ -372,7 +370,7 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
         viewport: currentViewport,
         skipItems,
         getRowHeight,
-        getColumnWidth
+        getColumnWidth,
       });
     },
     [
@@ -387,18 +385,18 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       viewportLeft,
       containerWidth,
       skipItems,
-      getRowHeight
-    ]
+      getRowHeight,
+    ],
   );
 
   const collapsedGrids = React.useMemo(
     () => getCollapsedGridsComputed(viewport),
-    [getCollapsedGridsComputed, viewport]
+    [getCollapsedGridsComputed, viewport],
   );
   const scrollLeft = getScrollLeft(
     columns.length,
     minColumnWidth || 0,
-    nextColumnId
+    nextColumnId,
   );
   const commonProps = React.useMemo(
     () => ({
@@ -406,9 +404,9 @@ export const VirtualTableLayout: React.ComponentType<VirtualTableLayoutProps> = 
       rowComponent,
       minColumnWidth,
       minWidth,
-      rowRefsHandler: registerRowRef
+      rowRefsHandler: registerRowRef,
     }),
-    [cellComponent, rowComponent, minColumnWidth, minWidth, registerRowRef]
+    [cellComponent, rowComponent, minColumnWidth, minWidth, registerRowRef],
   );
   const sizerHeight = height === AUTO_HEIGHT ? null : height;
 

@@ -1,6 +1,6 @@
-import * as React from "react";
-import { DragSource } from "@vtrphan/dx-react-core";
-import { GroupingPanel as GP } from "../../types";
+import * as React from 'react';
+import { DragSource } from '@vtrphan/dx-react-core';
+import { GroupingPanel as GP } from '../../types';
 
 /** @internal */
 export const ItemLayout: React.FC<GP.GroupingItemLayoutProps> = ({
@@ -9,7 +9,7 @@ export const ItemLayout: React.FC<GP.GroupingItemLayoutProps> = ({
   onDragEnd = () => {},
   item,
   itemComponent: Item,
-  itemRef
+  itemRef,
 }) => {
   const [dragging, setDragging] = React.useState(false);
 
@@ -19,7 +19,7 @@ export const ItemLayout: React.FC<GP.GroupingItemLayoutProps> = ({
 
   return draggingEnabled ? (
     <DragSource
-      payload={[{ type: "column", columnName: item.column.name }]}
+      payload={[{ type: 'column', columnName: item.column.name }]}
       onStart={() => {
         setDragging(true);
         onDragStart();

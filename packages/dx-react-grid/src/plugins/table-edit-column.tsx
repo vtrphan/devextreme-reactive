@@ -1,30 +1,30 @@
-import * as React from "react";
-import { getMessagesFormatter } from "@vtrphan/dx-core";
+import * as React from 'react';
+import { getMessagesFormatter } from '@vtrphan/dx-core';
 import {
   Getter,
   Template,
   Plugin,
   TemplateConnector,
-  Getters
-} from "@vtrphan/dx-react-core";
+  Getters,
+} from '@vtrphan/dx-react-core';
 import {
   TABLE_EDIT_COMMAND_TYPE,
   tableColumnsWithEditing,
   isHeadingEditCommandsTableCell,
   isEditCommandsTableCell,
   isAddedTableRow,
-  isEditTableRow
-} from "@vtrphan/dx-grid-core";
-import { TableEditColumnProps, TableCellProps } from "../types";
+  isEditTableRow,
+} from '@vtrphan/dx-grid-core';
+import { TableEditColumnProps, TableCellProps } from '../types';
 
-const pluginDependencies = [{ name: "EditingState" }, { name: "Table" }];
+const pluginDependencies = [{ name: 'EditingState' }, { name: 'Table' }];
 
 const defaultMessages = {
-  addCommand: "New",
-  editCommand: "Edit",
-  deleteCommand: "Delete",
-  commitCommand: "Save",
-  cancelCommand: "Cancel"
+  addCommand: 'New',
+  editCommand: 'Edit',
+  deleteCommand: 'Delete',
+  commitCommand: 'Save',
+  cancelCommand: 'Cancel',
 };
 
 const TableEditColumnBase: React.FC<TableEditColumnProps> & {
@@ -38,7 +38,7 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
   showEditCommand = false,
   showDeleteCommand = false,
   width = 140,
-  messages = {}
+  messages = {},
 }) => {
   const getMessage = getMessagesFormatter({ ...defaultMessages, ...messages });
   const tableColumnsComputed = ({ tableColumns }: Getters) =>
@@ -61,7 +61,7 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
                 {showAddCommand && (
                   <Command
                     id="add"
-                    text={getMessage("addCommand")}
+                    text={getMessage('addCommand')}
                     onExecute={() => actions.addRow()}
                   />
                 )}
@@ -88,14 +88,14 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
                   {showEditCommand && !isEditing && (
                     <Command
                       id="edit"
-                      text={getMessage("editCommand")}
+                      text={getMessage('editCommand')}
                       onExecute={() => actions.startEditRows({ rowIds })}
                     />
                   )}
                   {showDeleteCommand && !isEditing && (
                     <Command
                       id="delete"
-                      text={getMessage("deleteCommand")}
+                      text={getMessage('deleteCommand')}
                       onExecute={() => {
                         actions.deleteRows({ rowIds });
                         actions.commitDeletedRows({ rowIds });
@@ -105,7 +105,7 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
                   {isEditing && (
                     <Command
                       id="commit"
-                      text={getMessage("commitCommand")}
+                      text={getMessage('commitCommand')}
                       onExecute={() => {
                         if (isNew) {
                           actions.commitAddedRows({ rowIds });
@@ -119,7 +119,7 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
                   {isEditing && (
                     <Command
                       id="cancel"
-                      text={getMessage("cancelCommand")}
+                      text={getMessage('cancelCommand')}
                       onExecute={() => {
                         if (isNew) {
                           actions.cancelAddedRows({ rowIds });
@@ -141,9 +141,9 @@ const TableEditColumnBase: React.FC<TableEditColumnProps> & {
 };
 
 const TableEditColumnComponents = {
-  cellComponent: "Cell",
-  headerCellComponent: "HeaderCell",
-  commandComponent: "Command"
+  cellComponent: 'Cell',
+  headerCellComponent: 'HeaderCell',
+  commandComponent: 'Command',
 } as const;
 
 TableEditColumnBase.COLUMN_TYPE = TABLE_EDIT_COMMAND_TYPE;

@@ -1,9 +1,9 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { withKeyboardNavigation } from "@vtrphan/dx-react-grid";
-import { PageSizeSelector } from "./page-size-selector";
-import { Pagination } from "./pagination";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { withKeyboardNavigation } from '@vtrphan/dx-react-grid';
+import { PageSizeSelector } from './page-size-selector';
+import { Pagination } from './pagination';
 
 const PagerBase = ({
   currentPage,
@@ -20,8 +20,8 @@ const PagerBase = ({
 }) => (
   <div
     className={classNames(
-      "clearfix card-footer dx-g-bs4-paging-panel",
-      className
+      'clearfix card-footer dx-g-bs4-paging-panel',
+      className,
     )}
     ref={forwardedRef}
     {...restProps}
@@ -55,7 +55,7 @@ PagerBase.propTypes = {
   totalCount: PropTypes.number.isRequired,
   getMessage: PropTypes.func.isRequired,
   className: PropTypes.string,
-  forwardedRef: PropTypes.func
+  forwardedRef: PropTypes.func,
 };
 
-export const Pager = withKeyboardNavigation("paging", "none")(PagerBase);
+export const Pager = withKeyboardNavigation('paging', 'none')(PagerBase);

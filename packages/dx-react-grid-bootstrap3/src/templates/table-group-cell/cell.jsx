@@ -42,5 +42,3 @@ Cell.propTypes = {
   style: PropTypes.object,
   forwardedRef: PropTypes.func,
 };
-
-

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {
   Plugin,
   TemplateConnector,
@@ -6,11 +6,11 @@ import {
   TemplatePlaceholder,
   withComponents,
   Getters,
-  PluginComponents
-} from "@vtrphan/dx-react-core";
-import { getLegendItems } from "@vtrphan/dx-chart-core";
-import { Marker } from "../templates/legend/marker";
-import { LegendProps } from "../types";
+  PluginComponents,
+} from '@vtrphan/dx-react-core';
+import { getLegendItems } from '@vtrphan/dx-chart-core';
+import { Marker } from '../templates/legend/marker';
+import { LegendProps } from '../types';
 
 const defaultGetItems = ({ series }: Getters) => getLegendItems(series);
 
@@ -19,8 +19,8 @@ const RawLegend: React.FC<LegendProps> & { components: PluginComponents } = ({
   labelComponent: Label,
   rootComponent: Root,
   itemComponent: Item,
-  position = "right",
-  getItems = defaultGetItems
+  position = 'right',
+  getItems = defaultGetItems,
 }) => {
   const placeholder = position;
   return (
@@ -45,12 +45,12 @@ const RawLegend: React.FC<LegendProps> & { components: PluginComponents } = ({
 };
 
 RawLegend.components = {
-  rootComponent: "Root",
-  itemComponent: "Item",
-  markerComponent: "Marker",
-  labelComponent: "Label"
+  rootComponent: 'Root',
+  itemComponent: 'Item',
+  markerComponent: 'Marker',
+  labelComponent: 'Label',
 };
 
 export const Legend: React.ComponentType<LegendProps> = withComponents({
-  Marker
+  Marker,
 })(RawLegend);

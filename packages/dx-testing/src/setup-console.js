@@ -1,9 +1,9 @@
-import { format } from "util";
+import { format } from 'util';
 
 const defaultIgnore = [
-  "react-error-boundaries",
-  "componentWillUpdate has been renamed, and is not recommended for use.",
-  "componentWillReceiveProps has been renamed, and is not recommended for use."
+  'react-error-boundaries',
+  'componentWillUpdate has been renamed, and is not recommended for use.',
+  'componentWillReceiveProps has been renamed, and is not recommended for use.',
 ];
 
 export const setupConsole = (config = {}) => {
@@ -13,12 +13,11 @@ export const setupConsole = (config = {}) => {
   const ignore = [...defaultIgnore, ...(config.ignore || [])];
 
   const logToError = (...args) => {
-    const [first = ""] = args;
-    const normalizedMessage =
-      typeof first === "string" ? first : format(...args);
+    const [first = ''] = args;
+    const normalizedMessage = typeof first === 'string' ? first : format(...args);
 
     if (!ignore.some(message => normalizedMessage.includes(message))) {
-      throw new Error(format(...args).replace(/^Error: (?:Warning: )?/, ""));
+      throw new Error(format(...args).replace(/^Error: (?:Warning: )?/, ''));
     }
   };
 

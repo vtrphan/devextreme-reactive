@@ -1,17 +1,19 @@
-import React from "react";
-import { styled, FormControlLabel, Radio, Grid } from "@mui/material";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { NUMBER_EDITOR } from "@vtrphan/dx-scheduler-core";
+import React from 'react';
+import {
+  styled, FormControlLabel, Radio, Grid,
+} from '@mui/material';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { NUMBER_EDITOR } from '@vtrphan/dx-scheduler-core';
 
-const PREFIX = "ChangeMonthEditor";
+const PREFIX = 'ChangeMonthEditor';
 
 export const classes = {
   textEditor: `${PREFIX}-textEditor`,
   label: `${PREFIX}-label`,
   select: `${PREFIX}-select`,
   formControl: `${PREFIX}-formControl`,
-  controlLabel: `${PREFIX}-controlLabel`
+  controlLabel: `${PREFIX}-controlLabel`,
 };
 
 const StyledFormControlLabel = styled(FormControlLabel)(
@@ -19,12 +21,12 @@ const StyledFormControlLabel = styled(FormControlLabel)(
     [`&.${classes.formControl}`]: {
       marginRight: 0,
       marginTop: spacing(1),
-      marginBottom: spacing(1)
+      marginBottom: spacing(1),
     },
     [`&.${classes.controlLabel}`]: {
-      width: "100%"
-    }
-  })
+      width: '100%',
+    },
+  }),
 );
 
 export const ChangeMonthEditor = React.memo(
@@ -45,23 +47,23 @@ export const ChangeMonthEditor = React.memo(
   }) => {
     const StyledLabel = styled(Label)(() => ({
       [`&.${classes.label}`]: {
-        width: "4.5em"
-      }
+        width: '4.5em',
+      },
     }));
 
     const StyledSelect = styled(Select)(() => ({
       [`&.${classes.select}`]: {
-        width: "calc((100% - 5.5em) * 3 / 7)",
-        maxWidth: "8em"
-      }
+        width: 'calc((100% - 5.5em) * 3 / 7)',
+        maxWidth: '8em',
+      },
     }));
 
     const StyledTextEditor = styled(TextEditor)(() => ({
       [`&.${classes.textEditor}`]: {
-        width: "calc((100% - 5.5em) * 4 / 7)",
-        minWidth: "calc(100% - 13.5em)",
-        marginLeft: "1em"
-      }
+        width: 'calc((100% - 5.5em) * 4 / 7)',
+        minWidth: 'calc(100% - 13.5em)',
+        marginLeft: '1em',
+      },
     }));
 
     return (
@@ -72,7 +74,7 @@ export const ChangeMonthEditor = React.memo(
         control={<Radio color="primary" />}
         disabled={readOnly}
         {...restProps}
-        label={
+        label={(
           <Grid
             container
             direction="row"
@@ -80,7 +82,7 @@ export const ChangeMonthEditor = React.memo(
             alignItems="center"
           >
             <StyledLabel
-              text={getMessage("everyLabel")}
+              text={getMessage('everyLabel')}
               className={classes.label}
             />
             <StyledSelect
@@ -98,10 +100,10 @@ export const ChangeMonthEditor = React.memo(
               onValueChange={changeByMonthDay}
             />
           </Grid>
-        }
+        )}
       />
     );
-  }
+  },
 );
 
 ChangeMonthEditor.propTypes = {
@@ -118,11 +120,11 @@ ChangeMonthEditor.propTypes = {
   months: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ).isRequired,
   dayNumber: PropTypes.number.isRequired,
   changeByMonthDay: PropTypes.func.isRequired,
   className: PropTypes.string,
-  readOnlyEditors: PropTypes.bool
+  readOnlyEditors: PropTypes.bool,
 };

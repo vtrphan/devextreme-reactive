@@ -1,9 +1,11 @@
-import React from "react";
-import { styled, FormControlLabel, Radio, Grid } from "@mui/material";
-import PropTypes from "prop-types";
-import classNames from "clsx";
+import React from 'react';
+import {
+  styled, FormControlLabel, Radio, Grid,
+} from '@mui/material';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
 
-const PREFIX = "ChangeWeekNumberEditor";
+const PREFIX = 'ChangeWeekNumberEditor';
 
 export const classes = {
   label: `${PREFIX}-label`,
@@ -13,49 +15,49 @@ export const classes = {
   formControl: `${PREFIX}-formControl`,
   doubleSelect: `${PREFIX}-doubleSelect`,
   radioButton: `${PREFIX}-radioButton`,
-  controlLabel: `${PREFIX}-controlLabel`
+  controlLabel: `${PREFIX}-controlLabel`,
 };
 
-const StyledDiv = styled("div")(({ theme: { spacing } }) => ({
+const StyledDiv = styled('div')(({ theme: { spacing } }) => ({
   [`& .${classes.label}`]: {
-    width: "4.5em"
+    width: '4.5em',
   },
   [`& .${classes.select}`]: {
-    width: "calc((100% - 5.5em) * 3 / 7)",
-    maxWidth: "8em"
+    width: 'calc((100% - 5.5em) * 3 / 7)',
+    maxWidth: '8em',
   },
   [`& .${classes.longSelect}`]: {
-    width: "calc((100% - 5.5em) * 4 / 7)",
-    minWidth: "calc(100% - 13.5em)",
-    marginLeft: "1em"
+    width: 'calc((100% - 5.5em) * 4 / 7)',
+    minWidth: 'calc(100% - 13.5em)',
+    marginLeft: '1em',
   },
   [`& .${classes.doubleSelect}`]: {
-    marginLeft: "4.5em",
-    width: "calc(100% - 4.5em)",
-    marginTop: spacing(1)
-  }
+    marginLeft: '4.5em',
+    width: 'calc(100% - 4.5em)',
+    marginTop: spacing(1),
+  },
 }));
 
 const StyledFormControlLabel = styled(FormControlLabel)(
   ({ theme: { spacing } }) => ({
     [`&.${classes.formControlLabel}`]: {
-      alignItems: "flex-start"
+      alignItems: 'flex-start',
     },
     [`&.${classes.formControl}`]: {
       marginRight: 0,
       marginTop: spacing(1),
-      marginBottom: spacing(1)
+      marginBottom: spacing(1),
     },
     [`&.${classes.controlLabel}`]: {
-      width: "100%"
-    }
-  })
+      width: '100%',
+    },
+  }),
 );
 
 const StyledRadio = styled(Radio)(({ theme: { spacing } }) => ({
   [`&.${classes.radioButton}`]: {
-    marginTop: spacing(0.75)
-  }
+    marginTop: spacing(0.75),
+  },
 }));
 
 export const ChangeWeekNumberEditor = React.memo(
@@ -82,13 +84,13 @@ export const ChangeWeekNumberEditor = React.memo(
       className={classNames(
         classes.formControlLabel,
         classes.formControl,
-        className
+        className,
       )}
       classes={{ label: classes.controlLabel }}
       control={<StyledRadio color="primary" className={classes.radioButton} />}
       disabled={readOnly}
       {...restProps}
-      label={
+      label={(
         <StyledDiv>
           <Grid
             container
@@ -96,7 +98,7 @@ export const ChangeWeekNumberEditor = React.memo(
             justifyContent="flex-start"
             alignItems="center"
           >
-            <Label className={classes.label} text={getMessage("theLabel")} />
+            <Label className={classes.label} text={getMessage('theLabel')} />
             <Select
               className={classes.select}
               value={weekNumber}
@@ -120,9 +122,9 @@ export const ChangeWeekNumberEditor = React.memo(
             availableOptions={months}
           />
         </StyledDiv>
-      }
+      )}
     />
-  )
+  ),
 );
 
 ChangeWeekNumberEditor.propTypes = {
@@ -137,25 +139,25 @@ ChangeWeekNumberEditor.propTypes = {
   months: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ).isRequired,
   weekNumber: PropTypes.number.isRequired,
   changeWeekNumber: PropTypes.func.isRequired,
   weekNumbers: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ).isRequired,
   dayOfWeek: PropTypes.number.isRequired,
   changeDayOfWeek: PropTypes.func.isRequired,
   daysOfWeek: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      text: PropTypes.string.isRequired
-    })
+      text: PropTypes.string.isRequired,
+    }),
   ).isRequired,
   className: PropTypes.string,
-  readOnlyEditors: PropTypes.bool
+  readOnlyEditors: PropTypes.bool,
 };

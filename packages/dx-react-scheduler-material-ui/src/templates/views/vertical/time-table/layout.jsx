@@ -1,8 +1,8 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import { prepareVerticalViewCellsData } from "@vtrphan/dx-scheduler-core";
-import { Layout as LayoutBase } from "../../common/layout";
-import { getViewCellKey } from "../../../utils";
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { prepareVerticalViewCellsData } from '@vtrphan/dx-scheduler-core';
+import { Layout as LayoutBase } from '../../common/layout';
+import { getViewCellKey } from '../../../utils';
 
 const DefaultAllDayCellComponent = () => null;
 const DefaultAllDayRowComponent = () => null;
@@ -13,7 +13,7 @@ const renderCell = (
   endDate,
   endOfGroup,
   groupingInfo,
-  groupOrientation
+  groupOrientation,
 ) => (
   <Cell
     key={getViewCellKey(startDate, groupingInfo)}
@@ -56,16 +56,15 @@ export const Layout = React.memo(
                     endDate,
                     endOfGroup,
                     groupingInfo,
-                    groupOrientation
-                  }) =>
-                    renderCell(
-                      allDayCellComponent,
-                      startDate,
-                      endDate,
-                      endOfGroup,
-                      groupingInfo,
-                      groupOrientation
-                    )
+                    groupOrientation,
+                  }) => renderCell(
+                    allDayCellComponent,
+                    startDate,
+                    endDate,
+                    endOfGroup,
+                    groupingInfo,
+                    groupOrientation,
+                  ),
                 )}
               </AllDayRow>
             )}
@@ -77,24 +76,23 @@ export const Layout = React.memo(
                     endDate,
                     groupingInfo,
                     endOfGroup,
-                    groupOrientation
-                  }) =>
-                    renderCell(
-                      cellComponent,
-                      startDate,
-                      endDate,
-                      endOfGroup,
-                      groupingInfo,
-                      groupOrientation
-                    )
+                    groupOrientation,
+                  }) => renderCell(
+                    cellComponent,
+                    startDate,
+                    endDate,
+                    endOfGroup,
+                    groupingInfo,
+                    groupOrientation,
+                  ),
                 )}
               </Row>
             ))}
           </React.Fragment>
-        )
+        ),
       )}
     </LayoutBase>
-  )
+  ),
 );
 
 Layout.propTypes = {
@@ -107,5 +105,5 @@ Layout.propTypes = {
     .isRequired,
   allDayRowComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
   formatDate: PropTypes.func.isRequired,
-  setCellElementsMeta: PropTypes.func.isRequired
+  setCellElementsMeta: PropTypes.func.isRequired,
 };

@@ -1,14 +1,14 @@
-import * as React from "react";
-import { styled, Button } from "@mui/material";
-import PropTypes from "prop-types";
-import classNames from "clsx";
-import { ensureColor } from "../../utils";
+import * as React from 'react';
+import { styled, Button } from '@mui/material';
+import PropTypes from 'prop-types';
+import classNames from 'clsx';
+import { ensureColor } from '../../utils';
 
-const PREFIX = "SaveButton";
+const PREFIX = 'SaveButton';
 
 export const classes = {
   button: `${PREFIX}-button`,
-  textButton: `${PREFIX}-textButton`
+  textButton: `${PREFIX}-textButton`,
 };
 
 export const StyledButton = styled(Button)(
@@ -17,40 +17,42 @@ export const StyledButton = styled(Button)(
       padding: spacing(0.5, 3.5),
       marginLeft: spacing(3),
       height: spacing(4.5),
-      "&:first-of-type": {
-        marginLeft: 0
+      '&:first-of-type': {
+        marginLeft: 0,
       },
       backgroundColor: ensureColor(300, palette.primary),
-      "&:hover": {
-        backgroundColor: ensureColor(400, palette.primary)
-      }
+      '&:hover': {
+        backgroundColor: ensureColor(400, palette.primary),
+      },
     },
     [`&.${classes.textButton}`]: {
-      color: palette.primary.contrastText
-    }
-  })
+      color: palette.primary.contrastText,
+    },
+  }),
 );
 
 export const SaveButton = React.memo(
-  ({ getMessage, className = undefined, onExecute, ...restProps }) => (
+  ({
+    getMessage, className = undefined, onExecute, ...restProps
+  }) => (
     <StyledButton
       className={classNames(
         {
           [classes.button]: true,
-          [classes.textButton]: !restProps.disabled
+          [classes.textButton]: !restProps.disabled,
         },
-        className
+        className,
       )}
       onClick={onExecute}
       {...restProps}
     >
-      {getMessage("commitCommand")}
+      {getMessage('commitCommand')}
     </StyledButton>
-  )
+  ),
 );
 
 SaveButton.propTypes = {
   className: PropTypes.string,
   getMessage: PropTypes.func.isRequired,
-  onExecute: PropTypes.func.isRequired
+  onExecute: PropTypes.func.isRequired,
 };
