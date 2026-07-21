@@ -1,41 +1,61 @@
 name: Publish to GitHub Packages
 
 on:
-  workflow_dispatch: # Allows manual triggering from the GitHub Actions UI (the "push a button" feature)
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'Version bump type (patch, minor, major)'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 jobs:
   publish:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     
-    # These permissions are required for the GITHUB_TOKEN to be able to publish packages
+    # We need write permissions to push the version bump commit and tag back to the repo
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Lerna often needs git history to verify tags and commits
+          fetch-depth: 0 # Lerna needs full history
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Git User
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '22' # Using modern Node.js
+          node-version: '20' # Match CI
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vtrphan'
 
+      - name: Install Yarn globally
+        run: sudo npm i -g yarn@1.22.4 --force
+
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --no-progress
         env:
-          # yarn install will read the local .npmrc, so we must provide the token here too
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build packages
         run: yarn build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Publish with Lerna
-        run: npx lerna publish from-package --yes --registry https://npm.pkg.github.com
+        run: npx lerna publish ${{ inputs.bump }} --yes --registry https://npm.pkg.github.com
         env:
-          # The GITHUB_TOKEN automatically has permissions to push to GitHub Packages for this repository
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
