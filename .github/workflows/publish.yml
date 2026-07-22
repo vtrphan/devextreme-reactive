@@ -15,7 +15,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     
     # We need write permissions to push the version bump commit and tag back to the repo
     permissions:
@@ -37,7 +37,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Match CI
+          node-version: '22'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@vtrphan'
 
