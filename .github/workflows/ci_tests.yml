@@ -22,7 +22,7 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: '22'
 
@@ -44,7 +44,7 @@ jobs:
       run: 7z a -tzip -mx3 -mmt2 artifacts.zip packages -xr!node_modules
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: devextreme-reactive-artifacts
         path: artifacts.zip
@@ -64,7 +64,7 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: '22'
 
@@ -74,7 +74,7 @@ jobs:
         yarn --no-progress
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v7
       with:
         name: devextreme-reactive-artifacts
 
@@ -95,7 +95,7 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Use Node.js
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@v7
       with:
         node-version: '22'
 
@@ -105,7 +105,7 @@ jobs:
         yarn --no-progress
 
     - name: Download artifacts
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v7
       with:
         name: devextreme-reactive-artifacts
 
