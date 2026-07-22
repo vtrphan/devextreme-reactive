@@ -41,6 +41,7 @@
     "react-test-renderer": "^16.14.0",
     "replace-in-file": "^4.2.0",
     "rimraf": "^3.0.0",
+    "rollup": "^1.27.2",
     "run-sequence": "^2.2.1",
     "semver": "^6.3.0",
     "start-server-and-test": "^1.11.0",
