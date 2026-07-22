@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@vtrphan/dx-react-common",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "DevExtreme React Components",
   "author": {
     "name": "Developer Express Inc.",
@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "@vtrphan/dx-demo-shell": "^5.0.1",
-    "@vtrphan/dx-react-chart-demos": "^5.0.1",
-    "@vtrphan/dx-react-grid-demos": "^5.0.1",
-    "@vtrphan/dx-react-scheduler-demos": "^5.0.1",
+    "@vtrphan/dx-react-chart-demos": "^5.0.2",
+    "@vtrphan/dx-react-grid-demos": "^5.0.2",
+    "@vtrphan/dx-react-scheduler-demos": "^5.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "whatwg-fetch": "^3.0.0"

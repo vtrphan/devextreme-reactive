@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-react-chart",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Composable plugin-based chart component for React",
   "author": {
     "name": "Developer Express Inc.",
@@ -81,7 +81,7 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@vtrphan/dx-chart-core": "^5.0.1",
+    "@vtrphan/dx-chart-core": "^5.0.2",
     "d3-scale": "^4.0.2",
     "d3-shape": "^1.3.7"
   },

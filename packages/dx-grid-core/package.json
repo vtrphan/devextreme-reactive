@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-grid-core",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Core library for the DevExtreme Reactive Grid component",
   "author": {
     "name": "Developer Express Inc.",

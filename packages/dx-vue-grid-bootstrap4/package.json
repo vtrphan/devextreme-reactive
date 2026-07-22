@@ -1,7 +1,7 @@
 {
   "name": "@vtrphan/dx-vue-grid-bootstrap4",
   "private": true,
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Bootstrap 4 templates for DevExtreme Vue Grid component",
   "author": {
     "name": "Developer Express Inc.",
@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "@vtrphan/dx-core": "^5.0.1",
-    "@vtrphan/dx-grid-core": "^5.0.1"
+    "@vtrphan/dx-grid-core": "^5.0.2"
   },
   "peerDependencies": {
     "@vtrphan/dx-vue-core": "^5.0.0",

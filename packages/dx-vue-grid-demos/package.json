@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@vtrphan/dx-vue-grid-demos",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "DevExtreme Vue Components Demos",
   "author": {
     "name": "Developer Express Inc.",
@@ -26,8 +26,8 @@
   "dependencies": {
     "@vtrphan/dx-demo-shell": "^5.0.1",
     "@vtrphan/dx-vue-core": "^5.0.1",
-    "@vtrphan/dx-vue-grid": "^5.0.1",
-    "@vtrphan/dx-vue-grid-bootstrap4": "^5.0.1",
+    "@vtrphan/dx-vue-grid": "^5.0.2",
+    "@vtrphan/dx-vue-grid-bootstrap4": "^5.0.2",
     "babel-polyfill": "^6.26.0",
     "codemirror": "^5.49.2",
     "prop-types": "^15.7.2",

@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-scheduler-core",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Core library for the DevExtreme Reactive Scheduler component",
   "author": {
     "name": "Developer Express Inc.",

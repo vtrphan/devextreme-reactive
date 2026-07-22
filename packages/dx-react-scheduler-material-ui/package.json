@@ -1,6 +1,6 @@
 {
   "name": "@vtrphan/dx-react-scheduler-material-ui",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Material-UI templates for DevExtreme React Scheduler component",
   "author": {
     "name": "Developer Express Inc.",
@@ -71,8 +71,8 @@
     "@mui/x-date-pickers": "^5.0.15",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@vtrphan/dx-react-core": "^5.0.1",
-    "@vtrphan/dx-react-scheduler": "^5.0.1",
-    "@vtrphan/dx-scheduler-core": "^5.0.1",
+    "@vtrphan/dx-react-scheduler": "^5.0.2",
+    "@vtrphan/dx-scheduler-core": "^5.0.2",
     "@vtrphan/dx-testing": "^5.0.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "babel-core": "^7.0.0-bridge.0",

@@ -1,7 +1,7 @@
 {
   "name": "@vtrphan/dx-vue-grid",
   "private": true,
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "Composable plugin-based data grid component for Vue",
   "author": {
     "name": "Developer Express Inc.",
@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@vtrphan/dx-core": "^5.0.1",
-    "@vtrphan/dx-grid-core": "^5.0.1"
+    "@vtrphan/dx-grid-core": "^5.0.2"
   },
   "peerDependencies": {
     "@vtrphan/dx-vue-core": "^5.0.0",
