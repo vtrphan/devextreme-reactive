@@ -79,6 +79,6 @@
     "d3-shape": "^1.3.7"
   },
   "peerDependencies": {
-    "@vtrphan/dx-core": "4.0.14"
+    "@vtrphan/dx-core": "^5.0.0"
   }
 }

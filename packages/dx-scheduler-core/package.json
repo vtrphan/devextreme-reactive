@@ -79,7 +79,7 @@
     "typescript": "^4.8.4"
   },
   "peerDependencies": {
-    "@vtrphan/dx-core": "4.0.14"
+    "@vtrphan/dx-core": "^5.0.0"
   },
   "dependencies": {
     "moment": "^2.24.0",

@@ -73,6 +73,6 @@
     "typescript-tslint-plugin": "^1.0.1"
   },
   "peerDependencies": {
-    "@vtrphan/dx-core": "4.0.14"
+    "@vtrphan/dx-core": "^5.0.0"
   }
 }
